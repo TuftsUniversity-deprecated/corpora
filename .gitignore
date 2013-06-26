@@ -13,3 +13,17 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore jetty data and config files
+jetty
+
+# # Don't send local rvm config
+.rvmrc
+
+config/initializers/secret_token.rb
+config/database.yml
+config/fedora.yml
+config/solr.yml
+config/redis.yml
+
+/.idea

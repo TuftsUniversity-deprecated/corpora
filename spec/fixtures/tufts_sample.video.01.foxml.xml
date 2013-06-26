@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<foxml:digitalObject VERSION="1.1" PID="tufts:sample.video.01"
+xmlns:foxml="info:fedora/fedora-system:def/foxml#"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/definitions/1/0/foxml1-1.xsd">
+<foxml:objectProperties>
+<foxml:property NAME="info:fedora/fedora-system:def/model#state" VALUE="Active"/>
+<foxml:property NAME="info:fedora/fedora-system:def/model#label" VALUE="Kill Bill 3 Trailer"/>
+<foxml:property NAME="info:fedora/fedora-system:def/model#ownerId" VALUE="Miramax Films"/>
+<foxml:property NAME="info:fedora/fedora-system:def/model#createdDate" VALUE="2013-05-15T12:00:00.000Z"/>
+<foxml:property NAME="info:fedora/fedora-system:def/view#lastModifiedDate" VALUE="2013-06-18T20:51:51.973Z"/>
+</foxml:objectProperties>
+<foxml:datastream ID="RELS-EXT" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+<foxml:datastreamVersion ID="RELS-EXT.0" LABEL="Relationships to other objects" CREATED="2013-05-15T12:00:00.000Z" MIMETYPE="text/xml" FORMAT_URI="http://www.w3.org/1999/02/22-rdf-syntax-ns#" SIZE="709">
+<foxml:xmlContent>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rel="info:fedora/fedora-system:def/relations-external#" xmlns:xlink="http://www.w3.org/TR/xlink">
+					<rdf:Description rdf:about="info:fedora/tufts:sample.video.01">
+						<fedora-model:hasModel xmlns:fedora-model="info:fedora/fedora-system:def/model#" rdf:resource="info:fedora/afmodel:TuftsVideo"></fedora-model:hasModel>
+						<rel:isMemberOfCollection rdf:resource="info:fedora/tufts:sample"></rel:isMemberOfCollection>
+						<rel:hasDescription rdf:resource="info:fedora/tufts:sample.video.01"></rel:hasDescription>
+						<itemID xmlns="http://www.openarchives.org/OAI/2.0/">oai:tufts:sample.video.01</itemID>
+					</rdf:Description>
+				</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="DC" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+<foxml:datastreamVersion ID="DC.0" LABEL="Dublin Core Metadata" CREATED="2013-05-15T12:00:00.000Z" MIMETYPE="text/xml" FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/" SIZE="920">
+<foxml:xmlContent>
+<oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+  <dc:title>Kill Bill 3 Trailer</dc:title>
+  <dc:creator>Miramax Films</dc:creator>
+  <dc:subject>Bill</dc:subject>
+  <dc:subject>Bride</dc:subject>
+  <dc:description>Kill Bill 3 Trailer</dc:description>
+  <dc:publisher>Digital Collections and Archives, Tufts University</dc:publisher>
+  <dc:date>2013-05-15</dc:date>
+  <dc:type>video</dc:type>
+  <dc:type>text</dc:type>
+  <dc:format>video/mp4</dc:format>
+  <dc:format>text/xml</dc:format>
+  <dc:identifier>tufts:sample.video.01</dc:identifier>
+  <dc:source>sample</dc:source>
+  <dc:relation>sample</dc:relation>
+  <dc:rights>http://dca.tufts.edu/ua/access/rights.html</dc:rights>
+</oai_dc:dc>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="DCA-ADMIN" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+<foxml:datastreamVersion ID="DCA-ADMIN.0" LABEL="DCA administrative metadata" CREATED="2013-05-15T12:00:00.000Z" MIMETYPE="text/xml" SIZE="979">
+  <foxml:xmlContent>
+    <admin xmlns="http://nils.lib.tufts.edu/dcaadmin/" xmlns:ac="http://purl.org/dc/dcmitype/">
+      <editedAt>2013-06-04T20:29:37+00:00</editedAt>
+      <steward/>
+      <ac:name/>
+      <ac:comment/>
+      <retentionPeriod/>
+      <displays>tdl</displays>
+      <displays>southasia</displays>
+      <embargo/>
+      <status/>
+      <startDate/>
+      <expDate/>
+      <qrStatus/>
+      <rejectionReason/>
+      <note/>
+      <publishedAt>2013-06-04T20:29:37Z</publishedAt>
+    </admin>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="DCA-META" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+<foxml:datastreamVersion ID="DCA-META.0" LABEL="DCA descriptive metadata" CREATED="2013-05-15T12:00:00.000Z" MIMETYPE="text/xml" SIZE="1263">
+<foxml:xmlContent>
+<dca_dc:dc xmlns:dca_dc="http://nils.lib.tufts.edu/dca_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcadesc="http://nils.lib.tufts.edu/dcadesc/" xmlns:dcatech="http://nils.lib.tufts.edu/dcatech/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xlink="http://www.w3.org/TR/xlink">
+					<dc:title>Kill Bill 3 Trailer</dc:title>
+					<dc:description>Kill Bill 3 Trailer</dc:description>
+					<dc:creator>Miramax Films</dc:creator>
+					<dc:source>sample</dc:source>
+					<dc:temporal>2013</dc:temporal>
+					<dcterms:isPartOf>sample</dcterms:isPartOf>
+					<dc:publisher>Digital Collections and Archives, Tufts University</dc:publisher>
+					<dc:bibliographicCitation>Kill Bill 3 Trailer. Permanent URL: http://hdl.handle.net/?????/?????.</dc:bibliographicCitation>
+					<dc:rights>http://dca.tufts.edu/ua/access/rights.html</dc:rights>
+					<dc:identifier>http://hdl.handle.net/?????/?????</dc:identifier>
+					<dcterms:created>2013-05-15</dcterms:created>
+					<dcterms:available>2013-05-15</dcterms:available>
+					<dc:type>video</dc:type>
+					<dc:type>text</dc:type>
+					<dc:format>video/mp4</dc:format>
+					<dc:format>text/xml</dc:format>
+					<dcadesc:subject>Bill</dcadesc:subject>
+					<dcadesc:subject>Bride</dcadesc:subject>
+				</dca_dc:dc>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="ACCESS_MP4" STATE="A" CONTROL_GROUP="E" VERSIONABLE="true">
+<foxml:datastreamVersion ID="ACCESS_MP4.0" LABEL="MP4 video file" CREATED="2013-05-15T12:00:00.000Z" MIMETYPE="video/mp4">
+<foxml:contentLocation TYPE="URL" REF="http://bucket01.lib.tufts.edu/data05/tufts/central/dca/sample/access_mp4/sample004.mp4"/>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="ACCESS_OGG" STATE="A" CONTROL_GROUP="E" VERSIONABLE="true">
+<foxml:datastreamVersion ID="ACCESS_OGG.0" LABEL="ogg video file" CREATED="2013-05-15T12:00:00.000Z" MIMETYPE="video/ogg">
+<foxml:contentLocation TYPE="URL" REF="http://bucket01.lib.tufts.edu/data05/tufts/central/dca/sample/access_ogg/sample004.ogv"/>
+</foxml:datastreamVersion>
+</foxml:datastream>
+</foxml:digitalObject>

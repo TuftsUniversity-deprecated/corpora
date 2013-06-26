@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<foxml:digitalObject VERSION="1.1" PID="tufts:sample.audio.01"
+xmlns:foxml="info:fedora/fedora-system:def/foxml#"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/definitions/1/0/foxml1-1.xsd">
+<foxml:objectProperties>
+<foxml:property NAME="info:fedora/fedora-system:def/model#state" VALUE="Active"/>
+<foxml:property NAME="info:fedora/fedora-system:def/model#label" VALUE="Edward Ciampa Interview"/>
+<foxml:property NAME="info:fedora/fedora-system:def/model#ownerId" VALUE=""/>
+<foxml:property NAME="info:fedora/fedora-system:def/model#createdDate" VALUE="2006-06-20T18:12:56.482Z"/>
+<foxml:property NAME="info:fedora/fedora-system:def/view#lastModifiedDate" VALUE="2010-09-06T18:54:44.313Z"/>
+</foxml:objectProperties>
+<foxml:datastream ID="AUDIT" STATE="A" CONTROL_GROUP="X" VERSIONABLE="false">
+<foxml:datastreamVersion ID="AUDIT.0" LABEL="Audit Trail for this object" CREATED="2006-06-20T18:12:56.482Z" MIMETYPE="text/xml" FORMAT_URI="info:fedora/fedora-system:format/xml.fedora.audit">
+<foxml:xmlContent>
+<audit:auditTrail xmlns:audit="info:fedora/fedora-system:def/audit#">
+</audit:auditTrail>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="STREAM_ATOM" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+<foxml:datastreamVersion ID="STREAM_ATOM.0" LABEL="Streaming audio atom feed" CREATED="2006-03-09T18:11:24.320Z" MIMETYPE="application/atom+xml" SIZE="5275">
+<foxml:xmlContent>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="RELS-EXT" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+<foxml:datastreamVersion ID="RELS-EXT.0" LABEL="Relationships to other objects" CREATED="2005-05-17T23:08:38.024Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="715">
+<foxml:xmlContent>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/TR/xlink" xmlns:rel="info:fedora/fedora-system:def/relations-external#">
+          <rdf:Description rdf:about="info:fedora/tufts:sample.audio.01"><fedora-model:hasModel xmlns:fedora-model="info:fedora/fedora-system:def/model#" rdf:resource="info:fedora/afmodel:TuftsAudioText"></fedora-model:hasModel>
+            <rel:isMemberOfCollection rdf:resource="info:fedora/tufts:UA069.006.DO.MS124"></rel:isMemberOfCollection>
+            <rel:hasDescription rdf:resource="info:fedora/tufts:UA069.001.DO.MS124"></rel:hasDescription>
+          </rdf:Description>
+        </rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="ARCHIVAL_XML" STATE="A" CONTROL_GROUP="E" VERSIONABLE="true">
+<foxml:datastreamVersion ID="ARCHIVAL_XML.0" LABEL="Archival TEI transcript" CREATED="2006-03-09T18:06:24.684Z" MIMETYPE="text/xml">
+<foxml:contentLocation TYPE="URL" REF="http://bucket01.lib.tufts.edu/data01/tufts/central/dca/MS124/archival_xml/MS124.001.001.00002.tei.xml"/>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="ARCHIVAL_WAV" STATE="A" CONTROL_GROUP="E" VERSIONABLE="true">
+<foxml:datastreamVersion ID="ARCHIVAL_WAV.0" LABEL="Archival Broadcast WAV file" CREATED="2006-03-09T18:09:25.470Z" MIMETYPE="audio/wav">
+<foxml:contentLocation TYPE="URL" REF="http://bucket01.lib.tufts.edu/data01/tufts/central/dca/MS124/archival_wav/MS124.001.001.00002.archival.wav"/>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="DC" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+<foxml:datastreamVersion ID="DC.1" LABEL="Dublin Core Metadata" CREATED="2007-04-03T15:27:14.033Z" MIMETYPE="text/xml" FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/" SIZE="901">
+<foxml:xmlContent>
+<oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <dc:identifier>tufts:sample.audio.01</dc:identifier>
+</oai_dc:dc>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="DCA-ADMIN" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+<foxml:datastreamVersion ID="DCA-ADMIN.0" LABEL="DCA administrative metadata" CREATED="2006-03-09T18:11:51.657Z" MIMETYPE="text/xml" SIZE="1886">
+<foxml:xmlContent>
+    <admin xmlns="http://nils.lib.tufts.edu/dcaadmin/" xmlns:ac="http://purl.org/dc/dcmitype/">
+      <editedAt>2013-06-04T20:29:37+00:00</editedAt>
+      <steward/>
+      <ac:name/>
+      <ac:comment/>
+      <retentionPeriod/>
+      <displays>tdl</displays>
+      <displays>southasia</displays>
+      <embargo/>
+      <status/>
+      <startDate/>
+      <expDate/>
+      <qrStatus/>
+      <rejectionReason/>
+      <note/>
+      <publishedAt>2013-06-04T20:29:37Z</publishedAt>
+    </admin>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="DCA-META" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+<foxml:datastreamVersion ID="DCA-META.0" LABEL="DCA descriptive metadata" CREATED="2007-04-03T15:27:41.011Z" MIMETYPE="text/xml" SIZE="1351">
+<foxml:xmlContent>
+<dca_dc:dc xmlns:dca_dc="http://nils.lib.tufts.edu/dca_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcadesc="http://nils.lib.tufts.edu/dcadesc/" xmlns:dcatech="http://nils.lib.tufts.edu/dcatech/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xlink="http://www.w3.org/TR/xlink">
+  <dc:title>Andre Beteille Interview</dc:title>
+  <dc:description>Bengal Oral History: Andre Beteille Interview</dc:description>
+  <dc:creator>Kris Manjapra</dc:creator>
+  <dc:source>MS124</dc:source>
+  <dc:temporal>2002-2003</dc:temporal>
+  <dcterms:isPartOf>MS124</dcterms:isPartOf>
+  <dc:publisher>Digital Collections and Archives, Tufts University</dc:publisher>
+  <dc:bibliographicCitation>Andre Beteille Interview. Permanent URL: http://hdl.handle.net/10427/15856.</dc:bibliographicCitation>
+  <dc:rights>http://dca.tufts.edu/ua/access/rights.html</dc:rights>
+  <dc:identifier>http://hdl.handle.net/10427/15856</dc:identifier>
+  <dcterms:created>2006-02-08</dcterms:created>
+  <dcterms:available>2006-05-02</dcterms:available>
+  <dc:type>sound</dc:type>
+  <dc:type>text</dc:type>
+  <dc:format>audio/vnd.wave;codec=1</dc:format>
+  <dc:format>text/xml</dc:format>
+  <dcadesc:geogname>Bengaladesh</dcadesc:geogname>
+  <dcadesc:subject>Intellectuals</dcadesc:subject>
+  <dcadesc:subject>History</dcadesc:subject>
+</dca_dc:dc>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="ACCESS_MP3" STATE="A" CONTROL_GROUP="E" VERSIONABLE="true">
+<foxml:datastreamVersion ID="ACCESS_MP3.0" LABEL="MP3 audio file" CREATED="2006-03-09T18:08:11.808Z" MIMETYPE="audio/mpeg">
+<foxml:contentLocation TYPE="URL" REF="http://bucket01.lib.tufts.edu/data01/tufts/central/dca/MS124/access_mp3/MS124.001.001.00002.mp3"/>
+</foxml:datastreamVersion>
+</foxml:datastream>
+</foxml:digitalObject>

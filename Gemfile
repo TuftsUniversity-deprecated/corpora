@@ -1,10 +1,14 @@
 source 'http://rubygems.org'
-
+ruby '2.0.0'
 gem 'rails', '3.2.13'
+#ruby-gemset=manjapra
 
 gem 'blacklight'
 gem 'hydra-head', '~> 6.0.0'
 gem 'tuftsification-hydra', :git => 'git@github.com:TuftsUniversity/tuftsification-hydra.git'
+#gem 'tuftsification-hydra', :path => '/Users/mkorcy01/Documents/workspace/tuftsification-hydra'
+gem "active-fedora", "~> 6.3.0"
+gem 'om', git: 'https://github.com/projecthydra/om.git', branch: 'fix_serializing_nil'
 
 # We will assume that you're using sqlite3 for testing/demo,
 # but in a production setup you probably want to use a real sql database like mysql or postgres
