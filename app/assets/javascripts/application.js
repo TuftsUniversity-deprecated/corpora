@@ -15,4 +15,6 @@
 //
 // Required by Blacklight
 //= require blacklight/blacklight
+//= require 'tuftsification-hydra'
 //= require_tree .
+
