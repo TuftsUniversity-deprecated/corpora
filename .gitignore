@@ -27,3 +27,8 @@ config/solr.yml
 config/redis.yml
 
 /.idea
+#videos are too big to check in
+local_object_store//data05/tufts/central/dca/sample/access_mp4/*
+local_object_store/data05/tufts/central/dca/sample/access_mp4/
+
+.DS_Store
