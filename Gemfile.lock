@@ -1,5 +1,6 @@
-PATH
-  remote: /Users/mkorcy01/Documents/workspace/tuftsification-hydra
+GIT
+  remote: git@github.com:TuftsUniversity/tuftsification-hydra.git
+  revision: ba1606b2c88040ae8e9cc676c3e821cdf90e9381
   specs:
     tuftsification-hydra (0.0.3)
       active-fedora (~> 6.4.0)
