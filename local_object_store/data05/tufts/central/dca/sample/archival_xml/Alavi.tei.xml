@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TEI.2>
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title><!--Fill in a title--></title>
+            <author><!--Fill in the author--></author>
+         </titleStmt>
+         <extent><!--fill in the extent--></extent>
+         <publicationStmt>
+            <distributor>Tufts University Digital Collections and Archives</distributor>
+            <address>
+               <addrLine>Tufts University</addrLine>
+               <addrLine>35 Professors Row</addrLine>
+               <addrLine>Tisch Library Medford, MA 01255</addrLine>
+            </address>
+            <idno><!--fill in the ID number--></idno>
+            <availability status="free">
+               <p>This publication is freely available for scholarly or educational use.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <recordingStmt>
+               <recording type="audio" dur="4871209ms">
+                  <date><!--Fill in the date of the _recording_--></date>
+                  <equipment>
+                     <p><!--Fill in details about the recoring equipment--></p>
+                  </equipment>
+                  <respStmt>
+                     <resp>interview conducted by:</resp>
+                     <name><!--Fill in the person responsable for the recording--></name>
+                  </respStmt>
+               </recording>
+            </recordingStmt>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <stdVals>
+               <p>Standard date values are given in ISO form: yyyy-mm-dd.</p>
+            </stdVals>
+         </editorialDecl>
+         <classDecl>
+            <taxonomy id="LCSH">
+               <bibl>
+                  <title>Library of Congress Subject Headings</title>
+               </bibl>
+            </taxonomy>
+            <taxonomy id="LC">
+               <bibl>
+                  <title>Library of Congress</title>
+               </bibl>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <creation>
+            <date><!--Fill in an appropriate creation date (for the transcript)--></date>
+         </creation>
+         <langUsage>
+            <language id="EN" usage="100">English.</language>
+         </langUsage>
+         <particDesc><!--Fill in interview participants here--></particDesc>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline id="transcript_timeline" unit="millisecond" origin="timepoint_begin">
+            <when id="timepoint_begin" absolute="beginning of recording"/>
+            <when id="timepoint_1" since="timepoint_begin" interval="0"/>
+            <when id="timepoint_2" since="timepoint_begin" interval="23000"/>
+            <when id="timepoint_3" since="timepoint_begin" interval="45500"/>
+            <when id="timepoint_4" since="timepoint_begin" interval="78200"/>
+            <when id="timepoint_5" since="timepoint_begin" interval="101900"/>
+            <when id="timepoint_6" since="timepoint_begin" interval="129600"/>
+            <when id="timepoint_7" since="timepoint_begin" interval="162000"/>
+            <when id="timepoint_8" since="timepoint_begin" interval="193900"/>
+            <when id="timepoint_8" since="timepoint_begin" interval="222900"/>
+            <when id="timepoint_9" since="timepoint_begin" interval="247100"/>
+            <when id="timepoint_10" since="timepoint_begin" interval="259800"/>
+            <when id="timepoint_11" since="timepoint_begin" interval="287900"/>
+            <when id="timepoint_11" since="timepoint_begin" interval="338500"/>
+            <when id="timepoint_13" since="timepoint_begin" interval="369400"/>
+            <when id="timepoint_14" since="timepoint_begin" interval="398100"/>
+            <when id="timepoint_14" since="timepoint_begin" interval="424400"/>
+            <when id="timepoint_15" since="timepoint_begin" interval="453400"/>
+            <when id="timepoint_16" since="timepoint_begin" interval="484900"/>
+            <when id="timepoint_16" since="timepoint_begin" interval="512000"/>
+            <when id="timepoint_17" since="timepoint_begin" interval="540600"/>
+            <when id="timepoint_18" since="timepoint_begin" interval="569200"/>
+            <when id="timepoint_19" since="timepoint_begin" interval="606300"/>
+            <when id="timepoint_20" since="timepoint_begin" interval="644100"/>
+            <when id="timepoint_20" since="timepoint_begin" interval="670300"/>
+            <when id="timepoint_21" since="timepoint_begin" interval="692700"/>
+            <when id="timepoint_22" since="timepoint_begin" interval="723500"/>
+            <when id="timepoint_22" since="timepoint_begin" interval="753800"/>
+            <when id="timepoint_23" since="timepoint_begin" interval="786600"/>
+            <when id="timepoint_24" since="timepoint_begin" interval="813500"/>
+            <when id="timepoint_26" since="timepoint_begin" interval="845600"/>
+            <when id="timepoint_27" since="timepoint_begin" interval="877900"/>
+            <when id="timepoint_27" since="timepoint_begin" interval="902500"/>
+            <when id="timepoint_28" since="timepoint_begin" interval="933800"/>
+            <when id="timepoint_29" since="timepoint_begin" interval="955000"/>
+            <when id="timepoint_30" since="timepoint_begin" interval="987500"/>
+            <when id="timepoint_31" since="timepoint_begin" interval="1017400"/>
+            <when id="timepoint_33" since="timepoint_begin" interval="1043200"/>
+            <when id="timepoint_34" since="timepoint_begin" interval="1075800"/>
+            <when id="timepoint_35" since="timepoint_begin" interval="1101900"/>
+            <when id="timepoint_36" since="timepoint_begin" interval="1135300"/>
+            <when id="timepoint_38" since="timepoint_begin" interval="1161700"/>
+            <when id="timepoint_39" since="timepoint_begin" interval="1188600"/>
+            <when id="timepoint_40" since="timepoint_begin" interval="1212900"/>
+            <when id="timepoint_41" since="timepoint_begin" interval="1241200"/>
+            <when id="timepoint_42" since="timepoint_begin" interval="1272900"/>
+            <when id="timepoint_43" since="timepoint_begin" interval="1302300"/>
+            <when id="timepoint_44" since="timepoint_begin" interval="1324500"/>
+            <when id="timepoint_45" since="timepoint_begin" interval="1353000"/>
+            <when id="timepoint_46" since="timepoint_begin" interval="1378000"/>
+            <when id="timepoint_47" since="timepoint_begin" interval="1406400"/>
+            <when id="timepoint_48" since="timepoint_begin" interval="1433700"/>
+            <when id="timepoint_49" since="timepoint_begin" interval="1459300"/>
+            <when id="timepoint_50" since="timepoint_begin" interval="1485700"/>
+            <when id="timepoint_51" since="timepoint_begin" interval="1513800"/>
+            <when id="timepoint_52" since="timepoint_begin" interval="1544000"/>
+            <when id="timepoint_53" since="timepoint_begin" interval="1574500"/>
+            <when id="timepoint_54" since="timepoint_begin" interval="1604500"/>
+            <when id="timepoint_55" since="timepoint_begin" interval="1641800"/>
+            <when id="timepoint_56" since="timepoint_begin" interval="1672800"/>
+            <when id="timepoint_57" since="timepoint_begin" interval="1699300"/>
+            <when id="timepoint_58" since="timepoint_begin" interval="1734700"/>
+            <when id="timepoint_59" since="timepoint_begin" interval="1764100"/>
+            <when id="timepoint_60" since="timepoint_begin" interval="1791400"/>
+            <when id="timepoint_61" since="timepoint_begin" interval="1818600"/>
+            <when id="timepoint_62" since="timepoint_begin" interval="1845600"/>
+            <when id="timepoint_64" since="timepoint_begin" interval="1875200"/>
+            <when id="timepoint_65" since="timepoint_begin" interval="1903700"/>
+            <when id="timepoint_66" since="timepoint_begin" interval="1930000"/>
+            <when id="timepoint_57" since="timepoint_begin" interval="1952500"/>
+            <when id="timepoint_57" since="timepoint_begin" interval="1987700"/>
+            <when id="timepoint_58" since="timepoint_begin" interval="2014700"/>
+            <when id="timepoint_58" since="timepoint_begin" interval="2039600"/>
+            <when id="timepoint_59" since="timepoint_begin" interval="2064000"/>
+            <when id="timepoint_60" since="timepoint_begin" interval="2089800"/>
+            <when id="timepoint_71" since="timepoint_begin" interval="2114800"/>
+            <when id="timepoint_" since="timepoint_begin" interval="2128700"/>
+            <when id="timepoint_72" since="timepoint_begin" interval="2140800"/>
+            <when id="timepoint_73" since="timepoint_begin" interval="2165200"/>
+            <when id="timepoint_74" since="timepoint_begin" interval="2188500"/>
+            <when id="timepoint_76" since="timepoint_begin" interval="2218800"/>
+            <when id="timepoint_76" since="timepoint_begin" interval="2244900"/>
+            <when id="timepoint_77" since="timepoint_begin" interval="2272900"/>
+            <when id="timepoint_78" since="timepoint_begin" interval="2298800"/>
+            <when id="timepoint_79" since="timepoint_begin" interval="2324300"/>
+            <when id="timepoint_79" since="timepoint_begin" interval="2350600"/>
+            <when id="timepoint_79" since="timepoint_begin" interval="2376200"/>
+            <when id="timepoint_80" since="timepoint_begin" interval="2398500"/>
+            <when id="timepoint_81" since="timepoint_begin" interval="2425700"/>
+            <when id="timepoint_82" since="timepoint_begin" interval="2451000"/>
+            <when id="timepoint_83" since="timepoint_begin" interval="2477500"/>
+            <when id="timepoint_84" since="timepoint_begin" interval="2502100"/>
+            <when id="timepoint_86" since="timepoint_begin" interval="2524900"/>
+            <when id="timepoint_87" since="timepoint_begin" interval="2554400"/>
+            <when id="timepoint_88" since="timepoint_begin" interval="2574700"/>
+            <when id="timepoint_89" since="timepoint_begin" interval="2601200"/>
+            <when id="timepoint_90" since="timepoint_begin" interval="2635500"/>
+            <when id="timepoint_91" since="timepoint_begin" interval="2669300"/>
+            <when id="timepoint_92" since="timepoint_begin" interval="2693900"/>
+            <when id="timepoint_93" since="timepoint_begin" interval="2718100"/>
+            <when id="timepoint_94" since="timepoint_begin" interval="2745500"/>
+            <when id="timepoint_95" since="timepoint_begin" interval="2770400"/>
+            <when id="timepoint_96" since="timepoint_begin" interval="2794600"/>
+            <when id="timepoint_87" since="timepoint_begin" interval="2818900"/>
+            <when id="timepoint_98" since="timepoint_begin" interval="2859100"/>
+            <when id="timepoint_99" since="timepoint_begin" interval="2889500"/>
+            <when id="timepoint_100" since="timepoint_begin" interval="2922200"/>
+            <when id="timepoint_101" since="timepoint_begin" interval="2960300"/>
+            <when id="timepoint_102" since="timepoint_begin" interval="2987600"/>
+            <when id="timepoint_103" since="timepoint_begin" interval="3016100"/>
+            <when id="timepoint_104" since="timepoint_begin" interval="3045800"/>
+            <when id="timepoint_105" since="timepoint_begin" interval="3079600"/>
+            <when id="timepoint_106" since="timepoint_begin" interval="3105200"/>
+            <when id="timepoint_106" since="timepoint_begin" interval="3130400"/>
+            <when id="timepoint_107" since="timepoint_begin" interval="3157500"/>
+            <when id="timepoint_108" since="timepoint_begin" interval="3195700"/>
+            <when id="timepoint_109" since="timepoint_begin" interval="3231000"/>
+            <when id="timepoint_110" since="timepoint_begin" interval="3272300"/>
+            <when id="timepoint_111" since="timepoint_begin" interval="3309200"/>
+            <when id="timepoint_112" since="timepoint_begin" interval="3346500"/>
+            <when id="timepoint_113" since="timepoint_begin" interval="3384000"/>
+            <when id="timepoint_114" since="timepoint_begin" interval="3411900"/>
+            <when id="timepoint_115" since="timepoint_begin" interval="3441200"/>
+            <when id="timepoint_116" since="timepoint_begin" interval="3472800"/>
+            <when id="timepoint_117" since="timepoint_begin" interval="3513900"/>
+            <when id="timepoint_119" since="timepoint_begin" interval="3554000"/>
+            <when id="timepoint_120" since="timepoint_begin" interval="3595800"/>
+            <when id="timepoint_121" since="timepoint_begin" interval="3630500"/>
+            <when id="timepoint_122" since="timepoint_begin" interval="3677800"/>
+            <when id="timepoint_123" since="timepoint_begin" interval="3701000"/>
+            <when id="timepoint_124" since="timepoint_begin" interval="3734300"/>
+            <when id="timepoint_126" since="timepoint_begin" interval="3758200"/>
+            <when id="timepoint_127" since="timepoint_begin" interval="3784300"/>
+            <when id="timepoint_128" since="timepoint_begin" interval="3818500"/>
+            <when id="timepoint_129" since="timepoint_begin" interval="3867000"/>
+            <when id="timepoint_130" since="timepoint_begin" interval="3906100"/>
+            <when id="timepoint_132" since="timepoint_begin" interval="3936200"/>
+            <when id="timepoint_133" since="timepoint_begin" interval="3965500"/>
+            <when id="timepoint_134" since="timepoint_begin" interval="3996200"/>
+            <when id="timepoint_134" since="timepoint_begin" interval="4027000"/>
+            <when id="timepoint_136" since="timepoint_begin" interval="4056300"/>
+            <when id="timepoint_138" since="timepoint_begin" interval="4079400"/>
+            <when id="timepoint_139" since="timepoint_begin" interval="4121100"/>
+            <when id="timepoint_140" since="timepoint_begin" interval="4156000"/>
+            <when id="timepoint_141" since="timepoint_begin" interval="4193300"/>
+            <when id="timepoint_142" since="timepoint_begin" interval="4212600"/>
+            <when id="timepoint_143" since="timepoint_begin" interval="4238300"/>
+            <when id="timepoint_144" since="timepoint_begin" interval="4272300"/>
+            <when id="timepoint_146" since="timepoint_begin" interval="4284100"/>
+            <when id="timepoint_147" since="timepoint_begin" interval="4312800"/>
+            <when id="timepoint_148" since="timepoint_begin" interval="4338900"/>
+            <when id="timepoint_149" since="timepoint_begin" interval="4358900"/>
+            <when id="timepoint_150" since="timepoint_begin" interval="4391100"/>
+            <when id="timepoint_159" since="timepoint_begin" interval="4424600"/>
+            <when id="timepoint_150" since="timepoint_begin" interval="4463100"/>
+            <when id="timepoint_151" since="timepoint_begin" interval="4494800"/>
+            <when id="timepoint_152" since="timepoint_begin" interval="4521100"/>
+            <when id="timepoint_153" since="timepoint_begin" interval="4552400"/>
+            <when id="timepoint_154" since="timepoint_begin" interval="4586200"/>
+            <when id="timepoint_156" since="timepoint_begin" interval="4610600"/>
+            <when id="timepoint_157" since="timepoint_begin" interval="4646300"/>
+            <when id="timepoint_158" since="timepoint_begin" interval="4674000"/>
+            <when id="timepoint_160" since="timepoint_begin" interval="4695300"/>
+            <when id="timepoint_161" since="timepoint_begin" interval="4723400"/>
+            <when id="timepoint_" since="timepoint_begin" interval="4746200"/>
+            <when id="timepoint_164" since="timepoint_begin" interval="4773700"/>
+            <when id="timepoint_166" since="timepoint_begin" interval="4811200"/>
+            <when id="timepoint_167" since="timepoint_begin" interval="4841900"/>
+            <when id="timepoint_" since="timepoint_begin" interval="4871200"/>
+            <when id="timepoint_end" since="timepoint_begin" interval="4871209"/>
+         </timeline>
+         <div1 id="transcript.1" n="Transcript">
+            <u rend="transcript_chunk" start="timepoint_1" n="1" end="timepoint_2">
+<u>Ayesha Jalal: Well Thank you very much, and welcome all of you to the course of lectures in the series that we are doing on Islam and the Indian Ocean Rim and I am Ayesha Jalal really it&#8217;s a pleasure to welcome Seema Alavi, Professor Seema Alavi who&#8217;s really no stranger to Tufts, she is in fact an intrinsic part of Tufts whenever we hold conferences. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_2" n="2" end="timepoint_3">
+<u>It&#8217;s impossible not to have her around and I am really very, very delighted that she agreed after some reluctance to accept the invitation to come and speak to us whilst she was in this area while we were just taking advantage of her presence in the Boston area to get her across and come in and give us a lecture which some of you will know.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_3" n="3" end="timepoint_4">
+<u>We are recording a spring course that Kris Manjapra and I myself are teaching. I will be teaching it at Lahore at LUMS and Kris [Kris Manjapra] will be teaching it at Tufts. The series has been made possible by a grant from the Provost&#8217;s Office office called The Tufts Collaborates and also this event has been made possible by our co sponsors in the History Department and organizationally I owe gratitude to Juhi Shahin and to Bilal Baloch as well.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_4" n="4" end="timepoint_5">
+<u>Seema Alavi as some of you no doubt know that she is Professor of History at the Delhi University and she previously was at the Jamia Milia but she has held several very prestigious fellowships in UK at Cambridge, at Harvard here and so it&#8217;s been possible for us to keep in touch constantly really over the past several years.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_5" n="5" end="timepoint_6">
+<u>She is an expert on early Modern South Asia and really it&#8217;s impossible to understand the transition to Colonialism without referring to Seema&#8217;s [Seema Alavi] extraordinarily important work. Her first she was educated at Cambridge she did her PhD there and her PhD turned book called &#8220;The Sepoys and the Company: Tradition and Transition in Northern India 1717 to 1780&#8221; </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_6" n="6" end="timepoint_7">
+<u>was an important intervention in the field and it went against the grain of existing scholarship which emphasized continuity in Military traditions from the late Mughal period and the early colonial period in the 18th century and her work has been extraordinarily influential it looks at a wide array of factors and the role of the Military really I mean the Bengal army, the colonial States army in India. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_7" n="7" end="timepoint_8">
+<u>Her most recent book &#8220;Islam and healing, loss and recovery of an Indo-Muslim medical tradition 1600 to 1900&#8221; was published by Palgrave MacMillan in the year 2008. It&#8217;s a superb history of the Unani tradition of Indo Muslim medicine in India [Unani medicine]. It&#8217;s an extraordinary work because she uses a ray of sources Arabic, Persian and Urdu to challenge some common place views of medical,</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_8" n="8" end="timepoint_8">
+<u>of medicine really. She shows that medicine in the Unani tradition [Unani medicine] certainly was just not about the biological, about the biological entity but body but was incorporated a whole array of things including ethics questions of virtue and proper conduct and of course she has done a lot of other things, she has written a number of path breaking articles</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_8" n="8" end="timepoint_9">
+<u>some of which I think we will be hearing some of her new work is going to be presented today and she is also the editor of the influential work &#8220;The 18th century in India&#8221; which was published by Oxford  University Press. I think she has played a very, very crucial role in forcing us historians and students of South Asian History more broadly to look upon the 18th century differently. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_9" n="9" end="timepoint_10">
+<u>We no longer see it as a mere preface of the modern or as a mere epilogue to the medieval period, thank you for all that and thank you for coming. Please join me in giving her a warm welcome, welcome back.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_10" n="10" end="timepoint_11">
+<u>Seema Alavi: Thank you so much Ayesha [Ayesha Jalal] for this extremely generous and nice introduction. It&#8217;s always a pleasure for me to come to this area and of course more of a pleasure to come to Tufts with Ayesha [Ayesha Jalal] and all her students, many of who I have got to know personally over the years.s</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_11" n="11" end="timepoint_11">
+<u>This talk is actually a kind of review a survey of all the works </u>
+<u>that Ayesha [Ayesha Jalal] just mentioned and issues that have interested me over the last 10 to 15 years actually now and this is a way of revisiting some of the researches on the 18th century that I have done and kind of trying to put them in a new global frame. Basically, I am going to tell you 3 stories today and via those stories we will see how 18th century late Mughal decline was triggering some very interesting connections that South Asia was making with the world outside.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_11" n="11" end="timepoint_13">
+<u>Let me start like most 18th century specialist with Mir Taqi Mir &#8220;is ahal ko na jane, agla sa ahla Mir who door ab nahin who zamana nahin, asman nahin&#8221;. This age is not like that which went before it the times have changed the Earth and sky has changed. As most of you would know this was the final lament of the 18th century Mughal poet Mir Taqi Mir who had spent a life time in Delhi </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_13" n="13" end="timepoint_14">
+<u>enjoying the patronage of the Mughal Empire and living on the larges of the imperial court in Agra and Delhi. From the 1740&#8217;s he began to see the visible decline of the city of Delhi, it&#8217;s degradation in the hands of Afghan and Persian invaders the steadily rising political ambitions of the English East India Company and the loosening of the Imperial control as revenue from its far flung provinces slowly became a trickle. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_14" n="14" end="timepoint_14">
+<u>While Mir demeaned the fading of Delhi he was skeptical of the whims of change that saw power and patronage shift to the provinces. Indeed the shrinkage of the old patrons had as many of you know made provincial centers havens of new literary energy. In 1780 Mir like many other Delhi litterateurs very grudgingly shifted to the provincial town of Lucknow, </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_14" n="14" end="timepoint_15">
+<u>however his nostalgia of the Imperial capital continued and produced the famous poetry of lament sher ashow. Mir introduces himself to the people of Lucknow in a patronizing was that reflects the cultural arrogance of the archetype court Mughal poet &#8220;kya bhot baat puche ho purab ke sakiyon, Delli jo ek saher tha aal mein intequaab is ko phalak ne loot ke veeran kar diya, </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_15" n="15" end="timepoint_16">
+<u>humko gharib jaan ke has has pukaar ke rehte the muntakab hi jahan roz waar ke hum rehne wale hain usi ujrey dayar ke&#8221;. Why do you mock at me and ask yourselves where do I come from you Easterners which is Lucknowites where I also belong. There was a city famed throughout the world where dwelled the chosen spirits of the age Delhi it&#8217;s name fairest amongst fair fate looted it </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_16" n="16" end="timepoint_16">
+<u>and laid it desolate and to that rabid city I belong. Now Mir [Mir Taqi Mir] attributes the nasty fate of Mughal Delhi to the degeneration of the nobility and the corruption of office and he is not alone in his assessment of Imperial decay. His peer the Delhi poet Sauda [Mirza Rafi Sauda] echoes other similar sentiments, &#8220;Na rasm suleh ki samjhe na jang ka dastoor&#8221; this is his comment o Lukhnowites</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_16" n="16" end="timepoint_17">
+<u>&#8220;jo in mein quadradan theh who huien inse dur&#8221;. The nobles do not know the art of making war nor peace while the wise among them have deserted them. Such was their contempt for the eastern provinces where they had moved. Now the trope of decline as you can see in these verses referred to in these verses contains several elements that were common to the Mughals</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_17" n="17" end="timepoint_18">
+<u>and their contemporaries the Ottoman and the Western Roman Empires [Holy Roman Empire] which is the idea of degeneration and corruption of the body politic by luxuries sale of office on miscegenation. Now, some South Asianists have used this notion of decline quite literally and painted the 18th century as dark ages. Other revision studies have instead substituted decline with the idea of decentralization and transformation.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_18" n="18" end="timepoint_19">
+<u>What I want to do this evening is that I want to focus on the critical role of the myth of decline in the creation of wider conceptual spaces that offered critical arenas to intellectual communities to connect in fresh ways to global influences. I feel that this triggered a shift in the understanding of the self and the State and atomized understanding that derived from wider intellectual frame replaced one that framed perceptions in merely aristocratic literary and political genres of the past. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_19" n="19" end="timepoint_20">
+<u>The de-centering of the State in the 18th century narrative enables us to arrive at a more nuance genealogy of the evolution of the early modern political cultures as shaped conceptualized and understood by individuals who were weathering this imperial crisis. This longer history of the court or State conceptualized from below as it were it invests the discussion on the early colonial State with a Norbert Elias kind of long genealogy.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_20" n="20" end="timepoint_20">
+<u>It challenges the Foucaultian [Michel Foucault] brand of 19th century exceptionally with its Euro centric gaze and allows us to move beyond the colonial frame and understanding the political and the cultural transitions that characterize 18th century India. Now I will now as I said begin with the 3 stories to illustrate via these 3 histories how the very illness </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_20" n="20" end="timepoint_21">
+<u>and decline of the imperial body led to the creation of wider intellectual community occupying a newly envisioned conceptual space. One, that was marked notably by not merely by the impact of western forms but the passage of Knowledge within the global Indo Islamic ecumene itself.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_21" n="21" end="timepoint_22">
+<u>Now, the 3 stories that I am going to tell you is about the families of Indo Persian Mughal physicians on which I did some work earlier. The communities of Men of religion in the 18th century and the world of soldiering which was extremely critical in the 18th century context and via these 3 narratives that now I am going to share with you I will these stories</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_22" n="22" end="timepoint_22">
+<u>or these narratives themselves will reveal that the perceived dwindling of the Mughal court and its aristocratic culture became a trigger for wider social change in the 18th century. Now, let me begin then with the Indo Persian physicians commonly popularly called Hakims in the 18th century. Now, as many of you already know Medical knowledge as an exclusive was an exclusive family preserve</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_22" n="22" end="timepoint_23">
+<u>in Mughal India knowledge was protected families were you know guarded out from medical knowledge. Knowledge was kind of protected in languages which were not easily accessible to most of the people namely Persian and the whole idea was that literary medical literature was really men for bibliophile is they were meant for imperial courts, they were meant for libraries&#8217; they were really not meant for access to ordinary people. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_23" n="23" end="timepoint_24">
+<u>Now the reason of course for all of that was that Medical knowledge and people who practiced medical knowledge were extensions of the court and in a way in Mughal notions of governance body was equivalent to body politics and therefore theories of governance often as any of you would know made analogies to the physical body. The King as a healer was one of the very, </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_24" n="24" end="timepoint_26">
+<u>very popular and common trope in the late 17th century or the 17th century Mughal political culture. Now, but from the early 18th century the shrinkage of Mughal patrimony and the fag end of the imperial innings began to dent this social equilibrium in which urbane literate service gentry families had enjoyed rank and status as mere guardians and producers of this very, </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_26" n="26" end="timepoint_27">
+<u>very carefully guarded medical knowledge. Why because in the 18th century in the Persian language was used by the gentry to guard knowledge&#8217;s of Science, Medicine and wisdom began to be vernacularized. This was a consequence of regional assertion that itself was triggered by local perceptions of decline. Further the freshly introduced lithographic print culture by the European Missionaries in Bengal made access to exclusive texts possible and easy.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_27" n="27" end="timepoint_27">
+<u>This did not bode well again for service gentry families, it threatened to break family monopolies over knowledge. Now, this manifestation of decline and its popular perception triggered the forging of new bonds and connections. Some older families began to lean towards the British and European reference for survival but many turned towards non-European references as well.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_27" n="27" end="timepoint_28">
+<u>Indeed many in-house battle for control power status and profits of trade in this period of decline manifested themselves also as struggles over control of knowledge which is older canonical knowledge with a resort to doctrinal languages, the tapping of the global outreach and the learning that they embodied. Now this was most evident in the way that communities of high learning&#8217;s such as our Hakims [hakim] refashioned themselves. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_28" n="28" end="timepoint_29">
+<u>Their stories in the period of decline revealed that they made use of Arabic the doctrinal language and its canonical literature as the new medium to preserve family knowledge and status as a consequence of all the regional assertions the vernacularization [vernacular], the threat to family monopolies that they were receiving.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_29" n="29" end="timepoint_30">
+<u>And this shift from Persian to Arabic as I will now show had very far reaching implications as far as the global out reach of this late so called declining ad decaying of the Mughal political culture was concerned. Let me just illustrate this with a few texts. Persian medical texts the preserve of the Persian Mughal medical families were unique as I said in underscoring the idea of health as aristocratic virtue as individual well being. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_30" n="30" end="timepoint_31">
+<u>They emphasized the salience of Individual comportment and proper conduct as central to personal well being. The Tib-i Dara Shikohi a very, very famous Mughal Unani [Unani medicine] text written by Nuruddin al-Shirazi a very, very important litterateur from the court of Shah Jahan is one such case and point namely this is a text which is 3000 folio long which by any standards is huge it&#8217;s ornate, </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_31" n="31" end="timepoint_33">
+<u>it&#8217;s illustrative, it&#8217;s in Nastaliq Persian style which means more difficult to read than other styles of Persian and all this is meant, all this means that this is basically a text which barely has 2 or 3 copies and most of those the knowledge and the text is meant for bibiliophiles for court libraries and for the aristocracy.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_33" n="33" end="timepoint_34">
+<u>Now, the tradition and also the whole size the aristocratic audience that the text is pitched to is all kind of tuned to tuned by its author Shirazi [Nuruddin al-Shirazi] to up hold the king&#8217;s authority as manager of the health of the people because it&#8217;s meant for a certain kind of aristocratic audience and for aristocratic consumption for Shirazi [Nuruddin al-Shirazi] health his about well being about aristocratic virtue</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_34" n="34" end="timepoint_35">
+<u>and the ideal State that can be achieved by a select few through proper comportment. The text is exclusive and the conflation of the body with body politic is almost complete as because of its size the language in which it is written, the style, the way it excludes certain people and switched towards a very definite audience. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_35" n="35" end="timepoint_36">
+<u>Now the tradition of writing Shirazi [Nuruddin al-Shirazi] style medical encyclopedias continued in the period of imperial crisis however this period also saw the shift to a new genre of medical literature that signaled the early symptoms of decline. In the early decades of the 18th century the Mughal physician Mohammad Akbar Shah Arzani produced a very modest as compared to the Tib-i Dara Shikohi very modest text of merely 48 folios.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_36" n="36" end="timepoint_38">
+<u>Mizan-i-Tib or scales of medicine now this if you just compare it with the text I described of Shirazi [Nuruddin al-Shirazi] which was written in Shah Jahan&#8217;s period and Mizan-i-Tib which is written in late Aurangzeb&#8217;s period you can see a) the size from 3000 to mere 48 folios but more importantly this was also a text which was written in relatively easy to read Nastaliq style Persian. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_38" n="38" end="timepoint_39">
+<u>Stylistically, and in its size it stands in sharp contrast to the voluminous or the late Persian medical text of the Shirazi [Nuruddin al-Shirazi] kind but the Mizan-i-Tib or the scales of medicine was kind of important and significant also because it moves or it bends more towards providing youthful medical knowledge which you can call wisdom in the 18th century context </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_39" n="39" end="timepoint_40">
+<u>or Science rather than doses of aristocratic virtue as a guarantee of well being which was the case with the earlier text. The Mizan&#8217;s [Mizan-i-Tib] easy to read style and accessibility was triggered by quote unquote decline which meant in this context regional pressures for larger linguistic and cultural space within the Mughal political culture. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_40" n="40" end="timepoint_41">
+<u>With its emphasis of its useful knowledge of Science and theology this text radiates the austerity and wisdom associated with doctrinal languages like Arabic so it was not in Arabic but it was modeled on the style of the Arabic texts which were more into scientist learning rather than aristocratic virtue. The Mizan-i-Tib claims to be a handbook of medicine claims very different claims </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_41" n="41" end="timepoint_42">
+<u>than that being made in Shah Jahan time and for beginners not quite clearly it indicates not a text for Bibliophiles like its pre curser the Tib-i Dara Shikohi but as the text Mizan [Mizan-i-Tib] made family not the knowledge easy to access older families reacted by looking for new encasements for preserve their status. Now because of the imperial crisis because of pressures from the regions when medical texts of the Mizan [Mizan-i-Tib] </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_42" n="42" end="timepoint_43">
+<u>began to be written which could be easily accessible obviously the protectors and the preservers the custodians of the earlier kinds of medical knowledge who were felt very threatened and their responses to this resulted in the use of Arabic as the new language of both sacred and profane knowledge. This was a step ahead of the mere Arabic Scientist turn that the Mizan-i-Tib had taken. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_43" n="43" end="timepoint_44">
+<u>By the end of the 18th century the change was all too evident outside the capital of the post Mughal societies the dignity of Medical science had radically shifted from Persian in which it had rested since the time of the Mughals to Arabic which was projected as the custodian of the Arab Sciences by the late 18th century.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_44" n="44" end="timepoint_45">
+<u>Arab medical literature continued to the Mizan&#8217;s [Mizan-i-Tib] trend of healing via nuggets of medical wisdom science rather than aristocratic virtue. Books in the private library of the 18th century notables and rulers like Tipu Sultan of Mysore or Nawab Shuja-ud-Daulah of Awadh now included not just Persian texts but an equally large number of Arabic literary compendiums </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_45" n="45" end="timepoint_46">
+<u>and commentaries on religion, medicine and science. Aloys Sprenger Assistant to the British resident at Lucknow who prepared one such major catalogue of books in private hands in Awadh vouched for this trend. The Arabic text on medicine for instance the Shar-i-Mujib rather than the Persian medical literature of the earlier century became the most popular text in the schools </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_46" n="46" end="timepoint_47">
+<u>and libraries of 18th century north India. As elite families leaned on Arabic and the knowledge and prestige it embodied the change was easy to discern what was that in the late 18th century one could be a gentleman physician without having read a single Persian text of medicine. You could still qualify as a Hakim which was as I indicated not to be the case in high point of the Mughal period. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_47" n="47" end="timepoint_48">
+<u>In the late Mughal period better known as regional assertion the drift towards the doctrinal language Arabic complicated the narrative of the formation of regional identities in the shadow of what I call an ill empire. But it fitted in with the general orientation of 18th century Indian society towards the new religious learning that was streaming in from Arab lands much more than before. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_48" n="48" end="timepoint_49">
+<u>In the late 18th century the increased pilgrim traffics to Mecca and the improved transport facilities with the Arab world facilitated the entry of the Wahhabi inspired ideas of utilitarian styles, Arabic scriptures and the salient&#8217;s of the prophet into India. This gave religious knowledge a new austere and Arab orientation. Medical knowledge also succumbed to this trend.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_49" n="49" end="timepoint_50">
+<u>In fact it came as a much needed bonus to be leaguered as Indo Persian professionals who looked for new encasements in which to preserve and shield medical knowledge from going public. Medical individual&#8217;s families and their clientele eager to protect family knowledge even if as medical wisdom in new kinds of texts used as Arabic and it&#8217;s esoteric classical stature. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_50" n="50" end="timepoint_51">
+<u>Arabic was the universal language off Science at this point in time in the non-European world thus the shift to Arabic a wider ambit of literal and imaginary connections with the Islamic acumen. At the end of the Mughal innings when regional identities were sharply articulated in local languages it was Muslims of North India to a large extent who established the pan-regional links in Science, </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_51" n="51" end="timepoint_52">
+<u>medicine, astronomy and astrology in Arabic. This went parallel interestingly at this time to the Hindu efforts to consolidate their scientific legacy in Sanskrit and link up with the East and South East Asia on a scale never seen before. The long arms that stretched into the non-European imperials were a byproduct of the circulation of this idea of decline in the early 18th century.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_52" n="52" end="timepoint_53">
+<u>Now, to my 2nd story on Men of Religion now one remarkable manifestation of the myth of decline was the production of a new kind of reformist literature by men of religion attached to the seminaries of Sunni Islam in Delhi and in Lucknow. As legatees of the Mughal empire they met the new challenges posed by the ill Empire and it&#8217;s political successor the English East India Company</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_53" n="53" end="timepoint_54">
+<u>by tapping both the indigenous resources as well as the networks laid out by the new English power. This enable them to gun a support establish contacts beyond the territories still fledging British India. Their efforts were by informed by re interpretation of the Arabic scriptures the Quran and the hadith that had global appeal. They invoked these texts and popularized them using the vernacular Urdu language within India and Arabic outside its confines. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_54" n="54" end="timepoint_55">
+<u> Sorry, I forgot about my slide show, now, just to get back to the first story this is a slide of the Mughal emperor Babur being examined by a hakim and as you can see in this slide that it&#8217;s absolutely you know kind of impossible to figure out who noble is and who a Hakim is and that is what texts like the &#8220;Dara Shikohi&#8221; [Tib-i Dara Shikohi] that I was discussing the 3000 long folio text </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_55" n="55" end="timepoint_56">
+<u>were actually kind of trying to achieve which is they were trying to conflate body and body politics in the ways in which Unani healing [Unani medicine] was to be understood and this text, this slide is again of aristocratic of medicines being prepared in the Mughal kitchen actually and you can see the aristocratic setting of even the preparation of medicines again. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_56" n="56" end="timepoint_57">
+<u>This is the same idea of health being part of aristocratic virtue and now this is the Mizan-i-Tib the 2nd text that I discussed that period where you can see a drastic change from the way in which medicine, healing is going to be depicted this is a distillation of apparatus </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_57" n="57" end="timepoint_58">
+<u>and so the text that you have will actually have images of you know technology that is being used rather than all the frills and fan fare of making medicines or you know curing, healing the Mughal emperor. Ok so I am sorry about this I forgot about those slides but I think that they do very well illustrate the point that I am trying to make.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_58" n="58" end="timepoint_59">
+<u>Now the 2nd Story or the 2nd narrative is about men of religion as I was telling you, as I was referring to and these were as I said people who were now going to, were now threatened by this whole idea of decline and they were responding to this decline and they were leaning on the Arabic scriptures that had global appeal and they were leaning also to this vernacularization [vernacular]</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_59" n="59" end="timepoint_60">
+<u>trend that had already begun in the late Mughal period and were beginning to tap on the potential of using Urdu in order to connect within India and lean on Arabic to connect outside India. Now, many of these men trace their intellectual genealogies to the 18th century Delhi Sufi Shah Waliullah they interpreted his scriptures based eclectic tradition that was leader centric </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_60" n="60" end="timepoint_61">
+<u>and made it more individual centric. The shift to the canon and the individual was a notable consequence of decline. As the Mughal power successor states were popularly perceived as moving into oblivion so did the Indo Persian concept of the royal body and the court society as the embodiment of Knowledge of all kinds. In this period of transition therefore both religious </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_61" n="61" end="timepoint_62">
+<u>and scientific knowledge spilled out of their bodily trappings. There was a greatest stress on the individual and its ability to create a doctrine that ensured universal appeal and promised global connectivity and some of this discussion that in this story links up to Professor Jalal&#8217;s [Ayesha Jalal] very influential work about the individual and the self for a later period.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_62" n="62" end="timepoint_64">
+<u>So in a way this is like a prelude to much of what will happen in the late 19th century. Now this very distinct South Asian strand of Arabicist tradition became the hallmark of the turn of the century Urdu and Arabic literature. The reformist focused on the individual and his agency interpreting scripture. This added flexibility to the prescriptive decorum doled out to at shrines,</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_64" n="64" end="timepoint_65">
+<u>madrasa and religious gatherings by leaders and the high period of the Mughal Empire. Not surprisingly, this Arabisit tradition of return to the scripture and the salience of the individual opened a floodgate of individual energy. South Asian intellectual&#8217;s warrior&#8217;s traders and not just intellectuals but warriors and traders interpreted scriptures in individuated ways as they came to terms with the reality of the British rule.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_65" n="65" end="timepoint_66">
+<u>It became an effective strategy to reap together diverse people by offering them unprecedented agency. This individuation was more than generally viewed as a ere self-purification exercise and I am referring here to the work of Barbara Metcalf of Frances Robinson who just leave it at that. Rather I would argue it was oriented more towards reaching out across the regional divide of India </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_66" n="66" end="timepoint_57">
+<u>and forging connections with the world outside by using the new opportunities available at the turn of century namely the English Company networks to access the trans Asian labor market, print imperial rivalries, trade and the geo politics of the 18th century.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_57" n="57" end="timepoint_57">
+<u>Now let me turn to one popular text written in 1805 which kind of illustrates this trend. The &#8220;Nasihat al-Muminin&#8221; guide or advisory to Muslims was clearly a product of this new turn to individuation that I have been talking about. The &#8220;Nasihat&#8221; [Nasihat al-Muminin] authored by Karim Ali in 1810 exemplified an ordinary individual Karim Ali&#8217;s interpretation of the scriptures. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_57" n="57" end="timepoint_58">
+<u>What emerged was a text that deleted conspicuously the devotional aspects of Sufi leadership that characterized reformist literature of the Indo Persian reformists like Shah Waliullah himself. Instead in the &#8220;Nasihat&#8221; [Nasihat al-Muminin], there was a ban on all forms of devotion and rituals centered around in any one single leader. Tawhid believe in one Allah became the central pillar of this text</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_58" n="58" end="timepoint_58">
+<u>and the break with the Indo Persian reformist trends was you could begin to discern that. The English colonial within commerce gave this presence equation a new spin. It made it politically equitant that the doctrine may be premised on easy accessibility, simplicity, style and a kind of rationality that enabled global connectivity.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_58" n="58" end="timepoint_59">
+<u>The individual with the agency to interpret became the new connector who would enable this global reach. Indeed, the entanglement of men of religion in the post Mughal political and social moment that was characterized by a tough contest over military, trade, and global diplomacy and the competition for the political cultural supremacy between the Arabicist </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_59" n="59" end="timepoint_60">
+<u>and the English quote un quote colonial imperialism gave new meanings and wider circulations to this individuated Arabicist view of the late 18th century. Individuated reformist energy became the propeller to form strategic political alliances and further temporal ambitions. The reformers were ready to be reserved by the best employer for state building </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_60" n="60" end="timepoint_71">
+<u>and the point that I am making is that these were not really intellectuals who were now you know in the business of interpreting text to meet the new circumstances of the late 18th century but it was a more wide spread phenomenon moving beyond mere intellectuals. Within India, the Tonk state relied on the labor completely and on the north western frontier bordering Afghanistan</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_71" n="71" end="timepoint_">
+
+            </u>
+            <u rend="transcript_chunk" start="timepoint_" n="" end="timepoint_72">
+
+            </u>
+            <u rend="transcript_chunk" start="timepoint_72" n="72" end="timepoint_73">
+<u>such men not only exported these Indian brand of Arabic tradition abroad but also cashed on the autonym British rivalries much to their advantage. The new global connections via Muslim men of religion were clearly a spin off the effect of the myth of decline. They steered post Mughal Muslim politics since society in new directions and pushed it&#8217;s frontiers beyond Mughal India </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_73" n="73" end="timepoint_74">
+<u>and more importantly they pushed the idea of the individual interpreting and reacting and responding and conceptualizing the score and the new states around them in his own way they pushed that idea beyond intellectuals to warriors traders just very ordinary people.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_74" n="74" end="timepoint_76">
+<u>Now, the 3rd very important manifestation of the decline and the outward push that it generates can be seen in the realm of Military and this appeared in the form of increasing reliance of provincial Mughal elite on Europeans particularly French and German military entrepreneurs in the 18th century. This was most evident at the end of 18th century when the English East India Company assumed political power in Bengal. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_76" n="76" end="timepoint_76">
+<u>As Mughal provinces in towards regional autonomy they perceived the shift of power from Mughal Delhi to the English companies&#8217; base at Calcutta. This urged them to garner greater resources and expand the military apparatus triggering a kind of military revolution, one which leaned on the earlier Mughal Military tradition but which also reached out more than ever before to the European mercenaries</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_76" n="76" end="timepoint_77">
+<u>and free floaters to combat the English companies Military progress. As the English soldiers particularly the French and the Germans got the spot light they emerged themselves politics and society of the sub continent. They became the conduit for a particular kind of engagement with the European imperia. An engagement that was not framed in the sudden moment of the late 18th century </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_77" n="77" end="timepoint_78">
+<u>European technological revolution as is normally being argued or modernization rather than what reflected the intersection of the evolving South Asian and European political cultures that were driven by what I would argue comparable core societies with a what you can say a Norbert Elias kind of long genealogy. Such long histories of the court</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_78" n="78" end="timepoint_79">
+<u>and State indicate that such institutions were not impervious to the individual conceptualization of their worth and role in society. In other words the individual himself was playing an active role in a way in which he was conceptualizing change and the changing courts and the changing societies in the 18th century </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_79" n="79" end="timepoint_79">
+<u>and this was happening in a kind of comparative which is comparable to what was happening in the 18th century in Europe. The individual driven political evolution connected 18th century Europe in India in interesting ways. It meant that individuals could cross cultures and relocate with ease as the court ruled State was welcoming in self driven initiatives that suited interests.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_79" n="79" end="timepoint_79">
+<u>Thus for instance this circulation of the myth of decline in late Mughal India benefitted the European particularly French Protestant Jobber commanders immensely. The European Jobber commanders mainly protestant looked for new areas of operations outside Europe as the going got tough for them in the 18th century namely in 18th century catholic France for instance.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_79" n="79" end="timepoint_80">
+<u>At the same time Indian regional politics eager to re culture Military to combat the political aspirations of the English company offered a readymade recruitment centre to them. According to an English Military officer Colonel Galis there existed around 200 Europeans in the Mughal province of Awadh alone in the year 1772.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_80" n="80" end="timepoint_81">
+<u>These included a large number of important French men like Jonty Medech and of course one of my most favorite Henry Polier [Antoine-Louis Henri de Polier]. Needless to add the French and the French men political culture of regional kingdom was a source of immense concern for British residents and you could imagine that because they obviously viewed that as some kind of a threat </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_81" n="81" end="timepoint_82">
+<u>to their rule and the British India Company [East India Company] was continuously protesting against regional powers including employing French men but despite their protest the recruitment of the French men continued in the armies of the Persian regional satrap in India Najaf Khan rulers of the kingdom of Awadh, Punjab and the Benares Raj [Kingdom of Kashi] all of whom entertained </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_82" n="82" end="timepoint_83">
+<u>to their rule and the British India Company [East India Company] was continuously protesting against regional powers including employing French men but despite their protest the recruitment of the French men continued in the armies of the Persian regional satrap in India Najaf Khan rulers of the kingdom of Awadh, Punjab and the Benares Raj [Kingdom of Kashi] all of whom entertained </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_83" n="83" end="timepoint_84">
+<u>The literature in Persian produced by one Franco Swiss officer who I mentioned before A.H. Polier [Antoine-Louis Henri de Polier] who you can see on the slide who served several masters the Mughal emperor Shah Alam [Shah Alam II] the ruling house of erstwhile Mughal province of Awadh the Persian free booter in India Najaf Khan as well as the English East India Company reveals how such individuals bridge heads worked. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_84" n="84" end="timepoint_86">
+<u>Military, Engineers, commanders, surveyor, architect, and collector of oriental manuscripts, the man you can see there: Polier [Antoine-Louis Henri de Polier] was born of Protestant French parents and baptized in Lausanne, Switzerland. His family migrated there following the religious wars in France that saw huge protestant migrant Protestants to neighboring parts of Europe.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_86" n="86" end="timepoint_87">
+<u>Here in India, in 1757 to join his uncle who was employed with the English east India Company and his career beautifully illustrates how individuals became conduits between India and Europe much complicating the story of British rule in India. Polier [Antoine-Louis Henri de Polier] became a cadet and joined active service against the French under Lord Clive [Robert Clive], </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_87" n="87" end="timepoint_88">
+<u>transferred to Bengal in 1761 he struck a long lasting friendship with British Governor General Warren Hastings and on a posting to Awadh he developed good relations with the local ruler of Awadh Nawab Shuja-ud-Daulah. He served himself in Military and involved himself in private trade and mastered fortune and considerable cloud. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_88" n="88" end="timepoint_89">
+<u>On account of his French intelligence and his friendship with Indian rulers his relationship as you can imagine with the English company remained tumultuous. However Warren Hastings realizing his worth he remained his arch supporter and indeed Hastings dependence on this multi faceted French man also figured in the charge sheet that became public during his infamous impeachment proceedings. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_89" n="89" end="timepoint_90">
+<u>So this is the kind of career one is talking about. Polier&#8217;s [Antoine-Louis Henri de Polier] literary compendium the &#8220;Ijaz-e-Arsalani&#8221; the wonder of Arsalaan is a compilation of letters that he wrote in the 1770&#8217;s and 1780&#8217;s to a range of people. Raja&#8217;s, Warren Hastings himself, British officers, residents, traders and all his kind of multifaceted roles in India and all the people involved in these roles. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_90" n="90" end="timepoint_91">
+<u>So this is the kind of career one is talking about. Polier&#8217;s [Antoine-Louis Henri de Polier] literary compendium the &#8220;Ijaz-e-Arsalani&#8221; the wonder of Arsalaan is a compilation of letters that he wrote in the 1770&#8217;s and 1780&#8217;s to a range of people. Raja&#8217;s, Warren Hastings himself, British officers, residents, traders and all his kind of multifaceted roles in India and all the people involved in these roles. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_91" n="91" end="timepoint_92">
+<u>and how their take was despite being very different from that of the English East India Company was somehow being uneasily accommodated within the evolving early colonial culture. So for instance Polier&#8217;s [Antoine-Louis Henri de Polier] categorization and perceptions of Indian society stand in sharp contrast with the religion and caste based typologies of his very close British friends, </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_92" n="92" end="timepoint_93">
+<u>Acculturated in the courtly culture of pre revolutionary France and the rift of the political compulsions that framed the company English company officials. Polier [Antoine-Louis Henri de Polier] was comfortable with the Mughal way of engaging with society and thus in continuance of the Mughal trend to identify people in terms of their relationship to courtly society his notions of people</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_93" n="93" end="timepoint_94">
+<u>and politics is more based on professional rather than religious signifiers. His appreciations as well as repremazed to people are also couched in the very elitist vain but caste and community neutral vocabulary that had gained currency under the Mughals. His agents are also a nice mix of eclectic mix of people all kind of referred affectionately by the various roles that they are performing,</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_94" n="94" end="timepoint_95">
+<u>their efficiency never by their religious or by their primordial or by their caste or other kinds of identifications which was increasingly becoming the norm under the English company rule in the same period and yet despite this divergence of ideological and cultural take on people and politics the dependence of the company on somebody like him was complete </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_95" n="95" end="timepoint_96">
+<u>and Polier [Antoine-Louis Henri de Polier] retained his rank of Major in the company army and Hastings continued to support him. Indeed he remained the conduit between the Indo Persian-ate world in the 18th century and the British and European imperiums that ruled large at its horizon. Straddling the local and the western he developed an ambivalent relationship with both. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_96" n="96" end="timepoint_87">
+<u>This contributed to the production of hierarchy of knowledge about India in which the European understanding as revealed in his writings contested with English orientalist underpinnings of colonial rule and both came to be irritably entangled in the indo Persian-ate world that was only enriched via this encounter. If Polier&#8217;s [Antoine-Louis Henri de Polier] intellectual </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_87" n="87" end="timepoint_98">
+<u>and political inputs to into company administration fractured the myth of the reified homogenous colonial power, it also reflected in no small measure role that the myth of decline or the myth of the Mughal decline played in opening new and wider intellectual spaces in the18th century via indigenous initiatives to reach out to European job commanders like him and this was a way this reaching out was as I have indicated a way to meet the auto respond to the threat of imperial decline the news or the kind of myth of decline.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_98" n="98" end="timepoint_99">
+<u>So, to conclude through this talk or through this paper I would like to contend that the role of ideas including that of decline itself must be brought back into the picture but brought back as an active agent in historical change. Secondly, the paper draws attention to the fact that the social and the economic fragmentation of imperial politics in the 18th century period of decline </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_99" n="99" end="timepoint_100">
+<u>was accompanied by the emergence of new conceptual communities which occupied the space of former empires or expanded far beyond them. Capitalizing on the air bent time of imperial legitimacy thereby I would argue that new Empires of the mind came to populate the territory of Empires of the sword. How does the decline help us to understand the larger movement in South Asian history</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_100" n="100" end="timepoint_101">
+<u>in the centuries that followed as somebody who spent a lot of time working on the 18th century this obviously is the critical question why study the 18th century. First I feel it gives the binaries of the colonized essential zed rift and the social categories while South Asian scholarship has a effectively complicated the concept of the colonized other than the colonial self especially</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_101" n="101" end="timepoint_102">
+<u>in the early periods still stands as a homogenous entity thanks to the post modern scholarship with its euro centric ways. In contrast this kind of study of the 18th century that I just shared with you draws our attention to other global imperiums alongside the British colonial one that were shaping and being shaped as people worked their way through the myth of decline. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_102" n="102" end="timepoint_103">
+<u>So it&#8217;s basically looking at decline through individuals. The Islamic acumen and its Arabist strand as well as the European and in this case French strand were two such cases in point. Finally, the trope of decline and its critical role in bringing change brings to light the big challenge for South Asian scholarship to break out of the colonial frame and study Indian history at the intersection of global imperiums.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_103" n="103" end="timepoint_104">
+<u>This longer history of modern political cultures as conceptualized by the individuals invests later discussions on the colonial State with the Norbert Elias kind of genealogy which de centers the euro centric frame and or you can say which de centers the euro centric Foucaultian coupling of imperial knowledge and State power as the primary agents of change in the 19th century. Thank you so much.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_104" n="104" end="timepoint_105">
+<u>Ayesha Jalal:	 Thank you Seema [Seema Alavi] for conducting this lecture and making us think very hard about this transitional century but I have a question, comment and a question. My question relates to your very important valid argument about the very important of the global which we need to inject as we talk about a regionalized decentralized India that there is a global </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_105" n="105" end="timepoint_106">
+<u>but one needs to know a little bit about the global connection prior to that I mean you are not surely arguing that was a global centric vision. I mean I can understand from a status conception of the Mughal State and the regional success States that emerging but in the sense that there was always a global connection that existed but my question relates to your very interesting argument</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_106" n="106" end="timepoint_106">
+<u>about the Arabist turn I want to understand the scale of this turn I want to understand to what extent this is more of a kind of a guild kind of mentality that is protecting knowledge and turning both global and in terms of Arabic because if you look at the broader trends as I have understood I mean Persian never gets snuffed out. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_106" n="106" end="timepoint_107">
+<u>Poetry is getting constructed in Persian there&#8217;s of course the vernacularistaion [vernacular] in indigenous languages and the &#8220;Rekhta&#8221; and others are coming along so I was wondering about the scale of production Is it really specific knowledge that is being used, whether there is strategist knowledge or medical knowledge that&#8217;s being written up in Arabic sort of Persian or would you say that the trend is more popular, wide I am just really trying to understand that the scale.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_107" n="107" end="timepoint_108">
+<u>Seema Alavi: Thank you so much this is a very important point and it gives me an opportunity to elaborate, the first thing is you are very right that there were earlier connections as well and 18th century in that sense is not you know is not novel in opening up these connections, but what is novel about the 18th century global connections is that is the fact because the connections are being forged</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_108" n="108" end="timepoint_109">
+<u>under the threat of decline or under the popular vision of decline, the proper idea of decline therefore these connections are kind of mediated by individuals but individuals who are trying to respond to a particular moment of particular political moment so in the sense they would be different from say the kind of forays which intellectuals were making in the high period of the Mughal Empire </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_109" n="109" end="timepoint_110">
+<u>on their own coalition and they would therefore the connectivity therefore gets kind of entangled in the ways it is I kind of one can say it is more pervasive in the sense that it gets entangled to the whole idea of a body politic and a political culture fragmenting and you know decaying and breaking down and therefore the connections that you are forging are of course individuated</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_110" n="110" end="timepoint_111">
+<u>and individuals but they have a political reference point which is not really the case if that connectivity is being made in a non crisis period. That political referencing or referent is always there and therefore it seems to me that the whole 18th century notion of the individual and individuation that emerges it is actually emerging you can say from almost the womb of the Indo Persianate body</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_111" n="111" end="timepoint_112">
+<u>politic and body conflation kind of idea it is kind of emerging from that and because it is emerging from that it never really disconnects from the political referencing and its forays also therefore remain tied to the earlier kind of notions of preserving rank, status but in new kinds of ways and so you are looking at new connections to maintain what you have lost or to retrieve what you have lost, </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_112" n="112" end="timepoint_113">
+<u>yes the scale of that, yes that&#8217;s very important. You are very right of course Persian never dies and it remains you know poetry and literature and all continues to be written in Persian but in terms of scientific knowledge and religious knowledge definitely the transition is almost complete but more importantly I think in terms of not literary not just texts</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_113" n="113" end="timepoint_114">
+<u>but in terms of thinking like the Mizan-i-Tib for example instance a text which I can say stylistically that you may be writing Persian but you are drawing your stylistic kind of inspirations from something else that is kind of you can see a impact of that in most Persian stuff also in the non scientific Persian material as well, </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_114" n="114" end="timepoint_115">
+<u>so for instance the hyperbolic style or the early Persian begins to vain through the 18th and then into the 19th century. I mean so then so like for instance the letters of Polier [Antoine-Louis Henri de Polier] which are written I am not talking about poetry I am talking about correspondence and letters of that kind you can see the kind of impact or precision of rationality of trying to be in point, </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_115" n="115" end="timepoint_116">
+<u>of utilitarian no that kind of thins and getting rid of unnecessary salutations and hyperbolic frills and those kinds of things but also I don&#8217;t know I have no answer to that the question is also always on my mind that at the end  of the day if you look at South Asia today and particularly these areas which I have been talking about you find more people with Arabic knowledge</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_116" n="116" end="timepoint_117">
+<u>and learning than Persian knowledge and learning and Arabic seems to be you know the kind of connector to disparate Muslim societies all over India whether they be in Kerala or whether they be in Awadh rather than being Persian. I am not talking about so I mean that&#8217;s why I think the religious and the scientific learning begins to prevail as British colonial rule I think when it takes over, poetry does not get written thank God for that.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_117" n="117" end="timepoint_119">
+<u who="Amina">Hi, my name is Amla and I am a graduate student at Tufts, during the earlier part of the Mughal empire we see an active interchange of cultural, diplomatic and trade ties between Uzbek Central Asia and Mughal India given that the Mughals were Turko-Mongol dynasty who had their allies from Central Asia I was wondering if you could comment on how this decentralization in this 18th century affected existing ties between Khanate of central Asia and Mughal India.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_119" n="119" end="timepoint_120">
+<u>Seema Alavi: Yes, I am not really an expert of Central Asia but still as far s my understanding goes the ties remained but the connectors of those ties changed. And so for instance the Khanates became very important in the 18th century but because Mughal were going there as in the earlier case but because a lot of warriors traders you know now how were given a license to interpret their lives </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_120" n="120" end="timepoint_121">
+<u>and their traditions in their own way and you know chart out there own kind of destinies as it were working, taking stick of the post Mughal chaos that was going on they were reaching into the Khanates so for instance the early kind of Urdu reformists who I talked about the &#8216;Nasihat&#8221; [Nasihat al-Muminin] Karim Ali kind of level of authors his texts for instance were carried to the Khanates [khanate] </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_121" n="121" end="timepoint_122">
+<u>not by ulema or reformers or intellectuals but by traders and warriors of the 18th century who were now you know kind of moving into the so called fringe in the areas of the erstwhile not erstwhile but of the Mughal Empire and being probably you know a kind of guided or led by people like Karim Ali so the connections remained but the connectors changed. People who were connecting the Khanates began to change dramatically.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_122" n="122" end="timepoint_123">
+<u who="Audience">Could you talk a bit more about the issue of corruption, how do you submit these rational mediators that the real estate trading talk about corruption during this period I felt this is something that you talked about earlier talk and then suddenly didn&#8217;t explore to a huge extent.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_123" n="123" end="timepoint_124">
+<u>Seema Alavi: Yeah the corruption, the whole idea is that decline is because of corruption in the nobility and that&#8217;s the kind of focus and the corruption is not really in term of so much in terms of the so called as we understand today in terms of money, finances and all of that but corruption is in terms of loss of etiquette and loss of the code of conduct somewhere that has kind of broken </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_124" n="124" end="timepoint_126">
+<u>and that&#8217;s why the earlier verses that I read there was more money than where they were but the lament is that this is why the decline has happened because people are losing their you know the Mughal code of conduct and the etiquette and the social moorings are weakening </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_126" n="126" end="timepoint_127">
+<u>which of course is because whole new way of relationship between individual and societies is emerging in a more atomized way</u>
+<u>is emerging and therefore the flag bearer&#8217;s of the earlier system are talking about that change or that shift as a kind of corruption so that&#8217;s the whole notion.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_127" n="127" end="timepoint_128">
+<u who="Audience">Would this be a more conservative mentality? The people who are adapting to the newer system today use the language of corruption in a different way</u>
+<u>Seema Alavi: They don&#8217;t they think in fact for them it is a kind of opening up of new opportunity, these are new spaces it is the old order that is talking about this transition as corruption not the new communities that are coming up and occupying the spaces occupied by these earlier people.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_128" n="128" end="timepoint_129">
+<u>Sugata Bose: For the record, Sugata Bose you know this is been a wonderful paper which brings together so many dimensions of your work on Islam and healing on soldiering on religious discourse and so on, and I am specially persuaded by your argument that we need to look at this period of transition in the late 18th and early 19th century not in the context of Europe</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_129" n="129" end="timepoint_130">
+<u>and India but in the context of the intersections between rivaling imperiums Turkish, Arab, Persian, Indian along with of course the British and the French and so on. My question and comment you know would have some resonances with what Ayesha has already asked and commented upon, you know as I was hearing your 3 narratives it seemed to me that the 3rd narrative</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_130" n="130" end="timepoint_132">
+<u>was somewhat discordant with the first 2 and it was very clear there&#8217;s a shift from the aristocratic to the scientistic when you look at the discourse on medicine it was also quite clear that while you on Waliullah&#8217;s [Shah Waliullah] successors in terms of their religious discourse was moving towards new kinds of individuation and expressing their ideas through the Arabic language </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_132" n="132" end="timepoint_133">
+<u>but as soon as you got to Polier [Antoine-Louis Henri de Polier] you know he was actually fairly grounded in the Indo Persian political analysis literary tradition. Now, you have of course pointed out that he was drooping some of the frills of the ornate Persian in his correspondence but you started your talk with Mir Taqi Mir and so on they are very much that part of Persian Urdu tradition</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_133" n="133" end="timepoint_134">
+<u>and then of course Ghalib [Mirza Ghalib] continues to write in the Urdu and the Persian century but beyond that simply the question of you know ok Persian survives in poetry and literature though not in the scientistic and religious discourse but I was wondering about some of the older work on you know inter regional connections such as Juan Cole writing about the routes of Shiism [Shia]</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_134" n="134" end="timepoint_134">
+<u>and the connections between Lucknow and Awadh more generally which the theological seminaries in what is today  Iran, Iraq and even in that &#8220;Shia&#8221; tradition I mean there are certain rationalistic elements of Usuli jurisprudence so on so how would you things of connections you brought out some new global connections being made with the Arab imperium through the Arabic language</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_134" n="134" end="timepoint_136">
+<u>and you describe it as an doctrinaire sort of language but would it be fair to say that there are also some new global connections that are been forged through Persian and I take what you are saying about if you look at the sub continent today where we are in India, Pakistan, Bangladesh where the Arabic influence seems to be so much stronger</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_136" n="136" end="timepoint_138">
+<u>but even in the contemporary moment you know say when a Rafsanjani comes to visit India he would go to Lucknow and there is a certain kind of Persian, sort of &#8216;Shia&#8217; connection that seems to survive and may well have originated in a new form in precisely the period that you were discussing so I was just wondering whether you would&#8230; comment on that</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_138" n="138" end="timepoint_139">
+<u>Seema Alavi: Yeah right, you are absolutely right and I mean by no means anyone can argue that Persian died out completely but what is happening is that Awadh is quite a special and an exceptional case but even in Awadh you know if we talk about Awadh what is happening is that the opening up of Arabic knowledge probably Arab lands from the 18th century begins to shape things in ways </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_139" n="139" end="timepoint_140">
+<u>and create a kind of you know re orientation in ways which you hadn&#8217;t seen before and in Awadh of course because of the &#8220;Shiite&#8217; [Shia] ruling house and because of the various religious and literary people who are actually under their patronage the conduit with Persia remains quite exceptional in terms of philanthropy, charity and so on and so forth </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_140" n="140" end="timepoint_141">
+<u>and all of which is also quite interestingly is happening but it&#8217;s not in the Indo Persian-ate way that there is a kind of distinction where the Awadh nawabs [Kingdom of Awadh] when they open up conduits to Persia as Cole also argues it is in a way it is a kind of response to a decaying, falling, crumbling Indo Persian-ate tradition with which from what they want to now you know make a</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_141" n="141" end="timepoint_142">
+<u>distinction about themselves and I mean all and the entire the emergence of the Awadh Nawabi [Kingdom of Awadh] itself from the beginning was a way this Persian connection right from the early 18th century when the Awadh Nawabi [Kingdom of Awadh] came about was in a way to make a distinction with the</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_142" n="142" end="timepoint_143">
+<u>Indo Persianate world you know so obviously you were very right that the Persian connection remained. No where it dies out but I would argue that in the case of Awadh also that Persian connection is also something new about the 18th century and a marker of distinction rather than an continuation of earlier Persianate form.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_143" n="143" end="timepoint_144">
+<u>Sugata Bose: I was just wondering may not be that much of an exception but one thinks about other provinces of the Mughal empire which have asserted independence whether it&#8217;s Bengal or Kashmir you know Persian perhaps in a reformulated way continues to have some resonance not just in the domain of literature and poetry it would seem after all it remains the language of government</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_144" n="144" end="timepoint_146">
+<u>and the language of the higher courts within the regional states but also for a good while into the period of the rule of the East India company right but</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_146" n="146" end="timepoint_147">
+<u>Ayesha Jalal: I just wonder when you look back on the 18th century I mean when what was lost in transition I think what keeps in transition what strikes me in what you are saying is I mean I take your point on the turn to individual even though that&#8217;s one would want to ask further questions but it&#8217;s the spark that this individual can write a text on medicine in Arabic can write poetry in Persian</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_147" n="147" end="timepoint_148">
+<u>and can write letter to his family in Urdu so I mean isn&#8217;t that what I think I mean when people moan on what was lost it&#8217;s this multi lingual education tradition so I wonder whether you could tell us something more about that I mean it&#8217;s also a question of what people are learning in Madrasa and you know and it is actually all 3 lines I mean 2 languages</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_148" n="148" end="timepoint_149">
+<u>and Persian which continues to be taught I mean well into the 20th century when you have the likes of Faiz [Faiz Ahmad Faiz] and I mean Mohammad Iqbal when they are being trained in Persian and Arabic so there is a sense of loss and bemoaning in what was lost as a result in colonialism is precisely the classic language so I just wonder whether you could comment upon that.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_149" n="149" end="timepoint_150">
+<u>Seema Alavi: Well what is quite revealing in the sources is that the addition of the expansion of Arabic books is what is commented upon noted because that is new that they are not used to reading of so much Arabic texts so for instance the &#8216;Shar-i-Mujib&#8221; that I mentioned each time it is mentioned as a part of a curriculum in any Madrasa is a little paragraph on the novelty of this whole idea.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_150" n="150" end="timepoint_159">
+<u>Now in terms of recruiting teachers to teach these languages it&#8217;s quite interesting that because of this transition and even this kind of bilingual this change in the bilingual tone as it were it is more difficult obviously to find teachers to teach in Arabic than to teach Persian. Yet the ways in which the syllabi and curriculums have expanded and changed in the 18th century</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_159" n="159" end="timepoint_150">
+<u>you will even now do need more teachers to teach Arabic and there is this always hunt for teachers of people who know Arabic and that&#8217;s where you know there is this kind of desire or there is this kind of race to learn the Arabic language much more than was the case in the 17th century. Now, therefore what I think is the lament of having the loss of classical languages is more of a lament </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_150" n="150" end="timepoint_151">
+<u>of losing control rather than the languages per se you know it seems to me that at least Arabic because later the English companies also interested in it for their own agendas for its own interests, this little switch or trend or transition that has taken place in post Mughal society towards Arabic gets a fair with their English East India Company&#8217;s interest in that language</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_151" n="151" end="timepoint_152">
+<u>and to some extent it seems to me also that is the reason for the longevity of the Arabic in you know and that it&#8217;s not an Interlude with just happens and then dies. It is something which kind of you know continues and doesn&#8217;t die because the English East India Company does not let it die whereas Persian the longevity of Persian is on its own steam</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_152" n="152" end="timepoint_153">
+<u>and its own violation as it were of an earlier momentum you know that is still is going on and so of course from the 1840&#8217;s, 1830&#8217;s onwards its lament kind of increases but interestingly it is actually also from the 1830&#8217;s and from the 1840&#8217;s that Arabic teachers and Arabic texts and Arabic schools proliferate you know so it&#8217;s an interesting kind of you know the impressions</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_153" n="153" end="timepoint_154">
+<u>that one has that I had at least about the 1830&#8217;s marking you know this kind of lament of the kind of the vanishing kind of the classical languages and all of that, that lament has kind of to be explained I think in more complex and different ways whether this is the lament of a Persianate knowing  gentry and you know the only or whether it is you know the emergence of new communities </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_154" n="154" end="timepoint_156">
+<u>of learning   who are bilingual but not really honed in the Persian-ate tradition whose for instance to put it crudely like that first generation is honed in Arabic rather than Persian by the late 18th century so that when you send your child to school you learn Arabic there because there are more Arabic schools you know proliferating or you know you would learn more Arabic </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_156" n="156" end="timepoint_157">
+<u>than your father knew in the 17th century you know Madrasas [madrasa] and all that that you were to. So I think the lament it seems to me that the lament for the collapse of the language is more certain Persianate gentry, class which is not too happy with this tilt and this shift that is taking place and I mean for instance this late I mean as the centuries pass as you get down the line </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_157" n="157" end="timepoint_158">
+<u>as it were you know Azad etc are kind of they write more in Arabic and they are more efficient in that than Persian I mean he has more things written in Arabic than in Persian and I mean by no means this is to suggest that Persian is going and dying but I still feel that something new has been introduced </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_158" n="158" end="timepoint_160">
+<u>in this period of transition and this lament on the loss of the classical languages has also kind of to be understood in a more nuance kind of way in terms of older communities of learning and newer new communities of learning post 18th century and the education institutions.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_160" n="160" end="timepoint_161">
+<u>Thank you: Really, thank you for the compelling portrait of the intellectual world of the 18th century, I have sort of 2 specific questions that I think come from a little bit of respective intellectual history. The first is about what sort of sources of Arabic literature you see written in Indian texts is the balance more towards the classical texts or toured sort of literature in Arabic</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_161" n="161" end="timepoint_">
+<u>or other languages that&#8217;s kind of being produced contemporaneously in the Islamic world and the 2nd question is about to what extent is this idea of decline filters into languages, literature being produced like Sanskrit like to what extent is this really dominated by literature that is kind of centered in Indo Islamic tradition.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_" n="" end="timepoint_164">
+
+            </u>
+            <u rend="transcript_chunk" start="timepoint_164" n="164" end="timepoint_166">
+<u>the kind of expression of decline varies from archives to archives as it were and the of course the Indo Persian-ate kind of archives there is a kind of lament continues with which I started this talk but of course as you go into the regional archives there is of course the background of this ill empire in mind but the shrillness of that lament obviously you know is much less. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_166" n="166" end="timepoint_167">
+<u>As far as your 2nd question is concerned it&#8217;s really interesting that very rarely classical Arabic texts are cited or you know mentioned and most of the Arabic literature which is actually circulating and which is in the curriculum which is being taught and because to teach which teachers are being found is either locally produced or copies from the contemporary literature </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_167" n="167" end="timepoint_">
+<u>from the Islamic world which is coming in with pilgrims and the whole lot of people so for instance even the &#8220;Shar-i-Mujib&#8221; the medical text which becomes which is almost begins to replace a lot of the Persian medical compendiums of these 17th  century is something which is produced locally in India and which rarely has any reference to the larger world outside.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_" n="" end="timepoint_end">
+
+            </u>
+         </div1>
+      </body>
+   </text>
+</TEI.2>

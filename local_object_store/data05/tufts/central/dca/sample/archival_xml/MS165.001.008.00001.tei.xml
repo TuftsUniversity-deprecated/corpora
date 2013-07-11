@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TEI.2>
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Kamal Datta interview</title>
+            <author>Kris K. Manjapra</author>
+         </titleStmt>
+         <extent>86598 bytes</extent>
+         <publicationStmt>
+            <distributor>Tufts University Digital Collections and Archives</distributor>
+            <address>
+               <addrLine>Tufts University</addrLine>
+               <addrLine>35 Professors Row</addrLine>
+               <addrLine>Tisch Library Medford, MA 01255</addrLine>
+            </address>
+            <idno>MS165.001.008.00001</idno>
+            <availability status="free">
+               <p>This publication is freely available for scholarly or educational use.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <recordingStmt>
+               <recording type="audio" dur="5869975ms">
+                  <date>2009-08-20</date>
+                  <equipment>
+                     <p>Marantz 660 recorder with lapel microphone</p>
+                  </equipment>
+                  <respStmt>
+                     <resp>interview conducted by:</resp>
+                     <name>Kris K. Manjapra</name>
+                  </respStmt>
+               </recording>
+            </recordingStmt>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <stdVals>
+               <p>Standard date values are given in ISO form: yyyy-mm-dd.</p>
+            </stdVals>
+         </editorialDecl>
+         <classDecl>
+            <taxonomy id="LCSH">
+               <bibl>
+                  <title>Library of Congress Subject Headings</title>
+               </bibl>
+            </taxonomy>
+            <taxonomy id="LC">
+               <bibl>
+                  <title>Library of Congress</title>
+               </bibl>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <creation>
+            <date>2009-08-12</date>
+         </creation>
+         <langUsage>
+            <language id="EN" usage="100">English.</language>
+         </langUsage>
+         <particDesc>
+            <person id="KD" role="interviewee" sex="m"><p>Kamal Datta</p></person>
+            <person id="KM" role="interviewer" sex="m"><p>Kris K. Manjapra</p></person>
+         </particDesc>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline id="transcript_timeline" unit="millisecond" origin="timepoint_begin">
+            <when id="timepoint_begin" absolute="beginning of recording"/>
+            <when id="timepoint_Bubble 1" since="timepoint_begin" interval="0"/>
+            <when id="timepoint_Bubble 2" since="timepoint_begin" interval="77700"/>
+            <when id="timepoint_Bubble 3" since="timepoint_begin" interval="192800"/>
+            <when id="timepoint_Bubble 4" since="timepoint_begin" interval="274100"/>
+            <when id="timepoint_Bubble 5" since="timepoint_begin" interval="334100"/>
+            <when id="timepoint_Bubble 6" since="timepoint_begin" interval="402800"/>
+            <when id="timepoint_Bubble 7" since="timepoint_begin" interval="468500"/>
+            <when id="timepoint_Bubble 8" since="timepoint_begin" interval="530200"/>
+            <when id="timepoint_Bubble 9" since="timepoint_begin" interval="613500"/>
+            <when id="timepoint_Bubble 10" since="timepoint_begin" interval="684700"/>
+            <when id="timepoint_Bubble 11" since="timepoint_begin" interval="790700"/>
+            <when id="timepoint_Bubble 12" since="timepoint_begin" interval="860500"/>
+            <when id="timepoint_Bubble 13" since="timepoint_begin" interval="960300"/>
+            <when id="timepoint_Bubble 14" since="timepoint_begin" interval="1014800"/>
+            <when id="timepoint_Bubble 15" since="timepoint_begin" interval="1106600"/>
+            <when id="timepoint_Bubble 16" since="timepoint_begin" interval="1197300"/>
+            <when id="timepoint_Bubble 17" since="timepoint_begin" interval="1293200"/>
+            <when id="timepoint_Bubble 18" since="timepoint_begin" interval="1355100"/>
+            <when id="timepoint_Bubble 19" since="timepoint_begin" interval="1434300"/>
+            <when id="timepoint_Bubble 20" since="timepoint_begin" interval="1493800"/>
+            <when id="timepoint_Bubble 21" since="timepoint_begin" interval="1551500"/>
+            <when id="timepoint_Bubble 22" since="timepoint_begin" interval="1594600"/>
+            <when id="timepoint_Bubble 23" since="timepoint_begin" interval="1636200"/>
+            <when id="timepoint_Bubble 24" since="timepoint_begin" interval="1730600"/>
+            <when id="timepoint_Bubble 25" since="timepoint_begin" interval="1774000"/>
+            <when id="timepoint_Bubble 26" since="timepoint_begin" interval="1876500"/>
+            <when id="timepoint_Bubble 27" since="timepoint_begin" interval="1963400"/>
+            <when id="timepoint_Bubble 28" since="timepoint_begin" interval="2027800"/>
+            <when id="timepoint_Bubble 29" since="timepoint_begin" interval="2074400"/>
+            <when id="timepoint_Bubble 30" since="timepoint_begin" interval="2168000"/>
+            <when id="timepoint_Bubble 31" since="timepoint_begin" interval="2207400"/>
+            <when id="timepoint_Bubble 32" since="timepoint_begin" interval="2259800"/>
+            <when id="timepoint_Bubble 33" since="timepoint_begin" interval="2319200"/>
+            <when id="timepoint_Bubble 34" since="timepoint_begin" interval="2386100"/>
+            <when id="timepoint_Bubble 35" since="timepoint_begin" interval="2449400"/>
+            <when id="timepoint_Bubble 36" since="timepoint_begin" interval="2531900"/>
+            <when id="timepoint_Bubble 37" since="timepoint_begin" interval="2596200"/>
+            <when id="timepoint_Bubble 38" since="timepoint_begin" interval="2668200"/>
+            <when id="timepoint_Bubble 39" since="timepoint_begin" interval="2739600"/>
+            <when id="timepoint_Bubble 40" since="timepoint_begin" interval="2806100"/>
+            <when id="timepoint_Bubble 41" since="timepoint_begin" interval="2861100"/>
+            <when id="timepoint_Bubble 42" since="timepoint_begin" interval="2930300"/>
+            <when id="timepoint_Bubble 43" since="timepoint_begin" interval="2989600"/>
+            <when id="timepoint_Bubble 44" since="timepoint_begin" interval="3076299"/>
+            <when id="timepoint_Bubble 45" since="timepoint_begin" interval="3152000"/>
+            <when id="timepoint_Bubble 46" since="timepoint_begin" interval="3231500"/>
+            <when id="timepoint_Bubble 47" since="timepoint_begin" interval="3323700"/>
+            <when id="timepoint_Bubble 48" since="timepoint_begin" interval="3414200"/>
+            <when id="timepoint_Bubble 49" since="timepoint_begin" interval="3489200"/>
+            <when id="timepoint_Bubble 50" since="timepoint_begin" interval="3539500"/>
+            <when id="timepoint_Bubble 51" since="timepoint_begin" interval="3590800"/>
+            <when id="timepoint_Bubble 52" since="timepoint_begin" interval="3633400"/>
+            <when id="timepoint_Bubble 53" since="timepoint_begin" interval="3687600"/>
+            <when id="timepoint_Bubble 54" since="timepoint_begin" interval="3774000"/>
+            <when id="timepoint_Bubble 55" since="timepoint_begin" interval="3854200"/>
+            <when id="timepoint_Bubble 56" since="timepoint_begin" interval="3960100"/>
+            <when id="timepoint_Bubble 57" since="timepoint_begin" interval="3999400"/>
+            <when id="timepoint_Bubble 58" since="timepoint_begin" interval="4099700"/>
+            <when id="timepoint_Bubble 59" since="timepoint_begin" interval="4172800"/>
+            <when id="timepoint_Bubble 60" since="timepoint_begin" interval="4234000"/>
+            <when id="timepoint_Bubble 61" since="timepoint_begin" interval="4289900"/>
+            <when id="timepoint_Bubble 62" since="timepoint_begin" interval="4318100"/>
+            <when id="timepoint_Bubble 63" since="timepoint_begin" interval="4385100"/>
+            <when id="timepoint_Bubble 64" since="timepoint_begin" interval="4438100"/>
+            <when id="timepoint_Bubble 65" since="timepoint_begin" interval="4490100"/>
+            <when id="timepoint_Bubble 66" since="timepoint_begin" interval="4556100"/>
+            <when id="timepoint_Bubble 67" since="timepoint_begin" interval="4632100"/>
+            <when id="timepoint_Bubble 68" since="timepoint_begin" interval="4713300"/>
+            <when id="timepoint_Bubble 69" since="timepoint_begin" interval="4766200"/>
+            <when id="timepoint_Bubble 70" since="timepoint_begin" interval="4823600"/>
+            <when id="timepoint_Bubble 71" since="timepoint_begin" interval="4851400"/>
+            <when id="timepoint_Bubble 72" since="timepoint_begin" interval="4915800"/>
+            <when id="timepoint_Bubble 73" since="timepoint_begin" interval="4988600"/>
+            <when id="timepoint_Bubble 74" since="timepoint_begin" interval="5067200"/>
+            <when id="timepoint_Bubble 75" since="timepoint_begin" interval="5117400"/>
+            <when id="timepoint_Bubble 76" since="timepoint_begin" interval="5159700"/>
+            <when id="timepoint_Bubble 77" since="timepoint_begin" interval="5241000"/>
+            <when id="timepoint_Bubble 78" since="timepoint_begin" interval="5305900"/>
+            <when id="timepoint_Bubble 79" since="timepoint_begin" interval="5361900"/>
+            <when id="timepoint_Bubble 80" since="timepoint_begin" interval="5410700"/>
+            <when id="timepoint_Bubble 81" since="timepoint_begin" interval="5467800"/>
+            <when id="timepoint_Bubble 82" since="timepoint_begin" interval="5534400"/>
+            <when id="timepoint_Bubble 83" since="timepoint_begin" interval="5629500"/>
+            <when id="timepoint_Bubble 84" since="timepoint_begin" interval="5709800"/>
+            <when id="timepoint_Bubble 85" since="timepoint_begin" interval="5764600"/>
+            <when id="timepoint_end" since="timepoint_begin" interval="5869975"/>
+         </timeline>
+         <div1 id="transcript.1" n="Transcript">
+            <u rend="transcript_chunk" start="timepoint_Bubble 1" n="Bubble 1" end="timepoint_Bubble 2">
+<u who="KM">Test, Test, Test, 1, 2, 3 ...., Test, Test, Test, 1, 2, 3 ....</u>
+<u who="KM">This is August 20th 2009 and this is a oral history interview with Professor Kamal Datta. Professor let me begin with first asking you about childhood, when were you born?</u>
+<u who="KD">I was born on the June 27th 1938 in Simls, which is of course the hills. Our father used to work for the Government of India in Delhi and in those days the government moved during the summers to Simla and came down to Delhi in winters and that is how our families used to move up and down and my brothers and sister we were all born in Simla.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 2" n="Bubble 2" end="timepoint_Bubble 3">
+<u>Even the childhood was spent or at least mine was largely spent in Delhi. That was largely because of onset of the Second World War so once the war began the Government as an economy measure stooped the transition and stayed on in Delhi for summers as well. So from my earliest Childhood memories are of pre independence New Delhi. We lived in various kinds of Government housing at that time. Some very near Connaught Place what is now Connaught place. Some a little farther away and I went to School in Delhi. I went to school which was run by a Bengali gentleman who had been to Cambridge University and started a school which ultimately prepared you for an examination that was affiliated to the Cambridge University Overseas School Certificate Board and that is the exam which I took in 1952. It was a school of mixed variety of students, not a large school, at our time. The classes were barely 20 strong and the school was located sort of borderline between New Delhi and Old Delhi and we had a lot of children of Merchant families from the old city coming to the school.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 3" n="Bubble 3" end="timepoint_Bubble 4">
+<u who="KM">Do you remember the street name or a landmark by which the school stood.</u>
+<u who="KD">yes, yes I remember very well. The school was 2 Darya Ganj and the road is called now a days Ansari Road. The school was housed in a building which used to be at one time the residence of a well known physician and Congress leader Dr. Ansari after whom the road is named and it was a sort of extensive old style Bungalow with painted rooms and outhouse rooms and so on which have been turned into class rooms. The vast majority of students came from foot from well I some lived barely close in Delhi, some in the city, some like us within a twenty minute cycle ride away and the only interesting thing I remember of the early days in school was that even though the school had very few students speaking other than Hindustani.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 4" n="Bubble 4" end="timepoint_Bubble 5">
+<u>There were some Muslim students, there were some Hindu students. A few students whose mother tongue was neither Hindi nor Urdu like mine which is Bengali. But the school at that time had allowed for classes in Hindi, classes in Bengali and classes in Urdu. I presume the classes in Bengali came about simply because the Principal happened to be Bengali speaking. There was a some fraction of students who were Bengali speaking. Right after the August 1947 independence, Urdu and Bengali was dropped from the curriculum from the school and all of us were then required to take Hindi which we did for our ultimate school-leaving examinations. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 5" n="Bubble 5" end="timepoint_Bubble 6">
+<u who="KM">How do you being from a Bengali family, what was your awareness of that as distinctive during your childhood? Were you, did you think of yourself as Bengali or as a Delhi-ite</u>
+<u who="KD">I think we thought of ourselves very much as Bengali but as what people would refer to themselves as Prabasi Bangali and Bengali speaking people who have left for considerable time away from Bengal. My father came away from Bengal, worked for the Government from 1920 or 21, I guess. He finished his college with a master in mathematics in 1919 and taught in some college for some couple of years before coming out to Simla. So he had been away from the family, had been away from Calcutta for over 20-25 years.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 6" n="Bubble 6" end="timepoint_Bubble 7">
+<u>My mother grew up in Bihar in a town called Muzaffarpur where my grandfather was a lawyer so she too in some sense was somebody who is away from Central Bengal and grew up in the outlying regions. In her childhood Bihar of course was part of Bengal province but a distrinct linguistic entity so she too was in some sense ways Prabasi Bangali from her childhood so we were very much had the feeling that Bengali speaking people who had lived away from the Bengal for some time. But nonetheless as often happened with such families we had a very strong sense of Bengali identity because every month we would receive in the mail Bengali magazines</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 7" n="Bubble 7" end="timepoint_Bubble 8">
+<u who="KM">What kind of Bengali magazines?</u>
+<u who="KD">The magazines we subscribed at that time if I remember were 3. One called Probashi edited by Ramananda Chatterjee, another called Basumati edited by the Basumati publications House. It was the editorial family was called the Mukherjee, I don't know Satish Chandra Mukherjee or something like that, and a third which was called Bharat Barsha, that had been started by Dwijendralal Roy I don't know at that time. At that point of time who edited the magazine so these were the 3 magazines we used to receive every month. In addition my father had subscribed to the first collected edition of Tagore which was beginning to be published from Shantiniketan, Vishwa Bharti in 1941,</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 8" n="Bubble 8" end="timepoint_Bubble 9">
+<u>and he was one of the ritual subscribers who would occasionally receive the originals as they came out of the press. So these and various other books in Bengali around, there was absolutely no doubt that we were very conscious of being Bengalis and in part because we must have learnt our Bengali alphabets from my mother. We, all of us wrote, brothers and sisters and of course parents read and wrote Bengali quite fluently in spite of the fact that we ceased to receive instructions in Bengali in school.  Though my older brother and sister they did receive in school instructions in Bengali as well till the last school days. So it was very much a Bengali household. I would describe it as certainly not a very upper middle class Bengali household because that would be described as household of people in the upper reaches of the British administration. My father was not in the very upper reaches.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 9" n="Bubble 9" end="timepoint_Bubble 10">
+<u>This was in the middle rung of people who did not belong to the civil service, Indian Civil Service. But on the other hand at least by the stage I was a conscious child he had moved into the upper reaches of the administration. So we would be very much not very upper middle class but sort of middle, middle ranking but very much Bengali in our ways of dress, in our ways of food, ways of speech, in the kind of music we would listen to, the kind of poetry that was read. My father had grown up in Calcutta, had gone to college in the 1910's between 1913 and 1919. So he was, he had grown up in a very nationalist Calcutta with a lot of literature, with a lot of music and a strong Brahmo influence.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 10" n="Bubble 10" end="timepoint_Bubble 11">
+<u who="KM">What college he went to?</u>
+<u who="KD">He went to first to City College which was a Brahmo College and then he went to Presidency. He went to Presidency for 4 years, before that he went to City College for a couple of years. So he had I think, I would like to think, a mental outlook very typical of rather earnest young man who grew up in Calcutta influenced by Tagore, writings by the Brahmo Samaj, by the Independence movement as it unfolded at that time and I do remember that for instance even though I never remembering, remember him ever going to a temple or even attending a Durga Puja celebration. But on the other hand every morning he would read a bit of the Upanishads, a bit of the Gita, a bit of the Bible and sometimes a bit of the Quran as well. So it is he did not ever go to any temples to pray or attend any communal religious festivities but I would not believe that he was irreligious, probably influenced by the somewhat Upanishadic tradition of the Brahmo movement in Calcutta in 1910. So this is the kind of household I grew up in</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 11" n="Bubble 11" end="timepoint_Bubble 12">
+<u who="KM">How is it then that you came to go to, decide to go to Presidency College, which is of course in Calcutta?</u>
+<u who="KD">Well the reason, my brothers and sisters they went to College in Delhi but the reasons I went to College in Calcutta was twofold. One was purely technical, when I graduated from School I was a little over 14, it happened to be a little young and at that time Delhi University did not admit students to its Honors courses, undergraduate courses until you were 16. So there was the possibility of my prospect of my having to wait for at least a year if not more, if I were to go to college at Delhi at that time the brother who was a couple of years older than I am was already studying Economics in St. Stevens College in Delhi and I don't think I would have very much minded going to college in Delhi</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 12" n="Bubble 12" end="timepoint_Bubble 13">
+<u>but my father having gone to Presidency also had a feeling probably wanted one of his children to go to Presidency if that were possible, and since I would have had a couple of years wait in Delhi to no purpose really, it was decided that I, and I was quite happy at that of course for the usual reason that I would be getting away from home and be on my own in Calcutta. At that time I must, it must also be said, Calcutta did present something of a centre of educational excellence, not quite what it was in days of Ashutosh Mukherjee or the 20's and early 30's but still at the University of Calcutta Presidency College where quite well reputed institution. It is believed you could get as good an education as we would in India at that time. And for people who neither wanted to neither could afford to go abroad for graduate education going to Presidency College at that time was regarded as among the best possibilities that were available to students</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 13" n="Bubble 13" end="timepoint_Bubble 14">
+<u>and it turned out ultimately that I did not really gain in any years because of going to Calcutta because for various regulations I had to start at the first year of the Intermediate Science Course which meant I put in an extra year for my Honors' degree over of what I would have spent in a regular course in Delhi. So I didn't really gain any time but I was educated in a very different environment from that of my brothers and sister were educated in Delhi. </u>
+<u who="KM">You decided to, you were a physics student entering, as you entered Presidency College?</u>
+<u who="KD">No, that is not true. I entered Presidency College of course in the Intermediate Science stream</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 14" n="Bubble 14" end="timepoint_Bubble 15">
+<u>which at that time consisted of, Physics, you were requiring to study Physics, Chemistry, Mathematics and one additional subject science subject for which I chose Geology. In addition to being required to study English and Bengali for all whose mother tongue was Bengali. Now I having not studied Bengali in school and yet having my mother tongue, Bengali as my mother tongue, I was told there was no way I could not take Bengali as the offered subject. But I quickly realized that the standard of Bengali being taught in the first year in college was way above my capabilities in terms of written Bengali. So I did petition the university and the university after some time allowed me to take an alternative English course at a slightly higher level than the one that was required of all the students, which I could offer in lieu of Bengali. And it is in that course I met one of the most outstanding teachers or rather I was taught by one of the outstanding teachers of India in Presidency College, Dr. Amal Bhattacharya. He at that point was also teaching that course on alternative English.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 15" n="Bubble 15" end="timepoint_Bubble 16">
+<u who="KM">What made him so outstanding?</u>
+<u who="KD">What made him so outstanding was that unlike a lot of literacy teachers both in English and in Bengali in Presidency College he made a very strong impression by being very un emotional, very analytical, very precise and yet had an absolute command over both his subject and over the language. So if you started out and he felt comparison to a few other teachers he had a very flowery diction or made analysis or did analysis of prose and poetry which is rather you know, rather over the top, he was very quiet, studied the text very carefully and very analytically, and also seemed to value students who had an analytical turn of mind. And I found him very congenial, and it must have been the case with a lot of other people</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 16" n="Bubble 16" end="timepoint_Bubble 17">
+<u>or he would not have the reputation that he did. It turned out that in my regular course in English that was offered to everybody had a very well known teacher Professor S.C. Sengupta who was regarded as a very well-known Shakespearean scholar, but I found him quite over the top as it were, I didn't really, and it's also possible that he was teaching English to first year students and various assorted pieces of poetry, prose which he himself did not find very interesting. As an important Shakespearean scholar he probably did not find the material required to teach very interesting but in any case I found the lectures of Professor Amal Bhattacharya one of the outstanding features of my first couple of years in college. Its also the case that we had some very good teachers both in physics and in chemistry. They, it must be say that our instructors in Presidency College at that time, I think very few of them if any at all would be regarded as outstanding physics or chemists.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 17" n="Bubble 17" end="timepoint_Bubble 18">
+<u>Some of them had done work some of originality but not a vast amount. Many of them had pretty much done no research at all. But quite of few of them were pretty outstanding teachers and put in an enormous amount effort into their teaching in being clear and in being accessible to students. We had large classes of about 70 or 80 students and they would mark out the few of the outstanding better students and be very accessible to the better students. And while we did get some very poor teachers as well, there were some very outstanding teachers. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 18" n="Bubble 18" end="timepoint_Bubble 19">
+<u who="KM">Who were among the most important of these science teachers in the different fields that you were studying?           </u>
+<u who="KD">yeah.. there is a, there is a chemist by the name of Pratul Chandra Rakhit. He was a physical chemist, extremely good, he was very good chemist as well. There was a professor N.C. Ray who was , who was an organic chemist. The professor N.L. Sengupta who was a physicist. I would not now be in to recall what his area of specialization was.  There was another physics history expert well known as a physicist. But we did not get him in is our first couple of years in college. We used to see him from a distance. Professor  K.C. Kar he and his brother S.C. Kar who is an outstanding mathematician. They were practicing physicians and mathematicians of some repute. We had for instance another gentleman Professor P.C. Mukherjee, a very outstanding teacher of optics.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 19" n="Bubble 19" end="timepoint_Bubble 20">
+<u>So there were quite a few the but it would be very, very incorrect to say even though the teaching was good  and in some cases outstanding, it would still be wrong to say that it was the teaching per se which drove you, which sort of ultimately persuaded me to accept, take Physics as a discipline.  That ways rather the influence of your seniors. There was at this the very, you lived in a dormitory with students who were separated from you for by a couple of years, senior, junior and so on.  And you mixed very readily with students who very couple of years older than you and finishing their years in the physics honors course </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 20" n="Bubble 20" end="timepoint_Bubble 21">
+<u who="KM">Which dormitory was this? </u>
+<u who="KD">This is the Eden Hindu hostel which put up both art and science students of presidency college from the first to the forth years, not students in both graduate classes but in all undergraduate classes. So they you talked to lot with people who were, lived on the same corridor as you did, who were a couple of years may be your seniors. You talk a lot about what the subject was like, what was, what kind of books  were worth reading and even more than your teachers you learnt a lot from the people who were a couple of years your seniors and who were getting in to the subject in very serious way.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 21" n="Bubble 21" end="timepoint_Bubble 22">
+<u>And I was very strongly advised by some of my friends in the humanities that I should go into the humanities. A couple, a very close friend of mine went into history tried to very strongly induce me to go into history. Another, a lady, who is now a professor, was a professor at Jadavpur, couple of years senior to me, tried to persuade me very strongly to go into English.</u>
+<u who="KM">What was her name? </u>
+<u who="KD">Prasadhara Bagchi 1:32</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 22" n="Bubble 22" end="timepoint_Bubble 23">
+<u who="KM">And the historian friend? </u>
+<u who="KD">Historian friend, he later got on to be a lawyer. His name was Ahindra Chaudhury but ultimately it was the fascination for a possible entry into a rather difficult and esoteric discipline which older friends found very fascinating, ah, that is what ultimately persuaded me to go into Physics. </u>
+<u who="KM">Do you remember the names of some of the older friends, who were particularly important in encouraging you to do Physics.  </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 23" n="Bubble 23" end="timepoint_Bubble 24">
+<u who="KD">Yes, Yes very much so, very much so. One of those friends was by the name of Nitya Nath. He now a days lives in the Washington area. He came to the States in somewhere around 1960, I would guess, and got his degree from Cornell and then stayed back in this country working for NASA. Then another was by the name of Dilip Bhadra who got his PhD from San Diego, he was three years senior to me. He got his degree from University of California in San Diego and there after stayed back in California all his life. Doing work in plasma physics and so on. So these, I got to know these people who were older to me, but I must also say that, and this is quite not related to my choosing physics as a career, but I also got to know a number of people who were my seniors in the humanities also extremely well.</u>
+<u who="KD">I suppose the... </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 24" n="Bubble 24" end="timepoint_Bubble 25">
+<u who="KM">Yeah.... It's working, from where we left off. You were saying that there were some senior students in English.</u>
+<u who="KD">Yeah... have yes</u>
+<u who="KM">Was that the train of thought? You are saying that the... </u>
+<u who="KD">That there were seniors in other, in humanities as well, who I got to know very well. In particular two I remember very distinctly as being, as being very friendly.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 25" n="Bubble 25" end="timepoint_Bubble 26">
+<u>One was a student of English Jotinmoy Dutta, who when I was the in the first year was probably in his first year of the post-graduate classes. So he had just graduated that year. So he would have been in the same classes Amartya Sen and so on. He, I got to know him very well because after a few months in college I got involved in college debating. I cannot now recall the exact circumstance how I got involved, but I was asked... I was asked to lead the students in a debate against ex-students, former students, which was be held, which at that time used to be held every year in twentieth of January, which was the Founders Day of the college. And this, more than any other thing, was the major event of the Founders Day that there would be a debate on a topic of some serious interest between ex-students and present students, and I was requested to lead off the, I was rather not requested but told by the professor in charge to lead the students,</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 26" n="Bubble 26" end="timepoint_Bubble 27">
+<u>the team of students, and it turned out that the team for the ex-students was to be led by Professor Hiren Mukherjee, the member of parliament, the communist CPI member of parliament, and the subject had something to do with Marxism, I cannot to call the exact... and when I protested saying that I knew nothing about it, and couldn't possibly speak then Jotinmoy Datta, who I must have accidentally got to know he came to my hostel and he said, no no, you don't worry because I will take you to a source, to a friend, who will tell you all you need to know. So he took me along to the coffee house, the College Street coffee house, where he sat me down at a table where one of his class fellows was sitting with a pile of books in a Pajama and a shirt, and he told him, Sukumoy, this is the first-year fellow, he has to speak in a debate against Hiren Mukherjee.  He knows nothing about Marxism, so educate him! So so Sukumoy-da of course, he...  </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 27" n="Bubble 27" end="timepoint_Bubble 28">
+<u who="KM">This is Sukumoy...?</u>
+<u who="KD">Chakravarty,  he.....he had stayed on in Calcutta where Amartya had gone on to Cambridge, Amartya and Partha Sarathi Gupta, both of these one from history and the other from economics. Rather outstanding students had gone off to Cambridge. We had stayed back in Calcutta and he was a student of the first-year post-graduate class. So he, with out hesitation, he sort of lectured to me essentially for three or four hours at that coffee house table, so I sort of began a friendship with him that lasted for the rest of our lives. So it was in sort of,  through processes like these, Jotinmoy Datta, Jotin-da would come to the hostel very frequently, used to gossip, used to asked what books I was reading, suggest books I had not heard of...</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 28" n="Bubble 28" end="timepoint_Bubble 29">
+<u who="KD">A book by Colin Wilson called Outsider which an analysis of the or a description of various kinds of people who feel the outsider in society but who see the intrinsic tracks of society. This book had come out so he suggested read this book and write a review for the college magazine. So these are the kinds of trends you got to know who had quite serious academic interests.  </u>
+<u who="KM">When would you met with Sukhomoy Chakroborty, when would this be on a weekly basis? </u>
+<u who="KD">No not on a weekly basis, essentially on a casual basis.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 29" n="Bubble 29" end="timepoint_Bubble 30">
+<u>Because a lot of us at that time used to spend time in the coffee house and it would be essentially casual. Sukhomoy-da had stayed in Eden Hostel but he had then graduated so he had left hostel and he almost never came down to the hostel for gossip with younger people. Even at that time I think he was just reading so hard that apart from the time we could catch him in the coffee house, or he himself was in the coffee house with a few friends, he didn't really hang around for too much of gossip. But I would meet him occasionally in the coffee house and later it happened that I got to know his wife's family. The family of the economist Amit Bhaduri, because Amit's oldest sister, Lalita-di, was, is Sukhomoy-da's wife, now widow. So I got to know that family well so there also I would occasionally meet him because even they were not married at that time, he would visit them once in a while. So over the course of years I got to know both he and his wife very well.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 30" n="Bubble 30" end="timepoint_Bubble 31">
+<u>And this friendship was cemented very strongly when I went over to the US and I was at Brandeis but he and Amartya that year were visiting MIT on the faculty. They were very young people on the faculty and because we were all Presidency we used to sort of gather every Saturday some place in Harvard Square for a long, long gossip.</u>
+<u who="KM">You were free or there was a ... </u>
+<u who="KD">No, there was a larger group of people</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 31" n="Bubble 31" end="timepoint_Bubble 32">
+<u who="KM">many from Presidency or...</u>
+<u who="KD">many from Presidency, mainly from Presidency. One was a physicist by the name of Pranab Mitter, and another was an economist by the name of Mrinal Datta Chowdhury who later was a professor at Delhi School of Economics. So there would be shifting crowd of people from Presidency who would meet and then because I was, I had known Sukhomoy-da and Lalita-di a long while I usually would not return to Brandeis on Saturday. But stay overnight with the Chakraborty's in their livingroom. And that was a on a street where a few houses down from them lived Amartya</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 32" n="Bubble 32" end="timepoint_Bubble 33">
+<u who="KM">you know which street it was?</u>
+<u who="KD">yes, Prentice Street. Prentice Street, I wouldn't of course remember quite the numbers but they were very close to each other on Prentice Street. THe result of it was that after finishing this coffee house or you know tea shop chat somewhere near Harvard Square, there was also a standard location which I will now not remember, a caf&#233; of sorts which had become our standard location. Then I would return with Sukhomoy-da to their place and very often after dinner again there would be you know there would be another round of... with Amarthya, Sukhomoy. They had a very well known mathematician friend, Ramesh Ganguly, who is not a Bengali Ganguly but a Maharastrian Ganguly who later spent his life at University of Seattle in Washington.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 33" n="Bubble 33" end="timepoint_Bubble 34">
+<u>So there will be yet another round of, this time not quite gossip, but a little more serious discussion on different topics... between whoever happened to be free that Saturday evening which was a very very most often it used to be Sukhomoy, Amartya and Ramesh Ganguly. And myself, sometimes my friend Ashok Guha who was doing Economics at Harvard but not very frequently he did not quite even though was from Presidency and my classmate, he was a little reticent about coming to these gatherings.</u>
+<u who="KM">What strikes me is this very erudite culture among young intellectuals who were associated with Presidency college but also I would say a very verbal culture in other word there was a culture of coming together and discussing ideas and being eloquent in the expression of ideas and debate.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 34" n="Bubble 34" end="timepoint_Bubble 35">
+<u>You mentioned you were a leader of debate society. Where did that come from? Is that something you would see as related to the British colonial inheritance or is it something coming from the Bengali adda or is there some other source?</u>
+<u who="KD">I think it is a mixture of both. I think the notion of a formal debate and that too in English. Tough there used to be debates in Bengali as well but they were not as well attended or as highlighted in the College premises as the debates in English. I think the notion of a formal debate in this format of you know a topic of presentation, speakers in favor and against and ultimately a vote being taken of the house. This i think is pretty much an English phenomenon.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 35" n="Bubble 35" end="timepoint_Bubble 36">
+<u>But the fact that we took to it so completely was I think came from the fact that we amongst ourselves read and talked, I think, much more than we read and wrote. It is a fact of the humanities teachers a very large number very erudite scholars, very excellent classroom lecturers but did not have large public work of which Sushobhan Sarkar was a prime example. He was one of the most outstanding teachers of his generation of the generation preceding and after, and a very learned man.  But the volume of his published work is quite small. The same goes for instance for Professor Tarak Sen of English, who again was regarded as a very outstanding scholar, had a brilliant academic record was again a most outstanding teacher but I do not believe that as a critic he has a very large volume of written work.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 36" n="Bubble 36" end="timepoint_Bubble 37">
+<u who="KM">When you were there back home in Delhi, were you in a home where there was debating culture or is it something you learned at Presidency or you took to at Presidency?</u>
+<u who="KD">No I must say that I took a little bit of it from Delhi, not from home but from the fact that the principal of the school I went to had been to Cambridge and he somehow pretty early on may have detected in me some verbal ability and he coached me, very assiduously in debates, inter-school debates and so on. So I took a little bit of it from Delhi not from home but from my school. And that got reinforced very much to the point that I do remember that once when I was still an undergraduate there was a debating team came, which was an Oxford-Cambridge debating team that came to Calcutta under the auspices of the  British Council,</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 37" n="Bubble 37" end="timepoint_Bubble 38">
+<u>and we were asked to debate extemporaneously, meaning the topic of debate was announced only about 10 - 15 minutes before the actual debate and because it was held under the auspices of the British Council serious political topics were being eschewed, they did not want to get into politics so I remember that we were asked to debate that the woman's place is in the home.  And after the debate, two of us spoke in college and two from this Oxford-Cambridge debating society. The representative from the British Council was a very nice man called O'Brian and these English undergraduates. I mean they said that they had not expect at all the level of debate and the degree of fluency in spoken English before they came to our... sort of, participated in that debate.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 38" n="Bubble 38" end="timepoint_Bubble 39">
+<u>So this is, I think, is part of both the English colonial education heritage or teachers who had gone to college in English  universities - to Oxford and Cambridge - and the Bengali middle-class propensity to verbalize. These two came together and at that time this ....I mean, this business of college or debating by people who had left college but still so called public debates, this was a very big thing. I mean, I remember some people like the actor Utpal Dutta, M.P. Sadhan Gupta, Hiren Mukherjee [Hirendranath Mukherji]...these people participated in debates with us. But of course those debates would always have for discussion topics which were rather heavy in terms of politics, economics, sociology... </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 39" n="Bubble 39" end="timepoint_Bubble 40">
+<u who="KM">Where did you get your books from? It sounds as if you are reading a lot of new books.</u>
+<u who="KD">Yes. Yes. A lot of the books that I read came from two sources. Some from the college library and some from older friends.  People like Sukhomoy-da and Jyoti-da they would supply you with books. They would say that this is a book you ought to read in this language. Saying, na na, you haven't read this so far and that's is a shame, you must read this book and they would hand it over. And then after a few days you know that they would want to discuss it. So you were in some sense honour bound to go through those. So we learnt a lot from our seniors. And fortunately at that time I think more in Humanities, and in History, in Economics and in English. Particularly in these three.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 40" n="Bubble 40" end="timepoint_Bubble 41">
+<u>I think in these subject there were more outstanding students than there were in the Sciences and I think that has been reflected in the fact that a lot of them have gone out to become very outstanding historians, economist, writers, poets than the number of very outstanding scientists we have produced from that generation even among the ones who worked abroad.</u>
+<u who="KM">What was the culture of science then at the Presidency College? And what was the relationship with the University Science College?</u>
+<u who="KD">The relationship with the University Science College and the Presidency was the following: that in our undergraduate days we were entirely taught by teachers at Presidency College some of whom</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 41" n="Bubble 41" end="timepoint_Bubble 42">
+<u>.... quite a few of whom also lectured to the post-graduate students at the University Science college. Among them was the nuclear physicist by the by name of S.N. Ghosal and then the professor I had mentioned earlier Professor K.C. Kar, N.L. Sengupta; these people taught not only Presidency college undergraduates because they had appointments at Presidency College but they also taught post-graduate students at the university. Then the situation got a little more curious when we graduated after the honors course. At that time in Physics and I think also in Chemistry, I cannot say that for all subject, for the Masters course you could get admitted in two places: the University College of Science and Presidency College, two separate places for admission, but the classes were held jointly. The result was that for some classes students would come over from University College to Presidency to have their classes in Presidency College</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 42" n="Bubble 42" end="timepoint_Bubble 43">
+<u>and for other classes students from Presidency go over to University Science College to have classes at the University Science College though the laboratory were separate. The Presidency college students did their lab work in Presidency and University College Student did their in...  I chose to get admitted to the University Science College first because the residence... the post-graduate Presidency students' residence was pretty awful much more awful than Hindu Hostel and everybody said that you cannot possibly survive there and the other reason was friends told me that, you know, you go to the university then you will get an opening at the Saha Institute you will get to know teachers there. In any case all the teachers of Presidency and you will be coming here and you will be coming for classes here so you will get the full benefit of Presidency in any case since you will be here for four years,</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 43" n="Bubble 43" end="timepoint_Bubble 44">
+<u>so why don't you go and get admitted to . . .so I got admitted to the University Science College but of course, because of the nature of the connection kept a full connection with Presidency for the last two years in Calcutta. The atmosphere in Science ....how should I put it at that time...the atmosphere in Science was much the following: that Calcutta University and Presidency College had in the '10s and '20s produced scientists of most outstanding calibre. M.N. Saha in Physics, S.N. Bose in Physics, J.C. Bose in Chemistry and couple of others also... P.C. Ray also in Chemistry and so on. So it has produced physicists and chemist of the highest qualities but that had ceased to be the case in the forties and in the early fifties when I went to college. So there was a feeling that the centre of Indian science was had somehow shifted from Calcutta.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 44" n="Bubble 44" end="timepoint_Bubble 45">
+<u who="KM">To where?</u>
+<u who="KD">To where? We had a knowledge that the undergraduate Physics course at the University of Delhi, at that time, had been remodeled and was much tougher and considerably required much more mathematics than what we did at Calcutta. We knew that the Indian Institute of Science in Bangalore was getting to be a very big centre of physics. We knew that the Tata Institute of Fundamental Research in Bombay was attracting because of Bhabha's presence there...was attracting very outstanding physicists. So there was feeling that somehow the centre is shifting away from Calcutta to Delhi, to Bombay to Bangalore and I think, subsequent events have proven that we were not wrong in our assessment. That is really what did happen, that Calcutta did become a bit of a backwater.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 45" n="Bubble 45" end="timepoint_Bubble 46">
+<u who="KM">Why? Why is that? Why would.... it sounds part of the reason must have to with teachers or the institutions; changes within the institutions... you mentioned not requiring as much mathematics as Delhi University...why would that be, do you think?</u>
+<u who="KD">I think that there was this feeling in Sciences as against the absences of such a feeling in Humanities and Social Sciences largely because of one reason that was that while the Humanities and Social Sciences continued to have some outstanding scholars in the Humanities departments, I think, we did not have in the Sciences comparable outstanding people who could sort of, carry on. Thirties and the forties ...the famine, partition and thereafter...</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 46" n="Bubble 46" end="timepoint_Bubble 47">
+<u>well you would think that it would equally affect </u>
+<u>MZ000013</u>
+<u who="KD">all branches of academics...wouldn't you? If those were the reasons for the downturn but this did not happen. And, I have a ... my answer to the question would be that while in conditions of social turmoil...great social turmoil which Calcutta had been in since 1943 particularly, the famine followed by the partition, that social turmoil did not lead to a lessening of literary and humanistic activities, whereas it did lead, to some extent, to a loss of focus in the scientific areas. So I must also confess that this is a little older ... this lack of, this focus shifting away from... you look at the following that M.N. Saha from 1930 was in University of Allahabad trying to setup a school there. J.C. Ghosh, an outstanding chemist, became the Director of Indian Institute of Science, Bangalore and started again building up that institute.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 47" n="Bubble 47" end="timepoint_Bubble 48">
+<u>S.N. Bose, no institution builder, but he spent his most creative years in the University of Dhaka and came back to Calcutta as the Coir professor in the '40s pretty much when he was more of a sage rather than a very active and practicing scientist. He didn't have a large collection of students but I mean, sort of, had a like all mathematical physicists he had passed his most creative years. So P.C. Ray by then was much too old, J.C. Bose had died, Jagadish Bose had died much before. So the outstanding ...C.V. Raman had moved away... so the outstanding figures of Calcutta Science had all moved away...and there had not been another generation to take their place. Now why there should not have been another generation to take their place is a much more difficult question to which I do not have the answer but by the time we went there it had been effectively a generation and half of Calcutta Science under the tutelage of very much smaller figures who, it turned out,</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 48" n="Bubble 48" end="timepoint_Bubble 49">
+<u>were very poor copies of the physicists and chemists of the earlier age. I mean, I remember we had a teacher in statistical mechanics in the post graduation classes a gentleman, whom I will not name, who was a student of M.N. Saha's but who was such a terrible physicist; a terrible teacher. We had for nuclear physics again one of Prof. Saha's students. So we were left with very pale imitations. So whatever enthusiasm we could work up would be on our own, not very much really from the teachers. I do remember an exception, that was when we were in our first year post-graduate classes we had a former student from Delhi, P.K. Kabir, who had who had got his degree with Saul Peter in Cornell and had known Bethe and done some interesting work. He came to Saha Institute for a couple of years...</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 49" n="Bubble 49" end="timepoint_Bubble 50">
+<u>three or four years and he specifically requested that he would be allowed to teach Masters students. And he was an outstanding teacher. An outstanding physicist and an outstanding teacher. He later left and spent most of his life with the University of Virginia but he inspired a lot of people to go into Physics because he would interact with students, give them problems to work on, make sure that the problems were worked upon and speak with students about their difficulties and had a very clear idea of the fundamentals of physics so you could engage him on anything on physics and get a satisfactory answer.</u>
+<u who="KM">were you already in...engaging in quantum physics research at this time?</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 50" n="Bubble 50" end="timepoint_Bubble 51">
+<u who="KD">No. I would say I was not engaged in, none of us were engaged in Quantum Physics research but from my first year of my undergraduate class I was coaxed by the older student by my seniors. I was very seriously trying to understanding quantum theory. We were a few of us.  I must mention that in undergraduate class, there were three or four of us physics students, thre, four, maybe five...we would have a study circle of our own... that is no teacher were present but we would each assign ourselves some topic to read up and then after reading up we would talk to our friends</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 51" n="Bubble 51" end="timepoint_Bubble 52">
+<u who="KM">This was all in undergraduate?</u>
+<u who="KD">All undergrads. But we would have a study circle and we would meet usually fortnightly and then discuss. Because clearly we would try to read somewhat advanced topics and not all of it would get through to the person who was trying and the object was that whatever was unclear would get a little clearer if five of us sat around and talked about it. Of all these five people all five went to academics. For went to Physics and one went into theoretical electrical engineering and computer science. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 52" n="Bubble 52" end="timepoint_Bubble 53">
+<u who="KM">Do you remember some of their names?</u>
+<u who="KD">Yes. Very much so. One was Tapas Das. He went to the Tata Institute of Fundamental Research and then to the University of Rochester and came back to the Tata Institute and unfortunately died very young, Tapas Das. And another was Subal Dasgupta who is now an emeritus professor at McGill University and spent his life doing intermediate energy nuclear physics. Then there was Ranen Biswas who did Electrical Engineering at Berkeley and spent his life at IIT, Kanpur. He has written couple of very nice text books and so on. Who the fifth person was I cannot exactly recall.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 53" n="Bubble 53" end="timepoint_Bubble 54">
+<u who="KM">One point that comes up now quite a lot in sort of ...the things you mentioned, is the place of the United States. It seems that many scholars including yourself went to United States for the Ph.D....why was there a wave of students going to the United States and why is it not for e.g. to other classical centre's of Physics research like England, Germany..or perhaps the Soviet Union...or maybe there were different groups going to different places?</u>
+<u who="KD">No. The vast majority...it was the wave that went to the United States in preference to Germany or Britain or the Soviet Union. The principle examples, rather, reasons were two. One was that we started getting back from the United States ...essentially the first lot of people who went out in the early '50s people like P.K. Kabir,</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 54" n="Bubble 54" end="timepoint_Bubble 55">
+<u>there was another professor in Calcutta called M.K. Banerjee who later went to University of Maryland and spent all his life there, who was a very outstanding nuclear physicist. These people were the first batch who went to the United States and then came back and started teaching and they gave an impression, which was correct that American universities were very open and inviting, that they had plenty of funds available for capable students, that the teacher-student relationship there was a little easier than in Europe and that overall that was the place to go to because, because they said that the centre of Physics was shifting from Europe to the United States. Remember in 1957...The Nobel prize in Physics went to two very young Chinese Physicist from Columbia, Yang and Lee, who did the very great and pioneering work on parity violation;</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 55" n="Bubble 55" end="timepoint_Bubble 56">
+<u>the violation of left-right symmetry in particular kinds of nuclear interactions. They were very young scholars. Yang was a little older, he had actually gone at a slightly advanced stage from China, but Lee was a very young student at Columbia. And the fact that you know these Chinese emigres to the United States could do such pioneering work and be recognized for it and be immediately you know be handed out professorships at premier universities. This created a very strong impression that here was a pretty open university system which, where if you happen to be good you would not find it overly difficult to make your mark. The other was the very easy availability of finance. None of us...none of us could have gone to study on our own...funding our own education. Amartya and Partha Sarathi ..they went to Cambridge...Partha went to Oxford, Partha-da went to Oxford...on two very old government of Bengal scholarships but these were one or two... you could count with your fingers.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 56" n="Bubble 56" end="timepoint_Bubble 57">
+<u>So if you had no money which was the case with the vast majority of us and you wanted to study at a foreign university then money was much, much much easier to come by in American university than in Britain or in Germany. </u>
+<u who="KM">What was your senses of being an Indian scientist, did you feel as a young generation after independence that there was a lot riding on your shoulders. There were expectations that in some ways, the new nation had for its young mind. Was there any of this sentiment?</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 57" n="Bubble 57" end="timepoint_Bubble 58">
+<u who="KD">I don't remember feeling very much of this even though I must confess that the '50s was the high time of Nehru's nationalism, and socialism and India building. So it is not as if, and he did take every opportunity to talk about the need for a scientific temper, for the need for us to establish science of high quality for people to engage in research, to keep open minds. He was constantly at these themes. But I do not feel any very strong feeling that we owed the nation this activity but there was a feeling, there was very much a feeling, of an open world that you could do pretty much. I mean even being born Indian and being the poor, being part of the poor of the world, you still because of the circumstances where you have been placed in the education spectrum in India coming from within the Indian context moderately well off families who could afford to get their children well educated for as long as they wanted an education,</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 58" n="Bubble 58" end="timepoint_Bubble 59">
+<u>you did have a feeling that there was a open world. And that there was nothing that you would be limited to, except by your own abilities. And that society was not going to stand in your way, that pretty much all professions are open to you. Because, for instance, there were students even amongst us though not too many who went into the Civil Services, very... A very bright historian in Amartya's class there Nitish Sengupta; he did very well in all University examinations even Civil Services and I remember him in fact sitting in my room in Hindu Hostel telling me we are the steel back bone of this country. So I mean this was just about anything you wanted to do was available to you, and in that context he felt that very that Indians in the early part of the century if there was an S.N. Bose,</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 59" n="Bubble 59" end="timepoint_Bubble 60">
+<u>if there was an M.N. Saha. Even in those times and now things are so much easier so much free you could even go to graduate schools elsewhere. The government is offering so much money for scholarships and so on, you would be limited by your abilities and not by other things. So to that extent you felt that you could make a difference, both to the Indian academic world and also with the scientific world in general and I don't think things have quite worked out in that way but there was this great feeling of freedom and openness about pursuing what you wanted to pursue and what you thought was worthwhile, a worthwhile activity.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 60" n="Bubble 60" end="timepoint_Bubble 61">
+<u who="KM">What was this specific way that you came to Brandeis and the year?</u>
+<u who="KD">Yeah, the specific way I went to Brandeis was because of one teacher of mine, Kabir. He happened to know very well couple of physicists there including my, who later became my thesis professor, Professor Schweber. He had known Prof. Schweber in Cornell where Schweber was a very promising post-doc while Kabir was a graduate student. He knew that at that time Brandeis was a very new school but had built up two good graduate department. One was in theoretical Physics and the other was in Bio Chemistry. So he said that if you are interested in doing theoretical Physics then I can write to Sam Schweber and that is how I got there and they immediately gave me a fellowship.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 61" n="Bubble 61" end="timepoint_Bubble 62">
+<u who="KM">So you wrote to Prof. Schweber</u>
+<u who="KD">Yeah and he had the graduate school sent me all the forms and so on and then I went for the process and they gave me without really my applying for it, they had these huge set international scholarships where all expenses were taken care of including room, board, tuition, what have you, for books and they gave me one of those.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 62" n="Bubble 62" end="timepoint_Bubble 63">
+<u who="KM">And what year was it?</u>
+<u who="KD">That was in 1960. And that is how I came to go to Brandeis. It is true that I also tried to get into the University of Chicago and MIT. At MIT, I did not get admitted but at Chicago, I did get admitted but it turned out that they said that for one semester you will have to find funds. We will be able to fund you only from the spring semester coming. The first semester you will have to fund yourself or find other kind of funding sources on campus. So the alternative of Brandeis paid me scholarship etc, so I did not go to Chicago which in retrospect I think was foolish because I think Chicago at that time was a much more intense and a much stronger school in Physics than Brandeis was.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 63" n="Bubble 63" end="timepoint_Bubble 64">
+<u>And I think my later trajectory as a physicist would probably had been very different had I gone to Chicago rather than...had I taken the trouble for one semester to work in a cafeteria for one semester...but I didn't do that ...so choices one makes.</u>
+<u who="KM">so now entering the last phase of this interview, a few more question. One thing that we had discussed in a different conversation was the fact that America after the Second World War was a very unique place and had become the home for many exile from Europe, and that leads me to ask and particularly within your fields of Physics and theoretical physics, were you, did you get in contact with many European exilees or any great...</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 64" n="Bubble 64" end="timepoint_Bubble 65">
+<u who="KM">so when you come to American you had a sense that the leaders in the field of American Physics were not actually born and bread American or in fact were they any most of your teachers, colleagues and so forth...</u>
+<u who="KD">I will immediately say yes. Because one of the strongest influences at Brandeis happened to be come from a Professor Valentine Bargmann who was in '60s, in 1960-61 academic year was a visitor from Princeton to Brandeis. Professor Valentine Bargmann had come from Europe you know in 1930s and had first been an assistant to Albert Einstein.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 65" n="Bubble 65" end="timepoint_Bubble 66">
+<u who="KM">Was he also German?</u>
+<u who="KD">He was, I think he was German but and he was certainly German speaking but I sometimes had the impression that he could have been from one east European countries but I am not sure about this. He was one of the great Mathematical physicist of his generation. He was a pioneer in the field of Group Theory and Quantum Mechanics and the fact that he was a visiting lecturer professor at Brandeis during the first year that I was there was a very, very, very strong influence because he was a great mathematician, he was a great physicist and in addition he was one of the most outstanding lecturers that I have ever met. So as soon as I got there and I went to Professor Schweber asked which course should I be taking so he said yes</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 66" n="Bubble 66" end="timepoint_Bubble 67">
+<u>Professor Bergman, the first thing he told me was no matter what course you do or not take you have to take the course on Group Theory being offered by Professor Bargmann. And when I went to the first lecture at nine, the first day I found the whole faculty in addition to the Graduate student body including Professor Schweber of course, sitting in on the lectures. And this was possibly the best set of lectures I have ever attended by anybody. He also later held a set of special seminar on relativististic wave equations and Group Theory. He was very accessible and his lectures were models of perfection meaning that he did not bring a scrap of paper but did the most complicated mathematics working everything in the blackboard. With the blackboard you could just take stills of his blackboard one after the other, and he was one of the lecturers which, when the lecture ended, he was at the bottom right-hand corner of the blackboard, the last equation has finished there.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 67" n="Bubble 67" end="timepoint_Bubble 68">
+<u>We in fact asked him, how come your lectures are so perfect? He said that look, this does not come without both practice and constant effort and I lecture nine in the morning, but every day for lecture I am up at four and these are things that I have worked out throughout my life. Still every morning before a lecture I work out everything by myself long hand and I have made sure that I can do everything properly and correctly without mistakes before I come to the class. So here was an emigre, he had a not very strong, not a fairly strong  German accent, who was one of the people who came from the... he was Jewish,  like most of the other faculty at Brandeis which was of course a Jewish University. And it is his example that our, the other faculty held up to you as being the kind of physicist that we were trying to make and if any of you get to be 100th of Valentine Bargmann in the Graduate Department will be fortunate.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 68" n="Bubble 68" end="timepoint_Bubble 69">
+<u who="KM">Was there a cultural I mean the American academia at that time being something of a journeymen , I mean would you go to other labs would you go other Universities?</u>
+<u who="KD">Oh yes. Not to work but one of the another one of the very important things during our Graduation work both at Harvard and MIT there would be an occasional course that would be given by somebody who was very outstanding and... And it was understood that Brandeis would arrange lectures in such a way that that slot was free or an hour before and you could go there and we could go over in droves and then I attended a full course By Professor Schwinger at Harvard who was a Nobel laureate and again a very great quantum electro-dynamicist and then a lecture at MIT</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 69" n="Bubble 69" end="timepoint_Bubble 70">
+<u>by Professor Sidney Drell who had come from Stanford University for a course at MIT on various atoms. When there used to be a weekly after noon theoretical physics seminar at Brandeis Harvard MIT which was usually held at Harvard and we used to go over for those as well. Very often as graduate students at seminars our visits were because the tea was the thing was very good because a lot of the lectures as early graduate students we didn't make really much of but still the faculty would go and would ask us, hey, do you want a ride, so we would go over with the faculty and with any of the graduate students that had cars.  So it was a ritual that you stayed, you took not only courses at Brandeis but as theoretical physicist, you tried to take in as much from MIT and Harvard as well.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 70" n="Bubble 70" end="timepoint_Bubble 71">
+<u who="KM">Did you ever go to Princeton or Chicago or... </u>
+<u who="KD">No I did not...</u>
+<u who="KM">elsewhere</u>
+<u who="KD">No I did not and I don't know too many for who did. It was principally the Boston area, Boston might go to BU but it was primarily the Boston area and I must also say that the Boston area had more than we could handle, there was enough going on.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 71" n="Bubble 71" end="timepoint_Bubble 72">
+<u who="KM">Did you find, you mentioned there was a very strong academic culture that you were inducted into at Presidency College. A very verbal culture based on public reasoning and debating and so on and so forth. One I can say that the American academic culture was quite different or maybe it wasn't at that time. But did you feel that there was a clash of academic culture's? What was your, how did you enter into you know the expectations of American academia particularly within the Sciences, and also this kind of publishing emphasis that you had mentioned?</u>
+<u who="KD">Yeah, I very soon felt that the demands of a academia in the science department at least in the graduate school I went were very different from a lot that is the kind of thing that I have met in Calcutta in the sense that all that mattered really was...</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 72" n="Bubble 72" end="timepoint_Bubble 73">
+<u>did you work hard enough, was your problem interesting enough, were you ready to publish. Were you publishing in the best journals. It didn't much care whether, they didn't much care whether you left it well over the. One of the poorest lecturers that we faced was a general relativist by the name of Stanley Desert who has been one of the most outstanding physicists at Brandeis. He has been a very outstanding general relativist and then later a string theory and quantum field theory very outstanding man. But he was a terrible lecturer, and we just could simply make nothing of his courses. But this was not held against him at all. It mattered that he was writing a set of seminal papers on linearized gravity which was regarded in collaboration with somebody in Princeton, one at.. two people at Princeton and he were writing a series of papers on the linearized theory of gravity which at that time was very highly thought of.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 73" n="Bubble 73" end="timepoint_Bubble 74">
+<u>And that is all that it mattered. So all that mattered is, you know, are you working hard, are you working at an important problem or what would be an important problem, and are you getting to publish. Nothing else mattered, nothing else mattered. So this was quite different from the kind of verbal culture that came from Calcutta and also reading with teachers who were not great publishers but who were rather in many ways scholars of depth without great originality shown in their published work and who in addition tended to the student's very careful lecturers.  So this was a very different tradition. It was not as at Brandeis, we as students did not come like Bargmann very great lectures, absolutely superb lecturers. It's not that but that is not what it mattered. In case of Professor Bargmann, that was an added bonus, as it were. He was a great physicist and a great mathematician. It was an added bonus that he happened to be such a great lecturer</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 74" n="Bubble 74" end="timepoint_Bubble 75">
+<u>Or that Schwinger, for instance, is such a great physicist , was a great physicist, but was also a great lecturer. So these were added bonuses but that is not  what mattered and you soon realized that the requirements of the scientific and academic or the academic scientific community in United States were quite different, quite different from...</u>
+<u who="KM">Last two questions, one is short and the other one perhaps might be little longer but the short question is did you feel as you entered ... as you were progressing as a scholar in theoretical physics was part of this when you entered this field because it was new, because it was for the popular imagination when one says,</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 75" n="Bubble 75" end="timepoint_Bubble 76">
+<u>I am a quantum theorist, or I study quantum there is something about that feel which in some way signifies new knowledge, you know, what is really the cutting edge. So was is that a part of what drew you into the quantum theory or the fact that it was one of the newest, kind of, fields within science, maybe I am wrong about that but that is one question. The other question is when you came back to India how did you feel that the American culture of academia got translated back, since there are a number of scholars who were trained in United States who were coming to India. Those were the two questions that I had.  </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 76" n="Bubble 76" end="timepoint_Bubble 77">
+<u who="KD">Well about the first I would say that by the time I seriously started trying to understand quantum theory which was in the middle '50s , quantum theory had sort of ceased to have any kind of novelty. By then the novel and the cutting edge in branches of physics were quantum field theory, quantum electro dynamics and elementary particle physics. Quantum theory at that point was for us something that was so hard to understand. And we at that point did not realize that quantum theory is something you will never get fully to understand but it was, it appeared mysterious, it appeared hard, and yet it appeared through some classic books the text books of Dirac, something that you could think on and on and on about. And something which if you did not get straight or straight to the point of your being happy with it and happy to work with it, if you did not get to that point, then all of modern physics would be mystery to you,</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 77" n="Bubble 77" end="timepoint_Bubble 78">
+<u>you would never be a complete physicist if you did not get to understand quantum analysis. It did not matter as to whether you wanted to be a quantum, if you wanted to work in quantum mechanics. In fact at that point in the '50s work in quantum analysis had sort of died out. It was again reborn after 1965, after what is called Bell's theorem, but at that point there was no really cutting edge work going on in quantum mechanics, but it remained the foundation of all of the physics. And if you did not get to understand quantum mechanics everything, whether you were doing particle physics, whether solid state physics, whether you were doing this or that, everything you do by rule of thumb, you wouldn't be doing it in a way that engage with the fundamentals of the subject and at the foundation of everything was this new way of doing physics, and this is quantum mechanics. And this is what drew us. I mean we used to hang around,</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 78" n="Bubble 78" end="timepoint_Bubble 79">
+<u>readings a few pages from Dirac's books which did not understand or in 1955 when I was in third year in College, for the first time a very path breaking book by John von Neumann which is called the Mathematical foundations of Quantum Mechanics... that book was translated into English and appeared in a Princeton University paperback. It was a very hard book to read. At that point I and my friends were totally unequipped to read a book like that but we still carried it around saying that this is... I mean, if you got to understand Physics, you've got to make sense of this and that is what all drew us all to Quantum physics, to Quantum electro dynamics, to quantum field theory because the quantum field theory was as it were quantum mechanics applied to a range of systems like electromagnetic fields and so on.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 79" n="Bubble 79" end="timepoint_Bubble 80">
+<u>It was an application of quantum principles to what are called, fields. So it was not so much the novelty; thirty years have passed between the birth of quantum mechanics and the middle '50s that I am talking about. So nobody at that stage, no serious physicist would have talked about it being on the cutting edge, but anyway, anybody would have said, that if you don't get this straight, you will not get anything in physics straight. And the second question you asked about coming back to India. Well, this was a very peculiar experience because when I came back, of course, I had no job. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 80" n="Bubble 80" end="timepoint_Bubble 81">
+<u who="KM">What year was that?</u>
+<u who="KD">That was 1966. I got my degree in '65 and taught for one year in Brooklyn Polytechnic University and then came back in September 1966 and came back. I did not have a job. I have been sort of promised a position the government used to run or maybe they still do I do not know something called the scientist pool which is meant to place people who were coming back from abroad in various universities and so on, universities and research institutes where they would be funded by the government for a few years and may find positions of their own. So that is what I ultimately got. I did not have a position at the University of Delhi. I was given a job in the scientist pool. I went to the University of Delhi and though I did not anybody here personally,</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 81" n="Bubble 81" end="timepoint_Bubble 82">
+<u>I had a sort of a introduction from Professor Schweber to one of the professors of Delhi University here who had also been to Cornell and Prof. A.N. Mitra and then the department agreed to accept me on their scientist pool and I was on the scientist pool in the department for a couple of years before I actually got a job in the department. And I was also a little lucky because the university system was going through an expansion and a lot of new positions were being created and in spite of the fact that I had no connection with the University of Delhi, neither as a student or research student, I still did managed to get a job at the university because of the fact that I had been there for a couple of years and so on. The atmosphere here was; I found a lower grade version of what went on at mid-league American universities,</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 82" n="Bubble 82" end="timepoint_Bubble 83">
+<u>that is, there was an enormous pressure to publish and there was an enormous pressure to publish in the standard American journals and by that time the Physical Review and the Physical Review Letters had become principal journals in Physics the world over. There was the proceedings of the Royal Society UK, there was the Zeitschrift from Berlin, there was the Progress of Theoretical Physics from Japan, there was the XXX from Italy, but the primary and principal place you wanted to publish was the Physical Review and possibly the Physical Review Letters which regarded as the highest prestige. So there was an enormous pressure to ask how many 'Phys Rev' publications do you have and have you published in the past year. So it was a bit of a rat race, it was a rat race that I think was even more..... I don't know what quite the word to use.... It was a contorted version of what went on in a middling American university in that it really didn't matter what the quality of the work was. It didn't matter if you alone read your paper after it appeared in the 'Phys Rev'.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 83" n="Bubble 83" end="timepoint_Bubble 84">
+<u>but if you are able to publish in the 'Phys Rev' or the 'Phys Rev Letters', well, then , you know... that was it. I realized that...that if I had to find a place in this academic world, I have to more or less join this. My heart was never in it but then.... I did not feel that it was very healthy because a lot of people were doing work that was below their abilities, because in their rush to publish, they were publishing smaller papers, more insignificant papers than what they were capable of. And on the other hand a lot of people who had nothing to publish but somehow could grind out things and pursue the referees long enough; if the referee made adverse comment, all you had to do was to keep at the referee and make a little alteration here and a little alteration there, and ultimately got published because the referee got tired and wanted to get rid of you. So whole lot of people were publishing in spite of the fact that they should not be publishing at all because they have nothing to publish.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 84" n="Bubble 84" end="timepoint_Bubble 85">
+<u>So it was, I would say it was... even though that was regarded as the best periods of Delhi University's Physics Department, I don't think any work of outstanding value was published from there. </u>
+<u who="KM">So sounds like there is a  transition from earlier culture at least what existed in Calcutta of the teacher-scholar away from the more of a professionalized publishing scholar. This sounds like a major transition.</u>
+<u who="KD">Very major transition. And it was unlike the fact when I was a student in Calcutta where it mattered for a professor of History whether you were also well-read in literature, whether he was well-read in Sciences or the history of sciences and so on.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 85" n="Bubble 85" end="timepoint_end">
+<u>Now it simply did not matter. If you mention to one of the Indian professional physicists, I don't mean only people from Delhi but people from TIFR or Bangalore and so on, that you were also interested in this or that other than your matter, it was simply discounted and said that you know well that doesn't matter. We do not care about what you have published. So it was distinct shift away from the kind of academic culture that we were part of as students in Calcutta and I think it is in part because Calcutta did not catch on to this culture early enough when it was formed early in this country that it fell behind in the Indian scientific scene as well. That people in Bombay, at the Tata Institute, in Bangalore, in Delhi, they caught onto this culture much more rapidly and much more easily than people did in Calcutta and that was because Calcutta had a older pre-existing academic culture which was different from this, which was strong which was viable in its own way and so that had to transform itself into this which it did not do for quite a large period of time and so it fell behind in the Indian scientific world.</u>
+<u who="KM">Fascinating. Thank you very much for these interviews. Very very appreciated. Thank you.</u>
+</u>
+         </div1>
+      </body>
+   </text>
+</TEI.2>

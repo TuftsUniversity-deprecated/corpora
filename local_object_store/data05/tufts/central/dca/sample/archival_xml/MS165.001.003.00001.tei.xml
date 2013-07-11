@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TEI.2>
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Andre Beteille interview</title>
+            <author>Kris K. Manjapra</author>
+         </titleStmt>
+         <extent>65729 bytes</extent>
+         <publicationStmt>
+            <distributor>Tufts University Digital Collections and Archives</distributor>
+            <address>
+               <addrLine>Tufts University</addrLine>
+               <addrLine>35 Professors Row</addrLine>
+               <addrLine>Tisch Library Medford, MA 01255</addrLine>
+            </address>
+            <idno>MS165.001.003.00001</idno>
+            <availability status="free">
+               <p>This publication is freely available for scholarly or educational use.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <recordingStmt>
+               <recording type="audio" dur="3407360ms">
+                  <date>2009-08-14</date>
+                  <equipment>
+                     <p>Marantz 660 recorder with lapel microphone</p>
+                  </equipment>
+                  <respStmt>
+                     <resp>interview conducted by:</resp>
+                     <name>Kris K. Manjapra</name>
+                  </respStmt>
+               </recording>
+            </recordingStmt>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <stdVals>
+               <p>Standard date values are given in ISO form: yyyy-mm-dd.</p>
+            </stdVals>
+         </editorialDecl>
+         <classDecl>
+            <taxonomy id="LCSH">
+               <bibl>
+                  <title>Library of Congress Subject Headings</title>
+               </bibl>
+            </taxonomy>
+            <taxonomy id="LC">
+               <bibl>
+                  <title>Library of Congress</title>
+               </bibl>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <creation>
+            <date>2009-09-12</date>
+         </creation>
+         <langUsage>
+            <language id="EN" usage="100">English.</language>
+         </langUsage>
+         <particDesc>Andre Beteille</particDesc>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline id="transcript_timeline" unit="millisecond" origin="timepoint_begin">
+            <when id="timepoint_begin" absolute="beginning of recording"/>
+            <when id="timepoint_Bubble 1" since="timepoint_begin" interval="0"/>
+            <when id="timepoint_Bubble 2" since="timepoint_begin" interval="31600"/>
+            <when id="timepoint_Bubble 3" since="timepoint_begin" interval="66300"/>
+            <when id="timepoint_Bubble 4" since="timepoint_begin" interval="144200"/>
+            <when id="timepoint_Bubble 5" since="timepoint_begin" interval="169300"/>
+            <when id="timepoint_Bubble 6" since="timepoint_begin" interval="262500"/>
+            <when id="timepoint_Bubble 7" since="timepoint_begin" interval="323600"/>
+            <when id="timepoint_Bubble 8" since="timepoint_begin" interval="387400"/>
+            <when id="timepoint_Bubble 9" since="timepoint_begin" interval="436700"/>
+            <when id="timepoint_Bubble 10" since="timepoint_begin" interval="477000"/>
+            <when id="timepoint_Bubble 11" since="timepoint_begin" interval="511200"/>
+            <when id="timepoint_Bubble 12" since="timepoint_begin" interval="586400"/>
+            <when id="timepoint_Bubble 13" since="timepoint_begin" interval="670200"/>
+            <when id="timepoint_Bubble 14" since="timepoint_begin" interval="710400"/>
+            <when id="timepoint_Bubble 15" since="timepoint_begin" interval="777100"/>
+            <when id="timepoint_Bubble 16" since="timepoint_begin" interval="820200"/>
+            <when id="timepoint_Bubble 17" since="timepoint_begin" interval="844400"/>
+            <when id="timepoint_Bubble 18" since="timepoint_begin" interval="902100"/>
+            <when id="timepoint_Bubble 19" since="timepoint_begin" interval="961600"/>
+            <when id="timepoint_Bubble 20" since="timepoint_begin" interval="994400"/>
+            <when id="timepoint_Bubble 21" since="timepoint_begin" interval="1027500"/>
+            <when id="timepoint_Bubble 22" since="timepoint_begin" interval="1071100"/>
+            <when id="timepoint_Bubble 23" since="timepoint_begin" interval="1094100"/>
+            <when id="timepoint_bubble 24" since="timepoint_begin" interval="1135200"/>
+            <when id="timepoint_Bubble 25" since="timepoint_begin" interval="1169000"/>
+            <when id="timepoint_Bubble 26" since="timepoint_begin" interval="1230200"/>
+            <when id="timepoint_Bubble 27" since="timepoint_begin" interval="1288800"/>
+            <when id="timepoint_Bubble 28" since="timepoint_begin" interval="1330500"/>
+            <when id="timepoint_Bubble 29" since="timepoint_begin" interval="1374200"/>
+            <when id="timepoint_Bubble 30" since="timepoint_begin" interval="1419800"/>
+            <when id="timepoint_Bubble 31" since="timepoint_begin" interval="1433800"/>
+            <when id="timepoint_Bubble 32" since="timepoint_begin" interval="1480100"/>
+            <when id="timepoint_Bubble 33" since="timepoint_begin" interval="1529800"/>
+            <when id="timepoint_Bubble 34" since="timepoint_begin" interval="1572600"/>
+            <when id="timepoint_Bubble 35" since="timepoint_begin" interval="1606900"/>
+            <when id="timepoint_Bubble 36" since="timepoint_begin" interval="1630200"/>
+            <when id="timepoint_Bubble 37" since="timepoint_begin" interval="1715200"/>
+            <when id="timepoint_Bubble 38" since="timepoint_begin" interval="1724600"/>
+            <when id="timepoint_Bubble 39" since="timepoint_begin" interval="1757300"/>
+            <when id="timepoint_Bubble 40" since="timepoint_begin" interval="1816100"/>
+            <when id="timepoint_Bubble 41" since="timepoint_begin" interval="1894300"/>
+            <when id="timepoint_Bubble 42" since="timepoint_begin" interval="1969400"/>
+            <when id="timepoint_Bubble 43" since="timepoint_begin" interval="2041600"/>
+            <when id="timepoint_Bubble 44" since="timepoint_begin" interval="2081900"/>
+            <when id="timepoint_Bubble 45" since="timepoint_begin" interval="2154400"/>
+            <when id="timepoint_Bubble 46" since="timepoint_begin" interval="2214500"/>
+            <when id="timepoint_Bubble 47" since="timepoint_begin" interval="2257800"/>
+            <when id="timepoint_Bubble 48" since="timepoint_begin" interval="2326000"/>
+            <when id="timepoint_Bubble 49" since="timepoint_begin" interval="2379000"/>
+            <when id="timepoint_Bubble 50" since="timepoint_begin" interval="2455100"/>
+            <when id="timepoint_Bubble 51" since="timepoint_begin" interval="2485400"/>
+            <when id="timepoint_Bubble 52" since="timepoint_begin" interval="2556800"/>
+            <when id="timepoint_Bubble 53" since="timepoint_begin" interval="2581500"/>
+            <when id="timepoint_Bubble 54" since="timepoint_begin" interval="2632200"/>
+            <when id="timepoint_Bubble 55" since="timepoint_begin" interval="2686400"/>
+            <when id="timepoint_Bubble 56" since="timepoint_begin" interval="2740300"/>
+            <when id="timepoint_Bubble 57" since="timepoint_begin" interval="2800300"/>
+            <when id="timepoint_Bubble 58" since="timepoint_begin" interval="2883800"/>
+            <when id="timepoint_Bubble 59" since="timepoint_begin" interval="2912300"/>
+            <when id="timepoint_Bubble 60" since="timepoint_begin" interval="2953300"/>
+            <when id="timepoint_Bubble 61" since="timepoint_begin" interval="3021700"/>
+            <when id="timepoint_Bubble 62" since="timepoint_begin" interval="3093700"/>
+            <when id="timepoint_Bubble 63" since="timepoint_begin" interval="3181600"/>
+            <when id="timepoint_Bubble 64" since="timepoint_begin" interval="3238200"/>
+            <when id="timepoint_Bubble 65" since="timepoint_begin" interval="3281500"/>
+            <when id="timepoint_Bubble 66" since="timepoint_begin" interval="3322600"/>
+            <when id="timepoint_Bubble 67" since="timepoint_begin" interval="3367800"/>
+            <when id="timepoint_end" since="timepoint_begin" interval="3407360"/>
+         </timeline>
+         <div1 id="transcript.1" n="Transcript">
+            <u rend="transcript_chunk" start="timepoint_Bubble 1" n="Bubble 1" end="timepoint_Bubble 2">
+<u who="AB">Orientation. And they did not view ...associated with encounter congress from cultural freedom and so on and so forth. But nevertheless, it was aninteresting relationship.</u>
+<u who="KM">So Shields must have been a colleague with Bernal and with Curie,--Joliot Curie, I mean the French group that was involved with the ...</u>
+<u who="AB">Atomic scientist group</u>
+<u who="KM">The committee of cultural  freedom</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 2" n="Bubble 2" end="timepoint_Bubble 3">
+<u who="AB">The congress of cultural freedom</u>
+<u who="KM">The congress of cultural freedom. That's what the British and French and I wonder if he might have been the American prong so to speak for that movement in the '40s ...'40s and '50s</u>
+<u who="AB">Yes. This would be more... I mean it was associated with the cold war.</u>
+<u who="KM">The beginning of the cold war. This is interesting....he sounds to be a very important figure historically. </u>
+<u who="AB">Yes, I think he was very important.... "tumi ektu aalo ta jele debe, Taslima?" shall we have some tea?</u>
+<u who="KM">Sure. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 3" n="Bubble 3" end="timepoint_Bubble 4">
+<u who="KM">All right. This is a Calcutta and Dhaka Oral History interview with Professor AB. It's August 14th, 2009 in Delhi and an honor to have this opportunity with you Professor Beteille. Could we begin by some biodata and could you say when you are born and where you were born, just to start?</u>
+<u who="AB">I was born in Chandannagar which is one of the five French enclaves in India,  very near to Kolkata. And I spent the first 9 years of my life in that small town. Towards the end of that - I never went to school in Chandannagar. I entered school at the age of nine, but there was a tutor who would come to the house and do some tutoring in elementary maths and grammar and that kind of thing. And then I was sent off to a boarding school in Patna and that would have been in early 1944.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 4" n="Bubble 4" end="timepoint_Bubble 5">
+<u who="KM">I see.</u>
+<u who="AB">And I was there for 2 years not liking it very much and we were taken out of that school and put into a day school in Kolkata and we had come to live in Kolkata at that time in North Kolkata.</u>
+<u who="KM">Do you remember where you lived or the street name or? </u>
+<u who="AB">Yes, indeed.</u>
+<u who="KM">Yeah.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 5" n="Bubble 5" end="timepoint_Bubble 6">
+<u who="AB">57/1/1A Raja Dinendra Street. It was the house of a very well-known gynecologist and a leader of the Nationalist Movement. His name was Dr. Sundari Mohan Das. He had been an associate of Bipin Chandra Pal. But by then he was into his late 80s or early 90s. He used to always say that "I was born in the year of the Sepoy Mutiny." So when we came to live in Kolkata in 1946 I think he must have been just one year short of 90, so we lived in that house. It was a middle class Bengali neighborhood which had seen better days but it was in decline. We were put into a day school which was in a different part of the city called St. James's School what was then known as Lower Circular Road and it now known as AJC Bose Road after AJC Bose, the physicist. I was there off and on for a year and a half but I must stress the off and on because hardly had we settled into the school then the riots began in Kolkata. And it was very difficult for us. We were two. My brother who was 3 years older than me and myself, very difficult for us to go by public transportation to that school. And people at home waited and hoped that it would all blow over but it didn't. It lasted for one full year and...</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 6" n="Bubble 6" end="timepoint_Bubble 7">
+<u who="KM">This was from '46 to '47?</u>
+<u who="AB">It was from August '46 to August '47 exactly one full year. By then my mother had begun to be a little anxious about my education but even more about the education of my elder brother. So she took us out of that school but where to put us in? We had been socialized in English medium schools and my brother was to matriculate the next year or so and we had to change from the senior Cambridge stream to matriculation stream. So getting into - there were plenty of Bengali medium schools in that neighborhood but it would create enormous difficulty for my brother and some also for me but we did get into a neighborhood school about which I have written called Brahmo Boys School that is located in a street in North Calcutta known as Jhamapukur Lane.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 7" n="Bubble 7" end="timepoint_Bubble 8">
+<u>Jhamapukur Lane.  And so we and the headmaster who was known to our family said "look the boys both know Bengali quite well" and we were Bengali speakers. Bengali was the first language of home and he said so they will be able to follow the classes. "I will only ensure that they are allowed to take their examinations in the English medium" and he told my mother whom he knew and liked very much that "that you will have to arrange [ph] for." So I moved into this Brahmo Boys School I think after the summer vacation in 1947 and within a month the riots were over and everything is all right.  I liked Brahmo Boys School. It was a rather rundown lower middle class school, a Bengali medium school not just a Bengali medium school but a Bengali medium school at the lower end of the scholastic [ph] as well as the social hierarchy but that was the school that I liked the best. I really liked it very much.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 8" n="Bubble 8" end="timepoint_Bubble 9">
+<u who="KM">What was it about it that you enjoyed, that you liked?</u>
+<u who="AB">Well now that I, you know, I am coming to think about it, it was growing up, it was the age which made one receptive to new experiences and to freedom away from home, but I also liked the fact that I was greatly admired in that school mainly for my proficiency in spoken English. I could speak English like one's first language and that was very unusual in that school. Not just unusual, nobody did it, not even many of the teachers spoke English. And so you know language is so important and so interesting because if you are able to speak fluently people assume that you must be very intelligent.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 9" n="Bubble 9" end="timepoint_Bubble 10">
+<u who="KM">Right.</u>
+<u who="AB">So I was liked, and I enjoyed my freedom, I enjoyed the friendship of my fellow students. This is the first time in my life that I could move about on my own alone. Till then I had to be with my brother or with somebody else. In Chandannagar it was maid servant or somebody. It was the first time in my life that I could go out on my own, have my own friends which were not necessarily friends of the family or children of my parents friends but my own friends. So that they gave a sense of freedom and the freedom to explore the city and to see what city-- I was then what 13, 14, 15.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 10" n="Bubble 10" end="timepoint_Bubble 11">
+<u who="KM">This is a leading question but it might actually go somewhere interesting. Did you have the sense already at this age of let's say being somewhat different from the environment in which you were ? I am wondering that because I wonder if that helps explain why you eventually would decide to become a social scientist and write critically about society. And to in some ways take an outsider's perspective. Did you experience that in these years in either positive or negative ways?</u>
+<u who="AB">Yes. Yes, very much so. Let me say that...</u>
+<u who="KM">Please.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 11" n="Bubble 11" end="timepoint_Bubble 12">
+<u who="AB">...you might attribute some particular features of my writing to the sense of being different from the others but I don't think that there is just one way in which one enters the vocation of sociology. I was very conscious of my distinctive identity always because I had a funny name and that was made more conspicuous when I went to this lower middle class Bengali school where nobody spoke any language other than Bengali. I was liked, very much liked by the parents and particularly the mothers of my friends and they would ask me endless questions and they all assumed that I was very bright and they would ask me endless questions very kindly but I squirmed when they - "how did your parents get married?" and that sort of question. So I have always had a sense of my distinctive identity because of my name and my parentage. My children don't have that to the same extent that I do. I think it is to the a large extent a question of social class, social stratification,</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 12" n="Bubble 12" end="timepoint_Bubble 13">
+<u>particular social milieu and in that social milieu both in Chandannagar-- boarding school was a little different but even that brought out my distinctive identity because the first boarding school to which I went and in fact the only boarding school was what we would call an Anglo- Indian school. And all the boys had mothers who wore dresses. Not one of them wore a sari, but my mother when she came to see us off at the station, spoke to us in Bengali and she was always dressed in a sari. So even there I was not an Anglo Indian. They knew this and so when I went to the Brahmo Boys School I was very much - it was not necessarily a negative thing but I was very conscious of the fact that I was different from the others. Then I moved from Brahmo Boys to St. Xavier's College in 1950. St. Xavier's College was far more cosmopolitan college and I - my identity as being of mixed parentage was less conspicuous there because there might have been others of my kind there and I was - my French name was of course noticed by various people but it...</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 13" n="Bubble 13" end="timepoint_Bubble 14">
+<u who="AB">It was a more cosmopolitan --and sometimes I wonder whether that may not have been the reason why I decided to avoid Presidency College and go to St. Xavier's college.</u>
+<u who="KM">How did you make that decision because your thinking at the time where you would go to college or perhaps - there was a - maybe perhaps a family decision as well and what are the different factors that made you...?</u>
+<u who="AB">It was partly a family decision. You see I wanted to be a scientist. I wanted to study physics that was quite clear in my mind. But what physics was all about I didn't know at the age of 15 but I thought that it would be good to be a physicist and part of this may have been the</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 14" n="Bubble 14" end="timepoint_Bubble 15">
+<u>--in the atmosphere because the University College of Science where Bose and Saha both worked was just at a stone's throw from our house and they were legends and so being a physicist was an important thing. So I wanted to be a physicist. I went to St. Xavier's College with that intention. Why didn't I go to  Presidency College? Well, partly I think I wanted to escape the narrowness of lower middle class Bengali life. Partly that and the excitement of a different kind of social life more cosmopolitan social life in which my identity as being part French and part Bengali could be left behind. In which I wouldn't have to explain interminably how my parents have got married. So that was one reason.  And the other reason was that St. Xavier's had a great reputation for physics and math. Presidency had a better academic reputation. And I think if there was anyone in the home who pushed me towards St. Xavier's it was my elder brother, the one with whom I went</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 15" n="Bubble 15" end="timepoint_Bubble 16">
+<u>- moved from St. James's to Brahmo Boys School. He was not very good in his studies, he was very intelligent, but he was much more interested in sports and he thought that I would do well in studies and he somehow felt that St. Xavier's would be a better place for me. And you know  boys at the age of 17, 18 he didn't go to Presidency, he went to another College, the Scottish Church College, which is the college to which Tapan Raychaudhuri with which Tapan Raychaudhuri started.</u>
+<u who="KM">Yes.</u>
+<u who="AB">He went to Scottish and he felt that St. Xavier's was the better college. I didn't know why he felt that way. He was a quite considerable success in sports in later life.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 16" n="Bubble 16" end="timepoint_Bubble 17">
+<u who="KM">What did he?</u>
+<u who="AB">He played first division soccer and first division hockey in Calcua and that is no mean achievement. And I think rightly or wrongly he felt that the St, Xavier's was good in sports and it had good people and playing fields and all the rest of it and the Jesuit culture and all of that. And there was one legendary teacher of mathematics in St. Xavier's College</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 17" n="Bubble 17" end="timepoint_Bubble 18">
+<u who="KM">Who is that?</u>
+<u who="AB">Fr. Goreux. Fr. Goreux. And his name was known everywhere to everyone and partly, accidentally we became close to a Bengali family and I think that had a lot of influence on this decision not just my brother. This was a family of Bengali Brahmos related not very closely but related to Sumit Sarkar. I met Sumit Sarkar first in that home. There was a boy - he was a few years older than me more my brother's friend than mine Sujit Sarkar was his name but his name was Robin. Everybody called him Robin. Robin's father was a dentist and a very charming and agreeable man. And my elder brother got along extremely well with older people and he lived out of Sachin Sarkar's pocket.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 18" n="Bubble 18" end="timepoint_Bubble 19">
+<u>And so we would go to their home and Robin was going to St. Xavier's College and Robin knew all about St. Xavier's College. So I got a lot of information in those 3 or 4 crucial months when you've taken the matriculation examination and are waiting for the results. I spent a lot of time in their home not because I wanted to find out about the prospects but I went there, I liked Robin, I liked that home and they were connected with our family, they were family friends. So I went there a very great deal and I got a lot of information from Robin. And Robin himself was moving out of St. Xavier's College to Presidency College but he was on the art side and that he felt that Presidency would be better to do economics. And he was certainly right. He did not discourage me from my choice of St. Xavier's College. It's very difficult to at this late stage to be very precise as to what...</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 19" n="Bubble 19" end="timepoint_Bubble 20">
+<u who="KM">To get all the factors affecting [ph]...</u>
+<u who="AB">But I think that the social factor was important. I wanted to get away from the confines of the lower middle class Bengali life. I ...thought that I had - it was good, it was very nice to me. As I said the mothers of my friends and my friends themselves in Brahmo Boys School were very, very nice. I had a thoroughly good time there but still I found it somewhat confining and I wanted to explore a different kind of world and that is what must have been the decisive factor behind my choice of St. Xavier's college.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 20" n="Bubble 20" end="timepoint_Bubble 21">
+<u who="KM">It's often case that there is a period in someone's life, childhood through early adulthood which seems to be a kind of intellectual awakening or a kind of moment of opening to various new questions and begins a kind of path that sometimes you know carries through one's whole life. Was there such a moment, a particular period in time that you can recall in which you had an intellectual when I say intellectual awakening or?</u>
+<u who="AB">Yes.</u>
+<u who="KM">...not?</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 21" n="Bubble 21" end="timepoint_Bubble 22">
+<u who="AB">Yes I did. It was an awakening in a negative sense. I wanted very much to be a scientist and I did the inter science exam. After school --I left school in 15 that would be the normal age and at 17 I did the inter science - I did done very well in school despite all the handicaps I had done fairly well in school. I hadn't done quite as well in college. I got a first and I was easily admitted into the physics honors class. Many of my friends left and went away. I made new friends but in the course of the first year of my B.Sc. studies in physics...</u>
+<u who="KM">Which is after 2 years?</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 22" n="Bubble 22" end="timepoint_Bubble 23">
+<u who="AB">After 2 years. Yes it's called third year. In my third year in college I realized that I did not have it within me what it took  to be a good physicist and that was the moment of awakening. And I am very glad that --I lost a year in the process.</u>
+<u who="KM">So you changed directions?</u>
+<u who="AB">I changed directions.</u>
+<u who="KM">Wow.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 23" n="Bubble 23" end="timepoint_bubble 24">
+<u who="AB">I changed directions in 1952-53. I joined the B.Sc. course with honors in physics and maths and chemistry and I found that I could do reasonably well but I couldn't compete with the best students in the class and I thought that it was - I realized inwardly that this is very competitive subject and I didn't have it in me to succeed in that competition.</u>
+<u who="KM">So what was the inner voice that told you to then - where did that inner voice come from that told you to then to take up the path that you've ended taking - couldn't have been sociology because...</u>
+<u who="AB">No.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_bubble 24" n="bubble 24" end="timepoint_Bubble 25">
+<u who="KM">...there was no such field?</u>
+<u who="AB">I didn't know anything about sociology. I didn't know anything about sociology. I was very much interested in anthropology without knowing the name. What interested me in anthropology was not social anthropology. What interested me in anthropology was paleontology and evolution. I didn't know how --well again it may have been a moment that brought that in. I discovered that I had some ability, I won't say talent, in expounding things which I myself understood. I realized that in school in Brahmo Boys School...</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 25" n="Bubble 25" end="timepoint_Bubble 26">
+<u who="KM">Oh really...</u>
+<u who="AB">That was a great thing. That was a great thing because I found myself teaching my fellow students not only English at which I was much better than them but other subjects as well. Now in St. Xavier's College I think at the beginning of my third year B.Sc. studies there was an exhibition, a biology exhibition that had been arranged in the college. And the teacher of zoology with whom I didn't have much to do he picked me out and appointed me as a demonstrator and he gave me - there was a stall on evolution and he explained what I would have to explain. And I found that I did it very well and people commented on this. So it had a large number of visitors many of whom had been former students of St. Xavier's College and they went and told the college authorities that you know there is a young man whose</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 26" n="Bubble 26" end="timepoint_Bubble 27">
+<u>--and that is when I got caught because I had a conceived the fact that I was a Catholic and one of the new Fathers, Jesuit Fathers, was he was struck by my exposition.  He asked me "what is your name?" This is not a question that I wanted him to ask me. And I said "Andre Beteille." And he said and he looked -he'd just come from Belgium. He looked puzzled and he said --asked me how I had such a name and I said "well my mother is Bengali but my father is French." And then  - he almost swooped  down on me and said "Catholic? Catholic?" and I had to say yes. So that put me on to a different...path in St. Xavier's College and so this exhibition was very important for me and I got a pri--I got a sort of small prize and I remember the two books that I bought. The two books --I was given Rs.10.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 27" n="Bubble 27" end="timepoint_Bubble 28">
+<u>In those days you could buy two books. One was the Origin of Species and the other was Nietzsche's Thus Spake Zarathustra which I tried to read and made no sense whatsoever but Origin of Species I liked. And so I got into paleontology and when I discovered that I would not make it as a physicist I decided to discontinue my studies and sought admission in the anthropology department. And I spent 3 or 4 months doing nothing actually but I would go everyday to the national library. I had members--.</u>
+<u who="KM">Where was the national library?</u>
+<u who="AB">National library is the same place where it is now.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 28" n="Bubble 28" end="timepoint_Bubble 29">
+<u who="KM">Same place? Alipore.</u>
+<u who="AB">It is in Alipore. It was there. And I got a ticket for the reading room not to borrow and I spent lot of time reading books on various things. So when I went to the Department of Anthropology in 1953 again it was a sort of  lower end of the social as well as the academic hierarchy, Anthropology. the real subjects were physics or economics or even history but not anthropology. Again I was a star pupil. I was  a star pupil because partly because I knew English. My English was good. I could speak English fluently and partly because I was very well prepared. I read a lot of books in the national library on physical anthropology.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 29" n="Bubble 29" end="timepoint_Bubble 30">
+<u who="KM">So that means you restarted the third year?</u>
+<u who="AB">I restarted.</u>
+<u who="KM">You began again on a different track?</u>
+<u who="AB">On a different track. But the track was different but I now wonder why I did not make it completely, but I did not want to give up science and anthropology was  a science subject and you had to take one honors subject, six papers and two pass subjects, three papers each and I stuck with physics and maths as my pass subjects somehow. I did very well in anthropology but I was scared that I might flunk it in physics or maths but I went through with all of that and I did well in my studies. And I was at that time more interested in the esoteric side of anthropology</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 30" n="Bubble 30" end="timepoint_Bubble 31">
+<u who="KM">Meaning theoretical?</u>
+<u who="AB">No.</u>
+<u who="KM">No?</u>
+<u who="AB">No. No. Meaning primates. The evolution of primates. The curious customs of cannibalism, matriarchy and all of these.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 31" n="Bubble 31" end="timepoint_Bubble 32">
+<u who="KM">The natural science?</u>
+<u who="AB">Yes. That's right and see which are very different from our way of life. And in the first 2 years I read enormous amounts of ethnography, enormous amounts. I don't think I had any specific theoretical interest or focus. That gradually grew through reading all these ethnography. So that is what I was doing between 1953 and 1955.</u>
+<u who="KM">Did you have a - you mentioned this a priest who took a great interest in you at the science exhibition but in this period when you were making the transition and you were voraciously reading, did you have a guide per se or did you really experience this is your at the frontier on your own and kind of?</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 32" n="Bubble 32" end="timepoint_Bubble 33">
+<u who="AB">I didn't have any guide in my reading anthropology but what happened was we all admired Fr. Goreux, this maths teacher. He was a legend. He  still is a legend. I don't know if he is alive now but I have - my wife has nephews who are now in their late 40s and 50s they went to St. Xavier's School and said that they remember Fr. Goreux. So I kept up my connections with the college. I would go and meet Fr. Goreux. Fr. Goreux was a great hero although I had detached myself from maths and physics I still went and saw Fr. Goreux and discussed a lot of things. What had happened in the mean time is that I had acquired an interest in literature and in these 6 months I was not just going to the national library. I taught myself French.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 33" n="Bubble 33" end="timepoint_Bubble 34">
+<u who="KM">So you did not grew up with the language?</u>
+<u who="AB">I was taught French as I told you by my private tutor who would come home but it was very rudimentary but I was familiar with the sounds of the French language. My sister spoke French fluently. She was much older than me. Of course my father spoke French and my father insisted - often spoke in French with each other. You know how it is when you are a boy of 7 or 8 or 9 you hear a language spoken and you pick up the words and your pronunciation is good and so you pick a few sentences and people --that's-"oh my god you are so good in French." So I had some sense of the sounds of the French language when I picked...</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 34" n="Bubble 34" end="timepoint_Bubble 35">
+<u who="AB">...picked up again in 1953 and I joined the Alliance Francaise and I felt that I must do something with myself so I discovered some old books in my grandmother's house where my father had grown up. Old French books, all kinds of books. And these included the plays of Moliere and what better way of learning French than take one of these books and take - no, no I am fine.</u>
+<u who="KM">Okay.</u>
+<u who="AB">I am fine.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 35" n="Bubble 35" end="timepoint_Bubble 36">
+<u who="KM">So...</u>
+<u who="AB">But you switch it on. Okay. So </u>
+<u who="KM">Using the grandmother's house and Moliere? </u>
+<u who="AB">Moliere and what better way of learning French than go to Alliance Francaise, the pace is very slow. I picked out a couple of plays, one act plays and I took a dictionary and I translated them into English and that was very, very good.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 36" n="Bubble 36" end="timepoint_Bubble 37">
+<u>In the mean time this discovery of my Catholic roots brought me in contact with a very interesting man called Fr. Vester [ph] who had some administrative position not in the college alone but in the society of Jesuits and he lived in St. Xavier's College. So I got to know him well.</u>
+<u>And he was very nice and very encouraging and he gave me access to the fathers' library and I started borrowing French books and reading French. So that also is opening up French literature and not just paleontology. I was exploring but and I think I was trying to get over my sense of failure and not having really having it within me to become a physicist and I was and it was nice and in the 2 years that I spent for my B.Sc. I had a lot of freedom because I realized that I was well ahead of the rest of the class. I didn't have to strive strenu--. I could read on my own and read whatever I want to read and my teachers felt that I was very good and they pampered me and encouraged me and gave me their own books and I was also doing all this French and the rest of it. And I think that was the time when I also began to explore the Calcutta Coffee House. This is slightly before I completed my B.Sc. and moved to the M.Sc. program in anthropology.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 37" n="Bubble 37" end="timepoint_Bubble 38">
+<u who="KM">This is in the fourth year as it were?</u>
+<u who="AB">In the fourth year in the... </u>
+<u who="KM">Or that?</u>
+<u who="AB">Third year and fourth year. Oh.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 38" n="Bubble 38" end="timepoint_Bubble 39">
+<u who="KM">So two questions. One question of two parts before we perhaps jump into the M.Sc. and Ph.D. period and you mentioned the Brahmo School...?</u>
+<u who="AB">Brahmo Boys School.</u>
+<u who="KM">The Brahmo Boys School as well as Robin and his family who are Brahmos and also you've mentioned the Jesuits at St. Xavier's College and you also mentioned the fact that there was perhaps a decision or partly a part of your decision was to escape or leave the middle class colony.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 39" n="Bubble 39" end="timepoint_Bubble 40">
+<u who="AB">The confines of the lower middle class.</u>
+<u who="KM">The confines of the lower middle class Bengali context which one might actually find at Presidency for example. So and you also use the word cosmopolitan so what I was just wondering putting your experience in '50s in Calcutta in the context of what else was happening in Calcutta at that time. Perhaps specifically the rise of a wave of Marxism amongst the young, the youth which possibly was quite connected often with a kind of identity as well with a desire to be grounded and rooted in a Bengaliness or in the village or return to the village and so forth. And maybe I am drawing with too broad a  brush stroke but how - what - how was that context playing into your experience in the 1950s. Kind of the larger intellectual movement perhaps the Bengali mainstream --or not necessarily the mainstream but the bhadralok youth. What was happening?</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 40" n="Bubble 40" end="timepoint_Bubble 41">
+<u who="AB">I must mention one thing because it could be source of misunderstanding. Brahmos represent a more cosmopolitan part of the Bengali middle class and that was something that I found in Robin's family. That is something that you would find in Cherubin Sarkar's home but Brahmo Boys School by the time I was a student therewas Brahmo only in name. There were hardly any Brahmos who went to that school. It is started with Brahmos. P C Mahalanobish had gone to that school but that was in an another age. By the time I was there it was lower middle class. It was a lower middle class Bengali school. There was very little of the Brahmo element in it. So yes Marxism of course --you know I am a believer in the autonomy of ideas or the partial autonomy of ...ideas I think that once material circumstances, social conditions, identity etcetera have some parts certainly. I think I was never a Marxist and I reacted against it mainly as far as I can see looking back now on intellectual grounds.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 41" n="Bubble 41" end="timepoint_Bubble 42">
+<u>I found it unacceptable on intellectual grounds. So is it mine? Sorry. I found the Marxist system extremely oppressive. I found it oppressive, intellectually oppressive. I didn't know very much about what was happening in Stalin's Russia. I found that among my friends the brightest [ph] and the most able and the most successful were the Marxists and --but they were extremely convinced that they had the answers to all the questions. They were somewhat self -satisfied and arrogant, intellectually arrogant, and it is that side of Marxism that I  found repellent. I am sure there are many other sides to it but I found the Marxists in the coffee house in Calcutta and the Indian Statistical Institute, that was another haunt of Marxists-- St. Xavier's College was not, Presidency college must have been at that time I found them too self -satisfied intellectually. They knew all the answers. My model of an intellectual is not the person who knows the answers to all the questions.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 42" n="Bubble 42" end="timepoint_Bubble 43">
+<u>You know, I often use this example of a conversation between Bertrand Russell and G.E. Moore. They were both Cambridge philosophers, very different in personality and temperament. Moore, very laconic, hardly spoken and Russell very - Russell writes in his memoirs that there is only one occasion on which he could get an immediate answer to a question. He said "I asked Moore, I said Moore one day, I asked  'Moore, who is your best pupil?' And without a moment's thought he said 'why, Wittgenstein [ph] of course. He always looks puzzled.'" The Marxists never looked puzzled and I didn't find that a very attractive-- No brilliant people like Amartya Sen, Sukumar Chakraborty --they were brilliant but they never looked puzzled they had all the answers and I found this-- And by the time I was going to the university some idea of what was happening in the Soviet Union had begun to creep in and I found their attitude that those who are not for us are against us repellant and I began to see that</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 43" n="Bubble 43" end="timepoint_Bubble 44">
+<u>--and this was confirmed by the record later on that between Nehru and Stalin there really was no choices as far as I was concerned. Nehru was the sort of person who didn't have the answers to all the questions. He may have been a little too woolly and fuzzy but I found his intellectual temperament very attractive as against the intellectual temperament of the communists [ph]. </u>
+<u who="KM">So when you went to the coffee house if there were a certain groups of Marxists and Marxists would be there would it be that those groups you would spend time with was there another group that you would spend  time with?</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 44" n="Bubble 44" end="timepoint_Bubble 45">
+<u who="AB">No, naturally as a young man I sought out the brightest and the brightest were almost all Marxists although there were exceptions not that I knew very many of them they were the most prominent one. Abhinav Dutta [?]was very - but he was of an earlier generation. He was already a teacher and I didn't have access to Abhinav babu in those days I got to know him later on. Ashin Das Gupta whom I did not know at that [Unclear] husband. He was a Marxist . So there were non-Marxists but I didn't know them at that time. The ones I knew were either Marxist or Marxisant --that was the language-- but we discussed other things and they got me interested in things which I then found interesting and exciting. I told you that I came to anthropology from an interest in the otherness and in the differences of different ways of life. And the more esoteric, the more the arcane or archaic, the better for me but I mean one tires of it after 3 or 4 years and I had studied</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 45" n="Bubble 45" end="timepoint_Bubble 46">
+<u>--and I wanted to find --what was discussed in the coffee house is amongst these very bright young students --Marxists --were 2-- 2 or 3 things. One was politics in which I was an innocent and the other was literature...in which a lot of these people knew a very great deal but you know this famous thing that Isaiah Berlin quotes from some Greek writer "The fox has many little things. The hedgehog has one big thing." I had one big thing: I knew French and I was translating Baudelaire's poetry. So I can talk about French literature from the inside. So there was literature. There was politics and of course Marxism was very important even in literature. Marxism was very important. But I didn't find Marxism - I found it of course I found it interesting but not very attractive at that time. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 46" n="Bubble 46" end="timepoint_Bubble 47">
+<u who="KM">And I am wondering about how knowledge and what the theme that you have contributed so much to status and knowledge and how they went together. In other words in the coffee house amongst all of these bright young men was there a particular status associated to being able to speak about ideas that were not British or Anglo-Saxon or was it and if so how did --because you mentioned Baudelaire-- Were people particularly interested in American intellectual contributions and German intellectual while I guess the Russian would be in some ways be the Marxist so how did that field play?</u>
+<u who="AB">I think in some ways the Bengali intellectual was remarkably insular. They were interested in Bengal and then they were interested in Europe. They were not interested in the rest of India, hardly any interest in the rest of India.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 47" n="Bubble 47" end="timepoint_Bubble 48">
+<u>So they had a remarkable amount of information and also knowledge about what was happening in literature in the West, painting, all acquired from books. You know, Nirad[?] [ph] Chaudhuri is the classic example of getting all this information from books. Information about paintings-- He'd never seen those paintings but he had a remarkable understanding of those paintings. He didn't know too many European languages but he had a remarkable insight. So it is --you can gain a lot of insight from books about people and I think Nirad Chaudhuri is in some ways the quintessential selftaught Bengali intellectual and many of us were in fact selftaught but we were in a group. Nirad babu may have also been in a group of that kind. So that's how life was. I mean we didn't know it at first hand but while --so what? I mean there is a wonderful story that [Unclear] told me about Nirad Chaudhuri. Nirad Chaudhuri had a phenomenal memory and she was a great admirer of Nirad Chaudhuri. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 48" n="Bubble 48" end="timepoint_Bubble 49">
+<u who="KM">Encyclopedic as he was known.</u>
+<u who="AB">Encyclopedic and peculiar memory. It said that when somebody wrote him a letter from a house in Darjeeling and the house had a letterhead giving the name of the house and she wrote him a letter from that and a long letter about life in Darjeeling and he wrote back to her describing that house and the trees that stood around it and it appeared that he had never been in Darjeeling. He had heard about this and read about this and stored it in his memory. [Unclear] story was that Nirad babu had never been outside India till he was in his mid 50s. Then he decided to go to England and he decided to pay a visit to France, to Paris and he wanted to see Paris. Paris. So [Unclear] thought that this man [Unclear] looking after. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 49" n="Bubble 49" end="timepoint_Bubble 50">
+<u>He had a French friend in Paris he go to him saying that I have this Indian gentlemen he is a remarkable person he is very Indian in many ways but he is remarkably knowledgable in European literatureand European history. He is going there. He wants to see the city I would be very obliged if you were take him around and show him. So they set up an appointment in some caf&#233;, Boulevard St. Michel, whatever, and Nirad babu went he was very punctual and very meticulous and but his host did not show up so he waited for 15 minutes, 20 minutes got up and moved around on his own. And the friend came about 10 or 15 minutes late and thought that being an Indian he might take his own time so he sat down after about an hour when he began to worry as to what would have happened with this man Nirad babu showed up bright and beaming and said "I have been all round come let's go" and he said this man this Indian he started taking me through lanes and bylanes and he seem to know them better than I do. So it is remarkable how much detailed knowledge and even insight you can get out of books. I am a great believer in that.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 50" n="Bubble 50" end="timepoint_Bubble 51">
+<u who="KM">Let's move on to, maybe to the Ph.D. period so that I don't take too much of your time. Can you describe that phase in your development and the major intellectual...[Unclear] these are of course these are canonical figures so how did that and I think you moved to Delhi at this point?.</u>
+<u who="AB">Yes.</u>
+<u who="KM">So that decision?</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 51" n="Bubble 51" end="timepoint_Bubble 52">
+<u who="AB">Yes. Yes. I moved to Delhi and this is a misunderstanding which is repeated over and over again. I didn't join Delhi University as a Ph.D. student. I didn't come to Delhi to do a Ph.D. I came to Delhi to teach. By that time I had realized that my real vocation was as a teacher and I had a job after my M.Sc. I joined the Indian Statistical Institute and it was a research job, I didn't like it and I was on the lookout for a teaching job. So I got a lectureship in Delhi University to my great happiness but to my great surprise as well because I was the least qualified on paper of the candidates. Once I got the job I decided that I will settle down and teach. Read all the books and write book reviews, write articles and it was Srinivas who prodded me into doing a Ph.D. So then in course of time I registered for the P--but I did a Ph.D. while I was a full time lecturer. I came to the Delhi school as a lecturer not as a Ph.D. student not to do my Ph.D. So I was teaching. I had got into teaching I really loved it but...</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 52" n="Bubble 52" end="timepoint_Bubble 53">
+<u who="KM">And how old were you at this time when you had begun teaching?</u>
+<u who="AB">24.</u>
+<u who="KM">That young?</u>
+<u who="AB">Yeah. 24. I was teaching. That is one of my - that is something in which I take great pride that I gave the first lecture to students in the department of sociology which is the most outstanding department in the country. I gave the first lecture on the 18th of July, 1959.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 53" n="Bubble 53" end="timepoint_Bubble 54">
+<u who="KM">Of in that department?</u>
+<u who="AB">In that department. It just started. We recruited the first batch of students. The first batch of MA students. Srinivas had come in February. He joined as Professor. I was interviewed along with others on the 4th of April, 1959. I joined the department on the 1st of July. Classes started on the 18th of July and since I was young and I was a bachelor I was naturally assigned the first lecture in the morning hours and I loved it and  I did it for a year and in my first year, by the way, I had no thoughts of doing a Ph.D. but Srinivas pushed me into it and said that you must do it and of course he had very good reasons for doing this. So I went out to do my field work in the summer vacation of 1961 after completing 2 years of full time teaching. And then...</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 54" n="Bubble 54" end="timepoint_Bubble 55">
+<u who="KM">And having read into the field in your off hours, as it were you were doing...</u>
+<u who="AB">I read a lot. I can't say that my reading was very purposeful. I read very broadly and the one thing that because of my days in the coffee house in Calcutta and my friendship with all these people who were Marxists or pseudo-Marxists I had acquired a lot of interest in Marxism and the Delhi school, the economics department believed-- if I were to oversimplify I would say in those days by and large the sociologists studied caste and the economists studied class. They believed that the real divisions in Indian society were the divisions of class.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 55" n="Bubble 55" end="timepoint_Bubble 56">
+<u who="KM">who were and who would you say was the main figure and couple of main figures at economics, in the economics department?</u>
+<u who="AB">At that time the main figure was K.N. Raj who he was considerable influence on me, K.N. Raj. And K.N. Raj used to tell me that in later years you are wasting your time in the sociology department come and... So I was interested in class, I was interested in class, I had read-- I now realize as I started teaching Srinivas was intolerant of all this. Srinivas thought that Marxism was just a bombastic form of propaganda. It had - there is nothing intellectually serious about  Marxism. He was quite opinionated in this and but he did not stop me from talking about Marx [ph] or doing a course insisting that we should have a course on sociological theory with Marx, Weber, and Durkheim  which had become the staple in American and British universities by then</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 56" n="Bubble 56" end="timepoint_Bubble 57">
+<u>so he gave me a free hand in doing this and I think he sensed that I was not a Marxist or that-- I was fascinated by Marxism but I was not a Marxist. So I was teaching all kinds of things and then I set off to do my field work in the classic British anthropological tradition. I have never been to Britain but I knew all about it from Srinivas and from my reading because Srinivas had been and in later years when I did go to Cambridge and spend time there I used to educate...the young lecturers in anthropology in Cambridge University about the history of their own department. And the first professor of anthropology in Cambridge was a man called Hodson, T.C. Hodson who was a member of ICS. And the second professor of anthropology was also a member of the ICS called J.H. Hutton but then anthropology had turned around in the 1940s</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 57" n="Bubble 57" end="timepoint_Bubble 58">
+<u>but it had a past in Cambridge and the people who were teaching anthropology in the '70s and the '80s and '90s and particularly in the '80s and '90s in Cambridge had no idea of this past. So this is to reassert the point that you can learn a lot from books and from talking with people but specially from books so I went out to do field work. Did I have a plan? No I didn't. I did have a plan but I set that plan aside straight away.  I wanted to study temples and the religious organization of temples in Tanjore but once I went there I discovered that the social divisions of caste and the social divisions of class were very important and that is when I discovered that the real challenge in Indian society is to understand the dialectic of caste and class and that is the problem which has stayed with me for a long time and I am very, very pleased. It give me a great deal of satisfaction. One of my early Ph.D. students and the one who had remained closest to me oddly enough is an English one called Jonathan Parry. I do not know whether there was a [Unclear] for me when I retired in 1999. It was edited by two persons Ram Guha do you know the name? Ramachandra </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 58" n="Bubble 58" end="timepoint_Bubble 59">
+<u who="KM">Of course. Yes.</u>
+<u who="AB">Rama Guha and Johnny parry they edited it. Johnny was one of my early Ph. D. students. He was in Cambridge but I was a supervisor in Delhi and he was doing field work [Unclear] this started in 1966-67 and last year I had gone to the LSE [London School of Economics], at the invitation of the LSE to be the chief speaker at Johnny's retirement.</u>
+<u who="KM">So it was very much full circle or something very poignantabout it?</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 59" n="Bubble 59" end="timepoint_Bubble 60">
+<u who="AB">Yes. And not only that Johnny Parry has at last come back to the problem with which I started off: What is the relationship between caste and class?[Unclear] And of course he has done enormously more detailed field work than I have done and I felt really very happy. He was at first very, very skeptical of all my pre occupation with class but he has come back to it now and I feel very in a way I feel fulfilled that he has now after retirement he has now discovered the importance and the value of this problem with intellectual resources that are enormously superior to what I had in the early 60s. </u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 60" n="Bubble 60" end="timepoint_Bubble 61">
+<u who="KM">Coming to the --close to the end of this interview it struck me in some of the other discussions that I've had for example with Tapan Raychaudhuri or with Prashant that when they speak of you they speak of you as somebody who opened up  new methodologies for them that when you came to lecture in sociology in Kolkata Prashatn said I realized there is something called sociology that I would want to get involved with. And I noticed in some of your early writings in the '60s that you certainly engaged deeply with the British tradition of anthropology but then there is also this deep engagement with the French tradition of I guess anthropology-- sociology you mentioned your interest in Marxism which was something that other sociologists might someone skeptical of like Srinivas so how do you - it seems that you were able to channel or bring together discourses that were not always part of a particular [Unclear] that was someone from the outside. Where did this ability or this affinity come from would you say?</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 61" n="Bubble 61" end="timepoint_Bubble 62">
+<u who="AB">But you I just want to mention you omitted one influence which Dipankar, if you read Dipankar's introduction to this. I think yes I was greatly influenced by the British anthropological tradition. It started in Calcutta when I was an M.Sc. student and then Srinivas and I read a lot of British ethnography and I was --through my teaching I got interested in it. French yes -Durkheim--I knew the French language but if there is one single major intellectual influence on my sociology that influence is Max Weber who is neither  British nor French. And it was - I remember again I have written about the man he is no more he was one most fascinating figures of that periods. A man called Surajit Sinha. Surajit Sinha... ...now who is an anthropologist who later became Director of the Anthropological Survey of India and then became Vice Chancellor of Visva Bharati and was for sometime the Director of the Calcutta Center and its Chairman. He didn't publish very much.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 62" n="Bubble 62" end="timepoint_Bubble 63">
+<u>He was a rather - he was - he came from an old zamindar family, very old Bengal zamindar family and rather bohemian inwardly but he was a great influence on me and I still remember because he was the first one none of my teachers knew about Max Weber. I have discussed this endlessly with Ralph Nicholas and Kim Marriott and anthropologists did not engage with Max Weber except at the University of Chicago in those days. I am talking about the '40s and '50s now but Surajit drew my attention to the importance of Weber and I started reading Weber. I think what I did in my book Caste, Class, &amp;Power which was in some ways novel I wouldn't say original and what was novel about it is that I didn't do it at all deliberately but somehow this came about and I think the main driving force behind it was my teaching. I combined the ethnographic approach of [E.E.] Evans-Pritchard [ph] who was Srinivas's teacher and one of whose important books I was teaching every year. I combined that ethnographic approach with the broader view of social inequality that I had acquired from Max Weber because Evans-Pritchard was writing his ethnography about a totally unstratified small segmentary tribal system. I have brought the two together and somehow they gelled and I was lucky.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 63" n="Bubble 63" end="timepoint_Bubble 64">
+<u who="KM">Now this is the last question. We began the conversation earlier before we began recording about internationalism in the 1950, 1960s how would you locate yourself within a context of academic internationalism in India, in that period and do you - if there was some break or change when did that change happen? When did the discontinuity occurred if one can speak of such...?</u>
+<u who="AB">I don't think that in my case there was ever any break or change. I think I believed that one of the greatest threats to rational discourse and rational social science is the notion of an alternative sociology whose routes lie in a very retrograde [ph] kind of nationalism, although this is dressed up in very sophisticated language and I think that is one of the greatest threats that we Indians</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 64" n="Bubble 64" end="timepoint_Bubble 65">
+<u>--that tradition is not only an object of investigation it provides us with a method which is different from the method that is being developed in the West or in the modern world. I have written about this a great deal in newspapers. I think this is one -- it will last, I think it will not go away. This search for an alternative which is authentically Indian. I don't believe that there is such a thing --that in social science I don't believe that you can develop a social science approach or method which will be distinctively Indian and if it is it will be retrograde. I have no absolutely no doubt in my mind about that.</u>
+<u who="KM">When did the move for this search for this alternative tradition? When was it strongest?</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 65" n="Bubble 65" end="timepoint_Bubble 66">
+<u who="AB">I think it was there all along but I think the Emergency and the aftermath of the Emergency was the turning point in many ways.</u>
+<u who="KM">Very interesting.</u>
+<u who="AB">And the great proponents of this are people like Ashish Nandy and there are several others and it's always shimmering around in the horizon if you try to pin them down but it's a critique of the western model of sociology or main stream sociology which is very acute in many places but the alternative which they don't actually promise in concrete terms but which they imply is waiting to be discovered</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 66" n="Bubble 66" end="timepoint_Bubble 67">
+<u>--I think it was there even long before all of this. Many people --again I have written about this in a paper which I called "Sociology and Tradition" that to go back to the to dharmashastras to find a distinctive tradition for doing  socio --it's too late now and one of the great proponents of that, I don't know whether you know the name of man called T.N. Madan. Madan flirts with this kind of idea but he is not in forthright as Ashish or even Partha Chatterjee, but Madan flirts with this idea and one of his great mentors who is his teacher in Lucknow is a man called D. P. Mukherji who is very - I have never met D. P. Mukherji but he was a legend and I think frankly --I think he was a charlatan --very famous.</u>
+</u>
+            <u rend="transcript_chunk" start="timepoint_Bubble 67" n="Bubble 67" end="timepoint_end">
+<u who="KM">His full name was?</u>
+<u who="AB">Dhurjati Prasad Mukherji. Frankly I think he was a charlatan. If you are interested I have a paper called "Sociology...Tradition" or the "Sociological Approach." You see I have collection of papers called "Sociology Essays on Approach and Method" which I bring this up, discuss this point. Intellectually, I think, it had very little power but it has a great power of popular appeal. </u>
+<u who="KM">Thank you. Very much. Very stimulating interview. Thank you</u>
+<u who="AB">Thank you.</u>
+</u>
+         </div1>
+      </body>
+   </text>
+</TEI.2>
