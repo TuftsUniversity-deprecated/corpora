@@ -1,0 +1,18 @@
+<% metadata[:titles].each do |title| %>
+    <h2><%= raw title %></h2>
+<% end %>
+<% metadata[:creators].each do |creator| %>
+    <%= raw creator %>
+    <br>
+<% end %>
+<% unless metadata[:dates].nil? || metadata[:dates].empty? %>
+    <% metadata[:dates].each do |date| %>
+        <%= raw date %>
+        <br>
+    <% end %>
+<% else %>
+    <% metadata[:temporals].each do |temporal| %>
+        <%= raw temporal %>
+        <br>
+    <% end %>
+<% end %>
