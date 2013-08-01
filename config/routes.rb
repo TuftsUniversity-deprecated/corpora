@@ -3,14 +3,18 @@ ALLOW_DOTS ||= /[a-zA-Z0-9_.:]+/
 SouthAsianDigitalLibrary::Application.routes.draw do
   root :to => "catalog#index"
 
+
   Blacklight.add_routes(self)
    resources :catalog, :only => [:show, :update], :constraints => { :id => ALLOW_DOTS, :format => false }
    Blacklight::Routes.new(self, {}).catalog
+
    resources :unpublished, :only => :index
    # This is from Blacklight::Routes#solr_document, but with the constraints added which allows periods in the id
    resources :solr_document,  :path => 'catalog', :controller => 'catalog', :only => [:show, :update]
    resources :downloads, :only =>[:show], :constraints => { :id => ALLOW_DOTS
   }
+  resources :downloads, :only =>[:show], :constraints => { :id => ALLOW_DOTS }
+
   resources :bookmarks, :path => 'catalog'
   resources :search_history, :path => 'search_history', :only => [:index,:show]
 
@@ -28,6 +32,20 @@ SouthAsianDigitalLibrary::Application.routes.draw do
 
    resources :generics, only: [:edit, :update], constraints: { id: ALLOW_DOTS }
 
+
+
+    get '/file_assets/medium/:id', :to => 'local_file_assets#showMedium', :constraints => {:id => /.*/}, :as =>'file_asset'
+    get '/file_assets/:id', :to => 'local_file_assets#show', :constraints => {:id => /.*/}, :as =>'file_asset'
+#    match '/file_assets/advanced/:id', :to => 'local_file_assets#showAdvanced', :constraints => {:id => /.*/}, :as =>'file_asset'
+#    match '/file_assets/thumb/:id', :to => 'local_file_assets#showThumb', :constraints => {:id => /.*/}, :as =>'file_asset'
+#    match '/file_assets/transcript/:id', :to => 'local_file_assets#showTranscript', :constraints => {:id => /.*/}, :as =>'file_asset'
+#    match '/file_assets/rcr/:id', :to => 'local_file_assets#showRCR', :constraints => {:id => /.*/}, :as =>'file_asset'
+#    match '/file_assets/generic/:id/:index', :to => 'local_file_assets#showGeneric', :constraints => {:id => /.*/}, :as =>'file_asset'
+#    match '/file_assets/dimensions/:id', :to => 'local_file_assets#dimensions', :constraints => {:id => /.*/}, :as =>'file_asset'
+#    match '/file_assets/image_overlay/:id', :to => 'local_file_assets#image_overlay', :constraints => {:id => /.*/}, :as =>'file_asset'
+#    match '/file_assets/image_gallery/:id/:start/:number', :to => 'local_file_assets#image_gallery', :constraints => {:id => /.*/}, :as =>'file_asset'
+#    match '/file_assets/ogg/:id', :to => 'local_file_assets#showOGG', :constraints => {:id => /.*/}, :as =>'file_asset'
+#
    devise_for :users
   # mount Hydra::RoleManagement::Engine => '/'
 
