@@ -1,6 +1,26 @@
 ALLOW_DOTS ||= /[a-zA-Z0-9_.:]+/
 
 SouthAsianDigitalLibrary::Application.routes.draw do
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  resources :locations
+
+
+  resources :people
+
+
   root :to => "catalog#index"
 
 

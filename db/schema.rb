@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130606144762) do
+ActiveRecord::Schema.define(:version => 20130805141329) do
 
   create_table "bookmarks", :force => true do |t|
     t.integer  "user_id",     :null => false
@@ -21,6 +21,70 @@ ActiveRecord::Schema.define(:version => 20130606144762) do
     t.datetime "updated_at",  :null => false
     t.string   "user_type"
   end
+
+  create_table "concepts", :force => true do |t|
+    t.text     "description", :limit => 255
+    t.string   "link"
+    t.string   "name"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
+
+  create_table "events", :force => true do |t|
+    t.string   "description"
+    t.string   "link"
+    t.string   "name"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "features", :force => true do |t|
+    t.string   "type"
+    t.string   "name"
+    t.string   "description"
+    t.string   "link"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "locations", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "link"
+    t.string   "modern_location"
+    t.string   "historical_name"
+    t.string   "admin01"
+    t.string   "admin02"
+    t.string   "town"
+    t.string   "location_type"
+    t.string   "variable_names"
+    t.float    "latitutde"
+    t.float    "longitude"
+    t.integer  "external_feature_id"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
+
+  create_table "people", :force => true do |t|
+    t.string   "name"
+    t.text     "description", :limit => 255
+    t.string   "link"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
+
+  create_table "rails_admin_histories", :force => true do |t|
+    t.text     "message"
+    t.string   "username"
+    t.integer  "item"
+    t.string   "table"
+    t.integer  "month",      :limit => 2
+    t.integer  "year",       :limit => 5
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+  end
+
+  add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
 
   create_table "searches", :force => true do |t|
     t.text     "query_params"

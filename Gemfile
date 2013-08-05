@@ -32,3 +32,5 @@ gem "unicode", :platforms => [:mri_18, :mri_19]
 gem "devise"
 gem "devise-guests", "~> 0.3"
 gem "bootstrap-sass"
+
+gem "rails_admin"

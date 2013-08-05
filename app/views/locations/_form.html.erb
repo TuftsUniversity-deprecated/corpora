@@ -1,0 +1,69 @@
+<%= form_for(@location) do |f| %>
+  <% if @location.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@location.errors.count, "error") %> prohibited this location from being saved:</h2>
+
+      <ul>
+      <% @location.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br />
+    <%= f.text_field :link %>
+  </div>
+  <div class="field">
+    <%= f.label :modern_location %><br />
+    <%= f.text_field :modern_location %>
+  </div>
+  <div class="field">
+    <%= f.label :historical_name %><br />
+    <%= f.text_field :historical_name %>
+  </div>
+  <div class="field">
+    <%= f.label :admin01 %><br />
+    <%= f.text_field :admin01 %>
+  </div>
+  <div class="field">
+    <%= f.label :admin02 %><br />
+    <%= f.text_field :admin02 %>
+  </div>
+  <div class="field">
+    <%= f.label :town %><br />
+    <%= f.text_field :town %>
+  </div>
+  <div class="field">
+    <%= f.label :location_type %><br />
+    <%= f.text_field :location_type %>
+  </div>
+  <div class="field">
+    <%= f.label :variable_names %><br />
+    <%= f.text_field :variable_names %>
+  </div>
+  <div class="field">
+    <%= f.label :latitutde %><br />
+    <%= f.text_field :latitutde %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br />
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :external_feature_id %><br />
+    <%= f.number_field :external_feature_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
