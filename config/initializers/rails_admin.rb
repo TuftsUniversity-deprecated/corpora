@@ -7,13 +7,19 @@ RailsAdmin.config do |config|
   ################  Global configuration  ################
 
   # Set the admin name here (optional second array element will appear in red). For example:
-  config.main_app_name = ['South Asian Digital Library!', 'Admin']
+  config.main_app_name = ['South Asian Digital Library', 'Admin']
   # or for a more dynamic name:
   # config.main_app_name = Proc.new { |controller| [Rails.application.engine_name.titleize, controller.params['action'].titleize] }
 
   # RailsAdmin may need a way to know who the current user is]
   config.current_user_method { current_user } # auto-generated
 
+  config.navigation_static_links = {
+    'Disambiguation' => '/disambiguation'
+  }
+  #They are displayed in a separate group with default name 'Links', but you can change it:
+
+  config.navigation_static_label = "My Links"
   # If you want to track changes on your models:
   # config.audit_with :history, 'User'
 
@@ -27,8 +33,26 @@ RailsAdmin.config do |config|
   # config.default_items_per_page = 20
 
   # Exclude specific models (keep the others):
-  # config.excluded_models = ['Bookmark', 'Concept', 'Feature', 'Search', 'User']
+  config.excluded_models = ['Bookmark', 'Search']
+  config.model 'Person' do
+      list do
+        field :name
+        field :alternative_names
+        field :description
+        field :link
+        field :image_link
+      end
+  end
 
+  config.model 'Concept' do
+        list do
+          field :name
+          field :alternative_names
+          field :description
+          field :link
+          field :image_link
+        end
+    end
   # Include specific models (exclude the others):
   # config.included_models = ['Bookmark', 'Concept', 'Feature', 'Search', 'User']
 
