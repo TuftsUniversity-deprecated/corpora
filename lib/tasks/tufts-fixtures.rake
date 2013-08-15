@@ -1,6 +1,7 @@
 ActiveFedora.init(:fedora_config_path => "#{Rails.root}/config/fedora.yml")
 require "hydra"
 require "active-fedora"
+require 'csv'
 namespace :tufts do
 
   desc "Init Hydra configuration"
@@ -21,6 +22,38 @@ namespace :tufts do
   end
 
   namespace :sadl do
+
+      # Checks and ensures task is not run in production.
+      task :ensure_development_environment => :environment do
+        if Rails.env.production?
+          raise "\nI'm sorry, I can't do that.\n(You're asking me to drop your production database.)"
+        end
+      end
+
+      # Custom install for developement environment
+      desc "seed"
+      task :seed => [:ensure_development_environment, "db:migrate", "tufts:sadl:populate"]
+
+
+      # Populates development data
+      desc "Populate the database with development data using CSV files."
+      task :populate => :environment do
+      	puts "#{'*'*(`tput cols`.to_i)}\nChecking Environment... The database will be cleared of all content before populating.\n#{'*'*(`tput cols`.to_i)}"
+        # Removes content before populating with data to avoid duplication
+        # Rake::Task['db:reset'].invoke
+
+        CSV.foreach(Rails.root + 'spec/fixtures/people.csv') do |row|
+          name,description,link,alternative_names,image_link = row
+          # if the row already exists don't repeat it..
+          unless Person.where(:name => name).count > 0
+            puts "Adding #{name} as a Person"
+            Person.create!(:name => name, :description => description, :link => link, :alternative_names => alternative_names, :image_link =>image_link)
+          end
+        end
+
+        puts "#{'*'*(`tput cols`.to_i)}\nThe database has been populated!\n#{'*'*(`tput cols`.to_i)}"
+      end
+
 
     desc "Index Snippets from Transcript"
       task :index_snippets, [:pid] => :environment do |t, args|
