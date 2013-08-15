@@ -13,12 +13,16 @@ class CatalogController < ApplicationController
   # Use params[:id] to load an object from Fedora.  Inspects the object for known models and mixes in any of those models' behaviors.
   # Sets @document_fedora with the loaded object
   # Sets @file_assets with file objects that are children of the loaded object
+  # Sets @people, @places and @concepts with data from database
+  #   eventually, what to initialize with may come from Solr
   def load_fedora_document
     @document_fedora = ActiveFedora::Base.find(params[:id], :cast=>true)
     unless @document_fedora.class.include?(Hydra::ModelMethods)
       @document_fedora.class.send :include, Hydra::ModelMethods
     end
-
+    @people = Person.all
+    @places = Location.all
+    @concepts = Concept.all
     #@file_assets = @document_fedora.parts(:response_format=>:solr)
   end
   # This applies appropriate access controls to all solr queries
