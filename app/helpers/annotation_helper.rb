@@ -33,7 +33,7 @@ module AnnotationHelper
   #   with all the people data.  the value of the variable is an array of hashtables
   def self.show_people(people)
     result = people.to_json
-    result = "function initPeople () {people = " + result + '};'
+    result = "function initPeople () {return " + result + '};'
     return result
   end
 
@@ -41,7 +41,7 @@ module AnnotationHelper
   #   with all the concept data.  the value of the variable is an array of hashtables
   def self.show_concepts(concepts)
     result = concepts.to_json
-    result = "function initConcepts () {concepts = " + result + '};'
+    result = "function initConcepts () {return " + result + '};'
     return result
   end
 
@@ -49,7 +49,7 @@ module AnnotationHelper
   #   with all the places data.  the value of the variable is an array of hashtables
   def self.show_places(places)
     result = places.to_json
-    result = "function initPlaces () {places = " + result + '};'
+    result = "function initPlaces () {return" + result + '};'
     return result
   end
 
