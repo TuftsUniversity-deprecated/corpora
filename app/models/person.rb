@@ -1,3 +1,3 @@
 class Person < ActiveRecord::Base
-  attr_accessible :description, :link, :name
+  attr_accessible :name, :alternative_names, :description, :link, :image_link
 end
