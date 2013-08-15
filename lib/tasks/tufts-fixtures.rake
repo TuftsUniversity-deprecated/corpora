@@ -51,6 +51,15 @@ namespace :tufts do
           end
         end
 
+        CSV.foreach(Rails.root + 'spec/fixtures/concepts.csv') do |row|
+          name, description, link, alternative_names, image_link = row
+          # if the row already exists don't repeat it..
+          unless Concept.where(:name => name).count > 0
+            puts "Adding #{name} as a Concept"
+            Concept.create!(:name => name, :description => description, :link => link, :alternative_names => alternative_names, :image_link => image_link)
+          end
+        end
+
         puts "#{'*'*(`tput cols`.to_i)}\nThe database has been populated!\n#{'*'*(`tput cols`.to_i)}"
       end
 

@@ -43,6 +43,16 @@ RailsAdmin.config do |config|
         field :image_link
       end
   end
+
+  config.model 'Concept' do
+        list do
+          field :name
+          field :alternative_names
+          field :description
+          field :link
+          field :image_link
+        end
+    end
   # Include specific models (exclude the others):
   # config.included_models = ['Bookmark', 'Concept', 'Feature', 'Search', 'User']
 
