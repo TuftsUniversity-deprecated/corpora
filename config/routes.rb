@@ -1,4 +1,4 @@
-ALLOW_DOTS ||= /[a-zA-Z0-9_.:]+/
+ALLOW_DOTS ||= /[a-zA-Z0-9_.:\-]+/
 
 SouthAsianDigitalLibrary::Application.routes.draw do
   

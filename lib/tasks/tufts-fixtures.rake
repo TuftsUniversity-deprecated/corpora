@@ -1,6 +1,6 @@
 ActiveFedora.init(:fedora_config_path => "#{Rails.root}/config/fedora.yml")
 require "hydra"
-
+require "active-fedora"
 namespace :tufts do
 
   desc "Init Hydra configuration"
@@ -21,6 +21,50 @@ namespace :tufts do
   end
 
   namespace :sadl do
+
+    desc "Index Snippets from Transcript"
+      task :index_snippets, [:pid] => :environment do |t, args|
+        pid = args.pid
+        video = TuftsVideo.find(pid)
+
+        node_sets = video.datastreams['ARCHIVAL_XML'].find_by_terms_and_value(:u)
+        node_sets.each do |node|
+          utterence_id = node.attributes["n"]
+
+          solr_doc = {}
+          node.children.each do |child|
+            childName = child.name
+            if (childName == "u")
+              who = child.attributes["who"]
+              #result << "                  <div class=\"transcript_row\">\n"
+              #result << "                    <div class=\"transcript_speaker\">"+ (who.nil? ? "" : who.value) + "</div>\n"
+              #result << "                    <div class=\"transcript_utterance\">"+  Tufts::AudioMethods.parse_notations(child) + "</div>\n"
+              Solrizer.insert_field(solr_doc, 'text', Tufts::AudioMethods.parse_notations(child), :stored_searchable)
+              #result << "                  </div> <!-- transcript_row -->\n"
+            elsif (childName == "event" || childName == "gap" || childName == "vocal" || childName == "kinesic")
+              unless child.attributes.empty?
+                desc = child.attributes["desc"]
+                unless desc.nil?
+                 # result << "                  <div class=\"transcript_row\">\n"
+                 # result << "                    <div class=\"transcript_speaker\">" "</div>\n"
+                 # result << "                    <div class=\"transcript_utterance\"><span class = \"transcript_notation\">["+ desc + "]</span></div>\n"
+                 # result << "                  </div> <!-- transcript_row -->\n"
+                end
+              end
+            end
+          end
+          Solrizer.insert_field(solr_doc, 'title', "Excerpt from " + video.datastreams['DCA-META'].title[0], :stored_searchable)
+          Solrizer.insert_field(solr_doc, 'has_model', 'info:fedora/afmodel:Snippet', :symbol)
+          Solrizer.insert_field(solr_doc, 'read_access_group','public',:symbol)
+          solr_doc.merge!(:id => pid + "-" + utterence_id)
+          ActiveFedora::SolrService.add(solr_doc)
+          ActiveFedora::SolrService.commit
+
+
+
+        end
+      end
+
     namespace :fixtures do
       task :load do
         ENV["dir"] ||= "#{Rails.root}/spec/fixtures"

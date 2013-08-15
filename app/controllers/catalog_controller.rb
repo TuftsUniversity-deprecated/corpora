@@ -16,6 +16,14 @@ class CatalogController < ApplicationController
   # Sets @people, @places and @concepts with data from database
   #   eventually, what to initialize with may come from Solr
   def load_fedora_document
+    #In the case that this is a Utterance or Excerpt from a recording we've indexed that separately
+    #but its not backed by a real fedora object so it does not make sense to try to load that object out of
+    #fedora
+    if params[:id].include?("-")
+      id = params[:id]
+      id = id[0..params[:id].index('-')-1]
+      params[:id] = id
+    end
     @document_fedora = ActiveFedora::Base.find(params[:id], :cast=>true)
     unless @document_fedora.class.include?(Hydra::ModelMethods)
       @document_fedora.class.send :include, Hydra::ModelMethods
