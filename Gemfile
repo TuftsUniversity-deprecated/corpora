@@ -30,6 +30,7 @@ group :development, :test do
 end
 group :tdldev do
   gem 'therubyracer'
+  gem 'mysql'
 end
 
 gem "unicode", :platforms => [:mri_18, :mri_19]

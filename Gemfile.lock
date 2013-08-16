@@ -1,9 +1,8 @@
 GIT
   remote: https://github.com/TuftsUniversity/tuftsification-hydra.git
-  revision: 7e99b2fbaf229a557758a709cb63b742066c130f
+  revision: 2b5e1017c48b8214ee5f2e541541da74df9aea80
   specs:
     tuftsification-hydra (0.0.3)
-      active-fedora (~> 6.4.0)
       chronic
       rails (~> 3.2.13)
       settingslogic
@@ -146,6 +145,7 @@ GEM
     mime-types (1.23)
     mini_portile (0.5.1)
     multi_json (1.7.7)
+    mysql (2.9.1)
     nested_form (0.3.2)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
@@ -288,6 +288,7 @@ DEPENDENCIES
   hydra-head (~> 6.0.0)
   jettywrapper
   jquery-rails
+  mysql
   om (~> 3.0.0)
   rails (= 3.2.13)
   rails_admin
