@@ -39,11 +39,11 @@ function initConfigHash()
     extraData = {
         'person': {'name': 'person', 'tabId': '#tab3',
             'divId': '#peopleDiv',
-            'detailTemplate': "{{name}}<br/>{{description}}<br/>{{link}}<br/><a href='javascript:showList(\"{{type}}\")'>Go To List</a>"},
+            'detailTemplate': "{{name}}<br/><div class='elementDescription'>Description: {{description}}</div><br/><div class='elementLink>'>Link: <a href='{{link}}' target='_blank'>{{link}}</a></div><br/>{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}<div class='description-link'><a href='javascript:showList(\"{{type}}\")'>Show {{type}} list</a></div>"},
 
         'concept': {'name': 'concept', 'tabId': '#tab5',
             'divId': '#conceptsDiv',
-            'detailTemplate': "{{name}}<br/>{{description}}<br/>{{link}}<br/><a href='javascript:showList(\"{{type}}\")'>Go To List</a>"},
+            'detailTemplate': "{{name}}<br/><div class='elementDescription'>Description: {{description}}</div><br/><div class='elementLink>'>Link: <a href='{{link}}' target='_blank'>{{link}}</a></div><br/>{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}<div class='description-link'><a href='javascript:showList(\"{{type}}\")'>Show {{type}} list</a></div>"},
 
         'place': {'name': 'place', 'tabId': '#tab4',
             'divId': '#placesDiv',
