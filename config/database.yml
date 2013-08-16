@@ -8,7 +8,20 @@ development:
   database: db/development.sqlite3
   pool: 5
   timeout: 5000
-
+tdldev:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: **myapp_development**
+  pool: 5
+  username: **root**
+  password: **supersecretpassword**
+  socket: **/opt/local/var/run/mysql5/mysqld.sock**
+#tdldev:
+#  adapter: sqlite3
+#  database: db/development.sqlite3
+#  pool: 5
+#  timeout: 5000
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
