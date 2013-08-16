@@ -1,6 +1,6 @@
 GIT
-  remote: git@github.com:TuftsUniversity/tuftsification-hydra.git
-  revision: ba1606b2c88040ae8e9cc676c3e821cdf90e9381
+  remote: https://github.com/TuftsUniversity/tuftsification-hydra.git
+  revision: 7e99b2fbaf229a557758a709cb63b742066c130f
   specs:
     tuftsification-hydra (0.0.3)
       active-fedora (~> 6.4.0)
@@ -136,6 +136,7 @@ GEM
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    libv8 (3.11.8.17)
     logger (1.2.8)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -212,6 +213,7 @@ GEM
       rdf (>= 0.3.4)
     rdoc (3.12.2)
       json (~> 1.4)
+    ref (1.0.5)
     remotipart (1.2.1)
     rest-client (1.6.7)
       mime-types (>= 1.16)
@@ -259,6 +261,9 @@ GEM
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.7)
     stomp (1.2.10)
+    therubyracer (0.11.4)
+      libv8 (~> 3.11.8.12)
+      ref
     thor (0.18.1)
     tilt (1.4.1)
     titleize (1.3.0)
@@ -289,5 +294,6 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 3.2.3)
   sqlite3
+  therubyracer
   tuftsification-hydra!
   unicode
