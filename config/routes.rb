@@ -1,26 +1,14 @@
 ALLOW_DOTS ||= /[a-zA-Z0-9_.:\-]+/
 
 SouthAsianDigitalLibrary::Application.routes.draw do
-  
 
-  
-
-  
-
-  
-
-  
-
-  
+  get "disambiguation/resolve"
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   resources :locations
-
-
   resources :people
-
-
+  resources :disambiguation, :default => 'resolve'
   root :to => "catalog#index"
 
 
@@ -55,7 +43,10 @@ SouthAsianDigitalLibrary::Application.routes.draw do
 
 
     get '/file_assets/medium/:id', :to => 'local_file_assets#showMedium', :constraints => {:id => /.*/}, :as =>'file_asset'
+    get '/file_assets/webm/:id', :to => 'local_file_assets#showWebm', :constraints => {:id => /.*/}, :as =>'file_asset'
     get '/file_assets/:id', :to => 'local_file_assets#show', :constraints => {:id => /.*/}, :as =>'file_asset'
+
+
 #    match '/file_assets/advanced/:id', :to => 'local_file_assets#showAdvanced', :constraints => {:id => /.*/}, :as =>'file_asset'
 #    match '/file_assets/thumb/:id', :to => 'local_file_assets#showThumb', :constraints => {:id => /.*/}, :as =>'file_asset'
 #    match '/file_assets/transcript/:id', :to => 'local_file_assets#showTranscript', :constraints => {:id => /.*/}, :as =>'file_asset'
