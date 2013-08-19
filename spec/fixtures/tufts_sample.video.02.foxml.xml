@@ -88,6 +88,11 @@ xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/
 <foxml:contentLocation TYPE="URL" REF="http://bucket01.lib.tufts.edu/data05/tufts/central/dca/sample/access_mp4/Alavi.mp4"/>
 </foxml:datastreamVersion>
 </foxml:datastream>
+<foxml:datastream ID="Access.webm" STATE="A" CONTROL_GROUP="E" VERSIONABLE="true">
+<foxml:datastreamVersion ID="Access.webm.0" LABEL="ogg video file" CREATED="2013-05-15T12:00:00.000Z" MIMETYPE="video/ogg">
+<foxml:contentLocation TYPE="URL" REF="http://bucket01.lib.tufts.edu/data05/tufts/central/dca/sample/access_webm/sample006.webm"/>
+</foxml:datastreamVersion>
+</foxml:datastream>
 <foxml:datastream ID="ACCESS_OGG" STATE="A" CONTROL_GROUP="E" VERSIONABLE="true">
 <foxml:datastreamVersion ID="ACCESS_OGG.0" LABEL="ogg video file" CREATED="2013-05-15T12:00:00.000Z" MIMETYPE="video/ogg">
 <foxml:contentLocation TYPE="URL" REF="http://bucket01.lib.tufts.edu/data05/tufts/central/dca/sample/access_ogg/Alavi.ogv"/>
