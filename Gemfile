@@ -30,7 +30,9 @@ group :development, :test do
 end
 group :tdldev do
   gem 'therubyracer'
-  gem 'mysql'
+  gem 'mysql2'
+  gem 'activerecord-mysql-adapter'
+
 end
 
 gem "unicode", :platforms => [:mri_18, :mri_19]
