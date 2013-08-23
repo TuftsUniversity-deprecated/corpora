@@ -28,10 +28,28 @@ function initDataAndTabs()
     initTabs();
     annotateTranscript();
 
-    initMap();
-    initMarkers();
+    // init map on first display due to a resize bug
+    //initMap();
+    //initMarkers();
     showMapCanvas();
+
+    var mapTab = jQuery("#tab4");
+    mapTab.on("click", function(){delayedInitMap();})
 };
+
+// this is a temporary fix
+// if the map is created on page load it displays incorrectly
+//   because it doesn't receive a resize when the div is initialized after its first display
+//   so the map still zero size
+function delayedInitMap()
+{
+    if (map == null)
+    {
+        initMap();
+        initMarkers();
+        google.maps.event.trigger(map, 'resize');
+    }
+}
 
 // hold details like div name and detailed template for each of the person, concept and place
 var extraData;
@@ -166,7 +184,7 @@ function annotateTranscript()
 // passed records is an array of hashes for people, places or concepts
 function createRegex(records)
 {
-    var regex =  "(";
+    var regex =  "\\b(";
     for (var i = 0 ; i < records.length ; i++)
     {
         var element = records[i];
@@ -175,7 +193,7 @@ function createRegex(records)
         regex += "|";
     }
     regex = regex.substr(0, regex.length - 1); // remove last |
-    regex += ")";
+    regex += ")\\b";
     return regex;
 };
 
@@ -198,20 +216,23 @@ function initMap()
 
 };
 
+// display the list (index) of places, not the map
 function showLocationIndex()
 {
     jQuery("#mapParent").hide();
     jQuery("#placesParentDiv").show();
 };
 
+// display the map, not the list of places
 function showMapCanvas()
 {
     jQuery("#placesParentDiv").hide();
     jQuery("#mapParent").show();
-    google.maps.event.trigger(map, 'resize');
+    //google.maps.event.trigger(map, 'resize');
 };
 
 
+// iterate over global "places" var and create a marker for each
 function initMarkers()
 {
     var places = extraData.place.data;
@@ -232,12 +253,14 @@ function initMarkers()
 
 };
 
+// when user clicks on a map marker, display an info window
 function markerClickHandler(marker)
 {
     var name = marker.getTitle();
     highlightMapByName(name);
 }
 
+// highlight the passed name on the map by displaying an info window
 function highlightMapByName(name)
 {
     var element = getElement(name);
@@ -258,6 +281,7 @@ function addListener(marker)
     google.maps.event.addListener(marker, 'click', function (event) {markerClickHandler(marker)});
 }
 
+// return an appropriate map zoom level based on the passed type of location (e.g, university, continent)
 function locationTypeToZoomLevel(passedLocationType)
 {
     var zoomLevel = 7;
