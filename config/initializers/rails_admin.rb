@@ -43,6 +43,14 @@ RailsAdmin.config do |config|
         field :image_link
       end
   end
+  config.model "VideoUrl" do
+    list do
+      field :pid
+      field :mp4_link
+      field :webm_url
+      field :active
+    end
+  end
 
   config.model 'Concept' do
         list do
