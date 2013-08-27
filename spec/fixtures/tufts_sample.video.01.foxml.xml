@@ -84,8 +84,18 @@ xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/
 </foxml:xmlContent>
 </foxml:datastreamVersion>
 </foxml:datastream>
-<foxml:datastream ID="ACCESS_MP4" STATE="A" CONTROL_GROUP="E" VERSIONABLE="true">
+<foxml:datastream ID="Thumbnail.png" STATE="A" CONTROL_GROUP="E" VERSIONABLE="true">
+<foxml:datastreamVersion ID="Thumbnail.png.0" LABEL="MP4 video file" CREATED="2013-05-15T12:00:00.000Z" MIMETYPE="video/mp4">
+<foxml:contentLocation TYPE="URL" REF="http://bucket01.lib.tufts.edu/data05/tufts/central/dca/sample/thumbnail_png/Kaplan.png"/>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="Archival.video" STATE="A" CONTROL_GROUP="E" VERSIONABLE="true">
 <foxml:datastreamVersion ID="ACCESS_MP4.0" LABEL="MP4 video file" CREATED="2013-05-15T12:00:00.000Z" MIMETYPE="video/mp4">
+<foxml:contentLocation TYPE="URL" REF="http://bucket01.lib.tufts.edu/data05/tufts/central/dca/sample/archival_video/Kaplan.mp4"/>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="Access.mp4" STATE="A" CONTROL_GROUP="E" VERSIONABLE="true">
+<foxml:datastreamVersion ID="Access.mp4.0" LABEL="MP4 video file" CREATED="2013-05-15T12:00:00.000Z" MIMETYPE="video/mp4">
 <foxml:contentLocation TYPE="URL" REF="http://bucket01.lib.tufts.edu/data05/tufts/central/dca/sample/access_mp4/Kaplan.mp4"/>
 </foxml:datastreamVersion>
 </foxml:datastream>
