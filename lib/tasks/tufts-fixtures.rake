@@ -2,6 +2,8 @@ ActiveFedora.init(:fedora_config_path => "#{Rails.root}/config/fedora.yml")
 require "hydra"
 require "active-fedora"
 require 'csv'
+require 'annotation_tools'
+
 namespace :tufts do
 
   desc "Init Hydra configuration"
@@ -93,6 +95,10 @@ namespace :tufts do
       task :index_snippets, [:pid] => :environment do |t, args|
         pid = args.pid
         video = TuftsVideo.find(pid)
+        people = Person.all
+        places = Location.all
+        concepts = Concept.all
+        all = people + places + concepts
 
         node_sets = video.datastreams['ARCHIVAL_XML'].find_by_terms_and_value(:u)
         node_sets.each do |node|
@@ -106,7 +112,43 @@ namespace :tufts do
               #result << "                  <div class=\"transcript_row\">\n"
               #result << "                    <div class=\"transcript_speaker\">"+ (who.nil? ? "" : who.value) + "</div>\n"
               #result << "                    <div class=\"transcript_utterance\">"+  Tufts::AudioMethods.parse_notations(child) + "</div>\n"
-              Solrizer.insert_field(solr_doc, 'text', Tufts::AudioMethods.parse_notations(child), :stored_searchable)
+              blurb = Tufts::MediaPlayerMethods.parse_notations(child)
+
+              unless people.size == 0
+                regex = AnnotationTools.create_regex people
+                match_data = blurb.match regex
+                unless match_data.nil?
+                  match_data.captures.each do |data|
+                      Solrizer.insert_field(solr_doc, 'person', "#{data}", :symbol)
+                      Solrizer.insert_field(solr_doc, 'thing', "#{data}", :symbol)
+                  end
+                end
+              end
+
+              unless places.size == 0
+                regex = AnnotationTools.create_regex places
+                match_data = blurb.match regex
+                unless match_data.nil?
+                  match_data.captures.each do |data|
+                    Solrizer.insert_field(solr_doc, 'place', "#{data}", :symbol)
+                    Solrizer.insert_field(solr_doc, 'thing', "#{data}", :symbol)
+                  end
+                end
+              end
+
+              unless concepts.size == 0
+                regex = AnnotationTools.create_regex concepts
+
+                match_data = blurb.match regex
+                unless match_data.nil?
+                  match_data.captures.each do |data|
+                    Solrizer.insert_field(solr_doc, 'concepts', "#{data}", :symbol)
+                    Solrizer.insert_field(solr_doc, 'thing', "#{data}", :symbol)
+                  end
+                end
+              end
+
+              Solrizer.insert_field(solr_doc, 'text', blurb, :stored_searchable)
               #result << "                  </div> <!-- transcript_row -->\n"
             elsif (childName == "event" || childName == "gap" || childName == "vocal" || childName == "kinesic")
               unless child.attributes.empty?
@@ -120,7 +162,11 @@ namespace :tufts do
               end
             end
           end
+
+
+
           Solrizer.insert_field(solr_doc, 'title', "Excerpt from " + video.datastreams['DCA-META'].title[0], :stored_searchable)
+          Solrizer.insert_field(solr_doc, 'pid', pid, :symbol)
           Solrizer.insert_field(solr_doc, 'has_model', 'info:fedora/afmodel:Snippet', :symbol)
           Solrizer.insert_field(solr_doc, 'read_access_group','public',:symbol)
           solr_doc.merge!(:id => pid + "-" + utterence_id)
