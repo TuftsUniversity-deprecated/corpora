@@ -34,4 +34,13 @@ config/redis.yml
 local_object_store//data05/tufts/central/dca/sample/access_mp4/*
 local_object_store/data05/tufts/central/dca/sample/access_mp4/
 local_object_store/data05/tufts/central/dca/sample/access_webm/
+local_object_store/data05/tufts/central/dca/sample/archival_video/
+local_object_store/data05/tufts/central/dca/sample/thumbnail_png/
 .DS_Store
+
+#remove utils dir
+utils
+
+#keeping a videoizer copy for myself
+script/videoizer
+script/videoizerd
