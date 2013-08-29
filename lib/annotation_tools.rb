@@ -13,17 +13,18 @@ module AnnotationTools
     return regex
   end
 
-  def self.tag_things pid, fedora_obj, index_blurbs, solr_doc
+  def self.tag_things pid, fedora_obj, index_blurbs, solr_doc=nil
     people = Person.all
     places = Location.all
     concepts = Concept.all
-    all = people + places + concepts
+    # all = people + places + concepts
 
     node_sets = fedora_obj.datastreams['ARCHIVAL_XML'].find_by_terms_and_value(:u)
     node_sets.each do |node|
       utterence_id = node.attributes["n"]
-
-      solr_doc = solr_doc || {}
+      if index_blurbs
+        solr_doc = {}
+      end
       node.children.each do |child|
         childName = child.name
         if (childName == "u")
@@ -101,7 +102,6 @@ module AnnotationTools
         solr_doc.merge!(:id => pid + "-" + utterence_id)
         ActiveFedora::SolrService.add(solr_doc)
         ActiveFedora::SolrService.commit
-        return nil
       end
 
 
