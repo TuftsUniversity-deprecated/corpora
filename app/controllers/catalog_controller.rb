@@ -10,6 +10,22 @@ class CatalogController < ApplicationController
   before_filter :enforce_show_permissions, :only=>:show
   before_filter :load_fedora_document, :only=>[:show, :edit, :teireader, :eadoverview, :eadinternal, :transcriptonly]
 
+  # This filters out embargo'd objects
+  CatalogController.solr_search_params_logic += [:exclude_embargo_objects]
+
+  #This makes tdl aware of DCA-Admin displays tag
+  CatalogController.solr_search_params_logic += [:add_dca_admin_displays_awareness]
+
+  # This filters out objects that you want to exclude from search results.  By default it only excludes FileAssets
+  def exclude_embargo_objects(solr_parameters, user_parameters)
+    solr_parameters[:fq] ||= []
+    solr_parameters[:fq] << "-embargo_dtsi:[NOW TO *]"
+  end
+
+  def add_dca_admin_displays_awareness(solr_parameters, user_parameters)
+    solr_parameters[:fq] ||= []
+    solr_parameters[:fq] << "displays_ssi:corpora"
+  end
   # Use params[:id] to load an object from Fedora.  Inspects the object for known models and mixes in any of those models' behaviors.
   # Sets @document_fedora with the loaded object
   # Sets @file_assets with file objects that are children of the loaded object
