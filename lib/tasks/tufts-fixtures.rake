@@ -71,6 +71,22 @@ namespace :tufts do
         puts "#{'*'*(`tput cols`.to_i)}\nThe database has been populated!\n#{'*'*(`tput cols`.to_i)}"
       end
 
+      desc "Populate the database with development data using CSV files. (roles)"
+      task :populate_roles => :environment do
+        puts "#{'*'*(`tput cols`.to_i)}\nChecking Environment... The database will be cleared of all content before populating.\n#{'*'*(`tput cols`.to_i)}"
+        # Removes content before populating with data to avoid duplication
+        # Rake::Task['db:reset'].invoke
+        CSV.foreach(Rails.root + 'spec/fixtures/roles.csv') do |row|
+          id, name = row
+          # if the row already exists don't repeat it..
+          unless Role.where(:name => name).count > 0
+            puts "Adding #{name} as a Role"
+            Role.create!(:id => id, :name => name)
+          end
+        end
+
+        puts "#{'*'*(`tput cols`.to_i)}\nThe database has been populated!\n#{'*'*(`tput cols`.to_i)}"
+      end
       # Populates development data
       desc "Populate the database with development data using CSV files. (concepts)"
       task :populate_concepts => :environment do
