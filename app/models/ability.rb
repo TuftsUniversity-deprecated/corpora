@@ -3,7 +3,7 @@ class Ability
 
   def custom_permissions
     if current_user.admin?
-      can [:create, :show, :add_user, :remove_user, :index], Role
+      can [:create, :show, :add_user, :remove_user, :index, :new, :export, :history, :destroy, :show, :show_in_app, :edit], Role
       #Rails Admin Verbs
       #https://github.com/sferik/rails_admin/wiki/CanCan
       #:index, :new, :export, :history, :destroy, :show, :show_in_app, :edit
