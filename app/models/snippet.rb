@@ -4,7 +4,7 @@ class Snippet
   include AttachedFiles
 
   # Uses the Hydra Rights Metadata Schema for tracking access permissions & copyright
-  has_metadata "rightsMetadata", type: Hydra::Datastream::RightsMetadata
+ # has_metadata "rightsMetadata", type: Hydra::Datastream::RightsMetadata
 
   def get_snippet_id
 
