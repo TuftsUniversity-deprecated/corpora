@@ -7,9 +7,15 @@ class CatalogController < ApplicationController
   include Blacklight::Catalog
   include Hydra::Controller::ControllerBehavior
   # These before_filters apply the hydra access controls
-  before_filter :enforce_show_permissions, :only=>:show
+  before_filter :cancan_check, :only=>[:show,:index]
   before_filter :load_fedora_document, :only=>[:show, :edit, :teireader, :eadoverview, :eadinternal, :transcriptonly]
 
+  def cancan_check
+
+     unless  current_user.has_role? :student
+       render(file: "public/401", status: :unauthorized, layout: nil) unless devise_controller?
+    end
+  end
   # This filters out embargo'd objects
   CatalogController.solr_search_params_logic += [:exclude_embargo_objects]
 

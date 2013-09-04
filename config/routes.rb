@@ -58,12 +58,16 @@ SouthAsianDigitalLibrary::Application.routes.draw do
 #    match '/file_assets/ogg/:id', :to => 'local_file_assets#showOGG', :constraints => {:id => /.*/}, :as =>'file_asset'
 #
    devise_for :users
+  mount Hydra::RoleManagement::Engine => '/'
+
   # mount Hydra::RoleManagement::Engine => '/'
 
 #  Blacklight.add_routes(self)
 #  HydraHead.add_routes(self)
 
   #devise_for :users
+ # mount Hydra::RoleManagement::Engine => '/'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

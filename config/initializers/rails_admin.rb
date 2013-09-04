@@ -3,23 +3,23 @@
 
 RailsAdmin.config do |config|
 
-
+  config.authorize_with :cancan
   ################  Global configuration  ################
 
   # Set the admin name here (optional second array element will appear in red). For example:
-  config.main_app_name = ['South Asian Digital Library', 'Admin']
+  config.main_app_name = ['South Asian Digital Library']
   # or for a more dynamic name:
   # config.main_app_name = Proc.new { |controller| [Rails.application.engine_name.titleize, controller.params['action'].titleize] }
 
   # RailsAdmin may need a way to know who the current user is]
   config.current_user_method { current_user } # auto-generated
 
-  config.navigation_static_links = {
-    'Disambiguation' => '/disambiguation'
-  }
+  #config.navigation_static_links = {
+  #  'Disambiguation' => '/disambiguation'
+  #}
   #They are displayed in a separate group with default name 'Links', but you can change it:
 
-  config.navigation_static_label = "My Links"
+ #config.navigation_static_label = "My Links"
   # If you want to track changes on your models:
   # config.audit_with :history, 'User'
 
