@@ -19,7 +19,12 @@
 
   <div class="row">
     <div class="span5">
-      <%= raw Tufts::MediaPlayerMethods.show_video_player(params[:id], hasTranscript) %><br>
+      <% 
+        models = @document_fedora.relationships(:has_model)
+      %>
+
+      <%= raw Tufts::MediaPlayerMethods.show_audio_player(params[:id], hasTranscript) if models.include? 'info:fedora/afmodel:TuftsAudioText'%><br>
+      <%= raw Tufts::MediaPlayerMethods.show_video_player(params[:id], hasTranscript) if models.include? 'info:fedora/afmodel:TuftsVideo'%><br>
       <br>
       <% if hasTranscript %>
         <div class="participant_div">
@@ -29,7 +34,7 @@
       <% end %>
     </div>  <!-- span6 -->
 
-    <div class="span5">
+    <div class="span7">
     <% if hasTranscript %>
       <div class="tabbable">
         <ul class="nav nav-tabs">
