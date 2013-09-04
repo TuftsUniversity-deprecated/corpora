@@ -10,6 +10,7 @@ gem 'tuftsification-hydra', :git => 'https://github.com/TuftsUniversity/tuftsifi
 #gem 'tuftsification-hydra', :path => '/Users/mkorcy01/Documents/workspace/tuftsification-hydra'
 gem "active-fedora", "~> 6.4.0"
 gem 'om', "~> 3.0.0"
+gem 'hydra-role-management'
 
 # We will assume that you're using sqlite3 for testing/demo,
 # but in a production setup you probably want to use a real sql database like mysql or postgres
