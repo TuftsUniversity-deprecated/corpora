@@ -214,5 +214,38 @@ class CatalogController < ApplicationController
   end
 
 
+  # respond ot ajax request for external references
+  # return an array of hashes, each hash contains title, id and count
+  def get_external_references
+    pid = params[:pid]
+    name = params[:name]
+
+    references = AnnotationHelper.get_references name
+    external_summary = AnnotationHelper.summarize_external_references pid, references
+    render json: external_summary # {hello: params[:id]}
+  end
+
+  # respond to ajax request for internal references
+  # return an array of hashes, each hash contains segmentNumber and text
+  def get_internal_references
+    puts 'top of get_internal_references'
+    pid = params[:pid]
+    name = params[:name]
+    references = AnnotationHelper.get_references name
+    internal_summary = AnnotationHelper.summarize_internal_references pid, references
+    render json: internal_summary
+  end
+
+  # respond to ajax request
+  # return a two element array, index zero has internal reference, index one has external
+  def get_references
+    pid = params[:pid]
+    name = params[:name]
+    references = AnnotationHelper.get_references name
+    internal_summary = AnnotationHelper.summarize_internal_references pid, references
+    external_summary = AnnotationHelper.summarize_external_references pid, references
+    return_value = [internal_summary, external_summary]
+    render json: return_value
+  end
 
 end 
