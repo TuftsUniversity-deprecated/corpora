@@ -1,5 +1,4 @@
 module VideoDeliveryHelper
-  include Tufts::VideoRenderingMethods
 
   def self.render_video_path(path, type, pid)
     # no interest in modding the path here but we do want to do it in corpora/sadl
