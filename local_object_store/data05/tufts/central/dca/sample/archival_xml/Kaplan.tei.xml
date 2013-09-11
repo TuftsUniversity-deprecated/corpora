@@ -60,7 +60,10 @@
          <langUsage>
             <language id="EN" usage="100">English.</language>
          </langUsage>
-         <particDesc><!--Fill in interview participants here--></particDesc>
+         <particDesc>
+            <person id="KM" sex="m" role="lecturer"><p>Kris Manjapra</p></person>
+           	<person id="RK" sex="m" role="lecturer"><p>Robert Kaplan</p></person>
+         </particDesc>
       </profileDesc>
    </teiHeader>
    <text>
