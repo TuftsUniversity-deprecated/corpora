@@ -1,4 +1,5 @@
 require 'active_support/all'
+require 'rsolr'
 
 # code to help with annotations and getting annotation data to the client
 module AnnotationHelper
@@ -53,5 +54,61 @@ module AnnotationHelper
     return result
   end
 
+  # query Solr to get all occurrences of the the passed term
+  # return the docs in the solr response
+  # will this scale?  what if the passed term is referenced hundreds of times?
+  # what is the default number of items Solr will return?
+  def self.get_references(thing)
 
+    # solr = RSolr.connect :url => 'http://localhost:8983/solr/'
+    solr_connection = ActiveFedora.solr.conn
+    response = solr_connection.get 'select', :params => {:q => 'thing_ssim:' + thing}
+
+    docs = response['response']['docs']
+    puts "docs = " + docs.to_s
+    return docs
+  end
+
+  # iterate over the Solr docs and compute summary info needed for UI
+  # return an array of hashes, each hash contains title, id and occurrence count
+  # for testing purposes, this does not filter out the passed pid
+  def self.summarize_external_references(pid, references)
+    return_value = {}
+    references.each{ |reference|
+      puts reference.to_s
+      lecture_id = reference['pid_ssim']
+      summary = return_value[lecture_id]
+      if (summary.nil?)
+        title = reference['title_tesim'][0]
+        summary = {count: 1, title: title, id: lecture_id}
+        return_value[lecture_id] = summary
+        puts "added " + lecture_id.to_s  + ' with title ' + title;
+      else
+        summary[:count] = summary[:count] + 1
+        puts lecture_id.to_s + summary[:count].to_s
+      end
+    }
+    puts return_value.to_s
+    return return_value.values
+  end
+
+  def self.summarize_internal_references(pid, references)
+    return_value = []
+    puts 'summarize_internal_references'
+    puts references.size
+    references.each{ | reference|
+      current_pid = reference['pid_ssim'][0]
+      puts pid.to_s + ", " + current_pid.to_s
+      if (pid == current_pid)
+        id = reference['id']
+        dash = id.rindex '-'
+        segment_number = id[dash + 1, id.size]
+        text = reference['text_tesim'][0]
+        fragment = text[0,49] + "..."
+        summary = {segmentNumber: segment_number, text: fragment}
+        return_value << summary
+      end
+    }
+    return return_value
+  end
 end

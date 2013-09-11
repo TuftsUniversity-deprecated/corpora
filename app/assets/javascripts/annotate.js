@@ -61,15 +61,15 @@ function initConfigHash()
     extraData = {
         'person': {'name': 'person', 'tabId': '#tab3',
             'divId': '#peopleDiv',
-            'detailTemplate': "{{name}}<br/><div class='elementDescription'>Description: {{description}}</div><br/><div class='elementLink>'>Link: <a href='{{link}}' target='_blank'>{{link}}</a></div><br/>{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}<div class='description-link'><a href='javascript:showList(\"{{type}}\")'>Show {{type}} list</a></div>"},
+            'detailTemplate': "{{name}}<br/><div class='elementDescription'>Description: {{description}}</div><br/><div class='elementLink>'>Link: <a href='{{link}}' target='_blank'>{{link}}</a></div><br/>{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}Appearances in this interview:<div id='{{type}}InternalReferences'></div><br/>Also mentioned in these interviews:<div id='{{type}}ExternalReferences'></div><div class='description-link'><a href='javascript:showList(\"{{type}}\")'>Show {{type}} list</a></div>"},
 
         'concept': {'name': 'concept', 'tabId': '#tab5',
             'divId': '#conceptsDiv',
-            'detailTemplate': "{{name}}<br/><div class='elementDescription'>Description: {{description}}</div><br/><div class='elementLink>'>Link: <a href='{{link}}' target='_blank'>{{link}}</a></div><br/>{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}<div class='description-link'><a href='javascript:showList(\"{{type}}\")'>Show {{type}} list</a></div>"},
+            'detailTemplate': "{{name}}<br/><div class='elementDescription'>Description: {{description}}</div><br/><div class='elementLink>'>Link: <a href='{{link}}' target='_blank'>{{link}}</a></div><br/>{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}Appearances in this interview:<div id='{{type}}InternalReferences'></div><br/>Also mentioned in these interviews:<div id='{{type}}ExternalReferences'></div><div class='description-link'><a href='javascript:showList(\"{{type}}\")'>Show {{type}} list</a></div>"},
 
         'place': {'name': 'place', 'tabId': '#tab4',
             'divId': '#placesDiv',
-            'detailTemplate': "{{name}}<br/><div class='elementDescription'>Description: {{description}}</div><br/><div class='elementLink>'>Link: <a href='{{link}}' target='_blank'>{{link}}</a></div><br/>{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}<div class='description-link'><a href='javascript:showList(\"{{type}}\")'>Show {{type}} list</a></div>"}
+            'detailTemplate': "{{name}}<br/><div class='elementDescription'>Description: {{description}}</div><br/><div class='elementLink>'>Link: <a href='{{link}}' target='_blank'>{{link}}</a></div><br/>{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}Appearances in this interview:<div id='{{type}}InternalReferences'></div><br/>Also mentioned in these interviews<div id='{{type}}ExternalReferences'></div><div class='description-link'><a href='javascript:showList(\"{{type}}\")'>Show {{type}} list</a></div>"}
     };
 };
 
@@ -110,6 +110,7 @@ function initTabsAux(type)
 
 
 // display the element corresponding to the passed name in the proper tab
+// make ajax requests to fetch references to the passed name, both in this pid and for other pids
 function showElement(name, forceList)
 {
     var element = getElement(name);
@@ -131,8 +132,56 @@ function showElement(name, forceList)
         if (type == "place")
             showLocationIndex();
     }
-    jQuery(configHash.tabId).click();
+
+    clearReferences(type);
+
+    var pid = getPidFromUrl();
+    jQuery(configHash.tabId).click();     // show the right tab
+    // ajax back to server to get where this term appears in this and other interviews
+    var url = "/catalog/get_external_references/" + pid + "/" + name;
+    jQuery.ajax({type: "GET",
+        url: url
+    }).done(function(response){showExternalReferences(response, type)});
+
+    url = "/catalog/get_internal_references/" + pid + "/" + name;
+    jQuery.ajax({type: "GET",
+        url: url
+    }).done(function(response){showInternalReferences(response, type)});
 };
+
+
+function clearReferences(type)
+{
+    var divName = '#' + type + "ExternalReferences";
+    var div = jQuery(divName);
+    div.html("");
+    divName = '#' + type + "InternalReferences";
+    div = jQuery(divName);
+    div.html("");
+}
+
+// process external references from ajax request
+function showExternalReferences(response, type)
+{
+    var referenceTemplate = "{{#.}}{{title}} ({{count}})<br/>{{/.}}";
+    var text = Mustache.render(referenceTemplate, response);
+    var divName = '#' + type + "ExternalReferences";
+    var div = jQuery(divName);
+    div.html(text);
+}
+
+// process internal references from ajax request
+function showInternalReferences(response, type)
+{
+    console.log('top of showInternalReferences');
+    var referenceTemplate = "{{#.}}{{segmentNumber}}: {{text}}<br/>{{/.}}";
+    text = Mustache.render(referenceTemplate, response);
+    divName = '#' + type + "InternalReferences";
+    div = jQuery(divName);
+    div.html(text);
+    foo = response;
+    console.log('type = ' + type + ', response = ' + response);
+}
 
 // show the list of elements based on the passed type: person, concept or place
 function showList(type)
@@ -276,6 +325,18 @@ function highlightMapByName(name)
 
 }
 
+// get the pid from the browser's current url
+// is there a better way to obtain it?
+function getPidFromUrl()
+{
+    var path = window.location.pathname;
+    var slash = path.lastIndexOf('/');
+    if (slash == -1)
+      return 'error in getPidFromUrl';
+    var pid = path.substr(slash + 1);
+    return pid;
+}
+
 function addListener(marker)
 {
     google.maps.event.addListener(marker, 'click', function (event) {markerClickHandler(marker)});
@@ -310,7 +371,6 @@ else if ((passedLocationType == "region") || (passedLocationType == "state") || 
     zoomLevel = 6;
     return zoomLevel;
 }
-
 
 
 

@@ -6,7 +6,8 @@ gem 'rails', '3.2.13'
 gem 'blacklight'
 gem 'hydra-head', '~> 6.0.0'
 #gem 'tuftsification-hydra', :git => 'git@github.com:TuftsUniversity/tuftsification-hydra.git'
-gem 'tuftsification-hydra', :git => 'https://github.com/TuftsUniversity/tuftsification-hydra.git'
+#gem 'tuftsification-hydra', :git => 'https://github.com/TuftsUniversity/tuftsification-hydra.git'
+gem 'tuftsification-hydra', :path => '/Users/smcdon08/Devel/dl/tuftsification-hydra'
 #gem 'tuftsification-hydra', :path => '/Users/mkorcy01/Documents/workspace/tuftsification-hydra'
 gem "active-fedora", "~> 6.4.0"
 gem 'om', "~> 3.0.0"
