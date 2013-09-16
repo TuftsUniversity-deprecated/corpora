@@ -170,8 +170,8 @@ function showExternalReferences(response, type)
     div.html(text);
 }
 
-// process internal references from ajax request
-function showInternalReferences(response, type)
+
+function showInternalReferencesOld(response, type)
 {
     console.log('top of showInternalReferences');
     var referenceTemplate = "{{#.}}{{segmentNumber}}: {{text}}<br/>{{/.}}";
@@ -181,6 +181,35 @@ function showInternalReferences(response, type)
     div.html(text);
     foo = response;
     console.log('type = ' + type + ', response = ' + response);
+}
+
+// process internal references from ajax request
+function showInternalReferences(response, type)
+{
+    var referenceTemplate = "{{#.}}{{segmentNumber}}:  <div id='internalReferenceText{{segmentNumber}}' style='height:1.5em; overflow:hidden'>{{text}}</div>" +
+        "<a href='javascript:showInternalReferenceMore({{segmentNumber}})'><div id='internalReferenceMore{{segmentNumber}}' class='show-more'>Show more</div></a><br/>{{/.}}";
+    text = Mustache.render(referenceTemplate, response);
+    divName = '#' + type + "InternalReferences";
+    div = jQuery(divName);
+    div.html(text);
+}
+
+// handle calls to the show more/show less button on internal references
+function showInternalReferenceMore(id)
+{
+    var textElement = jQuery("#internalReferenceText" + id);
+    var moreElement = jQuery("#internalReferenceMore" + id);
+    if (moreElement.text() == "Show more")
+    {
+        textElement.css("height", "auto");    // show all the text
+        moreElement.text("Show less");
+    }
+    else
+    {
+        textElement.css("height", "1.5em");   // show just the first line
+        textElement.css("overflow", "hidden");
+        moreElement.text("Show more");
+    }
 }
 
 // show the list of elements based on the passed type: person, concept or place

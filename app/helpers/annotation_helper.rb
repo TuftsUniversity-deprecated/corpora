@@ -1,5 +1,6 @@
 require 'active_support/all'
 require 'rsolr'
+require 'set'
 
 # code to help with annotations and getting annotation data to the client
 module AnnotationHelper
@@ -30,24 +31,24 @@ module AnnotationHelper
     return RegExp.new pattern
   end
 
-  # create a javascript function that initializes a javascript global variable
-  #   with all the people data.  the value of the variable is an array of hashtables
+  # create a javascript function that returns an array of hashtables
+  #   with all the people data.
   def self.show_people(people)
     result = people.to_json
     result = "function initPeople () {return " + result + '};'
     return result
   end
 
-  # create a javascript function that initializes a javascript global variable
-  #   with all the concept data.  the value of the variable is an array of hashtables
+  # create a javascript function that returns an array of hashtables
+  #   with all the concept data.
   def self.show_concepts(concepts)
     result = concepts.to_json
     result = "function initConcepts () {return " + result + '};'
     return result
   end
 
-  # create a javascript function that initializes a javascript global variable
-  #   with all the places data.  the value of the variable is an array of hashtables
+  # create a javascript function returns an array of hashtables
+  #   with all the places data.
   def self.show_places(places)
     result = places.to_json
     result = "function initPlaces () {return" + result + '};'
@@ -59,8 +60,6 @@ module AnnotationHelper
   # will this scale?  what if the passed term is referenced hundreds of times?
   # what is the default number of items Solr will return?
   def self.get_references(thing)
-
-    # solr = RSolr.connect :url => 'http://localhost:8983/solr/'
     solr_connection = ActiveFedora.solr.conn
     response = solr_connection.get 'select', :params => {:q => 'thing_ssim:' + thing}
 
@@ -104,11 +103,27 @@ module AnnotationHelper
         dash = id.rindex '-'
         segment_number = id[dash + 1, id.size]
         text = reference['text_tesim'][0]
-        fragment = text[0,49] + "..."
-        summary = {segmentNumber: segment_number, text: fragment}
+        summary = {segmentNumber: segment_number, text: text}
         return_value << summary
       end
     }
+    return return_value
+  end
+
+  # return a list of the concepts, places and people appearing in the passed pid
+  def self.get_terms(pid)
+    return_value = Set.new
+    solr_connection = ActiveFedora.solr.conn
+    response = solr_connection.get 'select', :params => {:q => 'pid_ssim:' + pid, :fl => 'thing_ssim'}
+
+    docs = response['response']['docs']
+    docs.each { |current_doc|
+      terms = current_doc['thing_ssim']
+      terms.each { |term|
+        return_value << term
+      }
+    }
+    puts "terms = " + return_value.to_s
     return return_value
   end
 end
