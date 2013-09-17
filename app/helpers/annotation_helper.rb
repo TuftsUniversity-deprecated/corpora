@@ -57,6 +57,7 @@ module AnnotationHelper
 
   # query Solr to get all occurrences of the the passed term
   # return the docs in the solr response
+  # used to obtain all the transcript segments for a term
   # will this scale?  what if the passed term is referenced hundreds of times?
   # what is the default number of items Solr will return?
   def self.get_references(thing)
@@ -64,7 +65,6 @@ module AnnotationHelper
     response = solr_connection.get 'select', :params => {:q => 'thing_ssim:' + thing}
 
     docs = response['response']['docs']
-    puts "docs = " + docs.to_s
     return docs
   end
 
@@ -74,30 +74,23 @@ module AnnotationHelper
   def self.summarize_external_references(pid, references)
     return_value = {}
     references.each{ |reference|
-      puts reference.to_s
       lecture_id = reference['pid_ssim']
       summary = return_value[lecture_id]
       if (summary.nil?)
         title = reference['title_tesim'][0]
         summary = {count: 1, title: title, id: lecture_id}
         return_value[lecture_id] = summary
-        puts "added " + lecture_id.to_s  + ' with title ' + title;
       else
         summary[:count] = summary[:count] + 1
-        puts lecture_id.to_s + summary[:count].to_s
       end
     }
-    puts return_value.to_s
     return return_value.values
   end
 
   def self.summarize_internal_references(pid, references)
     return_value = []
-    puts 'summarize_internal_references'
-    puts references.size
     references.each{ | reference|
       current_pid = reference['pid_ssim'][0]
-      puts pid.to_s + ", " + current_pid.to_s
       if (pid == current_pid)
         id = reference['id']
         dash = id.rindex '-'
@@ -110,8 +103,8 @@ module AnnotationHelper
     return return_value
   end
 
-  # return a list of the concepts, places and people appearing in the passed pid
-  def self.get_terms(pid)
+  # return a flat list of the concepts, places and people appearing in the passed pid
+  def self.get_terms_flat(pid)
     return_value = Set.new
     solr_connection = ActiveFedora.solr.conn
     response = solr_connection.get 'select', :params => {:q => 'pid_ssim:' + pid, :fl => 'thing_ssim'}
@@ -123,7 +116,42 @@ module AnnotationHelper
         return_value << term
       }
     }
-    puts "terms = " + return_value.to_s
+    return return_value
+  end
+
+  # query solr and return all the concepts, people and places for the passed interview
+  # return value is a hash with keys :concepts, :people and :places, the values are set objects
+  def self.get_terms(pid)
+    solr_connection = ActiveFedora.solr.conn
+    # first, get all the Solr records for this pid
+    response = solr_connection.get 'select', :params => {:q => 'pid_ssim:' + pid, :fl => 'concepts_ssim, person_ssim, place_ssim'}
+    docs = response['response']['docs']
+
+    concepts = Set.new
+    people = Set.new
+    places = Set.new
+
+    # iterate over Solr documents adding found concepts, people and places to their corresponding sets
+    docs.each { |current_doc|
+      current_concepts = current_doc['concepts_ssim']
+      unless current_concepts.nil?
+        current_concepts.each { | concept |
+          concepts << concept}
+      end
+      current_people = current_doc['person_ssim']
+      unless current_people.nil?
+        current_people.each { | person |
+        people << person}
+      end
+      current_places = current_doc['place_ssim']
+      unless current_places.nil?
+        current_places.each { | place |
+          places << place
+        }
+      end
+    }
+    # return a hash with the concepts, people and places
+    return_value = {:concepts => concepts, :people => people, :places => places}
     return return_value
   end
 end

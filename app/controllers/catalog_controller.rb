@@ -50,9 +50,13 @@ class CatalogController < ApplicationController
     unless @document_fedora.class.include?(Hydra::ModelMethods)
       @document_fedora.class.send :include, Hydra::ModelMethods
     end
-    @people = Person.all
-    @places = Location.all
-    @concepts = Concept.all
+    terms = AnnotationHelper.get_terms(params[:id])
+    concept_names = terms[:concepts]
+    people_names = terms[:people]
+    place_names = terms[:places]
+    @people = Person.find_all_by_name(people_names.to_a.sort)
+    @places = Location.find_all_by_name(place_names.to_a.sort)
+    @concepts = Concept.find_all_by_name(concept_names.to_a.sort)
     #@file_assets = @document_fedora.parts(:response_format=>:solr)
   end
   # This applies appropriate access controls to all solr queries
