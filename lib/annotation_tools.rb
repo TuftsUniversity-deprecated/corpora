@@ -18,10 +18,12 @@ module AnnotationTools
     places = Location.all
     concepts = Concept.all
     # all = people + places + concepts
+    time_table = Tufts::MediaPlayerMethods.get_time_table(fedora_obj)
 
     node_sets = fedora_obj.datastreams['ARCHIVAL_XML'].find_by_terms_and_value(:u)
     node_sets.each do |node|
-      utterence_id = node.attributes["n"]
+      utterence_id = node.attributes['n']
+      start_id = node.attributes['start']
       if index_blurbs
         solr_doc = {}
       end
@@ -97,6 +99,8 @@ module AnnotationTools
       if index_blurbs
         Solrizer.insert_field(solr_doc, 'title', "Excerpt from " + fedora_obj.datastreams['DCA-META'].title[0], :stored_searchable)
         Solrizer.insert_field(solr_doc, 'pid', pid, :symbol)
+        Solrizer.insert_field(solr_doc, 'time', time_table[start_id.to_s][:time],:symbol)
+        Solrizer.insert_field(solr_doc, 'display_time', time_table[start_id.to_s][:display_time],:symbol)
         Solrizer.insert_field(solr_doc, 'displays', 'corpora', :stored_searchable)
         Solrizer.insert_field(solr_doc, 'has_model', 'info:fedora/afmodel:Snippet', :symbol)
         Solrizer.insert_field(solr_doc, 'read_access_group', 'public', :symbol)
