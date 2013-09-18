@@ -97,6 +97,7 @@ module AnnotationTools
       if index_blurbs
         Solrizer.insert_field(solr_doc, 'title', "Excerpt from " + fedora_obj.datastreams['DCA-META'].title[0], :stored_searchable)
         Solrizer.insert_field(solr_doc, 'pid', pid, :symbol)
+        Solrizer.insert_field(solr_doc, 'displays', 'corpora', :stored_searchable)
         Solrizer.insert_field(solr_doc, 'has_model', 'info:fedora/afmodel:Snippet', :symbol)
         Solrizer.insert_field(solr_doc, 'read_access_group', 'public', :symbol)
         solr_doc.merge!(:id => pid + "-" + utterence_id)
