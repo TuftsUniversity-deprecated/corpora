@@ -43,7 +43,7 @@ xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/
        <ac:comment/>
        <retentionPeriod/>
        <displays>tdl</displays>
-       <displays>southasia</displays>
+       <displays>corpora</displays>
        <embargo/>
        <status/>
        <startDate/>
@@ -106,6 +106,11 @@ xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/
 <foxml:datastream ID="ACCESS_OGG" STATE="A" CONTROL_GROUP="E" VERSIONABLE="true">
 <foxml:datastreamVersion ID="ACCESS_OGG.0" LABEL="ogg video file" CREATED="2013-05-15T12:00:00.000Z" MIMETYPE="video/ogg">
 <foxml:contentLocation TYPE="URL" REF="http://bucket01.lib.tufts.edu/data05/tufts/central/dca/sample/access_ogg/Alavi.ogv"/>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="ARCHIVAL_XML" STATE="A" CONTROL_GROUP="E" VERSIONABLE="true">
+<foxml:datastreamVersion ID="ARCHIVAL_XML.0" LABEL="Archival TEI transcript" CREATED="2006-03-09T18:06:24.684Z" MIMETYPE="text/xml">
+<foxml:contentLocation TYPE="URL" REF="http://bucket01.lib.tufts.edu/data05/tufts/central/dca/sample/archival_xml/Alavi.tei.xml"/>
 </foxml:datastreamVersion>
 </foxml:datastream>
 </foxml:digitalObject>

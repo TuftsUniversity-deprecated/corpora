@@ -59,7 +59,7 @@ xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/
       <ac:comment/>
       <retentionPeriod/>
       <displays>tdl</displays>
-      <displays>southasia</displays>
+      <displays>corpora</displays>
       <embargo/>
       <status/>
       <startDate/>
