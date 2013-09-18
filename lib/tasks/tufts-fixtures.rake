@@ -88,6 +88,24 @@ namespace :tufts do
         puts "#{'*'*(`tput cols`.to_i)}\nThe database has been populated!\n#{'*'*(`tput cols`.to_i)}"
       end
       # Populates development data
+      desc "Populate the database with development data using CSV files. (locations)"
+      task :populate_locations => :environment do
+        puts "#{'*'*(`tput cols`.to_i)}\nChecking Environment... The database will be cleared of all content before populating.\n#{'*'*(`tput cols`.to_i)}"
+        # Removes content before populating with data to avoid duplication
+        # Rake::Task['db:reset'].invoke
+
+        CSV.foreach(Rails.root + 'spec/fixtures/locations.csv') do |row|
+          name, link, modern_name, historical_name, admin01, admin02, town, Lat, Long= row
+          # if the row already exists don't repeat it..
+          unless Location.where(:name => name).count > 0
+            puts "Adding #{name} as a Location"
+            Location.create!(:name => name, :link => link, :modern_location => modern_name, :historical_name => historical_name, :admin01 => admin01, :admin02 => admin02, :town => town, :latitutde => Lat, :longitude => Long)
+          end
+        end
+
+        puts "#{'*'*(`tput cols`.to_i)}\nThe database has been populated!\n#{'*'*(`tput cols`.to_i)}"
+      end
+      # Populates development data
       desc "Populate the database with development data using CSV files. (concepts)"
       task :populate_concepts => :environment do
       	puts "#{'*'*(`tput cols`.to_i)}\nChecking Environment... The database will be cleared of all content before populating.\n#{'*'*(`tput cols`.to_i)}"
