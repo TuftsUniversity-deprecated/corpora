@@ -44,3 +44,4 @@ utils
 #keeping a videoizer copy for myself
 script/videoizer
 script/videoizerd
+script/ffmpeg
