@@ -314,6 +314,7 @@ function showMapCanvas()
 function initMarkers()
 {
     var places = extraData.place.data;
+    var latlngbounds = new google.maps.LatLngBounds();
 
     for (var i = 0 ; i < places.length ; i++)
     {
@@ -326,8 +327,13 @@ function initMarkers()
             position: position,
             map: map,
             title: name});
+        latlngbounds.extend(position);
         addListener(marker);
     }
+
+    //center the map around the markers and adjust zoom
+    map.setCenter(latlngbounds.getCenter());
+    map.fitBounds(latlngbounds);
 
 };
 
@@ -349,7 +355,7 @@ function highlightMapByName(name)
     infoWindow = new google.maps.InfoWindow();
     infoWindow.setContent(text);
     infoWindow.setPosition(new google.maps.LatLng(element.latitutde, element.longitude));
-    map.setZoom(locationTypeToZoomLevel(element.location_type));
+   // map.setZoom(locationTypeToZoomLevel(element.location_type));
     infoWindow.open(map);
 
 }
