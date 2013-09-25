@@ -1,0 +1,49 @@
+<%= form_tag search_action_url, :method => :get, :class => 'search-query-form form-inline clearfix' do %>
+    <%= search_as_hidden_fields(:omit_keys => [:q, :search_field, :qt, :page]).html_safe %>
+
+
+    <div class="input-append pull-left">
+      <label for="q" class="hide-text"><%= t('blacklight.search.form.q') %></label>
+      <%= text_field_tag :q, params[:q], :placeholder => t('blacklight.search.form.q'), :class => "search_q q", :id => "q" %>
+      <% unless search_fields.empty? %>
+
+          <label for="search_field" class="hide-text"><%= t('blacklight.search.form.search_field.label') %></label>
+          <%= select_tag(:search_field, options_for_select(search_fields, h(params[:search_field])), :title => t('blacklight.search.form.search_field.title'), :class => "search_field input-small") %>
+          <span class="hide-text"><%= t('blacklight.search.form.search_field.post_label') %></span>
+
+      <% end %>
+      <button type="submit" class="btn btn-primary search-btn" id="search">
+        <span class="submit-search-text"><%= t('blacklight.search.form.submit') %></span>
+        <i class="icon-search icon-white"></i>
+      </button>
+
+    </div>
+    <div class="input-append pull-right">
+      <% if has_user_authentication_provider? %>
+          <div class="util-links-login">
+            <% if current_user %>
+                <%= link_to t('blacklight.header_links.logout'), destroy_user_session_path %> <%= "#{ link_to current_user, edit_user_registration_path }".html_safe unless current_user.to_s.blank? %>
+            <% else %>
+                <%= link_to t('blacklight.header_links.login'), new_user_session_path %>
+            <% end %>
+          </div>
+      <% end %>
+
+
+<% end %>
+
+</div>
+<%# this is not in use for now we may bring it back later. %>
+<% if false %>
+    <div class="util-links-other">
+      <% if current_or_guest_user %>
+          <%= link_to t('blacklight.header_links.bookmarks'), bookmarks_path %>
+      <% end %>
+      <% if has_user_authentication_provider? and current_user %>
+          |
+          <%= link_to t('blacklight.header_links.saved_searches'), saved_searches_path %>
+      <% end %>
+      |
+      <%= link_to t('blacklight.header_links.search_history'), search_history_path %>
+    </div>
+<% end %>
