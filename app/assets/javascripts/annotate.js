@@ -108,6 +108,11 @@ function initTabsAux(type)
     jQuery(configHash.divId).html(text);
 };
 
+function showElementFromAnnotation(e)
+{
+    name = $(e.target).data('annotation').tags[0]
+    showElement(name);
+}
 
 // display the element corresponding to the passed name in the proper tab
 // make ajax requests to fetch references to the passed name, both in this pid and for other pids
