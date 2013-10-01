@@ -37,7 +37,7 @@
     <div class="span7">
     <% if hasTranscript %>
       <div class="tabbable">
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs" id="navTabsUl">
           <li <%= raw params[:tab] == "1" || params[:tab].nil? ? " class=\"active\"" : "" %>><a id="tab1" href="/catalog/<%= params[:id] %>?tab=1">Information</a></li>
           <li <%= raw params[:tab] == "2" ? " class=\"active\"" : "" %>><a id="tab2" href="/catalog/<%= params[:id] %>?tab=2">Transcript</a></li>
           <li <%= raw params[:tab] == "3" ? " class=\"active\"" : "" %>><a id="tab3" href="/catalog/<%= params[:id] %>?tab=3">People</a></li>

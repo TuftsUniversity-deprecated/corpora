@@ -35,7 +35,93 @@ function initDataAndTabs()
 
     var mapTab = jQuery("#tab4");
     mapTab.on("click", function(){delayedInitMap();})
+
+    history = window.History;
+    History.Adapter.bind(window,'statechange', processUrlStateChange);
+    var state = History.getState();
+    $("#navTabsUl").on("shown", tabClicked);  // need to update history when tab is clicked
+
+    processUrlStateChange();
+    initingPage = false;
 };
+
+
+var initingPage = true;
+
+// url is catalog/pid/type/arg
+// where type is person, place or concept
+// when there is no arg,
+function processUrlStateChange()
+{
+    var currentState = History.getState();
+    var url = currentState.url;
+    var parts = url.split(/\/|\?/);
+    var type = parts[parts.length - 1];
+    var element = null;
+    if ((type == "catalog") || (url.indexOf('?') == -1))
+    {
+        // here if we should be on the application's home tab
+        jQuery("#tab1").click();
+    }
+    if ((type != "concept") && (type != "place") && (type != "person") && (type != 'time'))
+    {
+        element = type;
+        type = parts[parts.length - 2];
+    }
+    if ((type == "concept") || (type == 'person') || (type == 'place'))
+    {
+        if (element == null)
+        {
+            showList(type);
+        }
+        else
+        {
+            showElement(element)
+        }
+
+    }
+
+}
+
+function tabClicked(event, eventData)
+{
+    // if we are initing the page, we don't want to push this history because it is already there
+    if (initingPage == true)
+        return;
+    var tab = event.target.id;
+    if (tab == "tab5")
+        pushHistory("concept");
+    else if (tab == "tab3")
+        pushHistory("person");
+    else if (tab == "tab4")
+        pushHistory("place");
+
+}
+
+function requestShowList(type)
+{
+     pushHistory(type);
+}
+
+function requestShowElement(name)
+{
+    var element = getElement(name);
+    if (element == null)
+        return;
+    var type = element.type;
+    pushHistory(type, name);
+}
+
+function pushHistory(type, name)
+{
+    if (name == null)
+    {
+        History.pushState(null, type, "?" + type);
+    }
+    else
+        History.pushState(null, type + "/" + name, "?" + type + "/" + name);
+}
+
 
 // this is a temporary fix
 // if the map is created on page load it displays incorrectly
@@ -61,15 +147,15 @@ function initConfigHash()
     extraData = {
         'person': {'name': 'person', 'tabId': '#tab3',
             'divId': '#peopleDiv',
-            'detailTemplate': "{{name}}<br/><div class='elementDescription'>Description: {{description}}</div><br/><div class='elementLink>'>Link: <a href='{{link}}' target='_blank'>{{link}}</a></div><br/>{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}Appearances in this interview:<div id='{{type}}InternalReferences'></div><br/>Also mentioned in these interviews:<div id='{{type}}ExternalReferences'></div><div class='description-link'><a href='javascript:showList(\"{{type}}\")'>Show {{type}} list</a></div>"},
+            'detailTemplate': "{{name}}<br/><div class='elementDescription'>Description: {{description}}</div><br/><div class='elementLink>'>Link: <a href='{{link}}' target='_blank'>{{link}}</a></div><br/>{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}Appearances in this interview:<div id='{{type}}InternalReferences'></div><br/>Also mentioned in these interviews:<div id='{{type}}ExternalReferences'></div><div class='description-link'><a href='javascript:requestShowList(\"{{type}}\")'>Show {{type}} list</a></div>"},
 
         'concept': {'name': 'concept', 'tabId': '#tab5',
             'divId': '#conceptsDiv',
-            'detailTemplate': "{{name}}<br/><div class='elementDescription'>Description: {{description}}</div><br/><div class='elementLink>'>Link: <a href='{{link}}' target='_blank'>{{link}}</a></div><br/>{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}Appearances in this interview:<div id='{{type}}InternalReferences'></div><br/>Also mentioned in these interviews:<div id='{{type}}ExternalReferences'></div><div class='description-link'><a href='javascript:showList(\"{{type}}\")'>Show {{type}} list</a></div>"},
+            'detailTemplate': "{{name}}<br/><div class='elementDescription'>Description: {{description}}</div><br/><div class='elementLink>'>Link: <a href='{{link}}' target='_blank'>{{link}}</a></div><br/>{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}Appearances in this interview:<div id='{{type}}InternalReferences'></div><br/>Also mentioned in these interviews:<div id='{{type}}ExternalReferences'></div><div class='description-link'><a href='javascript:requestShowList(\"{{type}}\")'>Show {{type}} list</a></div>"},
 
         'place': {'name': 'place', 'tabId': '#tab4',
             'divId': '#placesDiv',
-            'detailTemplate': "{{name}}<br/><div class='elementDescription'>Description: {{description}}</div><br/><div class='elementLink>'>Link: <a href='{{link}}' target='_blank'>{{link}}</a></div><br/>{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}Appearances in this interview:<div id='{{type}}InternalReferences'></div><br/>Also mentioned in these interviews<div id='{{type}}ExternalReferences'></div><div class='description-link'><a href='javascript:showList(\"{{type}}\")'>Show {{type}} list</a></div>"}
+            'detailTemplate': "{{name}}<br/><div class='elementDescription'>Description: {{description}}</div><br/><div class='elementLink>'>Link: <a href='{{link}}' target='_blank'>{{link}}</a></div><br/>{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}Appearances in this interview:<div id='{{type}}InternalReferences'></div><br/>Also mentioned in these interviews<div id='{{type}}ExternalReferences'></div><div class='description-link'><a href='javascript:requestShowList(\"{{type}}\")'>Show {{type}} list</a></div>"}
     };
 };
 
@@ -101,7 +187,7 @@ function initTabs()
 // add list of elements to corresponding ui tab
 function initTabsAux(type)
 {
-    var elementTemplate = "{{#.}}<a href='javascript:showElement(\"{{name}}\")'>{{name}}</a><br/>{{/.}}";
+    var elementTemplate = "{{#.}}<a href='javascript:requestShowElement(\"{{name}}\")'>{{name}}</a><br/>{{/.}}";
     var configHash = extraData[type];
     var text = Mustache.render(elementTemplate, configHash.data);
     configHash.listHtml = text;     // save list so we can switch back to it
@@ -118,6 +204,7 @@ function showElementFromAnnotation(e)
 // make ajax requests to fetch references to the passed name, both in this pid and for other pids
 function showElement(name, forceList)
 {
+    name = decodeURI(name);
     var element = getElement(name);
     if (element == null)
         return;
@@ -178,14 +265,11 @@ function showExternalReferences(response, type)
 
 function showInternalReferencesOld(response, type)
 {
-    console.log('top of showInternalReferences');
     var referenceTemplate = "{{#.}}{{segmentNumber}}: {{text}}<br/>{{/.}}";
     text = Mustache.render(referenceTemplate, response);
     divName = '#' + type + "InternalReferences";
     div = jQuery(divName);
     div.html(text);
-    foo = response;
-    console.log('type = ' + type + ', response = ' + response);
 }
 
 // process internal references from ajax request
@@ -224,7 +308,10 @@ function showList(type)
     var listHtml = configHash.listHtml;    // get the html list of elements we previously saved
     var div = jQuery(configHash.divId);
     div.html(listHtml);
+    var configHash = extraData[type];
+    jQuery(configHash.tabId).click();
 };
+
 
 
 // return the element hash that represents a database row
@@ -256,7 +343,7 @@ function annotateTranscript()
     {
         var utterance = utterances[i];
         var originalText = utterance.innerHTML;
-        var annotatedText = originalText.replace(regex, "<a href='javascript:showElement(\"$1\")'>$1</a>");
+        var annotatedText = originalText.replace(regex, "<a href='javascript:requestShowElement(\"$1\")'>$1</a>");
         utterance.innerHTML = annotatedText;
     }
 
@@ -355,7 +442,7 @@ function highlightMapByName(name)
     var element = getElement(name);
     if (name == null)
       return;
-    var template = "Name: {{name}}<br/>Description: {{description}}<br><a href='javascript:showElement(\"{{name}}\", true)'>More Info</a>";
+    var template = "Name: {{name}}<br/>Description: {{description}}<br><a href='javascript:requestShowElement(\"{{name}}\", true)'>More Info</a>";
     var text = Mustache.render(template, element);
     infoWindow = new google.maps.InfoWindow();
     infoWindow.setContent(text);
