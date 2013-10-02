@@ -63,11 +63,12 @@ function processUrlStateChange()
         // here if we should be on the application's home tab
         jQuery("#tab1").click();
     }
-    if ((type != "concept") && (type != "place") && (type != "person") && (type != 'time'))
+    if ((type != "concept") && (type != "place") && (type != "person") && (type != 'time') && (type != 'map'))
     {
         element = type;
         type = parts[parts.length - 2];
     }
+    console.log("type = " + type);
     if ((type == "concept") || (type == 'person') || (type == 'place'))
     {
         if (element == null)
@@ -78,9 +79,13 @@ function processUrlStateChange()
         {
             showElement(element)
         }
-
     }
-
+    else if (type == "map")
+    {
+        var configHash = extraData['place'];
+        jQuery(configHash.tabId).click();
+        showMapCanvas();
+    }
 }
 
 function tabClicked(event, eventData)
@@ -110,6 +115,11 @@ function requestShowElement(name)
         return;
     var type = element.type;
     pushHistory(type, name);
+}
+
+function requestShowMapCanvas()
+{
+    pushHistory("map");
 }
 
 function pushHistory(type, name)
@@ -210,10 +220,17 @@ function showElement(name, forceList)
         return;
     var type = element.type;
     var configHash = extraData[type];
+    /*
     if (type == "place" && forceList != true)
     {
-        highlightMapByName(name);
-        showMapCanvas();
+        //highlightMapByName(name);
+        //showMapCanvas();
+        var div = jQuery(configHash.divId);
+        var template = configHash.detailTemplate;
+        var text = Mustache.render(template, element);
+        div.html(text);
+        showLocationIndex();
+
     }
     else
     {
@@ -224,6 +241,14 @@ function showElement(name, forceList)
         if (type == "place")
             showLocationIndex();
     }
+    */
+
+    var div = jQuery(configHash.divId);
+    var template = configHash.detailTemplate;
+    var text = Mustache.render(template, element);
+    div.html(text);
+    if (type == "place")
+        showLocationIndex();
 
     clearReferences(type);
 
@@ -384,6 +409,7 @@ function initMap()
     };
     map = new google.maps.Map(document.getElementById("mapCanvas"), mapOptions);
 
+
 };
 
 // display the list (index) of places, not the map
@@ -398,7 +424,15 @@ function showMapCanvas()
 {
     jQuery("#placesParentDiv").hide();
     jQuery("#mapParent").show();
-    //google.maps.event.trigger(map, 'resize');
+    // the resize can throw an error but it is needed
+    try
+    {
+        google.maps.event.trigger(map, 'resize');
+    }
+    catch (err)
+    {
+
+    }
 };
 
 
@@ -442,7 +476,7 @@ function highlightMapByName(name)
     var element = getElement(name);
     if (name == null)
       return;
-    var template = "Name: {{name}}<br/>Description: {{description}}<br><a href='javascript:requestShowElement(\"{{name}}\", true)'>More Info</a>";
+    var template = "<div class='infoWindow' style='width:250px'>Name: {{name}}<br/>Description: {{description}}<br><a href='javascript:requestShowElement(\"{{name}}\", true)'>More Info</a></div>";
     var text = Mustache.render(template, element);
     infoWindow = new google.maps.InfoWindow();
     infoWindow.setContent(text);
