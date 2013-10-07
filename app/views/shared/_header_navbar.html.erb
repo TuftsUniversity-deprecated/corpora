@@ -1,0 +1,38 @@
+<div id="header-navbar-fixed-top" class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <div class="row">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+
+        <div class="span3">
+          <%= link_to application_name, root_path, :class => "brand" %>
+        </div>
+        <div class="input-append pull-right">
+          <% if has_user_authentication_provider? %>
+              <div class="util-links-login">
+                <% if current_user %>
+                    <%= link_to t('blacklight.header_links.logout'), destroy_user_session_path %> <%= "#{ link_to current_user, edit_user_registration_path }".html_safe unless current_user.to_s.blank? %>
+                <% else %>
+                    <%= link_to t('blacklight.header_links.login'), new_user_session_path %>
+                <% end %>
+              </div>
+          <% end %>
+        </div>
+
+        <div class="span6 clearfix" id="searchbar">
+          <%= render_search_bar %>
+        </div>
+
+        <div class="span3 nav-collapse">
+          <%= render :partial => '/user_util_links' %>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
