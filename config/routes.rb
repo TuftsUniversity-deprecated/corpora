@@ -8,6 +8,7 @@ SouthAsianDigitalLibrary::Application.routes.draw do
 
   resources :locations
   resources :people
+  resources :annotations
   resources :disambiguation, :default => 'resolve'
   root :to => "catalog#index"
 
@@ -40,8 +41,10 @@ SouthAsianDigitalLibrary::Application.routes.draw do
 
    resources :generics, only: [:edit, :update], constraints: { id: ALLOW_DOTS }
 
-
-
+    match '/api/search', :to => 'annotations#search'
+    get '/api', :to => 'annotations#index'
+    get '/api/annotations', :to => 'annotations#list'
+    post '/api/annotations', :to => 'annotations#create'
     get '/file_assets/medium/:id', :to => 'local_file_assets#showMedium', :constraints => {:id => /.*/}, :as =>'file_asset'
     get '/file_assets/webm/:id', :to => 'local_file_assets#showWebm', :constraints => {:id => /.*/}, :as =>'file_asset'
     get '/file_assets/:id', :to => 'local_file_assets#show', :constraints => {:id => /.*/}, :as =>'file_asset'
@@ -50,6 +53,7 @@ SouthAsianDigitalLibrary::Application.routes.draw do
   get '/catalog/get_external_references/:pid/:name' => 'catalog#get_external_references', :constraints => {:pid => /[^\/]+/}
   get '/catalog/get_internal_references/:pid/:name' => 'catalog#get_internal_references', :constraints => {:pid => /[^\/]+/}
   get '/catalog/get_references/:pid/:name' => 'catalog#get_references', :constraints => {:pid => /[^\/]+/}
+  get '/catalog/transcriptonly/:id' => 'catalog#transcriptonly', :constraints => {:id => /.*/}, :as =>'transcriptonly'
 
 
 #    match '/file_assets/advanced/:id', :to => 'local_file_assets#showAdvanced', :constraints => {:id => /.*/}, :as =>'file_asset'
