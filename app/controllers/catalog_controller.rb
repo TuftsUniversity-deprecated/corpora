@@ -57,6 +57,7 @@ class CatalogController < ApplicationController
     @people = Person.find_all_by_name(people_names.to_a.sort)
     @places = Location.find_all_by_name(place_names.to_a.sort)
     @concepts = Concept.find_all_by_name(concept_names.to_a.sort)
+    @names =  (Person.select(:name) + Location.select(:name) + Concept.select(:name)).to_a.to_json
     #@file_assets = @document_fedora.parts(:response_format=>:solr)
   end
   # This applies appropriate access controls to all solr queries
