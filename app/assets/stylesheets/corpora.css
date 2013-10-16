@@ -418,7 +418,7 @@ color: #333333;
 }
 
 #peopleDiv, .tab-content {
-height: 400px;
+
 overflow: auto;
 }
 
