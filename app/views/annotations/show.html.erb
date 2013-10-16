@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @location.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @location.description %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @location.link %>
+</p>
+
+<p>
+  <b>Modern location:</b>
+  <%= @location.modern_location %>
+</p>
+
+<p>
+  <b>Historical name:</b>
+  <%= @location.historical_name %>
+</p>
+
+<p>
+  <b>Admin01:</b>
+  <%= @location.admin01 %>
+</p>
+
+<p>
+  <b>Admin02:</b>
+  <%= @location.admin02 %>
+</p>
+
+<p>
+  <b>Town:</b>
+  <%= @location.town %>
+</p>
+
+<p>
+  <b>Location type:</b>
+  <%= @location.location_type %>
+</p>
+
+<p>
+  <b>Variable names:</b>
+  <%= @location.variable_names %>
+</p>
+
+<p>
+  <b>Latitutde:</b>
+  <%= @location.latitutde %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @location.longitude %>
+</p>
+
+<p>
+  <b>External feature:</b>
+  <%= @location.external_feature_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>
