@@ -41,7 +41,7 @@ function initDataAndTabs()
     var state = History.getState();
     $("#navTabsUl").on("shown", tabClicked);  // need to update history when tab is clicked
 
-    processUrlStateChange();
+    processUrlStateChange();   // process URL in case it includes a deep link
     initingPage = false;
 };
 
@@ -63,7 +63,7 @@ function processUrlStateChange()
         // here if we should be on the application's home tab
         jQuery("#tab1").click();
     }
-    if ((type != "concept") && (type != "place") && (type != "person") && (type != 'time') && (type != 'map'))
+    if ((type != "concept") && (type != "place") && (type != "person") && (type != 'time') && (type != 'map') && (type != 'timestamp'))
     {
         element = type;
         type = parts[parts.length - 2];
@@ -77,8 +77,30 @@ function processUrlStateChange()
         }
         else
         {
-            showElement(element)
+            showElement(element);
         }
+    }
+    else if (type == 'timestamp')
+    {
+        // timestamp on UI has the format minutes:seconds.  it does not use hours
+        // we use the same format for a deep linking url
+        var timestamp = element;
+        var parts = timestamp.split(':');
+        if (parts.length == 0)
+            return;
+        var minutes = parseInt(parts[0]);
+        if (isNaN(minutes))
+            return;  // if minutes are bad, skip setting player
+        var seconds = 0;
+        if (parts.length > 1)
+            seconds = parseInt(parts[1]);
+        if (isNaN(seconds))
+            seconds = 0;  // if seconds are bad, ignore seconds
+
+        var time = (minutes * 60 + seconds) * 1000;
+        console.log("jumping to " + time);
+        jumpPlayerTo(time);
+
     }
     else if (type == "map")
     {
