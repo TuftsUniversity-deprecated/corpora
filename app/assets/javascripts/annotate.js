@@ -148,10 +148,10 @@ function pushHistory(type, name)
 {
     if (name == null)
     {
-        History.pushState(null, type, "?" + type);
+        History.pushState(null, document.title, "?" + type);
     }
     else
-        History.pushState(null, type + "/" + name, "?" + type + "/" + name);
+        History.pushState(null, document.title, "?" + type + "/" + name);
 }
 
 
