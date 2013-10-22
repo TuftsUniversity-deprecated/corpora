@@ -119,9 +119,23 @@ class AnnotationsController < ApplicationController
     @annotation = Annotation.new()
     @annotation.pid = params[:uri]
     @annotation.text = params[:text]
+    @annotation.term = params[:tags][0]
+
+    if !Person.find_all_by_name([@annotation.term]).empty?
+      @annotation.term_type = "Person"
+    elsif !Location.find_all_by_name([@annotation.term]).empty?
+      @annotation.term_type = "Location"
+    elsif !Concept.find_all_by_name([@annotation.term]).empty?
+      @annotation.term_type = "Concept"
+    end
+
+
     #@annotations.concept = params[:tags]
     @annotation.json = params
     @annotation.save
+
+    @document_fedora = TuftsBase.find(params[:uri], :cast=>true)
+    @document_fedora.update_index
     respond_to do |format|
       if @annotation.save
         format.html { redirect_to @annotation, notice: 'Annotation was successfully created.' }

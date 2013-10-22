@@ -127,7 +127,7 @@ module AnnotationHelper
   def self.get_terms(pid)
     solr_connection = ActiveFedora.solr.conn
     # first, get all the Solr records for this pid
-    response = solr_connection.get 'select', :params => {:q => 'pid_ssim:' + pid, :fl => 'concepts_ssim, person_ssim, place_ssim'}
+    response = solr_connection.get 'select', :params => {:q => 'pid_ssim:' + pid, :rows=>'10000000',:fl => 'concepts_ssim, person_ssim, place_ssim'}
     docs = response['response']['docs']
 
     concepts = Set.new

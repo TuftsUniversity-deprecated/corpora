@@ -37,6 +37,7 @@ class CatalogController < ApplicationController
   # Sets @file_assets with file objects that are children of the loaded object
   # Sets @people, @places and @concepts with data from database
   #   eventually, what to initialize with may come from Solr
+
   def load_fedora_document
     #In the case that this is a Utterance or Excerpt from a recording we've indexed that separately
     #but its not backed by a real fedora object so it does not make sense to try to load that object out of
@@ -50,6 +51,7 @@ class CatalogController < ApplicationController
     unless @document_fedora.class.include?(Hydra::ModelMethods)
       @document_fedora.class.send :include, Hydra::ModelMethods
     end
+
     terms = AnnotationHelper.get_terms(params[:id])
     concept_names = terms[:concepts]
     people_names = terms[:people]

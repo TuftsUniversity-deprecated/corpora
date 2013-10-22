@@ -8,8 +8,10 @@ jQuery(document).ready(initDataAndTabs);
 
 // the functions initPeople, initConcepts and initPlaces are created
 //   by code in AnnotationHelper, they return json data for people, places and concepts
-function initDataAndTabs()
+function initDataAndTabs(annotate_transcript)
 {
+  //  annoate_transcript = annoate_transcript || true;
+
     initConfigHash();
     var people = initPeople();
     addType(people, "person");
@@ -26,7 +28,10 @@ function initDataAndTabs()
     // add all the data to a single array
     elements = people.concat(concepts, places);
     initTabs();
-    annotateTranscript();
+
+    if (annotate_transcript) {
+        annotateTranscript();
+    }
 
     // init map on first display due to a resize bug
     //initMap();
@@ -58,7 +63,7 @@ function processUrlStateChange()
     var parts = url.split(/\/|\?/);
     var type = parts[parts.length - 1];
     var element = null;
-    if ((type == "catalog") || (url.indexOf('?') == -1))
+    if ((type == "catalog") || (url.indexOf('?') == -1) || type == "transcript")
     {
         // here if we should be on the application's home tab
         jQuery("#tab1").click();
@@ -122,6 +127,8 @@ function tabClicked(event, eventData)
         pushHistory("person");
     else if (tab == "tab4")
         pushHistory("place");
+    else if (tab == "tab2")
+        pushHistory("transcript");
 
 }
 

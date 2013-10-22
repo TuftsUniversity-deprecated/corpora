@@ -54,6 +54,10 @@ Annotator.Plugin.Concepts = (function (_super) {
             return;
         }
         this.annotator
+            .subscribe('annotationEditorHidden', function (annotation) {
+                initDataAndTabs(false);
+            });
+    /*    this.annotator
             .subscribe("annotationViewerShown", function (annotation) {
                 $(".annotator-link[href*='View as webpage']").css('display', 'none');
                 $('.annotator-controls').nextAll().eq(0).css('display', 'none');
@@ -82,7 +86,7 @@ Annotator.Plugin.Concepts = (function (_super) {
                 $('#annotator-field-5').css('display', 'block');
                 $('.annotator-checkbox').css('display', 'block');
                 console.info("The annotation: %o has just been created!", annotation)
-            });
+            });      */
         this.field = this.annotator.editor.addField({
             label: Annotator._t('Add some tags here') + '\u2026',
             load: this.updateField,

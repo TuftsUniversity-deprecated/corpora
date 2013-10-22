@@ -13,6 +13,33 @@ module AnnotationTools
     return regex
   end
 
+  def self.tag_overrides pid, solr_doc
+   terms = Annotation.find_all_by_pid pid
+   terms.each do |term|
+     puts "#{term}"
+     Solrizer.insert_field(solr_doc, 'thing', "#{term.term}", :symbol)
+     if term.term_type == "Person"
+       Solrizer.insert_field(solr_doc, 'person', "#{term.term}", :symbol)
+       Solrizer.insert_field(solr_doc, 'names', "#{term.term}", :facetable)
+     elsif term.term_type == "Location"
+       Solrizer.insert_field(solr_doc, 'places', "#{term.term}", :facetable)
+       Solrizer.insert_field(solr_doc, 'place', "#{term.term}", :symbol)
+     elsif term.term_type == "Concept"
+      Solrizer.insert_field(solr_doc, 'concepts', "#{term.term}", :facetable)
+      Solrizer.insert_field(solr_doc, 'concepts', "#{term.term}", :symbol)
+     end
+=begin
+
+
+
+
+
+=end
+
+   end
+   solr_doc
+  end
+
   def self.tag_things pid, fedora_obj, index_blurbs, solr_doc=nil
     people = Person.all
     places = Location.all
@@ -110,6 +137,10 @@ module AnnotationTools
       end
 
 
+    end
+
+    unless index_blurbs
+      Solrizer.insert_field(solr_doc, 'pid', pid, :symbol)
     end
 
     solr_doc

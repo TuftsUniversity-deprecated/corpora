@@ -1,21 +1,26 @@
-<% javascript_includes << "https://maps.googleapis.com/maps/api/js?sensor=false"  %>
+<% javascript_includes << "https://maps.googleapis.com/maps/api/js?sensor=false" %>
 <% stylesheet_links << "media_player/media_player.css" %>
 <% stylesheet_links << "media_player/transcript.css" %>
 
+<% javascript_includes << 'concepts.js' %>
+<% javascript_includes << 'typeahead.js' %>
+<% stylesheet_links << 'annotator.min.css' %>
+
 
 <%
-  metadata = Tufts::ModelMethods.get_metadata(@document_fedora)
-  hasTranscript = !@document_fedora.datastreams["ARCHIVAL_XML"].dsLocation.nil?
+   metadata = Tufts::ModelMethods.get_metadata(@document_fedora)
+   hasTranscript = !@document_fedora.datastreams["ARCHIVAL_XML"].dsLocation.nil?
 %>
 
 
-  <div class="row">
-    <div class="span7">
-      <%= render :partial => 'shared/header_elements', :locals => {:metadata => metadata} %>
-    </div>  <!-- span12 -->
-  </div>  <!-- row -->
+<div class="row">
+  <div class="span7">
+    <%= render :partial => 'shared/header_elements', :locals => {:metadata => metadata} %>
+  </div>
+  <!-- span12 -->
+</div>  <!-- row -->
 
-  <hr>
+<hr>
 
   <div class="row">
     <div class="span5">
@@ -29,85 +34,250 @@
         <div class="participant_div">
           <b>Interview Participants</b><br>
           <%= raw Tufts::MediaPlayerMethods.show_participants(@document_fedora) %>
-        </div>  <!-- participant_div -->
-      <% end %>
-    </div>  <!-- span6 -->
+        </div>
+        <!-- participant_div -->
+    <% end %>
+  </div>
+  <!-- span6 -->
 
-    <div class="span7">
+  <div class="span7">
     <% if hasTranscript %>
-      <div class="tabbable">
-        <ul class="nav nav-tabs" id="navTabsUl">
-          <li <%= raw params[:tab] == "1" || params[:tab].nil? ? " class=\"active\"" : "" %>><a id="tab1" href="/catalog/<%= params[:id] %>?tab=1">Information</a></li>
-          <li <%= raw params[:tab] == "2" ? " class=\"active\"" : "" %>><a id="tab2" href="/catalog/<%= params[:id] %>?tab=2">Transcript</a></li>
-          <li <%= raw params[:tab] == "3" ? " class=\"active\"" : "" %>><a id="tab3" href="/catalog/<%= params[:id] %>?tab=3">People</a></li>
-          <li <%= raw params[:tab] == "4" ? " class=\"active\"" : "" %>><a id="tab4" href="/catalog/<%= params[:id] %>?tab=4">Places</a></li>
-          <li <%= raw params[:tab] == "5" ? " class=\"active\"" : "" %>><a id="tab5" href="/catalog/<%= params[:id] %>?tab=5">Concepts</a></li>
-        </ul>
+        <div class="tabbable">
+          <ul class="nav nav-tabs" id="navTabsUl">
+            <!-- <li <#%= raw params[:tab] == "1" || params[:tab].nil? ? " class=\"active\"" : "" %>><a id="tab1" href="/catalog/<%= params[:id] %>?tab=1">Information</a></li> -->
+            <li <%= raw params[:tab] == "1" || params[:tab].nil? ? " class=\"active\"" : "" %>>
+              <a id="tab2" href="/catalog/<%= params[:id] %>?tab=2">Transcript</a></li>
+            <li <%= raw params[:tab] == "2" ? " class=\"active\"" : "" %>>
+              <a id="tab3" href="/catalog/<%= params[:id] %>?tab=3">People</a></li>
+            <li <%= raw params[:tab] == "3" ? " class=\"active\"" : "" %>>
+              <a id="tab4" href="/catalog/<%= params[:id] %>?tab=4">Places</a></li>
+            <li <%= raw params[:tab] == "4" ? " class=\"active\"" : "" %>>
+              <a id="tab5" href="/catalog/<%= params[:id] %>?tab=5">Concepts</a></li>
+          </ul>
 
-        <div class="tab-content">
-          <div class="tab-pane<%= params[:tab] == "1" || params[:tab].nil?  ? " active" : "" %>" id="1">
-            <%= render :partial => 'shared/metadata_pane', :locals => {:metadata => metadata} %>
-          </div>
-          <!-- tab-pane 1 -->
+          <div class="tab-content">
+            <!--<div class="tab-pane<#%= params[:tab] == "1" || params[:tab].nil?  ? " active" : "" %>" id="1">
+              <#%= render :partial => 'shared/metadata_pane', :locals => {:metadata => metadata} %>
+            </div> -->
+            <!-- tab-pane 1 -->
 
-          <div class="tab-pane<%= params[:tab] == "2" ? " active" : "" %>" id="2">
-            <a href="/catalog/transcriptonly/<%= params[:id] %>" class="pull-right">
-              <h6>view transcript only <i class="icon-share"></i></h6></a>
-            <br>
+            <div class="tab-pane<%= params[:tab] == "1" || params[:tab].nil? ? " active" : "" %>" id="2">
+              <a href="/catalog/transcriptonly/<%= params[:id] %>" class="pull-right">
+                <h6>view transcript only <i class="icon-share"></i></h6></a>
+              <br>
 
-            <div class="transcript_box">
-              <%= raw Tufts::MediaPlayerMethods.show_transcript(@document_fedora, true) %>
-            </div>
-            <!-- transcript_box -->
-          </div>
-          <!-- tab-pane 2 -->
-          <div class="tab-pane<%= params[:tab] == "3" ? " active" : "" %>" id="3">
-            <div id='peopleDiv'>
-              &nbsp;   3
-            </div>
-            <!-- add javascript function to init people data -->
-            <script>
-            <%= raw AnnotationHelper.show_people(@people)%>
-            </script>
-          </div>
-          <!-- tab-pane 3 -->
-          <div class="tab-pane<%= params[:tab] == "4" ? " active" : "" %>" id="4">
-            <div id='placesMetaDiv'>
-              <div id="mapParent">
-                <div id="mapCanvas" style="width: 450px; height: 540px">
-                </div>
-                <a href="javascript:showLocationIndex()">Show Location Index</a>
+              <div class="transcript_box">
+                <%= raw Tufts::MediaPlayerMethods.show_transcript(@document_fedora, true) %>
               </div>
-              <div id='placesParentDiv'>
-                <div id='placesDiv'>
-                  &nbsp;         4,
+              <!-- transcript_box -->
+            </div>
+            <!-- tab-pane 2 -->
+            <div class="tab-pane<%= params[:tab] == "2" ? " active" : "" %>" id="3">
+              <div id='peopleDiv'>
+                &nbsp; 3
+              </div>
+              <!-- add javascript function to init people data -->
+              <script>
+                  <%= raw AnnotationHelper.show_people(@people)%>
+              </script>
+            </div>
+            <!-- tab-pane 3 -->
+            <div class="tab-pane<%= params[:tab] == "3" ? " active" : "" %>" id="4">
+              <div id='placesMetaDiv'>
+                <div id="mapParent">
+                  <div id="mapCanvas" style="width: 450px; height: 540px">
+                  </div>
+                  <a href="javascript:showLocationIndex()">Show Location Index</a>
                 </div>
+                <div id='placesParentDiv'>
+                  <div id='placesDiv'>
+                    &nbsp; 4,
+                  </div>
                 <a href="javascript:requestShowMapCanvas()">Show Map</a>
               </div>
+              <!-- add javascript function to init places data -->
+              <script>
+                  <%= raw AnnotationHelper.show_places(@places)%>
+              </script>
             </div>
-            <!-- add javascript function to init places data -->
-            <script>
-                <%= raw AnnotationHelper.show_places(@places)%>
-            </script>
-          </div>
-          <!-- tab-pane 4 -->
-          <div class="tab-pane<%= params[:tab] == "5" ? " active" : "" %>" id="5">
-            <div id='conceptsDiv'>
-              &nbsp; 5
+              </div>
+            <!-- tab-pane 4 -->
+            <div class="tab-pane<%= params[:tab] == "4" ? " active" : "" %>" id="5">
+              <div id='conceptsDiv'>
+                &nbsp; 5
+              </div>
+              <!-- add javascript function to init concept data -->
+              <script>
+                  <%= raw AnnotationHelper.show_concepts(@concepts)%>
+              </script>
             </div>
-            <!-- add javascript function to init concept data -->
-            <script>
-                <%= raw AnnotationHelper.show_concepts(@concepts)%>
-            </script>
-          </div>
-          <!-- tab-pane 5 -->
+            <!-- tab-pane 5 -->
 
+          </div>
+          <!-- tab-content -->
         </div>
-        <!-- tab-content -->
-      </div>
-          <!-- tabbable -->
-      <% else %>
-      <%= render :partial => 'shared/metadata_pane', :locals => {:metadata => metadata} %>
+        <!-- tabbable -->
+    <% else %>
+        <%= render :partial => 'shared/metadata_pane', :locals => {:metadata => metadata} %>
     <% end %>
-    </div>  <!-- span6 -->
-  </div>  <!-- row --> 
+  </div>
+  <!-- span6 -->
+</div>  <!-- row -->
+<% if can? :annotate, CatalogController %>
+    <% stylesheet_links << 'annotator_customizations.css' %>
+
+    <script>
+        $(document.body).annotator()
+                .annotator('setupPlugins'
+                , {readOnly: false }, {
+                    //                         Comments: false,
+                    //                        Tags: true,
+                    AnnotateItPermissions: false,
+                    Auth: false,
+                    Store: false,
+                    Filter: false
+                });
+
+
+        var content = $(document.body).annotator();
+   //     content.annotator('addPlugin', 'Auth', {
+    //              tokenUrl: '/auth/token'
+     //           });
+        content.annotator('addPlugin', 'Store', {
+            // The endpoint of the store on your server.
+            prefix: 'http://localhost:3000/api',
+
+            // Attach the uri of the current page to all annotations to allow search.
+            annotationData: {
+                'uri': '<%= params[:id] %>'
+            },
+            urls: {
+               // These are the default URLs.
+               create:  '/annotations',
+               read:    '/annotations/:id',
+               update:  '/annotations/:id',
+               destroy: '/annotations/:id',
+               search:  '/search'
+             },
+            // This will perform a "search" action rather than "read" when the plugin
+            // loads. Will request the last 20 annotations for the current url.
+            // eg. /store/endpoint/search?limit=20&uri=http://this/document/only
+            loadFromSearch: {
+                'limit': 20,
+                'uri': '<%= params[:id] %>',
+                'chunk': $(annotation.highlights[0]).parents().eq(3).attr('id')
+                '
+            }
+        });
+
+
+        var annotator = $(document.body).annotator().data('annotator');
+        annotator.addPlugin('Permissions', {
+            user: '',
+            permissions: {
+              'read':   [],
+              'update': [],
+              'delete': [],
+              'admin':  []
+            },
+            updateViewer: function(field, annotation, controls) {
+                      var user, username;
+                      field = $(field);
+                      username = this.options.userString(annotation.user);
+                      if (annotation.user && username && typeof username === 'string') {
+                        user = Annotator.Util.escape(this.options.userString(annotation.user));
+                        field.html(user).addClass('annotator-user');
+                      } else {
+                        field.remove();
+                      }
+                alert('p');
+                      if (controls) {
+                          alert('k');
+                        if (!this.authorize('update', annotation)) {
+                       //   controls.hideEdit();
+                        }
+                        if (!this.authorize('delete', annotation)) {
+                         // return controls.hideDelete();
+                        }
+                      }
+                    },
+            authorize: function(action, annotation, user) {
+                return true;
+            },
+            userAuthorize: function(action,annotation,user) {
+                //alert('l');
+                return true;
+            }
+
+        });
+
+        Annotator.prototype.deleteAnnotation = function (annotation) {
+            //  alert('deleted');
+            var child, h, _i, _len, _ref;
+            if (annotation.highlights != null) {
+                _ref = annotation.highlights;
+                for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+                    h = _ref[_i];
+                    if (!(h.parentNode != null)) {
+                        continue;
+                    }
+                    child = h.childNodes[0];
+                    //get the parent so that it removes the link with the onclick show element.
+                    $(h).parent().replaceWith(h.childNodes);
+                }
+            }
+            this.publish('annotationDeleted', [annotation]);
+            return annotation;
+        };
+
+        //overriding this method so i can wrap the elemnt with a showElement call
+        annotator.highlightRange = function (normedRange, cssClass) {
+
+            var hl, node, white, _i, _len, _ref, _results;
+            if (cssClass == null) {
+                cssClass = 'annotator-hl';
+            }
+            white = /^\s*$/;
+            //Kris Manjapra</a>
+
+
+            hl = $("<a onclick='showElementFromAnnotation(event)' href='#'><span class='" + cssClass + "'></span></a>");
+            _ref = normedRange.textNodes();
+            _results = [];
+            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+                node = _ref[_i];
+                if (!white.test(node.nodeValue)) {
+                    _results.push($(node).wrapAll(hl).parent().show()[0]);
+                }
+            }
+            return _results;
+
+        };
+        content.annotator('addPlugin', 'Concepts');
+
+
+        var json_crap = '<%= @names %>';
+        var concept_list = JSON.parse(json_crap.replace(/&quot;/g, '"'));
+        $('input#annotator-field-4').parent().prepend('<div class="annotator_title">Concepts</div>');
+        $('#annotator-field-4').typeahead([
+            {
+                name: 'concepts',
+                valueKey: 'name',
+                local: concept_list
+            }
+        ]);
+        /*
+         $('#annotator-field-5').typeahead([
+         {
+         name: 'planets',
+         local: [ "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune" ]
+         }
+         ]);
+         $('#annotator-field-6').typeahead([
+         {
+         name: 'planets',
+         local: [ "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune" ]
+         }
+         ]);   */
+    </script>
+<% end %>
