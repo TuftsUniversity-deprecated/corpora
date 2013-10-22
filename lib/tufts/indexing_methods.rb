@@ -10,6 +10,7 @@ module Tufts
       #   index_pub_date(solr_doc)
       #   index_unstemmed_values(solr_doc)
           index_utterance_metadata(solr_doc)
+	  index_corpora_collection(solr_doc)
       end
 
       private
