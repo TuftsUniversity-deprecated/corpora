@@ -332,7 +332,7 @@ width: 100%;
 margin-left: 0;
 }
 
-.blacklight-names_sim, .blacklight-concepts_sim, .blacklight-subject_sim, .blacklight-object_type_sim, .blacklight-places_sim {
+.blacklight-names_sim, .blacklight-concepts_sim, .blacklight-subject_sim, .blacklight-object_type_sim, .blacklight-places_sim, .blacklight-corpora_collection_sim {
 border: 1px solid #d4d4d4;
 background-color: #F1F1F2;
 margin-bottom: -1px;
