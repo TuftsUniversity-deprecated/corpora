@@ -10,8 +10,6 @@ jQuery(document).ready(initDataAndTabs);
 //   by code in AnnotationHelper, they return json data for people, places and concepts
 function initDataAndTabs(annotate_transcript)
 {
-  //  annoate_transcript = annoate_transcript || true;
-
     initConfigHash();
     var people = initPeople();
     addType(people, "person");
@@ -29,13 +27,12 @@ function initDataAndTabs(annotate_transcript)
     elements = people.concat(concepts, places);
     initTabs();
 
-    if (annotate_transcript) {
+    if (annotate_transcript)
+    {
         annotateTranscript();
     }
 
-    // init map on first display due to a resize bug
-    //initMap();
-    //initMarkers();
+
     showMapCanvas();
 
     var mapTab = jQuery("#tab4");
@@ -47,11 +44,11 @@ function initDataAndTabs(annotate_transcript)
     $("#navTabsUl").on("shown", tabClicked);  // need to update history when tab is clicked
 
     processUrlStateChange();   // process URL in case it includes a deep link
-    initingPage = false;
+    tabWithoutHistory = false;
 };
 
-
-var initingPage = true;
+// sometimes we have to select the tab without pushing a history change
+var tabWithoutHistory = true;
 
 // url is catalog/pid/type/arg
 // where type is person, place or concept
@@ -78,10 +75,12 @@ function processUrlStateChange()
     {
         if (element == null)
         {
+            console.log("processing url state change to list " + type);
             showList(type);
         }
         else
         {
+            console.log("processing url state change to element " + element);
             showElement(element);
         }
     }
@@ -118,7 +117,7 @@ function processUrlStateChange()
 function tabClicked(event, eventData)
 {
     // if we are initing the page, we don't want to push this history because it is already there
-    if (initingPage == true)
+    if (tabWithoutHistory == true)
         return;
     var tab = event.target.id;
     if (tab == "tab5")
@@ -162,7 +161,6 @@ function pushHistory(type, name)
 }
 
 
-// this is a temporary fix
 // if the map is created on page load it displays incorrectly
 //   because it doesn't receive a resize when the div is initialized after its first display
 //   so the map still zero size
@@ -249,28 +247,6 @@ function showElement(name, forceList)
         return;
     var type = element.type;
     var configHash = extraData[type];
-    /*
-    if (type == "place" && forceList != true)
-    {
-        //highlightMapByName(name);
-        //showMapCanvas();
-        var div = jQuery(configHash.divId);
-        var template = configHash.detailTemplate;
-        var text = Mustache.render(template, element);
-        div.html(text);
-        showLocationIndex();
-
-    }
-    else
-    {
-        var div = jQuery(configHash.divId);
-        var template = configHash.detailTemplate;
-        var text = Mustache.render(template, element);
-        div.html(text);
-        if (type == "place")
-            showLocationIndex();
-    }
-    */
 
     var div = jQuery(configHash.divId);
     var template = configHash.detailTemplate;
@@ -282,7 +258,9 @@ function showElement(name, forceList)
     clearReferences(type);
 
     var pid = getPidFromUrl();
+    tabWithoutHistory = true;
     jQuery(configHash.tabId).click();     // show the right tab
+    tabWithoutHistory = false;
     // ajax back to server to get where this term appears in this and other interviews
     var url = "/catalog/get_external_references/" + pid + "/" + name;
     jQuery.ajax({type: "GET",
@@ -296,6 +274,7 @@ function showElement(name, forceList)
 };
 
 
+// clear the divs that hold internal and external references
 function clearReferences(type)
 {
     var divName = '#' + type + "ExternalReferences";
@@ -316,15 +295,6 @@ function showExternalReferences(response, type)
     div.html(text);
 }
 
-
-function showInternalReferencesOld(response, type)
-{
-    var referenceTemplate = "{{#.}}{{segmentNumber}}: {{text}}<br/>{{/.}}";
-    text = Mustache.render(referenceTemplate, response);
-    divName = '#' + type + "InternalReferences";
-    div = jQuery(divName);
-    div.html(text);
-}
 
 // process internal references from ajax request
 function showInternalReferences(response, type)
@@ -359,7 +329,7 @@ function showInternalReferenceMore(id)
 function showList(type)
 {
     var configHash = extraData[type];
-    var listHtml = configHash.listHtml;    // get the html list of elements we previously saved
+    var listHtml = configHash.listHtml;    // use the html list of elements we previously saved
     var div = jQuery(configHash.divId);
     div.html(listHtml);
     var configHash = extraData[type];
@@ -374,6 +344,7 @@ function getElement(name)
     return getItem(name, elements);
 };
 
+// iterate over all the elements in the array looking for the passed name
 // should we use a hash rather than this slow iteration
 function getItem(name, array)
 {
