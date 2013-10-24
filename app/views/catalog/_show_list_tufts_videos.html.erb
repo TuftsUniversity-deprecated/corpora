@@ -22,15 +22,17 @@
 
 <hr>
 
-  <div class="row">
-    <div class="span5">
-      <% 
-        models = @document_fedora.relationships(:has_model)
-      %>
-      <%= raw Tufts::MediaPlayerMethods.show_audio_player(params[:id], hasTranscript) unless (models & ['info:fedora/cm:Audio.OralHistory', 'info:fedora/afmodel:TuftsAudioTexts']).empty? %><br>
-      <%= raw Tufts::MediaPlayerMethods.show_video_player(params[:id], hasTranscript) if models.include? 'info:fedora/afmodel:TuftsVideo'%><br>
-      <br>
-      <% if hasTranscript %>
+<div class="row">
+  <div class="span5">
+    <%
+       models = @document_fedora.relationships(:has_model)
+    %>
+    <%= raw Tufts::MediaPlayerMethods.show_audio_player(params[:id], hasTranscript) unless (models & ['info:fedora/cm:Audio.OralHistory', 'info:fedora/afmodel:TuftsAudioTexts']).empty? %>
+    <br>
+    <%= raw Tufts::MediaPlayerMethods.show_video_player(params[:id], hasTranscript) if models.include? 'info:fedora/afmodel:TuftsVideo' %>
+    <br>
+    <br>
+    <% if hasTranscript %>
         <div class="participant_div">
           <b>Interview Participants</b><br>
           <%= raw Tufts::MediaPlayerMethods.show_participants(@document_fedora) %>
@@ -62,9 +64,9 @@
             <!-- tab-pane 1 -->
 
             <div class="tab-pane<%= params[:tab] == "1" || params[:tab].nil? ? " active" : "" %>" id="2">
-              <a href="/catalog/transcriptonly/<%= params[:id] %>" class="pull-right">
+<!--              <a href="/catalog/transcriptonly/<%= params[:id] %>" class="pull-right">
                 <h6>view transcript only <i class="icon-share"></i></h6></a>
-              <br>
+              <br> -->
 
               <div class="transcript_box">
                 <%= raw Tufts::MediaPlayerMethods.show_transcript(@document_fedora, true) %>
@@ -73,43 +75,49 @@
             </div>
             <!-- tab-pane 2 -->
             <div class="tab-pane<%= params[:tab] == "2" ? " active" : "" %>" id="3">
-              <div id='peopleDiv'>
-                &nbsp; 3
+              <div class="transcript_box">
+                <div id='peopleDiv'>
+                  &nbsp; 3
+                </div>
+                <!-- add javascript function to init people data -->
+                <script>
+                    <%= raw AnnotationHelper.show_people(@people)%>
+                </script>
               </div>
-              <!-- add javascript function to init people data -->
-              <script>
-                  <%= raw AnnotationHelper.show_people(@people)%>
-              </script>
             </div>
             <!-- tab-pane 3 -->
             <div class="tab-pane<%= params[:tab] == "3" ? " active" : "" %>" id="4">
-              <div id='placesMetaDiv'>
-                <div id="mapParent">
-                  <div id="mapCanvas" style=" height: 540px">
+
+                <div id='placesMetaDiv'>
+                  <div id="mapParent">
+                    <div id="mapCanvas" style=" height: 540px">
+                    </div>
+                    <a href="javascript:showLocationIndex()">Show Location Index</a>
                   </div>
-                  <a href="javascript:showLocationIndex()">Show Location Index</a>
+                  <div id='placesParentDiv'>
+                    <div id='placesDiv'>
+                      &nbsp; 4,
+                    </div>
+                    <a href="javascript:requestShowMapCanvas()">Show Map</a>
+                  </div>
+                  <!-- add javascript function to init places data -->
+                  <script>
+                      <%= raw AnnotationHelper.show_places(@places)%>
+                  </script>
                 </div>
-                <div id='placesParentDiv'>
-                  <div id='placesDiv'>
-                    &nbsp; 4,
-                  </div>
-                <a href="javascript:requestShowMapCanvas()">Show Map</a>
-              </div>
-              <!-- add javascript function to init places data -->
-              <script>
-                  <%= raw AnnotationHelper.show_places(@places)%>
-              </script>
+
             </div>
-              </div>
             <!-- tab-pane 4 -->
             <div class="tab-pane<%= params[:tab] == "4" ? " active" : "" %>" id="5">
-              <div id='conceptsDiv'>
-                &nbsp; 5
+              <div class="transcript_box">
+                <div id='conceptsDiv'>
+                  &nbsp; 5
+                </div>
+                <!-- add javascript function to init concept data -->
+                <script>
+                    <%= raw AnnotationHelper.show_concepts(@concepts)%>
+                </script>
               </div>
-              <!-- add javascript function to init concept data -->
-              <script>
-                  <%= raw AnnotationHelper.show_concepts(@concepts)%>
-              </script>
             </div>
             <!-- tab-pane 5 -->
 
@@ -140,9 +148,9 @@
 
 
         var content = $(document.body).annotator();
-   //     content.annotator('addPlugin', 'Auth', {
-    //              tokenUrl: '/auth/token'
-     //           });
+        //     content.annotator('addPlugin', 'Auth', {
+        //              tokenUrl: '/auth/token'
+        //           });
         content.annotator('addPlugin', 'Store', {
             // The endpoint of the store on your server.
             prefix: 'http://localhost:3000/api',
@@ -152,21 +160,21 @@
                 'uri': '<%= params[:id] %>'
             },
             urls: {
-               // These are the default URLs.
-               create:  '/annotations',
-               read:    '/annotations/:id',
-               update:  '/annotations/:id',
-               destroy: '/annotations/:id',
-               search:  '/search'
-             },
+                // These are the default URLs.
+                create: '/annotations',
+                read: '/annotations/:id',
+                update: '/annotations/:id',
+                destroy: '/annotations/:id',
+                search: '/search'
+            },
             // This will perform a "search" action rather than "read" when the plugin
             // loads. Will request the last 20 annotations for the current url.
             // eg. /store/endpoint/search?limit=20&uri=http://this/document/only
             loadFromSearch: {
                 'limit': 20,
                 'uri': '<%= params[:id] %>',
-                'chunk': $(annotation.highlights[0]).parents().eq(3).attr('id')
-                '
+                //  'chunk': $(annotation.highlights[0]).parents().eq(3).attr('id')
+
             }
         });
 
@@ -175,36 +183,36 @@
         annotator.addPlugin('Permissions', {
             user: '',
             permissions: {
-              'read':   [],
-              'update': [],
-              'delete': [],
-              'admin':  []
+                'read': [],
+                'update': [],
+                'delete': [],
+                'admin': []
             },
-            updateViewer: function(field, annotation, controls) {
-                      var user, username;
-                      field = $(field);
-                      username = this.options.userString(annotation.user);
-                      if (annotation.user && username && typeof username === 'string') {
-                        user = Annotator.Util.escape(this.options.userString(annotation.user));
-                        field.html(user).addClass('annotator-user');
-                      } else {
-                        field.remove();
-                      }
+            updateViewer: function (field, annotation, controls) {
+                var user, username;
+                field = $(field);
+                username = this.options.userString(annotation.user);
+                if (annotation.user && username && typeof username === 'string') {
+                    user = Annotator.Util.escape(this.options.userString(annotation.user));
+                    field.html(user).addClass('annotator-user');
+                } else {
+                    field.remove();
+                }
                 alert('p');
-                      if (controls) {
-                          alert('k');
-                        if (!this.authorize('update', annotation)) {
-                       //   controls.hideEdit();
-                        }
-                        if (!this.authorize('delete', annotation)) {
-                         // return controls.hideDelete();
-                        }
-                      }
-                    },
-            authorize: function(action, annotation, user) {
+                if (controls) {
+                    alert('k');
+                    if (!this.authorize('update', annotation)) {
+                        //   controls.hideEdit();
+                    }
+                    if (!this.authorize('delete', annotation)) {
+                        // return controls.hideDelete();
+                    }
+                }
+            },
+            authorize: function (action, annotation, user) {
                 return true;
             },
-            userAuthorize: function(action,annotation,user) {
+            userAuthorize: function (action, annotation, user) {
                 //alert('l');
                 return true;
             }
