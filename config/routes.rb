@@ -45,6 +45,10 @@ SouthAsianDigitalLibrary::Application.routes.draw do
     get '/api', :to => 'annotations#index'
     get '/api/annotations', :to => 'annotations#list'
     post '/api/annotations', :to => 'annotations#create'
+    delete '/api/annotations/:id', :to => 'annotations#destroy'
+    put '/api/annotations/:id', :to =>'annotations#update'
+    #match '/api/annotations', to: 'annotations#destroy', via: :delete
+
     get '/file_assets/medium/:id', :to => 'local_file_assets#showMedium', :constraints => {:id => /.*/}, :as =>'file_asset'
     get '/file_assets/webm/:id', :to => 'local_file_assets#showWebm', :constraints => {:id => /.*/}, :as =>'file_asset'
     get '/file_assets/:id', :to => 'local_file_assets#show', :constraints => {:id => /.*/}, :as =>'file_asset'
