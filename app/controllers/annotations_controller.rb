@@ -96,11 +96,11 @@ class AnnotationsController < ApplicationController
     @annotations.each_index { |i|
 
       @annotations_array[i] = @annotations[i].json
-      @annotations_array[i][:id] = i
+      @annotations_array[i][:id] = @annotations[i][:id]
       @annotations_array[i][:annotator_schema_version] = 'v1.0'
       @annotations_array[i][:consumer] = 'anotateit'
-      @annotations_array[i][:created] = '2011-05-24T18:52:08.036814'
-      @annotations_array[i][:updated] = '2011-05-26T12:17:05.012544'
+      @annotations_array[i][:created] = @annotations[i][:created_at]
+      @annotations_array[i][:updated] = @annotations[i][:updated_at]
 
     }
     @annotations_json[:rows] = @annotations_array
@@ -117,6 +117,7 @@ class AnnotationsController < ApplicationController
   # POST /locations.json
   def create
     @annotation = Annotation.new()
+    #@annotation.id = params
     @annotation.pid = params[:uri]
     @annotation.text = params[:text]
     @annotation.term = params[:tags][0]
@@ -150,10 +151,26 @@ class AnnotationsController < ApplicationController
   # PUT /locations/1
   # PUT /locations/1.json
   def update
-    @location = Location.find(params[:id])
+    @annotation = Annotation.find(params[:id])
+    @annotation.pid = params[:uri]
+    @annotation.text = params[:text]
+    @annotation.term = params[:tags][0]
+
+    if !Person.find_all_by_name([@annotation.term]).empty?
+      @annotation.term_type = "Person"
+    elsif !Location.find_all_by_name([@annotation.term]).empty?
+      @annotation.term_type = "Location"
+    elsif !Concept.find_all_by_name([@annotation.term]).empty?
+      @annotation.term_type = "Concept"
+    end
+
+
+    #@annotations.concept = params[:tags]
+    @annotation.json = params
+    @annotation.save
 
     respond_to do |format|
-      if @location.update_attributes(params[:location])
+      if @annotation.update_attributes(params[:location])
         format.html { redirect_to @location, notice: 'Location was successfully updated.' }
         format.json { head :no_content }
       else
@@ -166,11 +183,11 @@ class AnnotationsController < ApplicationController
   # DELETE /locations/1
   # DELETE /locations/1.json
   def destroy
-    @location = Location.find(params[:id])
-    @location.destroy
+   @annotation = Annotation.find(params[:id])
+   @annotation.destroy
 
     respond_to do |format|
-      format.html { redirect_to locations_url }
+      format.html { redirect_to annotations_url }
       format.json { head :no_content }
     end
   end
