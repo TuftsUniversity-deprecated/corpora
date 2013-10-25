@@ -62,7 +62,8 @@ module AnnotationHelper
   # what is the default number of items Solr will return?
   def self.get_references(thing)
     solr_connection = ActiveFedora.solr.conn
-    response = solr_connection.get 'select', :params => {:q => 'thing_ssim:' + thing}
+    thing_q = 'thing_ssim:"' + thing + '"'
+    response = solr_connection.get 'select', :params => {:q => thing_q}
 
     docs = response['response']['docs']
     return docs
@@ -97,13 +98,15 @@ module AnnotationHelper
       if (pid == current_pid)
         id = reference['id']
         dash = id.rindex '-'
-        segment_number = id[dash + 1, id.size]
-        text = reference['text_tesim'][0]
-        start_in_milliseconds = reference['start_in_milliseconds']
-        display_time_ssim = reference['display_time_ssim']
-        summary = {segmentNumber: segment_number, text: text, start_in_milliseconds: start_in_milliseconds,
+        unless dash.nil?
+          segment_number = id[dash + 1, id.size]
+          text = reference['text_tesim'][0]
+          start_in_milliseconds = reference['start_in_milliseconds']
+          display_time_ssim = reference['display_time_ssim']
+          summary = {segmentNumber: segment_number, text: text, start_in_milliseconds: start_in_milliseconds,
                    display_time_ssim: display_time_ssim}
-        return_value << summary
+          return_value << summary
+        end
       end
     }
     return return_value
