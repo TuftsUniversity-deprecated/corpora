@@ -70,23 +70,26 @@ module AnnotationHelper
 
   # iterate over the Solr docs and compute summary info needed for UI
   # return an array of hashes, each hash contains title, id and occurrence count
-  # for testing purposes, this does not filter out the passed pid
+  # filter out data for passed pid, they are internal references
   def self.summarize_external_references(pid, references)
     return_value = {}
     references.each{ |reference|
-      lecture_id = reference['pid_ssim']
-      summary = return_value[lecture_id]
-      if (summary.nil?)
-        title = reference['title_tesim'][0]
-        summary = {count: 1, title: title, id: lecture_id}
-        return_value[lecture_id] = summary
-      else
-        summary[:count] = summary[:count] + 1
+      lecture_id = reference['pid_ssim'][0]
+      if (lecture_id != pid)
+        summary = return_value[lecture_id]
+        if (summary.nil?)
+          title = reference['title_tesim'][0]
+          summary = {count: 1, title: title, id: lecture_id}
+          return_value[lecture_id] = summary
+        else
+          summary[:count] = summary[:count] + 1
+        end
       end
     }
     return return_value.values
   end
 
+  # iterate over Solr docs and compute summary for references to the passed pid
   def self.summarize_internal_references(pid, references)
     return_value = []
     references.each{ | reference|
