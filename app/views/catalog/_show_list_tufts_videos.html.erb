@@ -138,8 +138,9 @@
         $(document.body).annotator()
                 .annotator('setupPlugins'
                 , {readOnly: false }, {
+                    //You can't set Comments or Permissions to false and have it take the effect you want.
                     //                         Comments: false,
-                    //                        Tags: true,
+                                           Tags: false,
                     AnnotateItPermissions: false,
                     Auth: false,
                     Store: false,
@@ -158,6 +159,7 @@
             // Attach the uri of the current page to all annotations to allow search.
             annotationData: {
                 'uri': '<%= params[:id] %>'
+
             },
             urls: {
                 // These are the default URLs.
@@ -172,9 +174,7 @@
             // eg. /store/endpoint/search?limit=20&uri=http://this/document/only
             loadFromSearch: {
                 'limit': 20,
-                'uri': '<%= params[:id] %>',
-                //  'chunk': $(annotation.highlights[0]).parents().eq(3).attr('id')
-
+                'uri': '<%= params[:id] %>'
             }
         });
 
@@ -266,8 +266,8 @@
 
         var json_crap = '<%= @names %>';
         var concept_list = JSON.parse(json_crap.replace(/&quot;/g, '"'));
-        $('input#annotator-field-4').parent().prepend('<div class="annotator_title">Concepts</div>');
-        $('#annotator-field-4').typeahead([
+        $('input#annotator-field-3').parent().prepend('<div class="annotator_title">Concepts</div>');
+        $('#annotator-field-3').typeahead([
             {
                 name: 'concepts',
                 valueKey: 'name',
