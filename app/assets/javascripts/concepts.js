@@ -56,7 +56,15 @@ Annotator.Plugin.Concepts = (function (_super) {
         this.annotator
             .subscribe('annotationEditorHidden', function (annotation) {
                 initDataAndTabs(false);
+            })
+            .subscribe('annotationEditorSubmit', function (annotation) {
+                var annotator = $(document.body).annotator().data('annotator');
+
+                annotator.plugins.Store.options.annotationData.chunk = $(annotation.annotation.highlights[0]).parents().eq(3).attr('id');
+
             });
+
+
     /*    this.annotator
             .subscribe("annotationViewerShown", function (annotation) {
                 $(".annotator-link[href*='View as webpage']").css('display', 'none');
