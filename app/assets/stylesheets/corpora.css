@@ -422,6 +422,10 @@ color: #333333;
 overflow: auto;
 }
 
+.tabbable {
+width: 600px !important;
+}
+
 /*------Responsive Overrides-------*/
 
 @media (max-width: 1050px) and (min-width: 850px) {
@@ -452,6 +456,9 @@ width: 400px;
 float: left;
 }
 
+.tabbable {
+width: 500px !important;
+}
 
 
 }
@@ -460,6 +467,10 @@ float: left;
 
 #content {
 width: 300px;
+}
+
+#content h2{
+font-size: 18px;
 }
 
 #header-navbar-fixed-top .navbar-inner {
@@ -493,7 +504,27 @@ background-size:contain;
 margin-bottom: 0;
 }
 
+#previousNextDocument {
+width: 280px !important;
+}
+
 #jw_player {
-width: 200px;
+width: 280px !important;
+}
+
+#player_container {
+width: 280px;
+}
+
+#controls {
+width: 276px !important;
+}
+
+#seekBack,#seekForward, #volumeDown, #volumeUp, #fullScreen, #mute {
+display: none;
+}
+
+.tabbable {
+width: 280px !important;
 }
 }
