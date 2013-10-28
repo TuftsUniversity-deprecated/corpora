@@ -121,7 +121,7 @@ class AnnotationsController < ApplicationController
     @annotation.pid = params[:uri]
     @annotation.text = params[:text]
     @annotation.term = params[:tags][0]
-
+    @annotation.utterance = params[:chunk]
     if !Person.find_all_by_name([@annotation.term]).empty?
       @annotation.term_type = "Person"
     elsif !Location.find_all_by_name([@annotation.term]).empty?
@@ -130,6 +130,7 @@ class AnnotationsController < ApplicationController
       @annotation.term_type = "Concept"
     end
 
+    #@annotation.utterance =
 
     #@annotations.concept = params[:tags]
     @annotation.json = params
