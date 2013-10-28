@@ -60,7 +60,27 @@ module AnnotationTools
           #who = child.attributes["who"]
 
           blurb = Tufts::MediaPlayerMethods.parse_notations(child)
+          annotations = Annotation.where("pid = ? AND utterance = ?", pid, start_id.to_s)
+          unless annotations.size == 0
+                      annotations.each do |annotation|
+                        if annotation.term_type == "Person"
+                          Solrizer.insert_field(solr_doc, 'thing', "#{annotation.term}", :symbol)
+                          Solrizer.insert_field(solr_doc, 'person', "#{annotation.term}", :symbol)
+                          Solrizer.insert_field(solr_doc, 'names', "#{annotation.term}", :facetable)
+                        end
 
+                        if annotation.term_type == "Location"
+                          Solrizer.insert_field(solr_doc, 'place', "#{annotation.term}", :symbol)
+                          Solrizer.insert_field(solr_doc, 'thing', "#{annotation.term}", :symbol)
+                          Solrizer.insert_field(solr_doc, 'places', "#{annotation.term}", :facetable)
+                        end
+                        if annotation.term_type == "Concept"
+                          Solrizer.insert_field(solr_doc, 'concepts', "#{annotation.term}", :symbol)
+                          Solrizer.insert_field(solr_doc, 'thing', "#{annotation.term}", :symbol)
+                          Solrizer.insert_field(solr_doc, 'concepts', "#{annotation.term}", :facetable)
+                      end
+                      end
+          end
           unless people.size == 0
             regex = AnnotationTools.create_regex people
             match_data = blurb.match regex
