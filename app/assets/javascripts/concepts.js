@@ -60,29 +60,28 @@ Annotator.Plugin.Concepts = (function (_super) {
             .subscribe('annotationEditorSubmit', function (annotation) {
                 var annotator = $(document.body).annotator().data('annotator');
 
-                annotator.plugins.Store.options.annotationData.chunk = $(annotation.annotation.highlights[0]).parents().eq(3).attr('id');
+                annotator.plugins.Store.options.annotationData.chunk = $(annotation.annotation.highlights[0]).parents().eq(1).attr('id');
 
-            });
-
-
-    /*    this.annotator
+            })
             .subscribe("annotationViewerShown", function (annotation) {
-                $(".annotator-link[href*='View as webpage']").css('display', 'none');
-                $('.annotator-controls').nextAll().eq(0).css('display', 'none');
-                $('.annotator-controls').nextAll().eq(1).css('display', 'none');
-                $('.annotator-controls').nextAll().eq(2).css('display', 'none');
+            //    $(".annotator-link[href*='View as webpage']").css('display', 'none');
+             //   $('.annotator-controls').nextAll().eq(0).css('display', 'none');
+             //   $('.annotator-controls').nextAll().eq(1).css('display', 'none');
+              //  $('.annotator-controls').nextAll().eq(2).css('display', 'none');
+                $('.annotator-controls').nextAll("div:contains('No Comment')").css( "display", "none" );
+
             })
             .subscribe("annotationViewerHidden", function (annotation) {
-                $(".annotator-link[href*='View as webpage']").css('display', 'block')
-                $('.annotator-controls').nextAll().eq(0).css('display', 'block');
-                $('.annotator-controls').nextAll().eq(1).css('display', 'block');
-                $('.annotator-controls').nextAll().eq(2).css('display', 'block');
+               // $(".annotator-link[href*='View as webpage']").css('display', 'block')
+               // $('.annotator-controls').nextAll().eq(0).css('display', 'block');
+               // $('.annotator-controls').nextAll().eq(1).css('display', 'block');
+               // $('.annotator-controls').nextAll().eq(2).css('display', 'block');
             })
             .subscribe('annotationEditorShown', function (annotation) {
                 $('#annotator-field-0').css('display', 'none');
-                $('#annotator-field-1').css('display', 'none');
-                $('#annotator-field-4').css('display', 'none');
-                $('#annotator-field-5').css('display', 'none');
+              //  $('#annotator-field-1').css('display', 'none');
+              //  $('#annotator-field-4').css('display', 'none');
+               // $('#annotator-field-5').css('display', 'none');
                 $('.annotator-checkbox').css('display', 'none');
                 console.info("The annotation: %o has just been created!", annotation)
 
@@ -90,11 +89,11 @@ Annotator.Plugin.Concepts = (function (_super) {
             .subscribe('annotationEditorHidden', function (annotation) {
                 $('#annotator-field-0').css('display', 'block');
                 $('#annotator-field-1').css('display', 'block');
-                $('#annotator-field-4').css('display', 'block');
-                $('#annotator-field-5').css('display', 'block');
+              //  $('#annotator-field-4').css('display', 'block');
+              //  $('#annotator-field-5').css('display', 'block');
                 $('.annotator-checkbox').css('display', 'block');
                 console.info("The annotation: %o has just been created!", annotation)
-            });      */
+            });
         this.field = this.annotator.editor.addField({
             label: Annotator._t('Add some tags here') + '\u2026',
             load: this.updateField,
