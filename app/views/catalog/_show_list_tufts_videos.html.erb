@@ -131,7 +131,7 @@
   </div>
   <!-- span6 -->
 </div>  <!-- row -->
-<% if can? :annotate, CatalogController %>
+
     <% stylesheet_links << 'annotator_customizations.css' %>
 
     <script>
@@ -274,6 +274,18 @@
                 local: concept_list
             }
         ]);
+        <% if !can? :annotate, CatalogController %>
+        $('.annotator-adder').addClass('adder-disabled');
+        $('.annotator-adder').removeClass('annotator-adder');
+        annotator.subscribe("annotationViewerShown", function (viewer,annotations) {
+                     viewer.hide();
+
+                  })
+        .subscribe("annotationEditorShown", function (viewer,annotations) {
+                                viewer.hide();
+
+         })
+        <% end %>
         /*
          $('#annotator-field-5').typeahead([
          {
@@ -288,4 +300,4 @@
          }
          ]);   */
     </script>
-<% end %>
+
