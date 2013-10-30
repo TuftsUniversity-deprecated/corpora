@@ -63,7 +63,7 @@ module AnnotationHelper
   def self.get_references(thing)
     solr_connection = ActiveFedora.solr.conn
     thing_q = 'thing_ssim:"' + thing + '"'
-    response = solr_connection.get 'select', :params => {:q => thing_q}
+    response = solr_connection.get 'select', :params => {:q => thing_q,:rows=>'10000000'}
 
     docs = response['response']['docs']
     return docs
@@ -116,7 +116,7 @@ module AnnotationHelper
   def self.get_terms_flat(pid)
     return_value = Set.new
     solr_connection = ActiveFedora.solr.conn
-    response = solr_connection.get 'select', :params => {:q => 'pid_ssim:' + pid, :fl => 'thing_ssim'}
+    response = solr_connection.get 'select', :params => {:q => 'pid_ssim:' + pid, :rows=>'10000000',:fl => 'thing_ssim'}
 
     docs = response['response']['docs']
     docs.each { |current_doc|
