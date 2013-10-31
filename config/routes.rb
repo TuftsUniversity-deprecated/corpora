@@ -54,9 +54,9 @@ SouthAsianDigitalLibrary::Application.routes.draw do
     get '/file_assets/:id', :to => 'local_file_assets#show', :constraints => {:id => /.*/}, :as =>'file_asset'
 
     # for ajax calls, pid contains period characters which, by default, are a routing separator
-  get '/catalog/get_external_references/:pid/:name' => 'catalog#get_external_references', :constraints => {:pid => /[^\/]+/}
-  get '/catalog/get_internal_references/:pid/:name' => 'catalog#get_internal_references', :constraints => {:pid => /[^\/]+/}
-  get '/catalog/get_references/:pid/:name' => 'catalog#get_references', :constraints => {:pid => /[^\/]+/}
+  get '/catalog/get_external_references/:pid/:name' => 'catalog#get_external_references', :constraints => {:pid => /[^\/]+/,  :name => /.*/ }
+  get '/catalog/get_internal_references/:pid/:name' => 'catalog#get_internal_references', :constraints => {:pid => /[^\/]+/, :name => /.*/}
+  get '/catalog/get_references/:pid/:name' => 'catalog#get_references', :constraints => {:pid => /[^\/]+/, :name => /.*/ }
   get '/catalog/transcriptonly/:id' => 'catalog#transcriptonly', :constraints => {:id => /.*/}, :as =>'transcriptonly'
 
 
