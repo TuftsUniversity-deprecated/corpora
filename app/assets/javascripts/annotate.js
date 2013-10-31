@@ -196,11 +196,27 @@ function initConfigHash()
 
         'concept': {'name': 'concept', 'tabId': '#tab5',
             'divId': '#conceptsDiv',
-            'detailTemplate': "{{name}}<br/><div class='elementDescription'>Description: {{description}}</div><br/><div class='elementLink>'>Link: <a href='{{link}}' target='_blank'>{{link}}</a></div><br/>{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}Appearances in this interview:<div id='{{type}}InternalReferences'></div><br/>Also mentioned in these interviews:<div id='{{type}}ExternalReferences'></div><div class='description-link'><a href='javascript:requestShowList(\"{{type}}\")'>Show {{type}} list</a></div>"},
+            'detailTemplate': "<h4>{{name}}</h4>" +
+                              "<h5>Description:</h5><div class='elementDescription'>{{description}}</div>" +
+                              "<div class='elementLink>'><h5>Link:</h5> <a href='{{link}}' target='_blank'>{{link}}</a></div>" +
+                              "{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}" +
+                              "<h5 id='appearances_header'>Appearances in this interview:</h5><div id='{{type}}InternalReferences'></div>" +
+                              "<h5 id='also_mentioned_header'>Also mentioned in these interviews:</h5><div id='{{type}}ExternalReferences'></div>" +
+                              "<div class='description-link'>" +
+                               "<a href='javascript:requestShowList(\"{{type}}\")'><i class='icon-chevron-left'></i>Show {{type}} list</a>" +
+                               "</div>"},
 
         'place': {'name': 'place', 'tabId': '#tab4',
             'divId': '#placesDiv',
-            'detailTemplate': "{{name}}<br/><div class='elementDescription'>Description: {{description}}</div><br/><div class='elementLink>'>Link: <a href='{{link}}' target='_blank'>{{link}}</a></div><br/>{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}Appearances in this interview:<div id='{{type}}InternalReferences'></div><br/>Also mentioned in these interviews<div id='{{type}}ExternalReferences'></div><div class='description-link'><a href='javascript:requestShowList(\"{{type}}\")'>Show {{type}} list</a></div>"}
+            'detailTemplate': "<h4>{{name}}</h4>" +
+                              "<h5>Description:</h5><div class='elementDescription'>{{description}}</div>" +
+                              "<div class='elementLink>'><h5>Link:</h5> <a href='{{link}}' target='_blank'>{{link}}</a></div>" +
+                              "{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}" +
+                              "<h5 id='appearances_header'>Appearances in this interview:</h5><div id='{{type}}InternalReferences'></div>" +
+                              "<h5 id='also_mentioned_header'>Also mentioned in these interviews:</h5><div id='{{type}}ExternalReferences'></div>" +
+                              "<div class='description-link'>" +
+                                "<a href='javascript:requestShowList(\"{{type}}\")'><i class='icon-chevron-left'></i>Show {{type}} list</a>" +
+                              "</div>"}
     };
 };
 
