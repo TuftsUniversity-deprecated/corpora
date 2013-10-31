@@ -184,7 +184,15 @@ function initConfigHash()
     extraData = {
         'person': {'name': 'person', 'tabId': '#tab3',
             'divId': '#peopleDiv',
-            'detailTemplate': "{{name}}<br/><div class='elementDescription'>Description: {{description}}</div><br/><div class='elementLink>'>Link: <a href='{{link}}' target='_blank'>{{link}}</a></div><br/>{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}Appearances in this interview:<div id='{{type}}InternalReferences'></div><br/>Also mentioned in these interviews:<div id='{{type}}ExternalReferences'></div><div class='description-link'><a href='javascript:requestShowList(\"{{type}}\")'>Show {{type}} list</a></div>"},
+            'detailTemplate': "<h4>{{name}}</h4>" +
+                              "<h5>Description:</h5><div class='elementDescription'>{{description}}</div>" +
+                              "<div class='elementLink>'><h5>Link:</h5> <a href='{{link}}' target='_blank'>{{link}}</a></div>" +
+                              "{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}" +
+                              "<h5 id='appearances_header'>Appearances in this interview:</h5><div id='{{type}}InternalReferences'></div>" +
+                              "<h5 id='also_mentioned_header'>Also mentioned in these interviews:</h5><div id='{{type}}ExternalReferences'></div>" +
+                              "<div class='description-link'>" +
+                                "<a href='javascript:requestShowList(\"{{type}}\")'><i class='icon-chevron-left'></i>Show {{type}} list</a>" +
+                              "</div>"},
 
         'concept': {'name': 'concept', 'tabId': '#tab5',
             'divId': '#conceptsDiv',
@@ -286,13 +294,24 @@ function clearReferences(type)
 }
 
 // process external references from ajax request
+//https://corpora.tufts.edu/catalog/tufts:MS165.002.001.00001?timestamp/31:29
 function showExternalReferences(response, type)
 {
-    var referenceTemplate = "{{#.}}{{title}} ({{count}})<br/>{{/.}}";
+    //var referenceTemplate = "{{#.}}{{title}} ({{count}})<br/>{{/.}}";
+    var referenceTemplate = "{{#.}}<a class=\"transcript_chunk_link\" href='/catalog/{{id}}'>{{title}} ({{count}})</a>{{/.}}";
     var text = Mustache.render(referenceTemplate, response);
     var divName = '#' + type + "ExternalReferences";
     var div = jQuery(divName);
-    div.html(text);
+    if (response.length > 0)
+    {
+        div.html(text);
+    }
+    else
+    {
+        jQuery('#also_mentioned_header').hide();
+        div.hide();
+    }
+
 }
 
 
