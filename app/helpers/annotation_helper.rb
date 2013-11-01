@@ -145,7 +145,7 @@ module AnnotationHelper
       current_concepts = current_doc['concepts_ssim']
       unless current_concepts.nil?
         current_concepts.each { | concept |
-          concepts << concept}
+          concepts << concept unless concept == 'concept'}
       end
       current_people = current_doc['person_ssim']
       unless current_people.nil?
