@@ -122,13 +122,7 @@ class AnnotationsController < ApplicationController
     @annotation.text = params[:text]
     @annotation.term = params[:tags][0]
     @annotation.utterance = params[:chunk]
-    if !Person.find_all_by_name([@annotation.term]).empty?
-      @annotation.term_type = "Person"
-    elsif !Location.find_all_by_name([@annotation.term]).empty?
-      @annotation.term_type = "Location"
-    elsif !Concept.find_all_by_name([@annotation.term]).empty?
-      @annotation.term_type = "Concept"
-    end
+    @annotation.term_type = get_term_type_from_term(@annotation.term)
 
     #@annotation.utterance =
 
@@ -156,15 +150,7 @@ class AnnotationsController < ApplicationController
     @annotation.pid = params[:uri]
     @annotation.text = params[:text]
     @annotation.term = params[:tags][0]
-
-    if !Person.find_all_by_name([@annotation.term]).empty?
-      @annotation.term_type = "Person"
-    elsif !Location.find_all_by_name([@annotation.term]).empty?
-      @annotation.term_type = "Location"
-    elsif !Concept.find_all_by_name([@annotation.term]).empty?
-      @annotation.term_type = "Concept"
-    end
-
+    @annotation.term_type = get_term_type_from_term(@annotation.term)
 
     #@annotations.concept = params[:tags]
     @annotation.json = params
@@ -191,5 +177,15 @@ class AnnotationsController < ApplicationController
       format.html { redirect_to annotations_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+
+  def get_term_type_from_term term
+
+    term_type = "Person" unless Person.find_all_by_name(term).empty?
+    term_type = "Location" unless Location.find_all_by_name(term).empty?
+    term_type = "Concept" unless Concept.find_all_by_name(term).empty?
+    term_type
   end
 end
