@@ -5,7 +5,7 @@ module AnnotationTools
 
     records.each do |record|
 
-      regex += record.name
+      regex += Regexp.quote(record.name)
       regex += '|'
     end
     regex = regex[0..-2]
@@ -28,14 +28,6 @@ module AnnotationTools
       Solrizer.insert_field(solr_doc, 'concepts', "#{term.term}", :facetable)
       Solrizer.insert_field(solr_doc, 'concepts', "#{term.term}", :symbol)
      end
-=begin
-
-
-
-
-
-=end
-
    end
    solr_doc
   end
