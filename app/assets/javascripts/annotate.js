@@ -314,7 +314,7 @@ function clearReferences(type)
 function showExternalReferences(response, type)
 {
     //var referenceTemplate = "{{#.}}{{title}} ({{count}})<br/>{{/.}}";
-    var referenceTemplate = "{{#.}}<a class=\"transcript_chunk_link\" href='/catalog/{{id}}'>{{title}} ({{count}})</a>{{/.}}";
+    var referenceTemplate = "{{#.}}<a class=\"transcript_chunk_link\" href='/catalog/{{id}}'>{{title}} ({{count}})</a><br/>{{/.}}";
     var text = Mustache.render(referenceTemplate, response);
     var divName = '#' + type + "ExternalReferences";
     var div = jQuery(divName);
@@ -488,7 +488,10 @@ function initMarkers()
             position: position,
             map: map,
             title: name});
-        latlngbounds.extend(position);
+        if (latitude != -9999 && longitude != -9999)
+        {
+          latlngbounds.extend(position);
+        }
         addListener(marker);
     }
 
