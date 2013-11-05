@@ -43,6 +43,14 @@ RailsAdmin.config do |config|
         field :image_link
       end
   end
+  config.model 'Location' do
+        list do
+          field :name
+          field :latitutde
+          field :longitude
+          field :link
+        end
+    end
   config.model "VideoUrl" do
     list do
       field :pid
