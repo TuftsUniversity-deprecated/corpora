@@ -27,7 +27,7 @@
     <%
        models = @document_fedora.relationships(:has_model)
     %>
-    <%= raw Tufts::MediaPlayerMethods.show_audio_player(params[:id], hasTranscript) unless (models & ['info:fedora/cm:Audio.OralHistory', 'info:fedora/afmodel:TuftsAudioTexts']).empty? %>
+    <%= raw Tufts::MediaPlayerMethods.show_audio_player(params[:id], hasTranscript) unless (models & ['info:fedora/cm:Audio.OralHistory', 'info:fedora/afmodel:TuftsAudioText']).empty? %>
     <br>
     <%= raw Tufts::MediaPlayerMethods.show_video_player(params[:id], hasTranscript) if models.include? 'info:fedora/afmodel:TuftsVideo' %>
     <br>
@@ -264,14 +264,14 @@
         content.annotator('addPlugin', 'Concepts');
 
 
-        var json_crap = '<%= @names %>';
-        var concept_list = JSON.parse(json_crap.replace(/&quot;/g, '"'));
+        //var json_crap = '';
+      //  var concept_list = JSON.parse(<%= @names %>)
         $('input#annotator-field-3').parent().prepend('<div class="annotator_title">Concepts</div>');
         $('#annotator-field-3').typeahead([
             {
                 name: 'concepts',
                 valueKey: 'name',
-                local: concept_list
+                prefetch: '/names'
             }
         ]);
         <% if !can? :annotate, CatalogController %>
