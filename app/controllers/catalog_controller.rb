@@ -38,6 +38,11 @@ class CatalogController < ApplicationController
   # Sets @people, @places and @concepts with data from database
   #   eventually, what to initialize with may come from Solr
 
+  def get_names
+    @names =  (Person.select(:name) + Location.select(:name) + Concept.select(:name)).to_a
+    render json: @names
+  end
+
   def load_fedora_document
     #In the case that this is a Utterance or Excerpt from a recording we've indexed that separately
     #but its not backed by a real fedora object so it does not make sense to try to load that object out of
@@ -59,8 +64,10 @@ class CatalogController < ApplicationController
     @people = Person.find_all_by_name(people_names.to_a.sort)
     @places = Location.find_all_by_name(place_names.to_a.sort)
     @concepts = Concept.find_all_by_name(concept_names.to_a.sort)
-    @names =  (Person.select(:name) + Location.select(:name) + Concept.select(:name)).to_a.to_json
+
+
     #@file_assets = @document_fedora.parts(:response_format=>:solr)
+
   end
   # This applies appropriate access controls to all solr queries
 #  CatalogController.solr_search_params_logic += [:add_access_controls_to_solr_params]
