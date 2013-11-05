@@ -44,6 +44,7 @@ SouthAsianDigitalLibrary::Application.routes.draw do
     match '/api/search', :to => 'annotations#search'
     get '/api', :to => 'annotations#index'
     get '/api/annotations', :to => 'annotations#list'
+    get 'names', :to =>'catalog#get_names'
     post '/api/annotations', :to => 'annotations#create'
     delete '/api/annotations/:id', :to => 'annotations#destroy'
     put '/api/annotations/:id', :to =>'annotations#update'
