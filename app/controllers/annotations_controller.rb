@@ -132,6 +132,7 @@ class AnnotationsController < ApplicationController
 
     @document_fedora = TuftsBase.find(params[:uri], :cast=>true)
     @document_fedora.update_index
+
     respond_to do |format|
       if @annotation.save
         format.html { redirect_to @annotation, notice: 'Annotation was successfully created.' }
@@ -156,6 +157,9 @@ class AnnotationsController < ApplicationController
     @annotation.json = params
     @annotation.save
 
+    @document_fedora = TuftsBase.find(params[:uri], :cast=>true)
+    @document_fedora.update_index
+
     respond_to do |format|
       if @annotation.update_attributes(params[:location])
         format.html { redirect_to @location, notice: 'Location was successfully updated.' }
@@ -173,10 +177,13 @@ class AnnotationsController < ApplicationController
    @annotation = Annotation.find(params[:id])
    @annotation.destroy
 
-    respond_to do |format|
+   @document_fedora = TuftsBase.find(params[:uri], :cast=>true)
+   @document_fedora.update_index
+
+   respond_to do |format|
       format.html { redirect_to annotations_url }
       format.json { head :no_content }
-    end
+   end
   end
 
   private
