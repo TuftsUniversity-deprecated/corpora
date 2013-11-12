@@ -1,4 +1,5 @@
 class AnnotationsController < ApplicationController
+
   # GET /locations
   # GET /locations.json
   def index
@@ -130,8 +131,7 @@ class AnnotationsController < ApplicationController
     @annotation.json = params
     @annotation.save
 
-    @document_fedora = TuftsBase.find(params[:uri], :cast=>true)
-    @document_fedora.update_index
+
 
     respond_to do |format|
       if @annotation.save
@@ -157,8 +157,7 @@ class AnnotationsController < ApplicationController
     @annotation.json = params
     @annotation.save
 
-    @document_fedora = TuftsBase.find(params[:uri], :cast=>true)
-    @document_fedora.update_index
+
 
     respond_to do |format|
       if @annotation.update_attributes(params[:location])
@@ -177,8 +176,7 @@ class AnnotationsController < ApplicationController
    @annotation = Annotation.find(params[:id])
    @annotation.destroy
 
-   @document_fedora = TuftsBase.find(params[:uri], :cast=>true)
-   @document_fedora.update_index
+
 
    respond_to do |format|
       format.html { redirect_to annotations_url }
