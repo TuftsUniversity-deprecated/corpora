@@ -6,7 +6,7 @@
     <h5 class="index_title"><%= t('blacklight.search.documents.counter', :counter => (document_counter + 1 + @response.params[:start].to_i)) %>
       <% if document[:has_model_ssim][0] == "info:fedora/afmodel:Snippet" %>
           <% #http://localhost:3000/catalog/tufts:sample.video.01?timestamp/1:01 %>
-        <a href="/catalog/<%= document[:pid_ssim][0]%>?timestamp/<%= document[:display_time_ssim][0]%>"> <%= document[document_show_link_field(document)][0]%></a>
+        <a href="/catalog/<%= document[:pid_ssi]%>?timestamp/<%= document[:display_time_ssim][0]%>"> <%= document[document_show_link_field(document)][0]%></a>
       <% else %>
         <%= link_to_document document, :label=>document_show_link_field(document), :counter => (document_counter + 1 + @response.params[:start].to_i) %>
       <% end %>
