@@ -137,7 +137,8 @@ module AnnotationTools
 
       if index_blurbs
         Solrizer.insert_field(solr_doc, 'title', "Excerpt from " + fedora_obj.datastreams['DCA-META'].title[0], :stored_searchable)
-        Solrizer.insert_field(solr_doc, 'pid', pid, :symbol)
+        #stored_sortable actually used to be stored_groupable in this case but groupable doesn't exist and i'm not sure if it should.
+        Solrizer.insert_field(solr_doc, 'pid', pid, :stored_sortable)
         Solrizer.insert_field(solr_doc, 'time', time_table[start_id.to_s][:time],:symbol)
         Solrizer.insert_field(solr_doc, 'display_time', time_table[start_id.to_s][:display_time],:symbol)
         Solrizer.insert_field(solr_doc, 'displays', 'corpora', :stored_searchable)
@@ -152,7 +153,7 @@ module AnnotationTools
     end
 
     unless index_blurbs
-      Solrizer.insert_field(solr_doc, 'pid', pid, :symbol)
+      Solrizer.insert_field(solr_doc, 'pid', pid, :stored_sortable)
     end
 
     solr_doc
