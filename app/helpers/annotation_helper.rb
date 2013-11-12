@@ -75,7 +75,7 @@ module AnnotationHelper
   def self.summarize_external_references(pid, references)
     return_value = {}
     references.each{ |reference|
-      lecture_id = reference['pid_ssim'][0]
+      lecture_id = reference['pid_ssi']
       if (lecture_id != pid)
         summary = return_value[lecture_id]
         if (summary.nil?)
@@ -94,7 +94,7 @@ module AnnotationHelper
   def self.summarize_internal_references(pid, references)
     return_value = []
     references.each{ | reference|
-      current_pid = reference['pid_ssim'][0]
+      current_pid = reference['pid_ssi']
       if (pid == current_pid)
         id = reference['id']
         dash = id.rindex '-'
@@ -116,7 +116,7 @@ module AnnotationHelper
   def self.get_terms_flat(pid)
     return_value = Set.new
     solr_connection = ActiveFedora.solr.conn
-    response = solr_connection.get 'select', :params => {:q => 'pid_ssim:' + pid, :rows=>'10000000',:fl => 'thing_ssim'}
+    response = solr_connection.get 'select', :params => {:q => 'pid_ssi:' + pid, :rows=>'10000000',:fl => 'thing_ssim'}
 
     docs = response['response']['docs']
     docs.each { |current_doc|
@@ -133,7 +133,7 @@ module AnnotationHelper
   def self.get_terms(pid)
     solr_connection = ActiveFedora.solr.conn
     # first, get all the Solr records for this pid
-    response = solr_connection.get 'select', :params => {:q => 'pid_ssim:' + pid, :rows=>'10000000',:fl => 'concepts_ssim, person_ssim, place_ssim'}
+    response = solr_connection.get 'select', :params => {:q => 'pid_ssi:' + pid, :rows=>'10000000',:fl => 'concepts_ssim, person_ssim, place_ssim'}
     docs = response['response']['docs']
 
     concepts = Set.new
