@@ -336,7 +336,7 @@ function showExternalReferences(response, type)
 function showInternalReferences(response, type)
 {
     var referenceTemplate = "{{#.}}{{#display_time_ssim}}<a class=\"transcript_chunk_link\" href='javascript:jumpPlayerTo({{start_in_milliseconds}})'>{{display_time_ssim}}</a>{{/display_time_ssim}}  <div id='internalReferenceText{{segmentNumber}}' style='height:1.5em; overflow:hidden'>{{text}}</div>" +
-        "<a href='javascript:showInternalReferenceMore({{segmentNumber}})'><div id='internalReferenceMore{{segmentNumber}}' class='show-more'>Show more</div></a><br/>{{/.}}";
+        "<a href='javascript:showInternalReferenceMore(\"{{segmentNumber}}\")'><div id='internalReferenceMore{{segmentNumber}}' class='show-more'>Show more</div></a><br/>{{/.}}";
     text = Mustache.render(referenceTemplate, response);
     divName = '#' + type + "InternalReferences";
     div = jQuery(divName);
