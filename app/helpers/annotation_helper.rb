@@ -108,7 +108,7 @@ module AnnotationHelper
           segment_number = id[dash + 1, id.size]
           segment_number = segment_number.tr(' ','_')
           text = reference['text_tesim'][0]
-          start_in_milliseconds = reference['start_in_milliseconds']
+          start_in_milliseconds = reference['time_ssim']
           display_time_ssim = reference['display_time_ssim']
           summary = {segmentNumber: segment_number, text: text, start_in_milliseconds: start_in_milliseconds,
                    display_time_ssim: display_time_ssim}
