@@ -73,7 +73,7 @@ xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/
   <dc:identifier>http://hdl.handle.net/?????/?????</dc:identifier>
   <dcterms:created>2013-05-15</dcterms:created>
   <dcterms:available>2013-05-15</dcterms:available>
-  <dc:type>video</dc:type>
+  <dc:type>MovingImage</dc:type>
   <dc:type>text</dc:type>
   <dc:format>video/mp4</dc:format>
   <dc:format>text/xml</dc:format>
