@@ -84,8 +84,8 @@ module AnnotationHelper
 
           solr_connection = ActiveFedora.solr.conn
           q = 'id:'+lecture_id
-          response = solr_connection.get 'select', :params => {:q => q,:rows=>'1',:fl => 'corpora_collection_sim'}
-          collection = response['response']['docs'][0]['corpora_collection_sim']
+          response = solr_connection.get 'select', :params => {:q => q,:rows=>'1',:fl => 'corpora_collection_tesim'}
+          collection = response['response']['docs'][0]['corpora_collection_tesim']
           summary = {count: 1, title: title, id: lecture_id, collection: collection}
           return_value[lecture_id] = summary
         else
