@@ -93,7 +93,7 @@ module AnnotationHelper
         end
       end
     }
-    return return_value.values
+    return return_value.values.sort{ |a,b| a[:count] <=> b[:count] }.reverse
   end
 
   # iterate over Solr docs and compute summary for references to the passed pid
