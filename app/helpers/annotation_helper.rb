@@ -80,6 +80,8 @@ module AnnotationHelper
         summary = return_value[lecture_id]
         if (summary.nil?)
           title = reference['title_tesim'][0]
+          title.slice! "Excerpt from " if title[/^Excerpt from/]
+
           solr_connection = ActiveFedora.solr.conn
           q = 'id:'+lecture_id
           response = solr_connection.get 'select', :params => {:q => q,:rows=>'1',:fl => 'corpora_collection_sim'}
