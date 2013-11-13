@@ -314,7 +314,8 @@ function clearReferences(type)
 function showExternalReferences(response, type)
 {
     //var referenceTemplate = "{{#.}}{{title}} ({{count}})<br/>{{/.}}";
-    var referenceTemplate = "{{#.}}<a class=\"transcript_chunk_link\" href='/catalog/{{id}}'>{{title}} ({{count}})</a><br/>{{/.}}";
+    var referenceTemplate = "<div>{{#.}}<a class=\"transcript_chunk_link\" href='/catalog/{{id}}'>{{title}} ({{count}})</a>" +
+			    "<span style='padding-left: 20px; display:block'>collection: {{collection}}</span></div>{{/.}}";
     var text = Mustache.render(referenceTemplate, response);
     var divName = '#' + type + "ExternalReferences";
     var div = jQuery(divName);
