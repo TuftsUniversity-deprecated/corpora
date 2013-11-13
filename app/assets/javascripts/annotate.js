@@ -189,7 +189,7 @@ function initConfigHash()
                               "<div class='elementLink>'><h5>Link:</h5> <a href='{{link}}' target='_blank'>{{link}}</a></div>" +
                               "{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}" +
                               "<h5 id='appearances_header'>Appearances in this interview:</h5><div id='{{type}}InternalReferences'></div>" +
-                              "<h5 id='also_mentioned_header'>Also mentioned in these interviews:</h5><div id='{{type}}ExternalReferences'></div>" +
+                              "<h5 id='also_mentioned_header'>Also mentioned in these other items:</h5><div id='{{type}}ExternalReferences'></div>" +
                               "<div class='description-link'>" +
                                 "<a href='javascript:requestShowList(\"{{type}}\")'><i class='icon-chevron-left'></i>Show {{type}} list</a>" +
                               "</div>"},
@@ -201,7 +201,7 @@ function initConfigHash()
                               "<div class='elementLink>'><h5>Link:</h5> <a href='{{link}}' target='_blank'>{{link}}</a></div>" +
                               "{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}" +
                               "<h5 id='appearances_header'>Appearances in this interview:</h5><div id='{{type}}InternalReferences'></div>" +
-                              "<h5 id='also_mentioned_header'>Also mentioned in these interviews:</h5><div id='{{type}}ExternalReferences'></div>" +
+                              "<h5 id='also_mentioned_header'>Also mentioned in these other items:</h5><div id='{{type}}ExternalReferences'></div>" +
                               "<div class='description-link'>" +
                                "<a href='javascript:requestShowList(\"{{type}}\")'><i class='icon-chevron-left'></i>Show {{type}} list</a>" +
                                "</div>"},
@@ -213,7 +213,7 @@ function initConfigHash()
                               "<div class='elementLink>'><h5>Link:</h5> <a href='{{link}}' target='_blank'>{{link}}</a></div>" +
                               "{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}" +
                               "<h5 id='appearances_header'>Appearances in this interview:</h5><div id='{{type}}InternalReferences'></div>" +
-                              "<h5 id='also_mentioned_header'>Also mentioned in these interviews:</h5><div id='{{type}}ExternalReferences'></div>" +
+                              "<h5 id='also_mentioned_header'>Also mentioned in these other items:</h5><div id='{{type}}ExternalReferences'></div>" +
                               "<div class='description-link'>" +
                                 "<a href='javascript:requestShowList(\"{{type}}\")'><i class='icon-chevron-left'></i>Show {{type}} list</a>" +
                               "</div>"}
