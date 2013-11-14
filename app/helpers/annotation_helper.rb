@@ -82,14 +82,21 @@ module AnnotationHelper
           title = reference['title_tesim'][0]
           title.slice! "Excerpt from " if title[/^Excerpt from/]
 
+          #get the collection information
           solr_connection = ActiveFedora.solr.conn
           q = 'id:'+lecture_id
           response = solr_connection.get 'select', :params => {:q => q,:rows=>'1',:fl => 'corpora_collection_tesim'}
           collection = response['response']['docs'][0]['corpora_collection_tesim']
-          summary = {count: 1, title: title, id: lecture_id, collection: collection}
+
+          bubble = [{text: reference['text_tesim'][0], display_time: reference['display_time_ssim'][0], time: reference['time_ssim'][0], pid: reference['pid_ssi']}]
+
+          summary = {count: 1, title: title, id: lecture_id, collection: collection, bubble: bubble}
+
           return_value[lecture_id] = summary
         else
           summary[:count] = summary[:count] + 1
+          summary[:bubble] << {text: reference['text_tesim'][0], display_time: reference['display_time_ssim'][0], time: reference['time_ssim'][0], pid: reference['pid_ssi']}
+
         end
       end
     }
