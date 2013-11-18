@@ -54,6 +54,7 @@ namespace :tufts do
       puts "#{'*'*(`tput cols`.to_i)}\nThe database has been populated!\n#{'*'*(`tput cols`.to_i)}"
     end
     # Populates development data
+
     desc "Populate the database with development data using CSV files. (people)"
     task :populate_people => :environment do
       puts "#{'*'*(`tput cols`.to_i)}\nChecking Environment... The database will be cleared of all content before populating.\n#{'*'*(`tput cols`.to_i)}"
@@ -74,6 +75,32 @@ namespace :tufts do
         puts "Adding #{name} as a Location"
         unless Person.where(:name => name).count > 0
           Person.create!(:name => name, :description => description, :link => link, :alternative_names => alternative_names, :image_link => image_link)
+        end
+      end
+
+      puts "#{'*'*(`tput cols`.to_i)}\nThe database has been populated!\n#{'*'*(`tput cols`.to_i)}"
+    end
+
+    desc "Populate the database with development data using CSV files. (people)"
+    task :populate_stream => :environment do
+      puts "#{'*'*(`tput cols`.to_i)}\nChecking Environment... The database will be cleared of all content before populating.\n#{'*'*(`tput cols`.to_i)}"
+      # Removes content before populating with data to avoid duplication
+      # Rake::Task['db:reset'].invoke
+      CSV.foreach(Rails.root + 'spec/fixtures/stream_people.csv') do |row|
+        name, description, link, alternative_names, image_link = row
+        # if the row already exists don't repeat it..
+        unless Person.where(:name => name).count > 0
+          puts "Adding #{name} as a Person"
+          Person.create!(:name => name, :description => description, :link => link, :alternative_names => alternative_names, :image_link => image_link)
+        end
+      end
+
+      CSV.foreach(Rails.root + 'spec/fixtures/stream_concepts.csv') do |row|
+        name, description, link, alternative_names, image_link = row
+        # if the row already exists don't repeat it..
+        unless Concept.where(:name => name).count > 0
+          puts "Adding #{name} as a Concept"
+          Concept.create!(:name => name, :description => description, :link => link, :alternative_names => alternative_names, :image_link => image_link)
         end
       end
 
@@ -104,21 +131,22 @@ namespace :tufts do
       # Rake::Task['db:reset'].invoke
 
       CSV.foreach(Rails.root + 'spec/fixtures/locations.csv') do |row|
-        name, link, modern_name, historical_name, admin01, admin02, town, Lat, Long = row
+        name, link, modern_name, historical_name, admin01, admin02, town, Lat, Long, desc, type = row
+
         # if the row already exists don't repeat it..
         unless Location.where(:name => name).count > 0
           puts "Adding #{name} as a Location"
-          Location.create!(:name => name, :link => link, :modern_location => modern_name, :historical_name => historical_name, :admin01 => admin01, :admin02 => admin02, :town => town, :latitutde => Lat, :longitude => Long)
+          Location.create!(:name => name, :link => link, :modern_location => modern_name, :historical_name => historical_name, :admin01 => admin01, :admin02 => admin02, :town => town, :latitutde => Lat, :longitude => Long, :location_type => type)
         end
       end
 
       CSV.foreach(Rails.root + 'spec/fixtures/IVPLocation.csv', encoding: "ISO8859-1") do |row|
-        name, link, modern_name, historical_name, admin01, admin02, town, Lat, Long, description= row
+        name, link, modern_name, historical_name, admin01, admin02, town, Lat, Long, description, type = row
         # if the row already exists don't repeat it..
 
         unless Location.where(:name => name).count > 0
           puts "Adding #{name} as a Location"
-          Location.create!(:name => name, :link => link, :modern_location => modern_name, :historical_name => historical_name, :admin01 => admin01, :admin02 => admin02, :town => town, :latitutde => Lat, :longitude => Long, :description => description)
+          Location.create!(:name => name, :link => link, :modern_location => modern_name, :historical_name => historical_name, :admin01 => admin01, :admin02 => admin02, :town => town, :latitutde => Lat, :longitude => Long, :description => description, :location_type => type)
         end
       end
 
