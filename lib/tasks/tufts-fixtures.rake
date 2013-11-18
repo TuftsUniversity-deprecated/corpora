@@ -107,6 +107,40 @@ namespace :tufts do
       puts "#{'*'*(`tput cols`.to_i)}\nThe database has been populated!\n#{'*'*(`tput cols`.to_i)}"
     end
 
+    desc "Populate the database with development data using CSV files. (people)"
+    task :populate_brac => :environment do
+      puts "#{'*'*(`tput cols`.to_i)}\nChecking Environment... The database will be cleared of all content before populating.\n#{'*'*(`tput cols`.to_i)}"
+      # Removes content before populating with data to avoid duplication
+      # Rake::Task['db:reset'].invoke
+      CSV.foreach(Rails.root + 'spec/fixtures/brac_people.csv', encoding: 'ISO8859-1') do |row|
+        name, description, link, alternative_names, image_link = row
+        # if the row already exists don't repeat it..
+
+        if Person.where(:name => name).count > 0
+          puts "Deleting #{name} as a Person"
+          Person.where(:name => name).destroy_all
+        end
+
+        puts "Adding #{name} as a Person"
+        Person.create!(:name => name, :description => description, :link => link, :alternative_names => alternative_names, :image_link => image_link)
+
+      end
+
+      CSV.foreach(Rails.root + 'spec/fixtures/brac_concepts.csv', encoding: 'ISO8859-1') do |row|
+        name, description, link, alternative_names, image_link = row
+        # if the row already exists don't repeat it..
+        if Concept.where(:name => name).count > 0
+          puts "Deleting #{name} as a Concept"
+          Concept.where(:name => name).destroy_all
+        end
+        puts "Adding #{name} as a Concept"
+        Concept.create!(:name => name, :description => description, :link => link, :alternative_names => alternative_names, :image_link => image_link)
+
+      end
+
+      puts "#{'*'*(`tput cols`.to_i)}\nThe database has been populated!\n#{'*'*(`tput cols`.to_i)}"
+    end
+
     desc "Populate the database with development data using CSV files. (roles)"
     task :populate_roles => :environment do
       puts "#{'*'*(`tput cols`.to_i)}\nChecking Environment... The database will be cleared of all content before populating.\n#{'*'*(`tput cols`.to_i)}"
