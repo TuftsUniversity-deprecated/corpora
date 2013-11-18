@@ -33,7 +33,7 @@ function initDataAndTabs(annotate_transcript)
     }
 
 
-    showMapCanvas();
+    showMapCanvas(true);
 
     var mapTab = jQuery("#tab4");
     mapTab.on("click", function(){delayedInitMap();})
@@ -110,7 +110,7 @@ function processUrlStateChange()
     {
         var configHash = extraData['place'];
         jQuery(configHash.tabId).click();
-        showMapCanvas();
+        showMapCanvas(false);
     }
 }
 
@@ -218,7 +218,7 @@ function initConfigHash()
                                 "<a href='javascript:requestShowList(\"{{type}}\")'><i class='icon-chevron-left'></i>Show {{type}} list</a>" +
                               "</div>"}
     };
-};
+}
 
 var elements = [];
 
@@ -233,7 +233,7 @@ function addType(array, type)
         var currentHash = array[i];
         currentHash.type = type;
     }
-};
+}
 
 
 
@@ -243,24 +243,27 @@ function initTabs()
     initTabsAux("person");
     initTabsAux("concept");
     initTabsAux("place");
-};
+}
 
 // add list of elements to corresponding ui tab
 function initTabsAux(type)
 {
     var elementTemplate = "{{#.}}<a href='javascript:requestShowElement(\"{{name}}\")'>{{name}}</a><br/>{{/.}}";
+    if (type == 'place')
+        elementTemplate = "<h4>Location Index</h4>" + elementTemplate;
+
     var configHash = extraData[type];
     var text = Mustache.render(elementTemplate, configHash.data);
     configHash.listHtml = text;     // save list so we can switch back to it
     jQuery(configHash.divId).html(text);
-};
+}
 
 function showElementFromAnnotation(e)
 {
     name = $(e.target).data('annotation').tags[0]
     showElement(name);
 }
-
+var map_initally_loaded = false
 // display the element corresponding to the passed name in the proper tab
 // make ajax requests to fetch references to the passed name, both in this pid and for other pids
 function showElement(name, forceList)
@@ -276,14 +279,49 @@ function showElement(name, forceList)
     var template = configHash.detailTemplate;
     var text = Mustache.render(template, element);
     div.html(text);
-    if (type == "place")
+    if (type == "place") {
         showLocationIndex();
+
+    }
 
     clearReferences(type);
 
     var pid = getPidFromUrl();
     tabWithoutHistory = true;
     jQuery(configHash.tabId).click();     // show the right tab
+    if (type == "place") {
+      showMapCanvas(true);
+      delayedInitMap();
+      var latitude = element.latitutde;
+             var longitude = element.longitude;
+               var position = new google.maps.LatLng(latitude, longitude);
+               //var latlngbounds = new google.maps.LatLngBounds();
+
+               //if (latitude != -9999 && longitude != -9999)
+               //{
+               //      latlngbounds.extend(position);
+               //}
+               //    addListener(marker);
+               //}
+
+               //center the map around the markers and adjust zoom
+            google.maps.event.addListenerOnce(map, 'idle', function(){
+                // do something only the first time the map is loaded
+                map.setCenter(position);
+                map.setZoom(locationTypeToZoomLevel(element.location_type));
+                map_initally_loaded = true
+            });
+
+           if (map_initally_loaded)
+           {
+               map.setCenter(position);
+               map.setZoom(locationTypeToZoomLevel(element.location_type));
+           }
+
+
+
+
+    }
     tabWithoutHistory = false;
     // ajax back to server to get where this term appears in this and other interviews
     var url = "/catalog/get_external_references/" + pid + "/" + name;
@@ -294,8 +332,11 @@ function showElement(name, forceList)
     url = "/catalog/get_internal_references/" + pid + "/" + name;
     jQuery.ajax({type: "GET",
         url: url
-    }).done(function(response){showInternalReferences(response, type)});
-};
+    }).done(function(response){
+            showInternalReferences(response, type);
+
+        });
+}
 
 
 // clear the divs that hold internal and external references
@@ -318,7 +359,14 @@ function showExternalReferences(response, type)
     var bubbleTemplate = "{{#.}}<a style=\"padding-left: 20px;\" class=\"transcript_link\" href='/catalog/{{pid}}?timestamp/{{display_time}}'>{{display_time}}</a>"+
                     "<div id='internalReferenceText{{time}}' style='padding-left: 20px; height:1.5em; overflow:hidden'>{{text}}</div>" +
                     "<a href='javascript:showInternalReferenceMore(\"{{time}}\")'><div style='padding-left: 20px; padding-bottom: 10px; display:block' id='internalReferenceMore{{time}}' class='show-more'>Show more</div></a>{{/.}}";
-    var bubble_text = Mustache.render(bubbleTemplate, response[0].bubble);
+
+    var bubble_text = '';
+
+    if(response[0] !== undefined && response[0].bubble !== undefined){
+        bubble_text = Mustache.render(bubbleTemplate, response[0].bubble);
+    }
+
+
 
     var referenceTemplate = "<div>{{#.}}<a class=\"transcript_chunk_link\" href='/catalog/{{id}}'>{{title}} ({{count}})</a>" +
 			    "<span class=\"collection_panel\" style='padding-left: 20px; display:block'>collection: {{collection}}</span></div>" +
@@ -392,7 +440,9 @@ function showList(type)
     div.html(listHtml);
     var configHash = extraData[type];
     jQuery(configHash.tabId).click();
-};
+    if (type == 'place')
+        map_initally_loaded = true
+}
 
 
 
@@ -400,7 +450,7 @@ function showList(type)
 function getElement(name)
 {
     return getItem(name, elements);
-};
+}
 
 // iterate over all the elements in the array looking for the passed name
 // should we use a hash rather than this slow iteration
@@ -430,7 +480,7 @@ function annotateTranscript()
         utterance.innerHTML = annotatedText;
     }
 
-};
+}
 
 
 // build a regular expression based on passed records
@@ -468,19 +518,21 @@ function initMap()
     map = new google.maps.Map(document.getElementById("mapCanvas"), mapOptions);
 
 
-};
+}
 
 // display the list (index) of places, not the map
 function showLocationIndex()
 {
     jQuery("#mapParent").hide();
     jQuery("#placesParentDiv").show();
-};
+}
 
 // display the map, not the list of places
-function showMapCanvas()
+function showMapCanvas(showDetails)
 {
+    if (!showDetails) {
     jQuery("#placesParentDiv").hide();
+    }
     jQuery("#mapParent").show();
     // the resize can throw an error but it is needed
     try
@@ -491,7 +543,7 @@ function showMapCanvas()
     {
 
     }
-};
+}
 
 
 // iterate over global "places" var and create a marker for each
@@ -513,16 +565,19 @@ function initMarkers()
             title: name});
         if (latitude != -9999 && longitude != -9999)
         {
+          console.log('lat :' + latitude);
+          console.log('long :' + longitude);
           latlngbounds.extend(position);
         }
         addListener(marker);
     }
 
     //center the map around the markers and adjust zoom
-    map.setCenter(latlngbounds.getCenter());
+   // map.setCenter(latlngbounds.getCenter());
     map.fitBounds(latlngbounds);
+    // map.setZoom(locationTypeToZoomLevel(element.location_type));
 
-};
+}
 
 // when user clicks on a map marker, display an info window
 function markerClickHandler(marker)
@@ -555,8 +610,7 @@ function getPidFromUrl()
     var slash = path.lastIndexOf('/');
     if (slash == -1)
       return 'error in getPidFromUrl';
-    var pid = path.substr(slash + 1);
-    return pid;
+    return path.substr(slash + 1);
 }
 
 function addListener(marker)
@@ -565,6 +619,7 @@ function addListener(marker)
 }
 
 // return an appropriate map zoom level based on the passed type of location (e.g, university, continent)
+
 function locationTypeToZoomLevel(passedLocationType)
 {
     var zoomLevel = 7;
@@ -593,15 +648,3 @@ else if ((passedLocationType == "region") || (passedLocationType == "state") || 
     zoomLevel = 6;
     return zoomLevel;
 }
-
-
-
-
-
-
-
-
-
-
-
-
