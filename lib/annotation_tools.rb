@@ -10,7 +10,7 @@ module AnnotationTools
     end
     regex = regex[0..-2]
     regex += ")\\b"
-    return regex
+    return Regexp.new(regex)
   end
 
   def self.tag_overrides pid, solr_doc
@@ -75,14 +75,14 @@ module AnnotationTools
           end
           unless people.size == 0
             regex = AnnotationTools.create_regex people
-            match_data = blurb.match regex
+            match_data = blurb.scan regex
             unless match_data.nil?
-              match_data.captures.each do |data|
+              match_data.each do |data|
                 if index_blurbs
-                  Solrizer.insert_field(solr_doc, 'thing', "#{data}", :symbol)
-                  Solrizer.insert_field(solr_doc, 'person', "#{data}", :symbol)
+                  Solrizer.insert_field(solr_doc, 'thing', "#{data[0]}", :symbol)
+                  Solrizer.insert_field(solr_doc, 'person', "#{data[0]}", :symbol)
                 else
-                  Solrizer.insert_field(solr_doc, 'names', "#{data}", :facetable)
+                  Solrizer.insert_field(solr_doc, 'names', "#{data[0]}", :facetable)
                 end
               end
             end
@@ -90,14 +90,14 @@ module AnnotationTools
 
           unless places.size == 0
             regex = AnnotationTools.create_regex places
-            match_data = blurb.match regex
+            match_data = blurb.scan regex
             unless match_data.nil?
-              match_data.captures.each do |data|
+              match_data.each do |data|
                 if index_blurbs
-                  Solrizer.insert_field(solr_doc, 'place', "#{data}", :symbol)
-                  Solrizer.insert_field(solr_doc, 'thing', "#{data}", :symbol)
+                  Solrizer.insert_field(solr_doc, 'place', "#{data[0]}", :symbol)
+                  Solrizer.insert_field(solr_doc, 'thing', "#{data[0]}", :symbol)
                 else
-                  Solrizer.insert_field(solr_doc, 'places', "#{data}", :facetable)
+                  Solrizer.insert_field(solr_doc, 'places', "#{data[0]}", :facetable)
                 end
               end
             end
@@ -106,14 +106,14 @@ module AnnotationTools
           unless concepts.size == 0
             regex = AnnotationTools.create_regex concepts
 
-            match_data = blurb.match regex
+            match_data = blurb.scan regex
             unless match_data.nil?
-              match_data.captures.each do |data|
+              match_data.each do |data|
                 if index_blurbs
-                  Solrizer.insert_field(solr_doc, 'concepts', "#{data}", :symbol)
-                  Solrizer.insert_field(solr_doc, 'thing', "#{data}", :symbol)
+                  Solrizer.insert_field(solr_doc, 'concepts', "#{data[0]}", :symbol)
+                  Solrizer.insert_field(solr_doc, 'thing', "#{data[0]}", :symbol)
                 else
-                  Solrizer.insert_field(solr_doc, 'concepts', "#{data}", :facetable)
+                  Solrizer.insert_field(solr_doc, 'concepts', "#{data[0]}", :facetable)
                 end
               end
             end
