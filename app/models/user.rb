@@ -18,7 +18,14 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   rails_admin do
-     object_label_method :email
+    object_label_method :email
+
+    list do
+      field :email
+      field :roles
+      field :sign_in_count
+    end
+
   end
 
 
