@@ -88,14 +88,14 @@ module AnnotationHelper
           response = solr_connection.get 'select', :params => {:q => q,:rows=>'1',:fl => 'corpora_collection_tesim'}
           collection = response['response']['docs'][0]['corpora_collection_tesim']
 
-          bubble = [{text: reference['text_tesim'][0], display_time: reference['display_time_ssim'][0], time: reference['time_ssim'][0], pid: reference['pid_ssi']}]
+          bubble = [{text: summarize_text(reference['text_tesim']), display_time: reference['display_time_ssim'][0], time: reference['time_ssim'][0], pid: reference['pid_ssi']}]
 
           summary = {count: 1, title: title, id: lecture_id, collection: collection, bubble: bubble}
 
           return_value[lecture_id] = summary
         else
           summary[:count] = summary[:count] + 1
-          summary[:bubble] << {text: reference['text_tesim'][0], display_time: reference['display_time_ssim'][0], time: reference['time_ssim'][0], pid: reference['pid_ssi']}
+          summary[:bubble] << {text: summarize_text(reference['text_tesim']), display_time: reference['display_time_ssim'][0], time: reference['time_ssim'][0], pid: reference['pid_ssi']}
 
         end
       end
@@ -103,6 +103,18 @@ module AnnotationHelper
     return return_value.values.sort{ |a,b| a[:count] <=> b[:count] }.reverse
   end
 
+  def self.summarize_text(text_array)
+    all_bubble_text = ''
+
+    if text_array.size < 2
+      all_bubble_text = text_array[0]
+    else
+      text_array.each {|paragraph|
+        all_bubble_text += '<div style="margin-bottom:10px">' + paragraph + '</div>'
+      }
+    end
+    all_bubble_text
+  end
   # iterate over Solr docs and compute summary for references to the passed pid
   def self.summarize_internal_references(pid, references)
     return_value = []
@@ -114,7 +126,7 @@ module AnnotationHelper
         unless dash.nil?
           segment_number = id[dash + 1, id.size]
           segment_number = segment_number.tr(' ','_')
-          text = reference['text_tesim'][0]
+          text = summarize_text(reference['text_tesim'])
           start_in_milliseconds = reference['time_ssim']
           display_time_ssim = reference['display_time_ssim']
           summary = {segmentNumber: segment_number, text: text, start_in_milliseconds: start_in_milliseconds,
