@@ -414,12 +414,16 @@ function showExternalReferences(response, type)
 // process internal references from ajax request
 function showInternalReferences(response, type)
 {
-    var referenceTemplate = "{{#.}}{{#display_time_ssim}}<a class=\"transcript_chunk_link\" href='javascript:jumpPlayerTo({{start_in_milliseconds}})'>{{display_time_ssim}}</a>{{/display_time_ssim}}  <div id='internalReferenceText{{segmentNumber}}' style='height:1.5em; overflow:hidden'>{{&text}}</div>" +
+    var referenceTemplate = "{{#.}}{{#display_time_ssim}}<div class=\"internal_transcript_chunk_link\" data-time='{{start_in_milliseconds}}'>{{display_time_ssim}}</div>{{/display_time_ssim}}  <div id='internalReferenceText{{segmentNumber}}' style='height:1.5em; overflow:hidden'>{{&text}}</div>" +
         "<a href='javascript:showInternalReferenceMore(\"{{segmentNumber}}\")'><div id='internalReferenceMore{{segmentNumber}}' class='show-more'>Show more</div></a><br/>{{/.}}";
     text = Mustache.render(referenceTemplate, response);
     divName = '#' + type + "InternalReferences";
     div = jQuery(divName);
     div.html(text);
+    $('.internal_transcript_chunk_link').on("click", function(e) {
+        var t = $(e.currentTarget).data('time')
+        jumpPlayerTo(t);
+    });
 }
 
 // handle calls to the show more/show less button on internal references

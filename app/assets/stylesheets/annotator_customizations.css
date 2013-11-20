@@ -31,7 +31,16 @@
             cursor: hand;
         }
 
-        .twitter-typeahead {
+       .internal_transcript_chunk_link {
+           color: #0088cc;
+           text-decoration: none;
+           cursor: auto;
+           background: none;
+           cursor: pointer;
+           cursor: hand;
+       }
+
+       .twitter-typeahead {
             width: 100%;
             position: relative;
         }
