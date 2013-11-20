@@ -7,7 +7,7 @@ RailsAdmin.config do |config|
   ################  Global configuration  ################
 
   # Set the admin name here (optional second array element will appear in red). For example:
-  config.main_app_name = ['South Asian Digital Library']
+  config.main_app_name = ['Corpora']
   # or for a more dynamic name:
   # config.main_app_name = Proc.new { |controller| [Rails.application.engine_name.titleize, controller.params['action'].titleize] }
 
@@ -68,7 +68,16 @@ RailsAdmin.config do |config|
           field :link
           field :image_link
         end
-    end
+  end
+  config.model 'Annotation' do
+          list do
+            field :pid
+            field :term
+            field :term_type
+            field :utterance
+          end
+  end
+
   # Include specific models (exclude the others):
   # config.included_models = ['Bookmark', 'Concept', 'Feature', 'Search', 'User']
 
