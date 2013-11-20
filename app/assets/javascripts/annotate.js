@@ -362,16 +362,20 @@ function showExternalReferences(response, type)
 
     var bubble_text = '';
 
-    if(response[0] !== undefined && response[0].bubble !== undefined){
-        bubble_text = Mustache.render(bubbleTemplate, response[0].bubble);
-    }
+//    if(response[0] !== undefined && response[0].bubble !== undefined){
+ //       bubble_text = Mustache.render(bubbleTemplate, response[0].bubble);
+  //  }
 
 
 
-    var referenceTemplate = "<div>{{#.}}<a class=\"transcript_chunk_link\" href='/catalog/{{id}}'>{{title}} ({{count}})</a>" +
-			    "<span class=\"collection_panel\" style='padding-left: 20px; display:block'>collection: {{collection}}</span></div>" +
-                "<span class=\"external_segments_panel\" style='display:none'>" + bubble_text +
-                "</span></div>{{/.}}";
+    var referenceTemplate = "{{#.}}<div><a class=\"transcript_chunk_link\" href='/catalog/{{id}}'>{{title}} ({{count}})</a>" +
+			    "<span class=\"collection_panel\" style='padding-left: 20px; display:block'>collection: {{collection}}</span>" +
+                "<span class=\"external_segments_panel\" style='display:none'>"+
+                "{{#bubble}}<a style=\"padding-left: 20px;\" class=\"transcript_link\" href='/catalog/{{pid}}?timestamp/{{display_time}}'>{{display_time}}</a>" +
+                "<div id='internalReferenceText{{time}}' style='padding-left: 20px; height:1.5em; overflow:hidden'>{{text}}</div>" +
+                "<a href='javascript:showInternalReferenceMore(\"{{time}}\")'><div style='padding-left: 20px; padding-bottom: 10px; display:block' id='internalReferenceMore{{time}}' class='show-more'>Show more</div></a>" +
+                "{{/bubble}}" +
+                "</span></div></div>{{/.}}";
     var text = Mustache.render(referenceTemplate, response);
 
 
@@ -391,8 +395,13 @@ function showExternalReferences(response, type)
     }
     $('.transcript_chunk_link').on("click", function(e) {
            e.preventDefault();
-           $('.collection_panel').slideToggle();
-           $('.external_segments_panel').slideToggle();
+           $(e.currentTarget).siblings('.collection_panel').slideToggle();
+           var external_segment = $(e.currentTarget).siblings('.external_segments_panel')
+           //.toggle();
+           external_segment.slideToggle('medium', function() {
+            if (external_segment.is(':visible'))
+                external_segment.css('display','inline-block');
+        });
 
        });
 
