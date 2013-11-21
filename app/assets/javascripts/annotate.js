@@ -372,7 +372,7 @@ function showExternalReferences(response, type)
 			    "<span class=\"collection_panel\" style='padding-left: 20px; display:block'>collection: {{collection}}</span>" +
                 "<span class=\"external_segments_panel\" style='display:none'>"+
                 "{{#bubble}}<a style=\"padding-left: 20px;\" class=\"transcript_link\" href='/catalog/{{pid}}?timestamp/{{display_time}}'>{{display_time}}</a>" +
-                "<div id='internalReferenceText{{time}}' style='padding-left: 20px; height:1.5em; overflow:hidden'>{{text}}</div>" +
+                "<div id='internalReferenceText{{time}}' style='padding-left: 20px; height:1.5em; overflow:hidden'>{{&text}}</div>" +
                 "<a href='javascript:showInternalReferenceMore(\"{{time}}\")'><div style='padding-left: 20px; padding-bottom: 10px; display:block' id='internalReferenceMore{{time}}' class='show-more'>Show more</div></a>" +
                 "{{/bubble}}" +
                 "</span></div></div>{{/.}}";
