@@ -8,7 +8,7 @@ module AnnotationTools
       regex += Regexp.quote(record.name)
       regex += '|'
     end
-    regex = regex[0..-2]
+    regex = regex[0..-2] if records.size > 0
     regex += ")\\b"
     return Regexp.new(regex)
   end
