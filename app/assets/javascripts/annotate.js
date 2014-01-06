@@ -484,6 +484,9 @@ function annotateTranscript()
 {
     var utterances = jQuery(".transcript_utterance");
     var regex$ = createRegex(elements);
+    if (regex$ == "") {
+	return;
+    }
     var regex = new RegExp(regex$, 'g');
     for (var i = 0 ; i < utterances.length ; i++)
     {
@@ -510,6 +513,10 @@ function createRegex(records)
     }
     regex = regex.substr(0, regex.length - 1); // remove last |
     regex += ")\\b";
+    if (records.length == 0) {
+	regex = "";
+    }
+
     return regex;
 };
 

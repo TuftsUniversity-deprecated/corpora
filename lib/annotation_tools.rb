@@ -10,6 +10,9 @@ module AnnotationTools
     end
     regex = regex[0..-2] if records.size > 0
     regex += ")\\b"
+
+    regex = "//" if records.size == 0
+
     return Regexp.new(regex)
   end
 
