@@ -16,10 +16,10 @@
 // Required by Blacklight
 //= require blacklight/blacklight
 //= require bootstrap
+//= require history
 //= require history.adapter.jquery.js
 //= require annotator-full.min.js
 //= require typeahead
 //= require concepts
 //= require annotate
-
-
+//= require mustache
