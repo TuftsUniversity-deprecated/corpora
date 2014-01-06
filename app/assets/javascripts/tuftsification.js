@@ -10,13 +10,4 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
-//= require jquery_ujs
-//
-// Required by Blacklight
-//= require blacklight/blacklight
-//= require bootstrap
-//= require concepts
-//= require typeahead
-
-
+//= require 'tuftsification-hydra'

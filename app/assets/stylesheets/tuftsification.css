@@ -9,10 +9,5 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require blacklight.css.scss
- *= require corpora
- *= require annotator.min.css
- *= require annotator_customizations.css
- *= require locations.css.scss
- *=
- */
+ *= require 'tuftsification-hydra'
+*/

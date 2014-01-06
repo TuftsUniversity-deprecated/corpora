@@ -45,3 +45,5 @@ utils
 script/videoizer
 script/videoizerd
 script/ffmpeg
+
+public/assets

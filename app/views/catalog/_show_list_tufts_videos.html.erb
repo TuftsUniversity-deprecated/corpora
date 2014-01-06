@@ -1,11 +1,6 @@
 <% javascript_includes << "https://maps.googleapis.com/maps/api/js?sensor=false" %>
-<% stylesheet_links << "media_player/media_player.css" %>
-<% stylesheet_links << "media_player/transcript.css" %>
-
-<% javascript_includes << 'concepts.js' %>
-<% javascript_includes << 'typeahead.js' %>
-<% stylesheet_links << 'annotator.min.css' %>
-
+<% stylesheet_links <<  "tuftsification.css" %>
+<% javascript_includes <<  "tuftsification.js" %>
 
 <%
    metadata = Tufts::ModelMethods.get_metadata(@document_fedora)
@@ -131,8 +126,6 @@
   </div>
   <!-- span6 -->
 </div>  <!-- row -->
-
-    <% stylesheet_links << 'annotator_customizations.css' %>
 
     <script>
         $(document.body).annotator()
