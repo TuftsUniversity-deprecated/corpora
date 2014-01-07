@@ -120,6 +120,13 @@
           <!-- tab-content -->
         </div>
         <!-- tabbable -->
+        <script>
+            $('.transcript_chunk_link').on("click", function(e) {
+                e.preventDefault()
+                var t = $(e.currentTarget).data('time')
+                jumpPlayerTo(t);
+            });
+        </script>
     <% else %>
         <%= render :partial => 'shared/metadata_pane', :locals => {:metadata => metadata} %>
     <% end %>
