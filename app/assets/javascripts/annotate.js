@@ -513,8 +513,9 @@ function createRegex(records)
     }
     regex = regex.substr(0, regex.length - 1); // remove last |
     regex += ")\\b";
+
     if (records.length == 0) {
-	regex = "";
+     regex = "";
     }
 
     return regex;
