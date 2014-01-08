@@ -91,14 +91,14 @@ module AnnotationHelper
           q = 'id:'+lecture_id
           response = solr_connection.get 'select', :params => {:q => q,:rows=>'1',:fl => 'corpora_collection_tesim'}
           collection = response['response']['docs'][0]['corpora_collection_tesim']
-          logger.error "Collection: #{collection}"
-          logger.error "q: #{q}"
-          logger.error "response : #{response['response']}"
-          logger.error "reference : #{reference}"
-          logger.error  "Text: #{reference['text_tesim']}"
-          logger.error "Display Time: #{reference['display_time_ssim']}"
-          logger.error "Time: #{reference['time_ssim']}"
-          logger.error "Pid: #{reference['pid_ssim']}"
+          #logger.error "Collection: #{collection}"
+          #logger.error "q: #{q}"
+          ##logger.error "response : #{response['response']}"
+          #logger.error "reference : #{reference}"
+          #logger.error  "Text: #{reference['text_tesim']}"
+          #logger.error "Display Time: #{reference['display_time_ssim']}"
+          #logger.error "Time: #{reference['time_ssim']}"
+          #logger.error "Pid: #{reference['pid_ssim']}"
 	  text_array = reference['text_tesim']
           bubble = [{text: summarize_text(text_array), display_time: reference['display_time_ssim'][0], time: reference['time_ssim'][0], pid: reference['pid_ssi']}]
 
@@ -106,13 +106,13 @@ module AnnotationHelper
 
           return_value[lecture_id] = summary
         else
-          logger.error "Collection: #{collection}"
-          logger.error "q: #{q}"
-          logger.error "reference : #{reference}"
-          logger.error  "Text: #{reference['text_tesim']}"
-          logger.error "Display Time: #{reference['display_time_ssim']}"
-          logger.error "Time: #{reference['time_ssim']}"
-          logger.error "Pid: #{reference['pid_ssim']}"
+          #logger.error "Collection: #{collection}"
+          ##logger.error "q: #{q}"
+          #logger.error "reference : #{reference}"
+          #logger.error  "Text: #{reference['text_tesim']}"
+          ##logger.error "Display Time: #{reference['display_time_ssim']}"
+          #logger.error "Time: #{reference['time_ssim']}"
+          #logger.error "Pid: #{reference['pid_ssim']}"
 	  text_array = reference['text_tesim']
           summary[:count] = summary[:count] + 1
           summary[:bubble] << {text: summarize_text(reference['text_tesim']), display_time: reference['display_time_ssim'][0], time: reference['time_ssim'][0], pid: reference['pid_ssi']}
@@ -125,7 +125,7 @@ module AnnotationHelper
 
   def self.summarize_text(text_array)
           #logger.error  "Caller: #{caller}"
-          logger.error  "Text Array: #{text_array}"
+          #logger.error  "Text Array: #{text_array}"
     text_array ||= []
     all_bubble_text = ''
 
