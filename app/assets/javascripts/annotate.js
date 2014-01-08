@@ -246,14 +246,84 @@ function initTabs()
 }
 
 // add list of elements to corresponding ui tab
+// This is the code that generates the Index style lists for people/concepts/locations.
 function initTabsAux(type)
 {
+
+
+
     var elementTemplate = "{{#.}}<a href='javascript:requestShowElement(\"{{name}}\")'>{{name}}</a><br/>{{/.}}";
-    if (type == 'place')
-        elementTemplate = "<h4>Location Index</h4>" + elementTemplate;
 
     var configHash = extraData[type];
-    var text = Mustache.render(elementTemplate, configHash.data);
+
+    var outterTemplate = "<div class='index'><h2>Index</h2>";
+
+    var sortedData = configHash.data.sort(function (a,b){
+            if(a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+            if(a.name.toLowerCase() > b.name.toLowerCase()) return 1;
+        })
+
+    var text = outterTemplate;
+    var shortList = [];
+
+    //start alpha anchor list and push first item.
+    var alphaAnchors = [];
+    alphaAnchors.push(sortedData[0].name.substr(0,1).toLowerCase());
+
+    var indexLetter = sortedData[0].name.substr(0,1).toLowerCase();
+    //build set of anchor links
+    for (i=0;i< sortedData.length; i++)
+    {
+        var nextLetter = sortedData[i].name.substr(0,1).toLowerCase();
+        if (indexLetter != nextLetter)
+        {
+            indexLetter = nextLetter;
+            alphaAnchors.push(indexLetter)
+        }
+
+    }
+
+    for (i = 0; i< alphaAnchors.length; i++)
+    {
+
+        text += "<a href=\"#" + type + alphaAnchors[i] + "\">" + alphaAnchors[i] + "</a> | ";
+    }
+    if (alphaAnchors.length > 0)
+    {
+        text = text.substring(0, text.length - 1);
+    }
+
+    //build actual index
+    indexLetter = sortedData[0].name.substr(0,1).toLowerCase();
+    for (i=0;i< sortedData.length; i++)
+    {
+        var nextLetter = sortedData[i].name.substr(0,1).toLowerCase();
+        if (indexLetter != nextLetter)
+        {
+
+            text += "<section><h2><div id=" + type + indexLetter + ">" + indexLetter + "</div></h2>";
+            indexLetter = nextLetter;
+            text += Mustache.render(elementTemplate, shortList);
+            text += "</section>";
+            shortList = [];
+            shortList.push(sortedData[i]);
+
+        } else {
+            shortList.push(sortedData[i]);
+        }
+
+        // at the end add the last letter.
+        if (i+1 == sortedData.length)
+        {
+            text += "<section><h2><div id=" + type + indexLetter + ">" + indexLetter + "</div></h2>";
+            text += Mustache.render(elementTemplate, shortList);
+            text += "</section>";
+        }
+
+    }
+
+    text += "</div>";
+
     configHash.listHtml = text;     // save list so we can switch back to it
     jQuery(configHash.divId).html(text);
 }
@@ -288,7 +358,14 @@ function showElement(name, forceList)
 
     var pid = getPidFromUrl();
     tabWithoutHistory = true;
-    jQuery(configHash.tabId).click();     // show the right tab
+
+    $( document ).ready( function()
+    {
+        tabWithoutHistory = true;
+        $(configHash.tabId).tab('show') // Select first tab
+        tabWithoutHistory = false;
+    })
+
     if (type == "place") {
       showMapCanvas(true);
       delayedInitMap();
@@ -336,6 +413,7 @@ function showElement(name, forceList)
             showInternalReferences(response, type);
 
         });
+
 }
 
 
