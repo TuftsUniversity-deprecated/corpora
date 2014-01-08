@@ -112,6 +112,22 @@
                 <script>
                     <%= raw AnnotationHelper.show_concepts(@concepts)%>
                 </script>
+                <script>
+                    $(document).ready(function () {
+                        $('a[href^="#goto"]').on('click', function (e) {
+                            e.preventDefault();
+
+                            var target = this.hash,
+                                    $target = $(target);
+
+                            $('html, body').stop().animate({
+                                'scrollTop': $target.offset().top
+                            }, 900, 'swing', function () {
+                                window.location.hash = target;
+                            });
+                        });
+                    });
+                </script>
               </div>
             </div>
             <!-- tab-pane 5 -->
@@ -126,6 +142,7 @@
                 var t = $(e.currentTarget).data('time')
                 jumpPlayerTo(t);
             });
+
         </script>
     <% else %>
         <%= render :partial => 'shared/metadata_pane', :locals => {:metadata => metadata} %>
