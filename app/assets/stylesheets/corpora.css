@@ -596,3 +596,19 @@ width: 280px !important;
 .description-link {
     margin-top: 30px;
 }
+
+.index h1 {
+  text-align:left;
+}
+.index  h1, h2 {
+  margin:0 1em 0 0;
+}
+.index section {
+  width:95%;
+  margin:auto;
+  column-count:1;
+ }
+.index a {
+  text-decoration:none;
+  color:black;
+}
