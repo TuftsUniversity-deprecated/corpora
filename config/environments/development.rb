@@ -30,16 +30,18 @@ SouthAsianDigitalLibrary::Application.configure do
   config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   # Expands the lines which load the assets
-  config.assets.debug = false
+  config.assets.debug = true
 
   #Compress JavaScripts and CSS
-  config.assets.compress = true
+  config.assets.compress = false
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs
-  config.assets.digest = true
+  config.assets.digest = false
+
+  config.serve_static_assets = false
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   config.assets.precompile += %w( tuftsification.js tuftsification.css )
