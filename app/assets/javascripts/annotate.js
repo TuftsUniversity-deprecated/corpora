@@ -268,59 +268,64 @@ function initTabsAux(type)
 
     //start alpha anchor list and push first item.
     var alphaAnchors = [];
-    alphaAnchors.push(sortedData[0].name.substr(0,1).toLowerCase());
 
-    var indexLetter = sortedData[0].name.substr(0,1).toLowerCase();
-    //build set of anchor links
-    for (i=0;i< sortedData.length; i++)
-    {
-        var nextLetter = sortedData[i].name.substr(0,1).toLowerCase();
-        if (indexLetter != nextLetter)
-        {
-            indexLetter = nextLetter;
-            alphaAnchors.push(indexLetter)
-        }
 
-    }
+    if (sortedData.length > 0){
 
-    for (i = 0; i< alphaAnchors.length; i++)
-    {
+        alphaAnchors.push(sortedData[0].name.substr(0,1).toLowerCase());
 
-        text += "<a href=\"#" + type + alphaAnchors[i] + "\">" + alphaAnchors[i] + "</a> | ";
-    }
-    if (alphaAnchors.length > 0)
-    {
-        text = text.substring(0, text.length - 1);
-    }
+                var indexLetter = sortedData[0].name.substr(0,1).toLowerCase();
+                //build set of anchor links
+                for (i=0;i< sortedData.length; i++)
+                {
+                    var nextLetter = sortedData[i].name.substr(0,1).toLowerCase();
+                    if (indexLetter != nextLetter)
+                    {
+                        indexLetter = nextLetter;
+                        alphaAnchors.push(indexLetter)
+                    }
 
-    //build actual index
-    indexLetter = sortedData[0].name.substr(0,1).toLowerCase();
-    for (i=0;i< sortedData.length; i++)
-    {
-        var nextLetter = sortedData[i].name.substr(0,1).toLowerCase();
-        if (indexLetter != nextLetter)
-        {
+                }
 
-            text += "<section><h2><div id=" + type + indexLetter + ">" + indexLetter + "</div></h2>";
-            indexLetter = nextLetter;
-            text += Mustache.render(elementTemplate, shortList);
-            text += "</section>";
-            shortList = [];
-            shortList.push(sortedData[i]);
+                for (i = 0; i< alphaAnchors.length; i++)
+                {
 
-        } else {
-            shortList.push(sortedData[i]);
-        }
+                    text += "<a href=\"#" + type + alphaAnchors[i] + "\">" + alphaAnchors[i] + "</a> | ";
+                }
+                if (alphaAnchors.length > 0)
+                {
+                    text = text.substring(0, text.length - 1);
+                }
 
-        // at the end add the last letter.
-        if (i+1 == sortedData.length)
-        {
-            text += "<section><h2><div id=" + type + indexLetter + ">" + indexLetter + "</div></h2>";
-            text += Mustache.render(elementTemplate, shortList);
-            text += "</section>";
-        }
+                //build actual index
+                indexLetter = sortedData[0].name.substr(0,1).toLowerCase();
+                for (i=0;i< sortedData.length; i++)
+                {
+                    var nextLetter = sortedData[i].name.substr(0,1).toLowerCase();
+                    if (indexLetter != nextLetter)
+                    {
 
-    }
+                        text += "<section><h2><div id=" + type + indexLetter + ">" + indexLetter + "</div></h2>";
+                        indexLetter = nextLetter;
+                        text += Mustache.render(elementTemplate, shortList);
+                        text += "</section>";
+                        shortList = [];
+                        shortList.push(sortedData[i]);
+
+                    } else {
+                        shortList.push(sortedData[i]);
+                    }
+
+                    // at the end add the last letter.
+                    if (i+1 == sortedData.length)
+                    {
+                        text += "<section><h2><div id=" + type + indexLetter + ">" + indexLetter + "</div></h2>";
+                        text += Mustache.render(elementTemplate, shortList);
+                        text += "</section>";
+                    }
+
+                }
+    }  // if there's no data this isn't going to do anything for us.
 
     text += "</div>";
 
