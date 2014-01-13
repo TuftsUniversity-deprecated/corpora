@@ -535,7 +535,14 @@ function showList(type)
     var div = jQuery(configHash.divId);
     div.html(listHtml);
     var configHash = extraData[type];
-    jQuery(configHash.tabId).click();
+    //jQuery(configHash.tabId).click();
+    $( document ).ready( function()
+       {
+           tabWithoutHistory = true;
+           $(configHash.tabId).tab('show') // Select first tab
+           tabWithoutHistory = false;
+       });
+
     if (type == 'place')
         map_initally_loaded = true
 }
