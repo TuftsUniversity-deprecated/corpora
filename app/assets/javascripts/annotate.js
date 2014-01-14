@@ -184,7 +184,7 @@ function initConfigHash()
     extraData = {
         'person': {'name': 'person', 'tabId': '#tab3',
             'divId': '#peopleDiv',
-            'detailTemplate': "<h4>{{name}}</h4>" +
+            'detailTemplate': "<div class=transcript_box_inner><h4>{{name}}</h4>" +
                               "<h5>Description:</h5><div class='elementDescription'>{{description}}</div>" +
                               "<div class='elementLink>'><h5>Link:</h5> <a href='{{link}}' target='_blank'>{{link}}</a></div>" +
                               "{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}" +
@@ -192,11 +192,11 @@ function initConfigHash()
                               "<h5 id='also_mentioned_header'>Also mentioned in these other items:</h5><div id='{{type}}ExternalReferences'></div>" +
                               "<div class='description-link'>" +
                                 "<a href='javascript:requestShowList(\"{{type}}\")'><i class='icon-chevron-left'></i>Show {{type}} list</a>" +
-                              "</div>"},
+                              "</div></div>"},
 
         'concept': {'name': 'concept', 'tabId': '#tab5',
             'divId': '#conceptsDiv',
-            'detailTemplate': "<h4>{{name}}</h4>" +
+            'detailTemplate': "<div class=transcript_box_inner><h4>{{name}}</h4>" +
                               "<h5>Description:</h5><div class='elementDescription'>{{description}}</div>" +
                               "<div class='elementLink>'><h5>Link:</h5> <a href='{{link}}' target='_blank'>{{link}}</a></div>" +
                               "{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}" +
@@ -204,11 +204,11 @@ function initConfigHash()
                               "<h5 id='also_mentioned_header'>Also mentioned in these other items:</h5><div id='{{type}}ExternalReferences'></div>" +
                               "<div class='description-link'>" +
                                "<a href='javascript:requestShowList(\"{{type}}\")'><i class='icon-chevron-left'></i>Show {{type}} list</a>" +
-                               "</div>"},
+                               "</div></div>"},
 
         'place': {'name': 'place', 'tabId': '#tab4',
             'divId': '#placesDiv',
-            'detailTemplate': "<h4>{{name}}</h4>" +
+            'detailTemplate': "<div class=transcript_box_inner><h4>{{name}}</h4>" +
                               "<h5>Description:</h5><div class='elementDescription'>{{description}}</div>" +
                               "<div class='elementLink>'><h5>Link:</h5> <a href='{{link}}' target='_blank'>{{link}}</a></div>" +
                               "{{#image_link}}<div class='description-image'><img src='{{image_link}}'></div>{{/image_link}}" +
@@ -216,7 +216,7 @@ function initConfigHash()
                               "<h5 id='also_mentioned_header'>Also mentioned in these other items:</h5><div id='{{type}}ExternalReferences'></div>" +
                               "<div class='description-link'>" +
                                 "<a href='javascript:requestShowList(\"{{type}}\")'><i class='icon-chevron-left'></i>Show {{type}} list</a>" +
-                              "</div>"}
+                              "</div></div>"}
     };
 }
 
