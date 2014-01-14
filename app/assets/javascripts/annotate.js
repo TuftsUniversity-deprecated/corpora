@@ -297,6 +297,8 @@ function initTabsAux(type)
                     text = text.substring(0, text.length - 1);
                 }
 
+                text += "</div><div class=\"transcript_box_inner\""
+
                 //build actual index
                 indexLetter = sortedData[0].name.substr(0,1).toLowerCase();
                 for (i=0;i< sortedData.length; i++)
