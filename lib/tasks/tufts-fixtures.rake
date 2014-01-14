@@ -81,6 +81,58 @@ namespace :tufts do
       puts "#{'*'*(`tput cols`.to_i)}\nThe database has been populated!\n#{'*'*(`tput cols`.to_i)}"
     end
 
+    desc "Populate the database with data using CSV files. (people) authoratative data so it will overwrite existing records"
+
+    task :populate_people_from_authority_file, [:arg1] => :environment do |t, args|
+      #arg1 = file to import full path
+      if args[:arg1].nil?
+        puts "YOU MUST SPECIFY FULL PATH TO FILE, ABORTING!"
+        next
+      end
+
+      puts "#{'*'*(`tput cols`.to_i)}\nChecking Environment... The database will not be cleared of all content before populating.\n#{'*'*(`tput cols`.to_i)}"
+
+      CSV.foreach(args[:arg1], encoding: "ISO8859-1") do |row|
+        name, alternative_names, period, description, link, image_link = row
+        puts "Trying to insert #{row}"
+
+        if Person.where(:name => name).count > 0
+          puts "This row already exists, it will now be replaced with this newer data."
+          Person.where(:name => name).destroy_all
+        end
+        Person.create!(:name => name, :description => description, :link => link, :alternative_names => alternative_names, :image_link => image_link)
+
+      end
+
+      puts "#{'*'*(`tput cols`.to_i)}\nThe database has been populated!\n#{'*'*(`tput cols`.to_i)}"
+    end
+
+    desc "Populate the database with data using CSV files. (people) authoratative data so it will overwrite existing records"
+
+    task :populate_concepts_from_authority_file, [:arg1] => :environment do |t, args|
+      #arg1 = file to import full path
+      if args[:arg1].nil?
+        puts "YOU MUST SPECIFY FULL PATH TO FILE, ABORTING!"
+        next
+      end
+
+      puts "#{'*'*(`tput cols`.to_i)}\nChecking Environment... The database will not be cleared of all content before populating.\n#{'*'*(`tput cols`.to_i)}"
+
+      CSV.foreach(args[:arg1], encoding: "ISO8859-1") do |row|
+        name, alternative_names, period, description, link, image_link = row
+        puts "Trying to insert #{row}"
+
+        if Concept.where(:name => name).count > 0
+          puts "This row already exists, it will now be replaced with this newer data."
+          Concept.where(:name => name).destroy_all
+        end
+        Concept.create!(:name => name, :description => description, :link => link, :alternative_names => alternative_names, :image_link => image_link)
+
+      end
+
+      puts "#{'*'*(`tput cols`.to_i)}\nThe database has been populated!\n#{'*'*(`tput cols`.to_i)}"
+    end
+
     desc "Populate the database with development data using CSV files. (people)"
     task :populate_stream => :environment do
       puts "#{'*'*(`tput cols`.to_i)}\nChecking Environment... The database will be cleared of all content before populating.\n#{'*'*(`tput cols`.to_i)}"
