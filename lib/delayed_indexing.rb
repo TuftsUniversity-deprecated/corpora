@@ -17,7 +17,9 @@ module DelayedIndexing
      }
      if pending_job_count < 2
        solr_connection = ActiveFedora.solr.conn
-       response = solr_connection.get 'select', :params => {:q => '*:*',:rows=>'10000000',:fl => 'pid_ssi', "group.field"=>'pid_ssi', :group=>'true'}
+       @config[:qt]
+       response = solr_connection.get 'select', :params => {:q => self.name, :qt => @config[:qt], :qf => @config[:qf], :rows=>'10000000',:fl => 'pid_ssi', "group.field"=>'pid_ssi', :group=>'true'}
+       #response = solr_connection.get 'select', :params => {:q => 'manjapra',:rows=>'10000000',:fl => 'pid_ssi', :qf => '', "group.field"=>'pid_ssi', :group=>'true'}
        results_array = response['grouped']['pid_ssi']['groups']
 
        #2 elementhash groupedValue=>pid  and docList
