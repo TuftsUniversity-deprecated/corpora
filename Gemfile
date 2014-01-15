@@ -45,3 +45,4 @@ gem "devise-guests", "~> 0.3"
 gem "bootstrap-sass"
 
 gem "rails_admin"
+gem 'google-analytics-rails'
