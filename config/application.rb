@@ -58,9 +58,12 @@ module SouthAsianDigitalLibrary
     # Default SASS Configuration, check out https://github.com/rails/sass-rails for details
     config.assets.compress = !Rails.env.development?
 
-
-
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    #if Rails.env == "production"
+    #GA.tracker = "UA-47167942-1"
+      config.middleware.use("Rack::GoogleAnalytics", :tracker => "UA-47167942-1")
+    #end
   end
 end

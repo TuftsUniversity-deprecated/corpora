@@ -44,6 +44,4 @@ SouthAsianDigitalLibrary::Application.configure do
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   config.assets.precompile += %w( tuftsification.js tuftsification.css )
 
-  # replace this with your tracker code
-  GA.tracker = "UA-47167942-1"
 end
