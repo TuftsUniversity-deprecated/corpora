@@ -354,7 +354,7 @@ function showElement(name, forceList)
 
     // track show element as a google analytics events as long as this is defined.
     if (typeof(_gaq) !== 'undefined') {
-        _gaq.push(['_trackEvent', 'Show ' + type, 'click', name]);
+        _gaq.push(['_trackEvent', 'Show ' + type + ' ' + name, 'click', name]);
     }
     var configHash = extraData[type];
 
@@ -544,6 +544,13 @@ function showList(type)
     div.html(listHtml);
     var configHash = extraData[type];
     //jQuery(configHash.tabId).click();
+
+    // if google analytics is defined track the show list events
+    if (typeof(_gaq) !== 'undefined') {
+            _gaq.push(['_trackEvent', 'Show index' + type, 'click', 'Show index' + type]);
+    }
+
+    //show the tab once the page if fully loaded
     $( document ).ready( function()
        {
            tabWithoutHistory = true;
