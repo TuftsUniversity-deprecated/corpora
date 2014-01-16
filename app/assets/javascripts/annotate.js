@@ -345,11 +345,17 @@ var map_initally_loaded = false
 // make ajax requests to fetch references to the passed name, both in this pid and for other pids
 function showElement(name, forceList)
 {
+
     name = decodeURI(name);
     var element = getElement(name);
     if (element == null)
         return;
     var type = element.type;
+
+    // track show element as a google analytics events as long as this is defined.
+    if (typeof(_gaq) !== 'undefined') {
+        _gaq.push(['_trackEvent', 'Show ' + type, 'click', name]);
+    }
     var configHash = extraData[type];
 
     var div = jQuery(configHash.divId);
