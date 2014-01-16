@@ -547,7 +547,7 @@ function showList(type)
 
     // if google analytics is defined track the show list events
     if (typeof(_gaq) !== 'undefined') {
-            _gaq.push(['_trackEvent', 'Show index' + type, 'click', 'Show index' + type]);
+            _gaq.push(['_trackEvent', 'Show index ' + type, 'click', 'Show index' + type]);
     }
 
     //show the tab once the page if fully loaded
