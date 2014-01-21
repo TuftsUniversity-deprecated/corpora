@@ -5,7 +5,7 @@ SouthAsianDigitalLibrary::Application.routes.draw do
   get "disambiguation/resolve"
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-
+  resources :ingests
   resources :locations
   resources :people
   resources :annotations

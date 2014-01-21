@@ -41,7 +41,8 @@ SouthAsianDigitalLibrary::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = false
 
-  config.serve_static_assets = false
+  config.serve_static_assets = true
+
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   config.assets.precompile += %w( tuftsification.js tuftsification.css )
