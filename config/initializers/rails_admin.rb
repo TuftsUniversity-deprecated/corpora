@@ -33,7 +33,7 @@ RailsAdmin.config do |config|
   # config.default_items_per_page = 20
 
   # Exclude specific models (keep the others):
-  config.excluded_models = ['Bookmark', 'Search']
+  config.excluded_models = ['Bookmark', 'Search','Datastreams::TuftsDatastream','Tufts::RcrMethods','CorporaAudioObject','TuftsEadMeta','Datastreams::DcaAdmin']
   config.model 'Person' do
       list do
         field :name
@@ -42,6 +42,25 @@ RailsAdmin.config do |config|
         field :link
         field :image_link
       end
+  end
+  config.model 'CorporaObject' do
+    edit do
+
+     field :pid
+     field :title
+     field :creator
+     field :temporal
+     #field :media_type, :has_one_association
+     field :video, :carrierwave
+     field :transcript, :carrierwave
+     field :collection, :belongs_to_association
+
+    end
+    list do
+      field :pid
+      field :title
+      field :published
+    end
   end
   config.model 'Location' do
         list do
