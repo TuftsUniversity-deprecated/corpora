@@ -1,15 +1,17 @@
 source 'http://rubygems.org'
 ruby '2.0.0'
-gem 'rails', '3.2.13'
+#gem 'rails', '3.2.13'
+gem "rails", "~> 4.0.3"
+
 #ruby-gemset=manjapra
 
 gem 'blacklight'
-gem 'hydra-head', '~> 6.0.0'
+gem 'hydra-head', '~> 6.5.0'
 #gem 'tuftsification-hydra', :git => 'git@github.com:TuftsUniversity/tuftsification-hydra.git'
 #gem 'tuftsification-hydra', :git => 'https://github.com/TuftsUniversity/tuftsification-hydra.git'
 #gem 'tuftsification-hydra', :path => '/Users/smcdon08/Devel/dl/tuftsification-hydra'
 gem 'tuftsification-hydra', :path => '/Users/mkorcy01/Documents/workspace/tuftsification-hydra'
-gem "active-fedora", "~> 6.4.0"
+#gem "active-fedora", "~> 6.4.0"
 gem 'om', "~> 3.0.0"
 gem 'hydra-role-management'
 gem 'delayed_job_active_record'
@@ -21,7 +23,7 @@ gem 'sqlite3'
 # Rails uses asset pipeline.  You will need these gems for used your assets in development.
 # However, you won't need them in production because they will be precompiled.
 group :assets do
-   gem 'sass-rails', '~> 3.2.3'
+   gem 'sass-rails'
    gem 'jquery-rails'
    gem 'uglifier'
 end
@@ -43,6 +45,12 @@ gem "unicode", :platforms => [:mri_18, :mri_19]
 gem "devise"
 gem "devise-guests", "~> 0.3"
 gem "bootstrap-sass"
+gem 'carrierwave'
+#gem "rails_admin"
+gem "rails_admin", "~> 0.6.1"
 
-gem "rails_admin"
 gem 'rack-google-analytics', :require => 'rack/google-analytics'
+
+#rails 4
+###gem 'protected_attributes'
+gem 'sprockets-rails'
