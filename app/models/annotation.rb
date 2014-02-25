@@ -1,6 +1,6 @@
 
 class Annotation < ActiveRecord::Base
-  attr_accessible :json, :text, :pid, :term, :term_type, :utterance
+###  attr_accessible :json, :text, :pid, :term, :term_type, :utterance
   serialize :json, JSON
   after_save :index_object
   after_destroy :index_object
