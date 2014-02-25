@@ -10,17 +10,23 @@
 
         <div class="span3">
           <%= link_to application_name, root_path, :class => "brand" %>
+
         </div>
         <div class="input-append pull-right">
           <% if has_user_authentication_provider? %>
               <div class="util-links-login">
                 <% if current_user %>
+                    <% if current_user.admin? %>
+                      <a href="/admin">Administrate</a>
+                    <% end %>
                     <%= link_to t('blacklight.header_links.logout'), destroy_user_session_path %> <%= "#{ link_to current_user, edit_user_registration_path }".html_safe unless current_user.to_s.blank? %>
+
                 <% else %>
                     <%= link_to t('blacklight.header_links.login'), new_user_session_path %>
                 <% end %>
               </div>
           <% end %>
+
         </div>
 
         <div class="span6 clearfix" id="searchbar">
@@ -29,7 +35,6 @@
 
         <div class="span3 nav-collapse">
           <%= render :partial => '/user_util_links' %>
-
         </div>
 
       </div>
