@@ -1,4 +1,5 @@
 require 'fileutils'
+require 'shellwords'
 require 'open3'
 class IngestsController < ApplicationController
   # Adds a few additional behaviors into the application controller
@@ -33,7 +34,7 @@ class IngestsController < ApplicationController
     }
 
     unless success
-      @logger.error($PROGRAM_NAME + ": ffmpeg error on command \n" + command + "\n" + @error_msg)
+      logger.error($PROGRAM_NAME + ": ffmpeg error on command \n" + command + "\n" + @error_msg)
     end
 
     return success
@@ -53,7 +54,7 @@ class IngestsController < ApplicationController
     xslt_path = Rails.root.to_s + "/xslt"
     xslt_file = Rails.root.to_s + "/xslt/v2t_tei.xsl"
     output_file = file + ".xml"
-    command = 'java -cp ' + xslt_path.to_s + '/saxon.jar:' + xslt_path.to_s + '/xmlenc-0.52.jar:' + xslt_path.to_s + '/ com.icl.saxon.StyleSheet ' + file.to_s + ' ' + xslt_file.to_s + '> ' + output_file.to_s
+    command = 'java -cp ' + xslt_path.to_s + '/saxon.jar:' + xslt_path.to_s + '/xmlenc-0.52.jar:' + xslt_path.to_s + '/ com.icl.saxon.StyleSheet ' + file.to_s.shellescape + ' ' + xslt_file.to_s + '> ' + output_file.to_s.shellescape
     puts command
     @success = execute_command command
     @download_link = output_file.gsub(Rails.root.to_s + '/public',"")
