@@ -22,10 +22,10 @@ class Collection < ActiveRecord::Base
   end
 
   def after_save_reindex_collection
-    reindex_collection2
+    reindex_collection_after_save
   end
 
-  def reindex_collection2
+  def reindex_collection_after_save
 
 
       puts "TEST: #{self.corpora_objects}"
@@ -45,6 +45,6 @@ class Collection < ActiveRecord::Base
   end
 
   handle_asynchronously :reindex_collection
-  handle_asynchronously :reindex_collection2
+  handle_asynchronously :reindex_collection_after_save
 
 end
