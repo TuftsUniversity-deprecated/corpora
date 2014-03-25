@@ -47,4 +47,5 @@ class Collection < ActiveRecord::Base
   handle_asynchronously :reindex_collection
   handle_asynchronously :reindex_collection_after_save
 
+
 end
