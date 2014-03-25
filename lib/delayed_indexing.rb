@@ -4,18 +4,22 @@ module DelayedIndexing
    def after_save
      puts "Save record"
      reindex_objects
-
    end
 
+   def after_save_reindex_object
+     reindex_object
+   end
+
+   def reindex_object
+     begin
+       @document_fedora = TuftsBase.find(self.pid, :cast=>true)
+       @document_fedora.update_index
+     rescue ActiveFedora::ObjectNotFoundError => e
+       logger.warn "Object not found"
+     end
+   end
 
    def reindex_objects
-     pending_jobs = Delayed::Job.all
-     pending_reindex = false
-     pending_job_count = 0
-     pending_jobs.each {|job|
-       pending_job_count +=1 if job.handler[/reindex_objects/]
-     }
-     if pending_job_count < 2
        solr_connection = ActiveFedora.solr.conn
 
 	#2.0.0-p0 :005 > CatalogController.blacklight_config[:default_solr_params][:qt]
@@ -37,9 +41,10 @@ logger.error("Background indexing #{id} because it matched #{self.name}")
          @document_fedora = TuftsBase.find(id, :cast=>true)
          @document_fedora.update_index
        }
-     end
+
    end
 
    handle_asynchronously :reindex_objects
+   handle_asynchronously :reindex_object
 
 end

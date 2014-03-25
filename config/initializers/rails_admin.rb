@@ -19,7 +19,7 @@ RailsAdmin.config do |config|
   #}
   #They are displayed in a separate group with default name 'Links', but you can change it:
 
- #config.navigation_static_label = "My Links"
+  #config.navigation_static_label = "My Links"
   # If you want to track changes on your models:
   # config.audit_with :history, 'User'
 
@@ -33,27 +33,67 @@ RailsAdmin.config do |config|
   # config.default_items_per_page = 20
 
   # Exclude specific models (keep the others):
-  config.excluded_models = ['Bookmark', 'Search','Datastreams::TuftsDatastream','Tufts::RcrMethods','CorporaAudioObject','TuftsEadMeta','Datastreams::DcaAdmin']
+  config.excluded_models = ['Bookmark', 'Search', 'Datastreams::TuftsDatastream', 'Tufts::RcrMethods', 'CorporaAudioObject', 'TuftsEadMeta', 'Datastreams::DcaAdmin','TuftsAudioTextMeta']
   config.model 'Person' do
-      list do
-        field :name
-        field :alternative_names
-        field :description
-        field :link
-        field :image_link
-      end
+    list do
+      field :name
+      field :alternative_names
+      field :description
+      field :link
+      field :image_link
+    end
   end
+
+
   config.model 'CorporaObject' do
     edit do
 
-     field :pid
-     field :title
-     field :creator
-     field :temporal
-     #field :media_type, :has_one_association
-     field :video, :carrierwave
-     field :transcript, :carrierwave
-     field :collection, :belongs_to_association
+      field :pid, :string do
+        required true
+        # readonly do
+        ##   bindings[:object].legacy == true
+        #end
+        visible do
+          bindings[:object].legacy == false
+        end
+      end
+      field :title, :string do
+        required true
+        visible do
+          bindings[:object].legacy == false
+        end
+      end
+      field :creator, :string do
+        required true
+        visible do
+          bindings[:object].legacy == false
+        end
+      end
+
+      field :temporal, :string do
+        required true
+        visible do
+          bindings[:object].legacy == false
+        end
+      end
+
+      field :media_type, :belongs_to_association, :string do
+        required true
+        visible do
+          bindings[:object].legacy == false
+        end
+      end
+      field :video, :carrierwave do
+        visible do
+          bindings[:object].legacy == false
+        end
+      end
+      field :transcript, :carrierwave do
+        visible do
+          bindings[:object].legacy == false
+        end
+      end
+      field :collections, :belongs_to_association
 
     end
     list do
@@ -63,13 +103,13 @@ RailsAdmin.config do |config|
     end
   end
   config.model 'Location' do
-        list do
-          field :name
-          field :latitutde
-          field :longitude
-          field :link
-        end
+    list do
+      field :name
+      field :latitutde
+      field :longitude
+      field :link
     end
+  end
   config.model "VideoUrl" do
     list do
       field :pid
@@ -80,21 +120,21 @@ RailsAdmin.config do |config|
   end
 
   config.model 'Concept' do
-        list do
-          field :name
-          field :alternative_names
-          field :description
-          field :link
-          field :image_link
-        end
+    list do
+      field :name
+      field :alternative_names
+      field :description
+      field :link
+      field :image_link
+    end
   end
   config.model 'Annotation' do
-          list do
-            field :pid
-            field :term
-            field :term_type
-            field :utterance
-          end
+    list do
+      field :pid
+      field :term
+      field :term_type
+      field :utterance
+    end
   end
 
   # Include specific models (exclude the others):
@@ -117,7 +157,6 @@ RailsAdmin.config do |config|
 
   # Now you probably need to tour the wiki a bit: https://github.com/sferik/rails_admin/wiki
   # Anyway, here is how RailsAdmin saw your application's models when you ran the initializer:
-
 
 
   ###  Bookmark  ###
@@ -175,7 +214,6 @@ RailsAdmin.config do |config|
   #   # Found associations:
 
 
-
   #   # Found columns:
 
   #     configure :id, :integer 
@@ -219,7 +257,6 @@ RailsAdmin.config do |config|
   #   # You can copy this to a 'rails_admin do ... end' block inside your feature.rb model definition
 
   #   # Found associations:
-
 
 
   #   # Found columns:

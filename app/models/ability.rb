@@ -17,7 +17,7 @@ class Ability
       can [:index, :new, :export, :history, :destroy, :show, :show_in_app, :edit], User
       can [:index, :new, :destroy, :show, :show_in_app, :edit], CorporaObject
       can [:index, :new, :export, :history, :destroy, :show, :show_in_app, :edit], Collection
-      can [:index, :new, :export, :history, :destroy, :show, :show_in_app, :edit], Pid
+      #can [:index, :new, :export, :history, :destroy, :show, :show_in_app, :edit], Pid
       can [:index, :new, :export, :history, :destroy, :show, :show_in_app, :edit], MediaType
 
       #not actually doing anything with the following in this app

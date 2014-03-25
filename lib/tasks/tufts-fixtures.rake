@@ -1,5 +1,5 @@
 ActiveFedora.init(:fedora_config_path => "#{Rails.root}/config/fedora.yml")
-require "hydra"
+#require "hydra"
 require "active-fedora"
 require 'csv'
 require 'annotation_tools'
