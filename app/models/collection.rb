@@ -26,8 +26,8 @@ class Collection < ActiveRecord::Base
   end
 
   def reindex_collection2
-      Rails.logger.info "Sending shit to delayed job"
-      puts "Shit"
+
+
       puts "TEST: #{self.corpora_objects}"
       self.corpora_objects.each do |obj|
         @document_fedora = TuftsBase.find(obj.pid, :cast=>true)
@@ -35,8 +35,8 @@ class Collection < ActiveRecord::Base
       end
     end
   def reindex_collection objs
-    Rails.logger.info "Sending shit to delayed job"
-    puts "Shit"
+
+
     #puts "TEST: #{self.corpora_objects}"
     objs.each do |obj|
       @document_fedora = TuftsBase.find(obj.pid, :cast=>true)
