@@ -1,5 +1,0 @@
-#class CorporaAudioObject < CorporaObject
-##
-#end
-
-
