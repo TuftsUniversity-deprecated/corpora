@@ -43,7 +43,7 @@ background-image: none;
 box-shadow: none;
 }
 
-.navbar .brand {
+#header-navbar-fixed-top .brand {
 width: 419px;
 background: transparent url(/assets/blacklight/corpora_logo.png) no-repeat top left;
 display: inline-block;
