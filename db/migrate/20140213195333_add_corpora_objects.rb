@@ -1,16 +1,18 @@
 class AddCorporaObjects < ActiveRecord::Migration
   def up
     create_table :corpora_objects do |t|
-       t.belongs_to :pid
+       t.string :pid
        t.string :title, :null => false
        t.string :video
        t.string :transcript
-       t.date :temporal, :null => false
+       t.string :temporal, :null => false
        t.string :creator, :null => false
        t.belongs_to :collection
        t.belongs_to :media_type
        t.boolean :published
+       t.boolean :legacy
        t.timestamps
+
     end
   end
 
