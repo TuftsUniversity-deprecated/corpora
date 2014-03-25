@@ -9,16 +9,15 @@ class Ability
       #https://github.com/sferik/rails_admin/wiki/CanCan
       #:index, :new, :export, :history, :destroy, :show, :show_in_app, :edit
        #:show,:edit :destroy :history,:show_in_app,
-      can [:index, :new, :export, :history, :destroy, :show, :show_in_app, :edit], Concept
-      can [:index, :new, :export, :history, :destroy, :show, :show_in_app, :edit], Annotation
-      can [:index, :new, :export, :history, :destroy, :show, :show_in_app, :edit], Person
-      can [:index, :new, :export, :history, :destroy, :show, :show_in_app, :edit], VideoUrl
-      can [:index, :new, :export, :history, :destroy, :show, :show_in_app, :edit], Location
-      can [:index, :new, :export, :history, :destroy, :show, :show_in_app, :edit], User
+      can [:index, :new, :export, :destroy, :show, :show_in_app, :edit], Concept
+      can [:index, :new, :export, :destroy, :show, :show_in_app, :edit], Annotation
+      can [:index, :new, :export, :destroy, :show, :show_in_app, :edit], Person
+      can [:index, :new, :export, :destroy, :show, :show_in_app, :edit], VideoUrl
+      can [:index, :new, :export, :destroy, :show, :show_in_app, :edit], Location
+      can [:index, :new, :export, :destroy, :show, :show_in_app, :edit], User
       can [:index, :new, :destroy, :show, :show_in_app, :edit], CorporaObject
-      can [:index, :new, :export, :history, :destroy, :show, :show_in_app, :edit], Collection
-      #can [:index, :new, :export, :history, :destroy, :show, :show_in_app, :edit], Pid
-      can [:index, :new, :export, :history, :destroy, :show, :show_in_app, :edit], MediaType
+      can [:index, :new, :export, :destroy, :show, :show_in_app, :edit], Collection
+      can [:index, :new, :export, :destroy, :show, :show_in_app, :edit], MediaType
 
       #not actually doing anything with the following in this app
 #      can [:create, :edit, :update, :publish, :destroy], ActiveFedora::Base
