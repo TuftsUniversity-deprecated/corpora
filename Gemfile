@@ -54,3 +54,7 @@ gem 'rack-google-analytics', :require => 'rack/google-analytics'
 #rails 4
 ###gem 'protected_attributes'
 gem 'sprockets-rails'
+
+#for contact form
+gem 'mail_form'
+gem 'simple_form'

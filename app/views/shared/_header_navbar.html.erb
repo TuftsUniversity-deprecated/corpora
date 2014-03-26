@@ -1,20 +1,37 @@
 <div id="header-navbar-fixed-top" class="navbar navbar-fixed-top">
+
   <div class="navbar-inner">
     <div class="container">
       <div class="row">
+           <div class="subnav">
+           <ul class="nav">
+             <li><a href="/site/about">About</a></li>
+             <li><a target="_blank" href="http://sites.tufts.edu/corpora/">Blog</a></li>
+             <li><a href="/site/docs">Documentation</a></li>
+             <li><a href="/contact">Contact</a></li>
+             <li><a href="/catalog/">Home</a></li>
+           </ul>
+           </div>
+             </div>
+      <div class="row">
         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
+          <span class="icon-bar">
+
+          </span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
+
 
         <div class="span3">
           <%= link_to application_name, root_path, :class => "brand" %>
 
         </div>
         <div class="input-append pull-right">
+
           <% if has_user_authentication_provider? %>
               <div class="util-links-login">
+
                 <% if current_user %>
                     <% if current_user.admin? %>
                       <a href="/admin">Administrate</a>

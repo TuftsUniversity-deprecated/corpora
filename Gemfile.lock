@@ -156,6 +156,9 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mail_form (1.5.0)
+      actionmailer (>= 3.2, < 5)
+      activemodel (>= 3.2, < 5)
     marc (0.8.1)
       ensure_valid_encoding
       unf
@@ -260,6 +263,9 @@ GEM
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
     settingslogic (2.0.9)
+    simple_form (3.0.1)
+      actionpack (>= 4.0.0, < 4.1)
+      activemodel (>= 4.0.0, < 4.1)
     solrizer (3.1.1)
       activesupport
       daemons
@@ -316,6 +322,7 @@ DEPENDENCIES
   hydra-role-management
   jettywrapper
   jquery-rails
+  mail_form
   mysql2
   om (~> 3.0.0)
   rack-google-analytics
@@ -323,6 +330,7 @@ DEPENDENCIES
   rails_admin (~> 0.6.1)
   rspec-rails
   sass-rails
+  simple_form
   sprockets-rails
   sqlite3
   therubyracer

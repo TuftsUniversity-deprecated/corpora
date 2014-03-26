@@ -1,0 +1,16 @@
+.navbar .subnav .nav {
+position: relative;
+left: 0;
+display: block;
+float: right;
+margin: 0 0 0 0;
+}
+
+#header-navbar-fixed-top .navbar-inner {
+padding-top: 0em;
+padding-bottom: 2em;
+margin-bottom: 1em;
+border-top: 10px solid #6699CC;
+background-color: white;
+background-image: none;
+}

@@ -20,56 +20,7 @@ class CorporaObject < ActiveRecord::Base
   # accepts_nested_attributes_for :media_type, :allow_destroy => true
   # accepts_nested_attributes_for :pid, :allow_destroy => true
   rails_admin do
-    edit do
 
-      field :pid, :string do
-        required true
-        # readonly do
-        ##   bindings[:object].legacy == true
-        #end
-        visible do
-          bindings[:object].legacy == false
-        end
-      end
-      field :title, :string do
-        required true
-        visible do
-          bindings[:object].legacy == false
-        end
-      end
-      field :creator, :string do
-        required true
-        visible do
-          bindings[:object].legacy == false
-        end
-      end
-
-      field :temporal, :string do
-        required true
-        visible do
-          bindings[:object].legacy == false
-        end
-      end
-
-      field :media_type, :belongs_to_association, :string do
-        required true
-        visible do
-          bindings[:object].legacy == false
-        end
-      end
-      field :video, :carrierwave do
-        visible do
-          bindings[:object].legacy == false
-        end
-      end
-      field :transcript, :carrierwave do
-        visible do
-          bindings[:object].legacy == false
-        end
-      end
-      field :collections
-
-    end
 
     list do
       field :pid

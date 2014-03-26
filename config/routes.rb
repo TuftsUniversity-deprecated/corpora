@@ -3,6 +3,11 @@ ALLOW_DOTS ||= /[a-zA-Z0-9_.:\-]+/
 SouthAsianDigitalLibrary::Application.routes.draw do
 
 
+  get "site/docs"
+  get "site/about"
+  match '/contact',     to: 'contacts#new',             via: 'get'
+  resources "contact", only: [:new, :create], :as => 'contacts'
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   root :to => "catalog#index"
 

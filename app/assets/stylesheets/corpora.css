@@ -31,7 +31,7 @@ padding: 0 20px;
 }
 
 #header-navbar-fixed-top .navbar-inner {
-padding-top: 2em;
+padding-top: 0em;
 padding-bottom: 2em;
 margin-bottom: 1em;
 border-top: 10px solid #6699CC;
@@ -55,7 +55,7 @@ margin-left: 0px;
 display: none;
 }
 
-.util-links-login a, .bookmark_toggle, .email, .sms {
+.util-links-login a, .bookmark_toggle, .sms {
 float: right;
 display: inline-block;
 padding: 4px 12px;
@@ -628,4 +628,11 @@ width: 280px !important;
 .index a {
   text-decoration:none;
   color:black;
+}
+
+#contact_message
+{
+    margin: 0px;
+    width: 503px;
+    height: 134px;
 }
