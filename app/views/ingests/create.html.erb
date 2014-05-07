@@ -1,0 +1,9 @@
+<% if @success %>
+<h5>Conversion Successful</h5>
+<a href="http://<%=request.env["HTTP_HOST"]%><%=@download_link%>">Download the file here.</a>
+<h5>Conversion Details</h5>
+<div><%=@info_msg%></div>
+<div><%=@error_msg%></div>
+<% else %>
+<p>There was an error in conversion, see log for details.</p>
+<% end %>

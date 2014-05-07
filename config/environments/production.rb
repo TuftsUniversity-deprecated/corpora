@@ -40,8 +40,20 @@ SouthAsianDigitalLibrary::Application.configure do
 
   # Generate digests for assets URLs
   config.assets.digest = true
+  # bumped to 1.1 to expire assets after home page image changes
+  config.assets.version = '1.1'
+
+  config.serve_static_assets = true
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   config.assets.precompile += %w( tuftsification.js tuftsification.css )
-
+  config.action_mailer.default_url_options = {
+  :host => 'corpora.tufts.edu',
+  :port => 80
+  }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => "smtp.tufts.edu",
+    :port => 25
+  }
 end

@@ -1,0 +1,37 @@
+<div class="document">
+
+
+  <div class="row">
+    <div class="span12">
+      <h1>Corpora Ingest Tools</h1>
+
+      <p>For the moment these tools are just some utilities useful for creating the necessary manifestations to get
+        content into corpora.
+      </p>
+    </div>
+
+  </div>
+  <!-- row -->
+
+  <hr>
+
+  <div class="row">
+
+    <div class="span12">
+      <h4>V2T to TEI Transformations</h4>
+          <%= form_for :file_upload, :url => ingests_path, :html => {:multipart => true}, :remote => false do |f| %>
+          <%# form_for :file_upload, :url => ingests_path(:format => :js), :html => {:multipart => true}, :remote => false do |f| %>
+              <%= f.file_field :my_file %>
+              <%= f.submit "Upload" %>
+          <% end %>
+    </div>
+
+
+  </div>
+  <!-- row -->
+
+
+</div>
+
+
+
