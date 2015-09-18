@@ -25,6 +25,49 @@ namespace :tufts do
 
   namespace :sadl do
 
+desc "Populate the combined ubersheet, not replacing any existing data"
+    task :populate_uber => :environment do
+      if ENV['CONCEPTS_FILE']
+        @@index_list = ENV['CONCEPTS_FILE']
+      else
+        puts "rake tufts:sadl:populate_uber CONCEPTS_FILE=/home/hydradm/some.csv "
+        next
+      end
+
+      CSV.foreach(@@index_list, encoding: 'ISO8859-1') do |row|
+        id,FeatureType,rowClass,AuthoritativeName,ModernName,HistoricalName,Admin01,Admin02,Town,Latitude,Longitude \
+        ,SourceId,BengaliName,Gender,Interviewee,BirthYear,DeathYear,BirthLocation,Notes,AlternativeNames,Period, \
+        ShortDescription,Profession,BookSuggestion,LocationType,ExternalFeatureId,id2,FeatureId,Link,ImageLink,\
+        Additions,AltTagText,TranscriptionID = row
+        
+        puts "#{rowClass}"
+        if rowClass.downcase == "people"
+           if  Person.where(:name => AuthoritativeName ).count > 0
+             puts "This row already exists, will not replace #{AuthoritativeName}."     
+           else
+              Person.create!(:name => AuthoritativeName, :description => ShortDescription, :link => Link, :alternative_names => AlternativeNames, :image_link => ImageLink)
+           end
+        elsif rowClass.downcase == "concept"
+          if Concept.where(:name => AuthoritativeName).count > 0
+             puts "This row already exists, will not replace #{AuthoritativeName}."
+          else
+            Concept.create!(:name => AuthoritativeName, :description => ShortDescription, :link => Link, :alternative_names => AlternativeNames, :image_link => ImageLink)
+           end
+        elsif rowClass.downcase == "place"
+          if Location.where(:name => AuthoritativeName).count > 0
+             puts "This row already exists, will not replace #{AuthoritativeName}."
+          else
+#             Location.create!(:name => AuthoritativeName, :link => Link, :modern_location => ModernName, :historical_name => HistoricalName, :admin01 => Admin01, :admin02 => Admin02, :town => Town, :latitutde => Latitude, :longitude => Longitude, :location_type => type)a
+              puts "TODO : FIX ME"
+          end
+        else
+          puts "Ignoring row of type #{rowClass}: #{row}"
+        end
+      end
+
+
+    end
+
     # Checks and ensures task is not run in production.
     task :ensure_development_environment => :environment do
       if Rails.env.production?
