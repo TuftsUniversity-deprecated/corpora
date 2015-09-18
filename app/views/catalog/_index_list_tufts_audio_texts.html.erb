@@ -1,1 +1,1 @@
-<p><%= document['description_tesim'][0].html_safe if document['title_tesim'][0] == "This I Believe" %></p>
+<p><%= document['description_tesim'][0].html_safe unless document['description_tesim'].nil? %></p>
